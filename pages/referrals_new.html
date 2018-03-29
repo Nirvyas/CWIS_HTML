@@ -4136,25 +4136,25 @@
                                                                         <td>Child</td>
                                                                         <td>Joe Smith</td>
                                                                         <td>No Risk</td>
-                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivDummyInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivChildInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Parent</td>
                                                                         <td>Jill Smith</td>
                                                                         <td>Moderate</td>
-                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivDummyInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivParentInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Parent</td>
                                                                         <td>Ian Smith</td>
                                                                         <td>Low</td>
-                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivDummyInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                        <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivParentInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table> 
                                                         </div>
                                                         <div class="row"><br></div>
-                                                        <div class="row col-xs-18" id="DivDummyInfo" style="display:none">
+                                                        <div class="row col-xs-18" id="DivChildInfo" style="display:none">
 
 
                                                             <table class="table table-hover table-striped">
@@ -4172,12 +4172,72 @@
                                                                         <td>No Risk</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>PARENTING SKILLS /KNOWLEDGE </td>
+                                                                        <td>SEV/FREQ AND/OR RECENTNESS OF
+ ABUSE/NEGLECT </td>
 
                                                                         <td>No Risk</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>ALCOHOL/SUBSTANCE ABUSE </td>
+                                                                        <td>PRIOR ABUSE/NEGLECTED </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>EXTENT OF EMOTIONAL HARM  </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>  
+
+                                                        </div>
+                                                        
+                                                        <div class="row"><br></div>
+                                                        <div class="row col-xs-18" id="DivParentInfo" style="display:none">
+
+
+                                                            <table class="table table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Risk Factor</th>
+
+                                                                        <th>Risk Level</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>AGE, PHYSICAL, INTELLECTUAL OR
+EMOTIONAL STATUS  </td>
+
+                                                                        <td>No Risk</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>COOPERATION  </td>
+
+                                                                        <td>No Risk</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>PARENTING SKILLS /KNOWLEDGE </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td> ALCOHOL/SUBSTANCE ABUSE   </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td> ACCESS TO CHILDREN    </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>  PRIOR ABUSE/NEGLECT    </td>
+
+                                                                        <td>Low</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>  RELATIONSHIP WITH CHILDREN    </td>
 
                                                                         <td>Low</td>
                                                                     </tr>
@@ -4669,12 +4729,14 @@
                                                                     </div> 
                                                                 </div>
 
+<!--
                                                                 <div class="row">
                                                                     <div class="col-xs-18">
                                                                         <label for="obj">Reason Service Ended</label>
                                                                         <textarea readonly class="col-xs-18" id="obj" cols="45" rows="3">The family met the task.</textarea>
                                                                     </div>
                                                                 </div>
+-->
                                                                 <div class="row"><br></div>
 
 
@@ -4715,7 +4777,7 @@
 
                                                                                         <th> Date of Signature</th>																						
                                                                                         <th>Plan/Rights Sent Date</th>
-                                                                                        <th>Method. of Delivery</th>
+                                                                                        <th>Method of Delivery</th>
                                                                                         <th> View </th>
                                                                                     </tr>
                                                                                 </thead>
@@ -5002,8 +5064,9 @@
                                                             <div class="panel-heading">
                                                                 <!-- Nav tabs -->
                                                                 <ul class="nav nav-tabs">
-                                                                    <li class="active"><a href="#childLocation" data-toggle="tab"> Child's Location  </a></li>
-                                                                    <li><a href="#placementInformation" data-toggle="tab">Placement Agency </a></li>
+                                                                    
+                                                                    <li class="active"><a href="#placementInformation" data-toggle="tab">Placement </a></li>
+                                                                    <li><a href="#childLocation" data-toggle="tab"> Special Needs  </a></li>
                                                                     <li><a href="#circumstances" data-toggle="tab">Circumstances </a></li>
                                                                     <li><a href="#efforts" data-toggle="tab">Efforts </a></li>
                                                                 </ul>
@@ -5012,7 +5075,8 @@
                                                             <div class="panel-body panel-tabs">
                                                                 <!-- Tab panes -->
                                                                 <div class="tab-content">
-                                                                    <div class="tab-pane active"  id="childLocation">											
+                                                                    <div class="tab-pane"  id="childLocation">											
+<!--
                                                                         <div class="row">
                                                                             <div class="col-lg-18">
                                                                                 <h2 class="tab-heading">Child's Location</h2>
@@ -5108,7 +5172,7 @@
                                                                         <div class="row">
                                                                             <div class="col-xs-7">
                                                                                 <div class="form-group">
-                                                                                    <label for="famStrength">Placement allows Child to be in same school</label>
+                                                                                    <label for="famStrength">Same school prior to Placement</label>
                                                                                     <input type="checkbox" id="famStrength" style="width: 20%" value="Type 1" checked disabled>
                                                                                 </div>
                                                                             </div>
@@ -5117,12 +5181,13 @@
 																			
 																			<div class="col-xs-16">
                                                                                 <div class="form-group">
-                                                                                    <label for="txtCaseworker" >Justification for Placement out of Existing School</label>&nbsp;&nbsp;
+                                                                                    <label for="txtCaseworker" >Reason for Placement out of Existing School</label>&nbsp;&nbsp;
                                                                                     <input type="text" id="dtofrevisedplan" style="width: 60%" value="" disabled>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         
+-->
 
 <!--
                                                                         <div class="row">
@@ -5140,7 +5205,7 @@
 
                                                                     </div>
 
-                                                                    <div class="tab-pane"  id="placementInformation">											
+                                                                    <div class="tab-pane active"  id="placementInformation">											
                                                                         <div class="row">
                                                                             <div class="col-lg-18">
                                                                                 <h2 class="tab-heading">Placement Information</h2>
@@ -5205,6 +5270,119 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                     
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="famStrength">Location Withheld</label>
+                                                                                    <input type="checkbox" id="famStrength" style="width: 30%" value="Type 1" checked disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+<!--
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker" >Address Line 1</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 50%" value="123 Awesome St" disabled>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker" >Address Line 2</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 50%" value=" " disabled>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">Address Line 3</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 50%" value=" " disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">City</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 45%" value="Harrisburg" disabled>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-xs-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">State</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 45%" value="PA" disabled>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-xs-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">Zip</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 45%" value="17011" disabled>
+                                                                                </div>
+                                                                            </div>																		
+
+                                                                            <div class="col-xs-5">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">Phone Number</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 50%" value="717-123-4567" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+-->
+
+
+
+                                                                        <div class="row">
+                                                                            <div class="col-xs-16">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker" >Placement Setting is in Best Interest of Child</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 60%" value="" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-7">
+                                                                                <div class="form-group">
+                                                                                    <label for="famStrength">Location is in Proximity of Child's Community</label>
+                                                                                    <input type="checkbox" id="famStrength" style="width: 20%" value="Type 1" checked disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+																			
+                                                                            <div class="row">
+																			<div class="col-xs-16">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker" >Explanation of Placement out of Proximity</label>
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 60%" value="" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-7">
+                                                                                <div class="form-group">
+                                                                                    <label for="famStrength">Same school prior to Placement</label>
+                                                                                    <input type="checkbox" id="famStrength" style="width: 20%" value="Type 1" checked disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+																			<div class="row">
+																			
+																			<div class="col-xs-16">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker" >Reason for Placement out of Existing School</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 60%" value="" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
                                                                     </div>
 
                                                                     <div class="tab-pane"  id="circumstances">											
@@ -5648,6 +5826,20 @@
                                                             <option value="02">Unsafe</option>
                                                             <option value="03">Safe with Plan</option>
                                                              <option value="03">Not Applicable</option>
+                                                        </select>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-xs-6">
+                                                <div class="form-group">
+                                                    <label for="ddlCounty">Location</label>
+                                                    <span id="MainContent_ddlCounty" title="County">
+                                                        <select name="dropDown" id="abcd" style="width: 65%">
+                                                            <option value="-1">Select...</option>
+                                                            <option value="01">Primary Place of Residence</option>
+                                                            <option value="02">Other Location</option>
+                                                            
                                                         </select>
                                                     </span>
                                                 </div>

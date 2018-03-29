@@ -13,6 +13,84 @@
                 e.style.display = 'block';
         }
     </script> 
+    
+    <script>
+    (function($) {
+  //Moves selected item(s) from sourceList to destinationList
+  $.fn.moveToList = function(sourceList, destinationList) {
+    var opts = $(sourceList + ' option:selected');
+    if (opts.length == 0) {
+      alert("Nothing to move");
+    }
+
+    $(destinationList).append($(opts).clone());
+  };
+
+  //Moves all items from sourceList to destinationList
+  $.fn.moveAllToList = function(sourceList, destinationList) {
+    var opts = $(sourceList + ' option');
+    if (opts.length == 0) {
+      alert("Nothing to move");
+    }
+
+    $(destinationList).append($(opts).clone());
+  };
+
+  //Moves selected item(s) from sourceList to destinationList and deleting the
+  // selected item(s) from the source list
+  $.fn.moveToListAndDelete = function(sourceList, destinationList) {
+    var opts = $(sourceList + ' option:selected');
+    if (opts.length == 0) {
+      alert("Nothing to move");
+    }
+
+    $(opts).remove();
+    $(destinationList).append($(opts).clone());
+  };
+
+  //Moves all items from sourceList to destinationList and deleting
+  // all items from the source list
+  $.fn.moveAllToListAndDelete = function(sourceList, destinationList) {
+    var opts = $(sourceList + ' option');
+    if (opts.length == 0) {
+      alert("Nothing to move");
+    }
+
+    $(opts).remove();
+    $(destinationList).append($(opts).clone());
+  };
+
+  //Removes selected item(s) from list
+  $.fn.removeSelected = function(list) {
+    var opts = $(list + ' option:selected');
+    if (opts.length == 0) {
+      alert("Nothing to remove");
+    }
+
+    $(opts).remove();
+  };
+
+  //Moves selected item(s) up or down in a list
+  $.fn.moveUpDown = function(list, btnUp, btnDown) {
+    var opts = $(list + ' option:selected');
+    if (opts.length == 0) {
+      alert("Nothing to move");
+    }
+
+    if (btnUp) {
+      opts.first().prev().before(opts);
+    } else if (btnDown) {
+      opts.last().next().after(opts);
+    }
+  };
+})(jQuery);
+
+    
+    
+    
+    
+    
+    </script>
 	
 	<script type="text/javascript">
         function toggle_tab(id) {
@@ -112,18 +190,12 @@
 																		<input type="text" id="dtofrevisedplan" style="width: 45%" >
 																	</div>
 																</div>
-<!--
-																<script>
-																	jQuery(document).ready(function(){
-																		jQuery(".chosen").chosen();
-																	});	
-                                                                 </script>      
--->
 																
-																<div class="col-xs-8" >
-																	<div class="form-group">
+																
+																<!-- <div class="col-xs-6" >
+																	<div class="subject-info-box-1">
 																		<label for="dtofrevisedplan">County</label>&nbsp;&nbsp;																		
-																			 <select class="chosen" multiple="true" name="dropDown" id="county" style="width: 65%">
+																			 <select multiple="multiple" id="lstbox1" class="form-control">
 																				<option>Adams </option>
 																				<option>Allegheny </option>
 																				<option>Armstrong </option>
@@ -193,7 +265,35 @@
 																				<option>York </option>
 																			</select>
 																	</div>
-																</div>
+																	
+																	 
+																	<div class="subject-info-arrows"> 
+																	  <input type="button" id="btnAllRight" value=">>" class="btn btn-default" /><br /> 
+																	  <input type="button" id="btnRight" value=">" class="btn btn-default" ><br /> 
+																	  <input type="button" id="btnLeft" value="<" class="btn btn-default" /><br /> 
+																	  <input type="button" id="btnAllLeft" value="<<" class="btn btn-default"  /> 
+																	</div> 
+
+																	
+																	
+																	<div class="subject-info-box-2" >
+																		<label for="dtofrevisedplan">County Selected</label>&nbsp;&nbsp;																		
+																			 <select multiple="multiple" id="lstbox2" class="form-control">
+																				<option>Adams </option>
+																				<option>Allegheny </option>
+																				<option>Armstrong </option>
+																				<option>Beaver </option>
+																				<option>Bedford </option>
+																				<option>Berks </option>																				
+																				<option>Wayne </option>
+																				<option>Westmoreland </option>
+																				<option>Wyoming </option>
+																				<option>York </option>
+																			</select>
+																	</div>	
+																</div> -->
+																
+																
 																<div class="col-xs-8" >
 																	<div class="form-group">
 																		<label for="dtofrevisedplan">System</label>&nbsp;&nbsp;
@@ -212,6 +312,287 @@
 																</div>
 																
 															</div>
+                                                        
+                                                        
+                                                        <div class="row style-select">
+<!--
+  <div class="col-md-6">
+    <label class="control-label">Superheroes</label>
+    <select multiple class="form-control" id="StaffList">
+      <option value="123">Superman</option>
+      <option value="456">Batman</option>
+      <option value="789">Spiderman</option>
+      <option value="654">Captain America</option>
+    </select>
+  </div>
+-->
+  <div class="col-md-6">
+<!--
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+        <input type="button" id="btnAvenger" value="Add Avenger" class="btn btn-default" />
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+        <label class="control-label">Avengers</label>
+        <div class="selected-left">
+          <select multiple class="form-control" id="PresenterList">
+            <option value="856">Iron Man</option>
+          </select>
+        </div>
+        <div class="selected-right">
+          <button type="button" class="btn btn-default btn-sm" id="btnAvengerUp">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnAvengerDown">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnRemoveAvenger">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+-->
+
+<!--
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+        <input type="button" id="btnShield" value="Add S.H.I.E.L.D." class="btn btn-default" />
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+        <label class="control-label">S.H.I.E.L.D.</label>
+        <div class="selected-left">
+          <select multiple class="form-control" id="ContactList">
+            <option value="765">Nick Fury</option>
+            <option value="698">The Hulk</option>
+          </select>
+        </div>
+        <div class="selected-right">
+          <button type="button" class="btn btn-default btn-sm" id="btnShieldUp">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnShieldDown">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnRemoveShield">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+-->
+
+<!--
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+        <input type="button" id="btnJusticeLeague" value="Add Justice League" class="btn btn-default" />
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+        <label class="control-label">Justice League</label>
+        <div class="selected-left">
+          <select multiple class="form-control" id="FacilitatorList">
+
+          </select>
+        </div>
+        <div class="selected-right">
+          <button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueUp">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueDown">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-sm" id="btnRemoveJusticeLeague">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+-->
+  </div>
+</div>
+<p>&nbsp;</p>
+<div class="row style-select">
+  <div class="col-md-12">
+    <div class="subject-info-box-1">
+      <label>Available Counties</label>
+      <select multiple class="form-control" id="lstBox1">
+        <option>Adams </option>
+																				<option>Allegheny </option>
+																				<option>Armstrong </option>
+																				<option>Beaver </option>
+																				<option>Bedford </option>
+																				<option>Berks </option>
+																				<option>Blair </option>
+																				<option>Bradford </option>
+																				<option>Bucks </option>
+																				<option>Butler </option>
+																				<option>Cambria </option>
+																				<option>Cameron </option>
+																				<option>Carbon </option>
+																				<option>Centre </option>
+																				<option>Chester </option>
+																				<option>Clarion </option>
+																				<option>Clearfield </option>
+																				<option>Clinton </option>
+																				<option>Columbia </option>
+																				<option>Crawford </option>
+																				<option>Cumberland </option>
+																				<option>Dauphin </option>
+																				<option>Delaware </option>
+																				<option>Elk </option>
+																				<option>Erie </option>
+																				<option>Fayette </option>
+																				<option>Forest </option>
+																				<option>Franklin </option>
+																				<option>Fulton </option>
+																				<option>Greene </option>
+																				<option>Huntingdon </option>
+																				<option>Indiana </option>
+																				<option>Jefferson </option>
+																				<option>Juniata </option>
+																				<option>Lackawanna </option>
+																				<option>Lancaster </option>
+																				<option>Lawrence </option>
+																				<option>Lebanon </option>
+																				<option>Lehigh </option>
+																				<option>Luzerne </option>
+																				<option>Lycoming </option>
+																				<option>McKean </option>
+																				<option>Mercer </option>
+																				<option>Mifflin </option>
+																				<option>Monroe </option>
+																				<option>Montgomery </option>
+																				<option>Montour </option>
+																				<option>Northampton </option>
+																				<option>Northumberland </option>
+																				<option>Perry </option>
+																				<option>Philadelphia </option>
+																				<option>Pike </option>
+																				<option>Potter </option>
+																				<option>Schuylkill </option>
+																				<option>Snyder </option>
+																				<option>Somerset </option>
+																				<option>Sullivan </option>
+																				<option>Susquehanna </option>
+																				<option>Tioga </option>
+																				<option>Union </option>
+																				<option>Venango </option>
+																				<option>Warren </option>
+																				<option>Washington </option>
+																				<option>Wayne </option>
+																				<option>Westmoreland </option>
+																				<option>Wyoming </option>
+																				<option>York </option>
+      </select>
+    </div>
+
+    <div class="subject-info-arrows text-center">
+      
+      <input type='button' id='btnAllRight' value='>>' style="height:40px;width:40px;"/>
+      <br />
+      <input type='button' id='btnRight' value='>' style="height:40px;width:40px;"/>
+      <br />
+      <input type='button' id='btnLeft' value='<' style="height:40px;width:40px;"/>
+      <br />
+    <input type='button' id='btnAllLeft' value='<<' style="height:40px;width:40px;"/>
+    </div>
+
+    <div class="subject-info-box-2">
+      <label>Counties You Have Selected</label>
+      <select multiple class="form-control" id="lstBox2">
+        
+      </select>
+    </div>
+
+    <div class="clearfix"></div>
+      <br/>
+      <br/>
+  </div>
+</div>
+
+<script>
+  $('#btnAvenger').click(function(e) {
+    $('select').moveToList('#StaffList', '#PresenterList');
+    e.preventDefault();
+  });
+
+  $('#btnRemoveAvenger').click(function(e) {
+    $('select').removeSelected('#PresenterList');
+    e.preventDefault();
+  });
+
+  $('#btnAvengerUp').click(function(e) {
+    $('select').moveUpDown('#PresenterList', true, false);
+    e.preventDefault();
+  });
+
+  $('#btnAvengerDown').click(function(e) {
+    $('select').moveUpDown('#PresenterList', false, true);
+    e.preventDefault();
+  });
+
+  $('#btnShield').click(function(e) {
+    $('select').moveToList('#StaffList', '#ContactList');
+    e.preventDefault();
+  });
+
+  $('#btnRemoveShield').click(function(e) {
+    $('select').removeSelected('#ContactList');
+    e.preventDefault();
+  });
+
+  $('#btnShieldUp').click(function(e) {
+    $('select').moveUpDown('#ContactList', true, false);
+    e.preventDefault();
+  });
+
+  $('#btnShieldDown').click(function(e) {
+    $('select').moveUpDown('#ContactList', false, true);
+    e.preventDefault();
+  });
+
+  $('#btnJusticeLeague').click(function(e) {
+    $('select').moveToList('#StaffList', '#FacilitatorList');
+    e.preventDefault();
+  });
+
+  $('#btnRemoveJusticeLeague').click(function(e) {
+    $('select').removeSelected('#FacilitatorList');
+    e.preventDefault();
+  });
+
+  $('#btnJusticeLeagueUp').click(function(e) {
+    $('select').moveUpDown('#FacilitatorList', true, false);
+    e.preventDefault();
+  });
+
+  $('#btnJusticeLeagueDown').click(function(e) {
+    $('select').moveUpDown('#FacilitatorList', false, true);
+    e.preventDefault();
+  });
+
+  $('#btnRight').click(function(e) {
+    $('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+    e.preventDefault();
+  });
+
+  $('#btnAllRight').click(function(e) {
+    $('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+    e.preventDefault();
+  });
+
+  $('#btnLeft').click(function(e) {
+    $('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+    e.preventDefault();
+  });
+
+  $('#btnAllLeft').click(function(e) {
+    $('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+    e.preventDefault();
+  });
+
+</script>
+
 															
 															<div class="row">
 																<div class="col-xs-12" >
@@ -235,7 +616,7 @@
 																<div id="afcars_search" class="row">
 																	<div class="col-xs-18">
 																		<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->
-																		<label for="txtDateTimeReceived"><h2>You will be notified as soon as the report is available.</h2></label>&nbsp;&nbsp;
+																		<label for="txtDateTimeReceived"><h2>You will be notified as soon as the report will be available.</h2></label>&nbsp;&nbsp;
 																		
 																	</div>
 																</div>	
@@ -247,9 +628,7 @@
 												<!--Beginning of Afcars CWIS Data --> 
 												
 												<div class="tab-pane" id="afcars_cwis_data">
-															<div class="row">
-																
-															</div>
+															<div class="row"> </div>
 															
 															<div class="modal-content">
 																	<div class="modal-header">
@@ -261,36 +640,147 @@
 																		<thead>
 																			<tr>
 																				<th>MCI</th>
-																				<th>Counties</th>
+																				<th>County</th>
 																				<th>Has Errors?</th>
+																				<th>Status</th>
 																			</tr>
 																		</thead>
 																		<tbody>
 																			<tr>
-																				<td><a href="SearchPage2.html">123456789</a></td>
+																				<!-- <td><a href="SearchPage2.html">123456789</a></td> -->
+																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
 																				<td>Dauphin</td>
 																				<td>Y</td>
+																				<td>Send to County</td>
 																			</tr>
 																			<tr>
 																				<td>987654321</td>
 																				<td>York</td>
-																				<td> </td>
+																				<td>Y</td>
+																				<td>Reviewed by OCYF</td>
 																			</tr>
 																			<tr>
 																				<td>112233445</td>
 																				<td>Cumberland</td>
 																				<td>Y</td>
+																				<td>Exclude</td>
 																			</tr>
 																		</tbody>
 																	</table>
 															 </div>
+															 
+															 
+															 <div id="runawayDetailsModal" class="modal fade">
+                                                                    <div class="modal-dialog modal-lg">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Foster Care Details</h4>
+                                                                            </div>
+
+                                                                            <div class="modal-body">
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">First Name</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Last Name</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+                                                                                            <a href="#">123456789
+                                                                                            </a>
+
+                                                                                        </div>
+                                                                                    </div>  
+                                                                                </div>
+
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-8">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Reporting Period</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%" value="01/01/2017-07/01/2017">
+
+                                                                                        </div>
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Local FIPS Code</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 25%" value="22">
+
+                                                                                        </div>
+                                                                                    </div> 
+																					
+																					
+
+                                                                                </div>
+
+
+                                                                                <div class="row">
+																				
+																					<div class="col-xs-4">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Sex</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%" value="Male">
+
+                                                                                        </div>
+																					</div>
+																					
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Date of Birth</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%" value="02/01/2017">
+
+                                                                                        </div>
+                                                                                    </div>   
+
+																					<div class="col-xs-7">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Record Number </label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%" value="AX12C1N09">
+
+                                                                                        </div>
+                                                                                    </div>                                   
+																					
+																					
+
+                                                                                </div>
+																				
+																				<div class="row">
+																					<div class="col-xs-5">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Race</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%" value="White">
+
+																							</div>
+																					</div> 
+																				</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+															 
 													
 															<div class="row"><br></div>
 															
 															<div class="panel-footer text-right">
 																<div class="btn-group primary-actions">
-																	 <form  method="get" class="btn-group primary-actions">
-                                                                         <input type="submit" name="ctl00$MainContent$btnClear" value="AFCARS Report" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																	<form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
+																	<input type="submit" name="ctl00$MainContent$btnClear" value="AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																	</form>
+																	 <form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
 																	<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
 																	</form>
 																	<form  method="get" class="btn-group primary-actions">
@@ -460,5 +950,8 @@
 				</div>
 			</div>
 	</div>
-
+	
+		<script src="../CWIS_HTML_03282018_V_1_0/js/script.js"></script>  
+		<script src="/CWIS_HTML_03282018_V_1_0/js/jquery.selectlistactions.js"></script>
+		
 </html>
