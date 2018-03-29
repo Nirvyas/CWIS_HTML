@@ -1,0 +1,66 @@
+
+/*----- Accordion -----*/
+.accordion, .accordion * {
+-webkit-box-sizing:border-box; 
+-moz-box-sizing:border-box; 
+box-sizing:border-box;
+}
+.accordion {
+overflow:hidden;
+box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+border-radius:3px;
+background:#f7f7f7;
+}
+
+.accordion-section-title.active:after {
+    content: "\2212";
+}
+/*----- Section Titles -----*/
+.accordion-section-title {
+width:100%;
+padding:15px;
+display:inline-block;
+
+background:#d3d3d3;
+transition:all linear 0.15s;
+/* Type */
+
+
+
+}
+
+.accordion-section-title:after{
+    color:black;
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+
+
+
+.accordion-section-title.active, .accordion-section-title:hover {
+
+
+}
+
+.accordion-section:last-child .accordion-section-title {
+border-bottom:none;
+}
+/*----- Section Content -----*/
+.accordion-section-content {
+padding:15px;
+display:none;
+}
+
+
+Nirav Kamlesh Vyas
+Business Technology Analyst | App Arch – Systems Integration
+Deloitte Consulting LLP
+Tel/Direct: +1 717 608 7310 
+nirvyas@deloitte.com
+
+Please consider the environment before printing.
+

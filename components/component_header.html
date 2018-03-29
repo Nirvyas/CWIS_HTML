@@ -1,0 +1,339 @@
+<script>
+    var headerRevision = $("#template-body-content").attr("data-header");
+    var selectedMenuItem = $("#template-body-content").attr("data-nav-selection");
+    var hasBroadcastMessages = $("#template-body-content").attr("data-broadcast-messages");
+
+    // Used to pick which header block to display.
+    if (headerRevision) {
+        $("." + headerRevision).attr("style", "display : block");
+    }
+    // Used to pick which menu item to select in the main navigation.
+    if (selectedMenuItem) {
+        $("#" + selectedMenuItem).addClass("active");
+    }
+    // Loads broadcast messages into the footer tag.
+    if (hasBroadcastMessages == "yes") {
+        $.get("../components/component_broadcast_messages.html", function (data) {
+            $("#template-body-content").prepend(data);
+        });
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-9 navbar-header">
+            <a class="navbar-brand" title="Pennsylvania Child Welfare Information Solution" href="#"></a>
+        </div>
+        <div class="col-xs-9 login" style="display: none !important;">
+            <div class="dpw-slogan">An initiative of the Department of Public Welfare.</div>
+            <div class="navbar-form navbar-right">
+                <div class="navbar-username">Corey O.</div>
+                <div class="btn-group navbar-user-buttons">
+                    <select name="ddStatus" id="ddStatus" class="navbar-select">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <a id="alerts" class="navbar-alerts" data-title="Alerts" data-toggle="popover" data-placement="bottom" data-content="">Alerts<span>10</span></a>
+                    <div id="alert-content">
+                        <div class="panel panel-secondary">
+                            <div class="panel-heading">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href=".indvAlert" data-toggle="tab">Individual Alert (3)</a></li>
+                                    <li><a href=".commAlert" data-toggle="tab">Community Alert (12)</a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body panel-tabs">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active indvAlert" id="indvAlert">
+                                        <div class="row">
+                                            <div class="col-xs-18">
+                                                <div class="row">
+                                                    <div class="col-xs-18 alerts-table">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Alert Message</th>
+                                                                    <th>Last Action</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Clearance application has been on unassigned stage for 10 days.</td>
+                                                                    <td>Created by John Smith<br>01/01/2014 at 10:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Clearance application has been on unassigned stage for 10 days.</td>
+                                                                    <td>Created by John Smith<br>01/01/2014 at 10:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Clearance application has been on unassigned stage for 10 days.</td>
+                                                                    <td>Created by John Smith <br>01/01/2014 at 10:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane commAlert" id="commAlert">
+                                        <div class="row">
+                                            <div class="col-xs-18">
+                                                <div class="row">
+                                                    <div class="col-xs-18 alerts-table ">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Alert Message</th>
+                                                                    <th>Last Action</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><a href="Javascript:void(0);">Any county information pertaining to referrals.</a></td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Any county information pertaining to referrals.</td>
+                                                                    <td>Created by Trevor Smith<br>01/01/2014 at 09:40am</td>
+                                                                    <td><a href="Javascript:void(0);" title="Remove Alert"><em class="glyphicon glyphicon-remove"></em></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">&nbsp;</div>
+                        </div>
+                    </div>
+                    <a id="help" class="navbar-help">Help</a>
+                    <button type="button" class="btn btn-inline btn-log-out">Log Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 no-login" style="display: none !important;">
+            <div class="navbar-form navbar-right">
+                <div class="btn-group navbar-user-buttons">
+                    <button type="button" class="btn btn-inline btn-log-out">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="navbar navbar-default" role="navigation">
+        <nav class="navbar-main megamenu">
+            <ul class="nav navbar-nav login" style="display: none !important;">
+                <li class="nav-item" id="1"><a href="dashboard.html" class="dashboard-link"><em class="glyphicon glyphicon-home"></em></a></li>
+                <li class="nav-item" id="2"><a href="referrals.html">Referral</a>
+				<div class="sub-nav solo">
+                        <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <ul>
+                                            <li><a href="referrals.html">Create Referral</a></li>
+                                            <li><a href="#11">Look Up Referral</a></li>
+                                            <li><a href="#11">Continue Referral</a></li>
+                                            <li><a href="#11">Referral Inbox</a></li>
+                                            <li><a href="#11">Help With Referrals</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </li>
+                <li class="nav-item" id="3"><a href="#">Clearance</a>
+                    <div class="sub-nav solo">
+                        <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <ul>
+                                            <li><a href="#11">Create Clearance</a></li>
+                                            <li><a href="#11">FBI Interpretation</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item" id="4"><a href="#">Administration</a>
+                    <div class="sub-nav solo">
+                        <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <ul>
+                                            <li><a href="#11">Messages</a></li>
+                                            <li><a href="#11">Alerts</a></li>
+                                            <li><a href="#11">Reference Table</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+				<li class="nav-item" id="5"><a href="#">Case</a>
+                    <div class="sub-nav solo">
+						 <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <ul>
+                                            <li><a href="../pages/case_dashboard.html">Dashboard</a></li>
+                                            <li><a href="../pages/SearchPage1.html">Search Case</a></li>
+                                            <!-- <li><a href="#11">Search FBI Interpretation</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+                </li>
+                <li class="nav-item" id="6"><a href="#">Search</a>
+                <div class="sub-nav solo">
+                        <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <ul>
+                                               <li><a href="#11">Records Check performed</a></li>
+                                            <li><a href="#11">Search Juvenile</a></li>
+                                            <li><a href="#11">Search Referral</a></li>
+                                            <li><a href="#11">Search Clearance</a></li>
+                                            <li><a href="#11">Search Appeal</a></li>
+                                            <li><a href="#11">Search Person</a></li>
+                                            <!-- <li><a href="../pages/SearchPage1.html">Search Case</a></li> -->
+                                            <li><a href="#11">Search FBI Interpretation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+				<li class="nav-item" id="7"><a href="Afcars_Page.html">AFCARS</a>
+                    <div class="sub-nav solo">
+						 <div class="row">
+                            <div class="col-xs-18">
+                                <div class="row">
+                                    <div class="col-xs-18 callout-menu-links">
+                                        <!-- <ul>
+                                            <li><a href="../pages/case_dashboard.html">Dashboard</a></li>                                         
+                                            <li><a href="../pages/SearchPage1.html">Search Case</a></li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+                </li>
+                 
+                    
+            
+            </ul>
+        </nav>
+        <ul class="nav navbar-nav no-login" style="display: none !important;">
+            <li class="active"><a href="#">About CWIS</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    head.ready(function() {
+        $('.megamenu').accessibleMegaMenu();
+
+        // hack so that the megamenu doesn't show flash of css animation after the page loads.
+        setTimeout(function () {
+            $('body').removeClass('init');
+        }, 500);
+
+        $('#alerts').popover({
+            html : true,
+            container: 'header',
+            content: function() {
+                return $('#alert-content').html();
+            }
+        });
+
+        $(".navbar-select").change(function() {
+            var str = $(this).find(":selected").text();
+
+            if (str == "Active") {
+                $( ".navbar-select" ).attr("class", "navbar-select active");
+            } else if (str == "Inactive") {
+                $( ".navbar-select" ).attr("class", "navbar-select inactive");
+            }
+
+        }).trigger('change');
+    });
+</script>

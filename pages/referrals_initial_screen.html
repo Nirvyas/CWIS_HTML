@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+	<script lang="javascript">
+        function showtransmitdiv() {
+            var showme = document.getElementById("transmissiondiv");
+            showme.style.visibility = "visible";
+        }
+        function hidetransmitdiv() {
+            var showme = document.getElementById("transmissiondiv");
+            showme.style.visibility = "hidden";
+        }
+    </script>
+	<!-- Body content goes here. -->
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="2" data-broadcast-messages="no">
+	    <div class="panel panel-secondary with-header-info">
+	        <div class="panel-heading">
+	            <!-- Nav tabs -->
+	            <ul class="nav nav-tabs">
+	                <li class="active"><a href="#recordType" data-toggle="tab">Create Referral</a></li>
+	            </ul>
+	            <!-- Referral Info Bar -->
+	            <div class="header-info">
+	                <p>Date & Time Created:<span>03/07/2014 - 05:32:21 PM</span></p>
+	                <p>Referral ID:<span>5342117</span></p>
+	                <p>Created By:<span>Leela Ganisetti </span></p>
+	            </div>
+	        </div>
+	        <div class="panel-body panel-tabs">
+	            <!-- Tab panes -->
+	            <div class="tab-content">
+	                <div class="tab-pane active" id="personInformation">
+	                    <div class="row">
+	                        <div class="col-xs-18">
+	                            <h2 class="tab-heading">Initial Referral Information:</h2>
+	                            <div class="row row-padding">
+	                                <div class="col-xs-4">
+	                                    <div class="form-group">
+	                                        <label for="txtDateTimeReceived">Date and Time Received</label>
+	                                        <input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014 10:00AM">
+	                                        <a href="#1" class="icon-date-time"></a>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-4">
+	                                    <div class="form-group">
+	                                        <label for="ddReasonforDate">Reason for Date Override</label>
+	                                        <select name="ddReasonforDate" id="ddReasonforDate">
+	                                            <option>- Select One -</option>
+	                                            <option>Active</option>
+	                                            <option>Inactive</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-3">
+	                                    <div class="form-group">
+	                                        <label for="ddReferralMethod">Referral Method</label>
+	                                        <select name="ddReferralMethod" id="ddReferralMethod">
+	                                            <option>- Select One -</option>
+	                                            <option>Active</option>
+	                                            <option>Inactive</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-3">
+	                                    <div class="form-group">
+	                                        <label for="ddReferralMethod">Referral Type</label>
+	                                        <select name="ddReferralMethod" id="ddReferralMethod">
+	                                            <option>- Select One -</option>
+	                                            <option>Active</option>
+	                                            <option>Inactive</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="row row-padding">
+	                                <div class="col-xs-4">
+	                                    <div class="form-group">
+	                                        <label for="txtCounty">County</label>
+	                                        <input type="text" id="txtCounty" class="form-control" value="Berks" disabled>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-4">
+	                                    <div class="form-group">
+	                                        <label for="txtCaseworker">County Caseworker</label>
+	                                        <input type="text" id="txtCaseworker" class="form-control" value="Joseph Doe" disabled>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-3">
+	                                    <div class="form-group">
+	                                        <label for="txtCreatedDate">County Created Date</label>
+	                                        <input type="text" id="txtCreatedDate" class="form-control" value="01/21/2014" disabled>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-3">
+	                                    <div class="form-group">
+	                                        <br>
+	                                        <div class="checkbox">
+	                                            <label>
+	                                                <input type="checkbox">
+	                                                Re-Evaluation
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <div class="col-xs-3">
+	                                    <div class="form-group">
+	                                        <br>
+	                                        <div class="checkbox">
+	                                            <label>
+	                                                <input type="checkbox">
+	                                                County Screen Out
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                </div>
+
+	                            </div>
+	                            <div class="row row-padding">
+	                                <div class="col-xs-4">
+	                                    <div class="form-group">
+	                                        <label for="ddReferralMethod">Reason for Screenout</label>
+	                                        <select name="ddReferralMethod" id="Select4">
+	                                            <option>- Select-</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                                <span id="transmissiondiv" style="visibility: hidden;">
+	                                    <div class="col-xs-3">
+	                                        <div class="form-group">
+	                                            <label for="txtCounty">ChildLine Caseworker</label>
+	                                            <input type="text" id="Text12" class="form-control" value="Berks" disabled>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-xs-4">
+	                                        <div class="form-group">
+	                                            <label for="txtCaseworker">ChildLine Supervisor</label>
+	                                            <input type="text" id="Text13" class="form-control" value="Joseph Doe" disabled>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-xs-3">
+	                                        <div class="form-group">
+	                                            <label for="txtCreatedDate">Investigation Due Date</label>
+	                                            <input type="text" id="Text14" placeholder="Eg., 01/21/2014">
+	                                            <a href="#1" class="icon-date-time"></a>
+	                                        </div>
+	                                    </div>
+	                                </span>
+
+	                            </div>
+	                            <div class="row">
+	                                <br>
+	                            </div>
+	                            <div class="panel panel-third">
+	                                <div class="panel-heading">
+	                                    <!-- Nav tabs -->
+	                                    <ul class="nav nav-tabs">
+	                                        <li class="active"><a href="#personInfo" data-toggle="tab" onclick="hidetransmitdiv()">Person Information</a></li>
+	                                        <li><a href="#safety" data-toggle="tab" onclick="hidetransmitdiv()">Safety</a></li>
+	                                        <li><a href="#allegations" data-toggle="tab" onclick="hidetransmitdiv()">Allegations</a></li>
+	                                        <li><a href="#priorReferrals" data-toggle="tab" onclick="hidetransmitdiv()">Prior Referrals</a></li>
+	                                        <li><a href="#transmit" data-toggle="tab" onclick="showtransmitdiv()">Transmission</a></li>
+	                                    </ul>
+	                                </div>
+	                                <div class="panel-body panel-tabs">
+	                                    <!-- Tab panes -->
+	                                    <div class="tab-content">
+	                                        <div class="tab-pane active" id="personInfo">
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+		                                                <div class="row">
+		                                                	<div class="col-xs-4">
+																<div class="people-entity blank">
+																	<a data-toggle="modal" data-target="#addRoleModal"><em class="glyphicon glyphicon-plus"></em>Add a Person</a>
+																</div>
+															</div>
+														</div>
+	                                                </div>
+	                                            </div>
+												<!-- Begin modal container -->
+												<div id="addRoleModal" class="modal fade">
+													<div class="modal-dialog modal-lg">
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																<h4 class="modal-title">Add New Person</h4>
+															</div>
+															<div class="modal-body">
+		                                                        <div class="row">
+		                                                            <div class="col-xs-9">
+		                                                                <label for="ddRoleAtIntake">Role at Intake:</label>
+		                                                                <select name="ddRoleAtIntake" id="Select3" multiple="multiple" size="10">
+		                                                                    <option>Alleged Perpetrator/Responsible Person
+																			<option>Alleged Victim/Subject Child</option>
+																			<option>Complainant</option>
+																			<option>Complaint Subject</option>
+																			<option>Household Member (Subject Person)</option>
+																			<option>Other</option>
+																			<option>Other Reporting Source</option>
+																			<option>Parent</option>
+																			<option>Guardian</option>
+																			<option>Non-Mandated Reporter</option>
+																			<option>Non-Mandated Reporter</option>
+																			<option>Unknown</option>
+		                                                                </select>
+		                                                            </div>
+		                                                            <div class="col-xs-9">
+		                                                                <label for="ddRoleAtIntake">Source of Knowledge of Situation:</label>
+		                                                                <select name="ddRoleAtIntake" id="Select6" multiple="multiple" size="10">
+			                                                                <option>Observed</option>
+																			<option>Told by Another Party</option>
+																			<option>Rumor</option>
+																			<option>Media</option>
+		                                                                </select>
+		                                                            </div>
+		                                                        </div>
+		                                                    </div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+																<a class="btn btn-primary" href="referrals_second_screen.html">Add</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Modal Body Container -->
+	                                            <div class="row"><br></div>
+	                                        </div>
+	                                        <!-- ++++ Safety Tab Begin ++++ -->
+	                                        <div class="tab-pane" id="safety">
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Safety Information</h2>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtMaltratment">Type of Maltreatment/ Nature of Maltreatment</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtChldFunc">Child Functioning</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtAduldFunc">Adult Functioning</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtGenParenting">General Parenting</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtParentDisc">Parenting Discipline</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtAddInfo">Additional Information</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtLegCustDetails">Legal Custody Details</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtConWorkerSafety">Concerns for Worker Safety</label>
+                                                                    <textarea class="col-xs-18" id="Textarea2" cols="38" rows="5"></textarea>
+                                                                </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row"><br></div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-5 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtConWorkerSafety">Does the Child(ren) need Immediate Attention?</label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Yes
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        No
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Unknown
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div>
+	                                                                    <input type="text" id="Text2" class="form-control" value="">
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-5 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtConWorkerSafety">Does the Child(ren) Appear Fearful?</label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Yes
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        No
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Unknown
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div>
+	                                                                    <input type="text" id="Text7" class="form-control" value="">
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-5 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtConWorkerSafety">Will Child(ren) be at Risk due to CPS Involvement?</label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Yes
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        No
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="radio">
+	                                                                    <label>
+	                                                                        <input type="radio">
+	                                                                        Unknown
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div>
+	                                                                    <input type="text" id="Text8" class="form-control" value="">
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAction">Actions Taken or About to be taken</label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Photographs
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Hospitalization
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAction"></label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        X-Rays
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Police notification
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <input type="text" id="txtAddress1" class="form-control" value="">
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAction"></label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Exam
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Emergency Custody Taken
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAction"></label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Lab Testing
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Notification of Coroner
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6 vertical-rule">
+	                                                            <div class="col-xs-15">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAction"></label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Interview Conducted
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="checkbox">
+	                                                                    <label>
+	                                                                        <input type="checkbox">
+	                                                                        Other
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <input type="text" id="txtOther" class="form-control" value="">
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <!-------------------------------------------------->
+	                                        <div class="tab-pane" id="allegations">
+	                                            <!--<p>Allegations Tab</p> -->
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Allegation Summary</h2>
+	                                                    <table class="table table-hover table-striped">
+	                                                        <thead>
+	                                                            <tr>
+	                                                                <th>&nbsp;</th>
+	                                                                <th>Alleged Victim</th>
+	                                                                <th>Alleged Perpetrator</th>
+	                                                                <th>CPSL Relationship</th>
+	                                                                <th>Perpetrator By</th>
+	                                                                <th>Category of Abuse</th>
+	                                                                <th>Sub-Category of Abuse</th>
+	                                                            </tr>
+	                                                        </thead>
+	                                                        <tbody>
+	                                                            <tr>
+	                                                                <td>
+	                                                                    <input id="Radio6" name="radParticipantSummary1" type="radio"></td>
+	                                                                <td>FirstName LastName </td>
+	                                                                <td>FirstName LastName </td>
+	                                                                <td>12345 Test Test Test #apt, PA 11111-1111</td>
+	                                                                <td></td>
+	                                                                <td>Some text goes here</td>
+	                                                                <td>Some text goes here</td>
+
+	                                                            </tr>
+	                                                        </tbody>
+	                                                    </table>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-14">
+	                                                            <div class="form-group">
+	                                                                <div class="btn-group internal-actions buttons-left">
+	                                                                    <button class="btn btn-primary">Delete</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <div class="btn-group internal-actions buttons-left">
+	                                                                    <button class="btn btn-primary">Copy Previous</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+	                                                            <h2 class="tab-heading">Allegation Details</h2>
+	                                                        </div>
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-6 vertical-rule">
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Alleged Victim/ Subject Child</label>
+	                                                                            <select name="ddRace" id="ddAllegedVictimSelect16">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Alleged Perpetrator/ Responsible Person</label>
+	                                                                            <select name="ddRace" id="ddAllegedPerp">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Category of Abuse/ Neglected</label>
+	                                                                            <select name="ddRace" id="ddCatAbuse">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Sub-Category of Abuse/ Neglected</label>
+	                                                                            <select name="ddRace" id="ddSubCatAbuse">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-14">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Selected: This box will appear if the selections are more than one item and will list all of the selections</label>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-6 vertical-rule">
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <label for="ddRace">CPSL Relationship</label>
+	                                                                            <select name="ddRace" id="ddCPSLRelation">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <label for="ddRace">Resulting Injury</label>
+	                                                                            <select name="ddRace" id="ddResInjury">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option></option>
+	                                                                                <option></option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-14">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Selected: This box will appear if the selections are more than one item and will list all of the selections</label>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-6">
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <label for="ddRace">Perpetrator By</label>
+	                                                                            <select name="ddRace" id="ddPerpBy">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-15">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <br>
+	                                                                            <label for="ddRace">Injury Locations</label>
+	                                                                            <select name="ddRace" id="ddInjuryLoc">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-14">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Selected: This box will appear if the selections are more than one item and will list all of the selections</label>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="row">
+	                                                            <hr>
+	                                                        </div>
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox">
+	                                                                            Fatality
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox">
+	                                                                            Near Fatality
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox" checked>
+	                                                                            Ritualistic Abuse
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox">
+	                                                                            Child Trafficking
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-8">
+	                                                                <div class="form-group">
+	                                                                    <label>
+	                                                                    </label>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <select name="ddSubCat1" id="ddSubCat1">
+	                                                                        <option>- Sub-Category -</option>
+	                                                                        <option>1</option>
+	                                                                        <option>2</option>
+	                                                                    </select>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <select name="ddSubCat2" id="ddSubCat2" disabled>
+	                                                                        <option>- Sub-Category -</option>
+	                                                                        <option>1</option>
+	                                                                        <option>2</option>
+	                                                                    </select>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+	                                                            <h2 class="tab-heading">Incident Details</h2>
+	                                                        </div>
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-3">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtStartDate">Start Date of Incident</label>
+	                                                                    <input type="text" id="txtStartDate" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                    <a href="#1" class="icon-date-time"></a>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-2">
+	                                                                <div class="form-group">
+	                                                                    <br>
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox">
+	                                                                            Estimated
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-3">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtEndDate">End Date of Incident</label>
+	                                                                    <input type="text" id="txtEndDate" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                    <a href="#1" class="icon-date-time"></a>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-2">
+	                                                                <div class="form-group">
+	                                                                    <br>
+	                                                                    <div class="checkbox">
+	                                                                        <label>
+	                                                                            <input type="checkbox">
+	                                                                            Estimated
+	                                                                        </label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAgePerp">Age of Perpetrator at Start of Incident</label>
+	                                                                    <input type="text" id="Text1" class="form-control" value="">
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-4">
+	                                                                <div class="form-group">
+	                                                                    <label for="txtAgeVictim">Age of Victim at Start of Incident</label>
+	                                                                    <input type="text" id="txtAgeVictim" class="form-control" value="">
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+	                                                            <h2 class="tab-heading">Address of Allegation/ Incident</h2>
+	                                                        </div>
+	                                                        <div class="col-xs-7 vertical-rule">
+	                                                            <div class="row">
+	                                                                <div class="col-xs-10">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Validated</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Address Type:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <select name="ddGendr" id="ddGendr" disabled>
+	                                                                            <option>Incident Address</option>
+	                                                                        </select>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Business Name:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text4" placeholder="Eg., 123 Main St">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Address Line 1:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text6" placeholder="Eg., 123 Main St">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Address Line 2:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text30" placeholder="Eg., 123 Main St">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Address Line 3:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text31" placeholder="Eg., 123 Main St">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">City:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text32" placeholder="Eg., 123 Main St">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">County:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <select name="ddGender" id="Select1">
+	                                                                            <option>- Select One -</option>
+	                                                                            <option>Jr.</option>
+	                                                                            <option>Sr.</option>
+	                                                                        </select>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">State/Region/Province:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <select name="ddGender" id="Select9">
+	                                                                            <option>- Select One -</option>
+	                                                                            <option>Jr.</option>
+	                                                                            <option>Sr.</option>
+	                                                                        </select>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Zip / Postal Code:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-6">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text34">
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-5">
+	                                                                    <div class="form-group">
+	                                                                        <input type="text" id="Text3">
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                            <div class="row">
+	                                                                <div class="col-xs-7">
+	                                                                    <div class="form-group">
+	                                                                        <label for="ddRace">Country:</label>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-11">
+	                                                                    <div class="form-group">
+	                                                                        <select name="ddGender" id="Select5">
+	                                                                            <option>- Select One -</option>
+	                                                                            <option>USA</option>
+	                                                                            <option>Canada</option>
+	                                                                        </select>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <div class="col-xs-15">
+	                                                                    <div class="form-group">
+	                                                                        <label for="txtMiddleName">Location Details:</label>
+	                                                                        <asp:TextBox ID="TextBox2" Rows="5" Text="Enter text" runat="server" Width="370px" TextMode="MultiLine"></asp:TextBox>
+
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="col-xs-3">
+	                                                                    <div class="form-group">
+	                                                                        <label for="txtMiddleName"></label>
+	                                                                        <br />
+	                                                                        <br />
+	                                                                        <asp:ImageButton runat="server" ImageUrl="..\..\images\icon_Spell_Check.png" ID="ImageButton10"></asp:ImageButton>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <div class="btn-group internal-actions buttons-right">
+	                                                                    <button class="btn btn-primary">Copy Previous Address</button>
+	                                                                </div>
+	                                                                <div class="btn-group internal-actions buttons-right">
+	                                                                    <button class="btn btn-primary">Validate</button>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="row">
+	                                                                <hr>
+	                                                            </div>
+	                                                            <div class="col-xs-18">
+	                                                                <div class="panel-footer text-right">
+	                                                                    <button class="btn btn-primary">ADD Address</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-10">
+	                                                            <div class="row">
+	                                                                <table class="table table-hover table-striped">
+	                                                                    <thead>
+	                                                                        <tr>
+	                                                                            <th>&nbsp;</th>
+	                                                                            <th>Type</th>
+	                                                                            <th>Address</th>
+	                                                                            <th>Action</th>
+	                                                                        </tr>
+	                                                                    </thead>
+	                                                                    <tbody>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio4" name="radParticipantSummary1" type="radio"></td>
+	                                                                            <td>Incident </td>
+	                                                                            <td>12345 Some Street, Apt 123, city name, PA 11111-111, US</td>
+	                                                                            <td><a href="#">Delete</a></td>
+	                                                                        </tr>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio5" name="radParticipantSummary1" type="radio"></td>
+	                                                                            <td>Incident </td>
+	                                                                            <td>543 Somestreet Lane, Apt 123, Cityname, NY xxxxx -xxxx, US</td>
+	                                                                            <td><a href="#">Delete</a></td>
+	                                                                        </tr>
+	                                                                    </tbody>
+	                                                                </table>
+	                                                            </div>
+	                                                        </div>
+
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+	                                                            <h2 class="tab-heading">Organization/ Facility Information</h2>
+	                                                        </div>
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-8 vertical-rule">
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddRace">Organization/ Facility Type</label>
+	                                                                            <select name="ddRace" id="ddOrgFac">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtMPIID">MPI ID</label>
+	                                                                            <input type="text" id="txtMPIID" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtServiceLoc">Service Location ID</label>
+	                                                                            <input type="text" id="txtServiceLoc" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtFacility">Facility/ Business Name</label>
+	                                                                            <input type="text" id="txtFacility" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtContactName">Contact Name</label>
+	                                                                            <input type="text" id="txtContactName" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtContactNo">Contact Number</label>
+	                                                                            <input type="text" id="txtContactNo" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtExtension">Extension</label>
+	                                                                            <input type="text" id="txtExtension" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtWebsite">Website</label>
+	                                                                            <input type="text" id="txtWebsite" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="panel-footer text-right">
+	                                                                    <div class="btn-group internal-actions buttons-left">
+	                                                                        <button class="btn btn-primary">Copy Previous Address</button>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+	                                                            <div class="col-xs-8">
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtAddr1">Address Line 1 </label>
+	                                                                            <input type="text" id="txtAddr1" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtAddr2">Address Line 2 </label>
+	                                                                            <input type="text" id="txtAddr2" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtAddr3">Address Line 3</label>
+	                                                                            <input type="text" id="txtAddr3" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="txtCity">City</label>
+	                                                                            <input type="text" id="txtCity" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddCounty">County</label>
+	                                                                            <select name="ddCounty" id="ddCounty1">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddState">State/ Region/ Province</label>
+	                                                                            <select name="ddState" id="ddState">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-5">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <label for="txtZip">Zip/ Postal Code</label>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                    <div class="col-xs-3">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <input type="text" id="txtZip" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                    <div class="col-xs-3">
+	                                                                        <div class="form-group">
+	                                                                            <br>
+	                                                                            <input type="text" id="txtPostal" class="form-control" value="">
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="row">
+	                                                                    <div class="col-xs-10">
+	                                                                        <div class="form-group">
+	                                                                            <label for="ddCountry">Country</label>
+	                                                                            <select name="ddCountry" id="ddCountry">
+	                                                                                <option>- Select One -</option>
+	                                                                                <option>1.</option>
+	                                                                                <option>2.</option>
+	                                                                            </select>
+	                                                                        </div>
+	                                                                    </div>
+	                                                                </div>
+	                                                                <div class="panel-footer text-right">
+	                                                                    <div class="btn-group internal-actions buttons-left">
+	                                                                        <button class="btn btn-primary">Search MPI</button>
+	                                                                    </div>
+	                                                                </div>
+	                                                            </div>
+
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+
+	                                        <!-------------------------------------------------->
+	                                        <div class="tab-pane" id="priorReferrals">
+	                                            <!--<p>Prior Referrals Tab Test</p> -->
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Search Criteria</h2>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <label for="ddParticipent">Participants</label>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <select name="ddParticipent" id="Select2">
+	                                                                    <option>- All -</option>
+	                                                                    <option>1</option>
+	                                                                    <option>2</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <div class="btn-group internal-actions buttons-left">
+	                                                                    <button class="btn btn-primary">Search</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <hr>
+	                                                    </div>
+	                                                    <div class="row">
+	                                                        <div class="col-xs-18">
+	                                                            <h2 class="tab-heading">Search Results</h2>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-18">
+	                                                            <table class="table table-hover table-striped">
+	                                                                <thead>
+	                                                                    <tr>
+	                                                                        <th>Alleged Victim</th>
+	                                                                        <th>Alleged Perpetrator</th>
+	                                                                        <th>Start Date
+	                                                                            <br />
+	                                                                            of Incident</th>
+	                                                                        <th>Referral ID</th>
+	                                                                        <th>Referral<br />
+	                                                                            Type</th>
+	                                                                        <th>County</th>
+	                                                                        <th>Workflow Status</th>
+	                                                                        <th>Investigation<br />
+	                                                                            Outcome</th>
+	                                                                        <%--<th>Disposition
+	                                                                            
+	                                                                            Outcome</th>--%>
+	                                                                        <th>Link</th>
+	                                                                        <th>Supplement</th>
+	                                                                        <th>Send to
+	                                                                            <br />
+	                                                                            County</th>
+	                                                                    </tr>
+	                                                                </thead>
+	                                                                <tbody>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="chkLink" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="chkSupp" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="chkSend" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox1" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox2" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox3" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox4" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox5" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox6" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox7" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox8" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox9" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox10" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox11" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox12" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox13" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox14" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox15" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                    <tr>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>FirstName LastName </td>
+	                                                                        <td>mm/dd/yyyy</td>
+	                                                                        <td>123456789</td>
+	                                                                        <td>CPS</td>
+	                                                                        <td>Countyname</td>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <%-- <td>Some Text Goes here</td>--%>
+	                                                                        <td>Investigation Review</td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox16" name="chkLink" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox17" name="chkSupp" type="checkbox"></td>
+	                                                                        <td>
+	                                                                            <input id="Checkbox18" name="chkSend" type="checkbox"></td>
+	                                                                    </tr>
+	                                                                </tbody>
+	                                                            </table>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="panel-footer text-right">
+	                                                        <!-- <div class="btn-group primary-actions"> -->
+	                                                        <ul class="pagination pull-right">
+	                                                            <li><a href="#">&laquo;</a></li>
+	                                                            <li class="active"><a href="#">1</a></li>
+	                                                            <li><a href="#">2</a></li>
+	                                                            <li><a href="#">3</a></li>
+	                                                            <li><a href="#">4</a></li>
+	                                                            <li><a href="#">5</a></li>
+	                                                            <li><a href="#">&raquo;</a></li>
+	                                                        </ul>
+	                                                        <div class="clearfix"></div>
+	                                                        <!-- </div> -->
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="tab-pane" id="transmit">
+	                                            <!--<p>Transmit Tab</p> -->
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Internal Notes</h2>
+	                                                </div>
+	                                                <div class="tab-content">
+	                                                    <div class="tab-pane active">
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-12">
+	                                                                <table class="table table-hover table-striped">
+	                                                                    <thead>
+	                                                                        <tr>
+	                                                                            <th>&nbsp;</th>
+	                                                                            <th>Note</th>
+	                                                                            <th>Date</th>
+	                                                                            <th>Name</th>
+	                                                                        </tr>
+	                                                                    </thead>
+	                                                                    <tbody>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio1" name="radReferral" type="radio"></td>
+	                                                                            <td><a href="#1">View</a></td>
+	                                                                            <td>10/10/2014</td>
+	                                                                            <td>FirstName LastName</td>
+	                                                                        </tr>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio2" name="radReferral" type="radio"></td>
+	                                                                            <td><a href="#1">View</a></td>
+	                                                                            <td>10/10/2014</td>
+	                                                                            <td>FirstName LastName</td>
+	                                                                        </tr>
+	                                                                    </tbody>
+	                                                                </table>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-left">
+	                                                    <div class="tab-content">
+	                                                        <div class="tab-pane active">
+	                                                            <div class="row row-padding">
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Delete</button>
+	                                                                    <button class="btn btn-primary">ADD</button>
+	                                                                    <button class="btn btn-primary">EDIT</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Date:</label>
+	                                                                <input type="text" id="txtTransmitDate" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                <a href="#1" class="icon-date-time"></a>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Name:</label>
+	                                                                <input type="text" id="txtName">
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-10">
+	                                                            <div class="form-group">
+	                                                                <label>Notes:</label>
+	                                                                <textarea id="txtNotes" cols="80" rows="10"></textarea>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <label for="txtMiddleName"></label>
+	                                                                <br />
+	                                                                <br />
+	                                                                <asp:ImageButton runat="server" ImageUrl="..\..\images\icon_Spell_Check.png" ID="ImageButton4"></asp:ImageButton>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-left">
+	                                                    <div class="tab-content">
+	                                                        <div class="tab-pane active">
+	                                                            <div class="row row-padding">
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">SAVE</button>
+	                                                                </div>
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Alert Worker</button>
+	                                                                </div>
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Alert Supervisor</button>
+	                                                                </div>
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Alert Director</button>
+	                                                                </div>
+	                                                                <div class="btn-group">
+	                                                                    <input type="checkbox" id="chkManual" />
+	                                                                    <label>Manual</label>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <br />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Referral Recipients</h2>
+	                                                </div>
+	                                                <div class="tab-content">
+	                                                    <div class="tab-pane active">
+	                                                        <div class="row row-padding">
+	                                                            <div class="col-xs-18">
+	                                                                <table class="table table-hover table-striped">
+	                                                                    <thead>
+	                                                                        <tr>
+	                                                                            <th>&nbsp;</th>
+	                                                                            <th>Primary/Secondary Recipient</th>
+	                                                                            <th>Recipient</th>
+	                                                                            <th>DA's Office</th>
+	                                                                            <th>Name</th>
+	                                                                            <th>Contact</th>
+	                                                                            <th>Transmit Date</th>
+	                                                                            <th>Transmit Method</th>
+	                                                                            <th>Received Date</th>
+	                                                                            <th>Acknowledged Date</th>
+	                                                                            <th>Resend</th>
+	                                                                        </tr>
+	                                                                    </thead>
+	                                                                    <tbody>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio1" name="radReferral" type="radio"></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td>
+	                                                                                <div class="btn-group">
+	                                                                                    <button class="btn btn-primary">Resend</button>
+	                                                                                </div>
+	                                                                            </td>
+	                                                                        </tr>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio2" name="radReferral" type="radio"></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td>
+	                                                                                <div class="btn-group">
+	                                                                                    <button class="btn btn-primary">Resend</button>
+	                                                                                </div>
+	                                                                            </td>
+	                                                                        </tr>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio2" name="radReferral" type="radio"></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td>
+	                                                                                <div class="btn-group">
+	                                                                                    <button class="btn btn-primary">Resend</button>
+	                                                                                </div>
+	                                                                            </td>
+	                                                                        </tr>
+	                                                                        <tr>
+	                                                                            <td>
+	                                                                                <input id="Radio2" name="radReferral" type="radio"></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td></td>
+	                                                                            <td>
+	                                                                                <div class="btn-group">
+	                                                                                    <button class="btn btn-primary">Resend</button>
+	                                                                                </div>
+	                                                                            </td>
+	                                                                        </tr>
+	                                                                    </tbody>
+	                                                                </table>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-left">
+	                                                    <div class="tab-content">
+	                                                        <div class="tab-pane active">
+	                                                            <div class="row row-padding">
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Delete</button>
+	                                                                    <button class="btn btn-primary">ADD</button>
+	                                                                    <button class="btn btn-primary">EDIT</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6">
+	                                                            <div class="form-group">
+	                                                                <label>Primary/Secondary Recipient:</label>
+	                                                                <select name="ddlPrimarySecondaryRecipient" id="ddlPrimarySecondaryRecipient">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-6">
+	                                                            <div class="form-group">
+	                                                                <label>Recipient:</label>
+	                                                                <select name="ddlPrimarySecondaryRecipient" id="ddlPrimarySecondaryRecipient">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                                <%--<textarea id="txtNotes" cols="44" rows="3"></textarea>--%>
+	                                                                <%--<asp:TextBox ID="txtNote" runat="server" TextMode="MultiLine" Rows="3"></asp:TextBox>                                                             --%>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-6">
+	                                                            <div class="form-group">
+	                                                                <input id="chkDAOffice" name="chkDAOffice" type="checkbox" />
+	                                                                <label>DA's Office</label>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Transmission Method:</label>
+	                                                                <select name="ddlTransmissionMethod" id="ddlTransmissionMethod">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Transmit Callout Worker:</label>
+	                                                                <select name="ddlCalloutWorker" id="ddlCalloutWorker">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Transmit Date:</label>
+	                                                                <input type="text" id="txtTransmitDate" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                <a href="#1" class="icon-date-time"></a>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Recipient Name:</label>
+	                                                                <input type="text" id="txtReportRecipient">
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Recipient Contact:</label>
+	                                                                <input type="text" id="txtContact">
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>County Received Date:</label>
+	                                                                <input type="text" id="Text11" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                <a href="#1" class="icon-date-time"></a>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>County Acknowledged Date:</label>
+	                                                                <input type="text" id="txtCountyAcknowledgedDate" placeholder="Eg., 01/21/2014 10:00AM">
+	                                                                <a href="#1" class="icon-date-time"></a>
+	                                                            </div>
+	                                                        </div>
+
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <div class="tab-content">
+	                                                        <div class="tab-pane active">
+	                                                            <div class="row row-padding">
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Add Recipients</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <br />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <h2 class="tab-heading">Re-evaluation</h2>
+	                                                </div>
+
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <label>Caseworker:</label>
+	                                                                <label>Caseworker Name</label>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-1">
+	                                                            <div class="form-group">
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <label>Date:</label>
+	                                                                <label>12/12/2015 10:00:32</label>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>County/Region Requesting:</label>
+	                                                                <select name="ddlCorrespondence" id="Select10">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>County/Region Worker:</label>
+	                                                                <select name="ddlCorrespondence" id="Select11">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <label>Reason for Change:</label>
+	                                                                <select name="ddlCorrespondence" id="Select12">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <label>Date Resolved:</label>
+	                                                                <label>12/12/2015 10:00:32</label>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-6">
+	                                                            <div class="form-group">
+	                                                                <label>Outcome Explaination:</label>
+	                                                                <textarea id="txtOutCome" cols="47" rows="3"></textarea>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-3">
+	                                                            <div class="form-group">
+	                                                                <label for="txtMiddleName"></label>
+	                                                                <br />
+	                                                                <br />
+	                                                                <asp:ImageButton runat="server" ImageUrl="..\..\images\icon_Spell_Check.png" ID="ImageButton11"></asp:ImageButton>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <hr />
+	                                                </div>
+	                                            </div>
+	                                            <%--<div class="row">
+	                                                <div class="col-xs-18 text-right">
+	                                                    <div class="tab-content">
+	                                                        <div class="tab-pane active">
+	                                                            <div class="row row-padding">
+	                                                                <div class="btn-group">
+	                                                                    <button class="btn btn-primary">Add Re-evaluation</button>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>--%>
+	                                            <div class="row">
+	                                                <div class="col-xs-18">
+	                                                    <div class="row row-padding">
+	                                                        <div class="col-xs-2">
+	                                                            <div class="form-group">
+	                                                                <label>Correspondence:</label>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="form-group">
+	                                                                <select name="ddlCorrespondence" id="ddlCorrespondence">
+	                                                                    <option>- Select One -</option>
+	                                                                </select>
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="col-xs-4">
+	                                                            <div class="btn-group">
+	                                                                <button class="btn btn-primary">View/Print Correspondence</button>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="panel-footer text-right">
+	                <div class="btn-group primary-actions">
+	                    <div class="btn-group">
+	                        <button class="btn btn-primary">Validate</button>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button class="btn btn-primary">Save</button>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button class="btn btn-primary">Copy Referral</button>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button class="btn btn-primary">Submit</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+	<!-- Body content goes here. -->
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="2" data-broadcast-messages="no">
+		<div class="panel panel-secondary with-header-info">
+			<div class="panel-heading">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#recordType" data-toggle="tab">Create Referral</a></li>
+				</ul>
+				<!-- Referral Info Bar -->
+				<div class="header-info">
+					<p>Date & Time Created:<span>01/11/2015 - 10:00PM</span></p>
+					<p>Clearance ID:<span>12345678</span></p>
+					<p>Created By:<span>Samantha Smith</span></p>
+				</div>
+			</div>
+			<div class="panel-body panel-tabs">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="personInformation">
+						<div class="row">
+							<div class="col-xs-18">
+								<h2 class="tab-heading">Initial Referral Information:</h2>
+								<div class="row">
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="txtDateTimeReceived">Date and Time Received</label>
+											<input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014 10:00AM">
+											<a href="#1" class="icon-date-time"></a>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="ddReasonforDate">Reason for Date Override</label>
+						                    <select name="ddReasonforDate" id="ddReasonforDate">
+						                        <option>- Select One -</option>
+						                        <option>Active</option>
+						                        <option>Inactive</option>
+						                    </select>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="ddReferralMethod">Referral Method</label>
+						                    <select name="ddReferralMethod" id="ddReferralMethod">
+						                        <option>- Select One -</option>
+						                        <option>Active</option>
+						                        <option>Inactive</option>
+						                    </select>
+										</div>
+									</div>
+									<div class="col-xs-6 form-horizontal">
+										<br>
+										<div class="form-group">
+											<label for="ddReferralMethod2" class="col-xs-9 control-label">Horizontal Label</label>
+										    <div class="col-xs-9">
+												<input type="text" id="ddReferralMethod2" id="ddReferralMethod2" placeholder="Eg., Horizontal">
+												<a href="#1" class="icon-date-time horizontal"></a>
+							            	</div>
+   						            	</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="txtCounty">County</label>
+						                    <input type="text" id="txtCounty" class="form-control" value="Berks" disabled>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="txtCaseworker">County Caseworker</label>
+						                    <input type="text" id="txtCaseworker" class="form-control" value="Joseph Doe" disabled>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="txtCreatedDate">County Created Date</label>
+						                    <input type="text" id="txtCreatedDate" class="form-control" value="01/21/2014" disabled>
+										</div>
+									</div>
+									<div class="col-xs-3">
+										<div class="form-group">
+											<br>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox"> Re-Evaluation
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3">
+										<div class="form-group">
+											<br>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox"> County Screen Out
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row"><br></div>
+								<h2 class="tab-heading">Initial Referral Information:</h2>
+								<div class="row">
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="txtDateTimeReceived">Date and Time Received</label>
+											<input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014 10:00AM">
+											<a href="#1" class="icon-date-time"></a>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="ddReasonforDate">Reason for Date Override</label>
+						                    <select name="ddReasonforDate" id="ddReasonforDate">
+						                        <option>- Select One -</option>
+						                        <option>Active</option>
+						                        <option>Inactive</option>
+						                    </select>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="form-group">
+											<label for="ddReferralMethod">Referral Method</label>
+						                    <select name="ddReferralMethod" id="ddReferralMethod">
+						                        <option>- Select One -</option>
+						                        <option>Active</option>
+						                        <option>Inactive</option>
+						                    </select>
+										</div>
+									</div>
+								</div>
+								<div class="row"><br></div>
+								<div class="panel panel-third">
+									<div class="panel-heading">
+										<!-- Nav tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#personInformation" data-toggle="tab">Person Information</a></li>
+											<li><a href="#safety" data-toggle="tab">Safety</a></li>
+											<li><a href="#allegations" data-toggle="tab">Allegations</a></li>
+											<li><a href="#priorReferrals" data-toggle="tab">Prior Referrals</a></li>
+											<li><a href="#transmit" data-toggle="tab">Transmit</a></li>
+										</ul>
+									</div>
+									<div class="panel-body panel-tabs">
+										<!-- Tab panes -->
+										<div class="tab-content">
+											<div class="tab-pane active" id="personInformation">
+												<div class="row">
+													<div class="col-xs-18">
+														<h2 class="tab-heading">Participant Information</h2>
+														<table class="table table-hover table-striped">
+															<thead>
+																<tr>
+																	<th>&nbsp;</th>
+																	<th>Person Name</th>
+																	<th>DOB</th>
+																	<th>Age</th>
+																	<th>Gender</th>
+																	<th>SSN</th>
+																	<th>Role</th>
+																	<th>Relationship</th>
+																	<th>Primary Address</th>
+																	<th>Action</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="add-url" data-url="dashboard">
+																	<!-- <td class="hidden"><a href="dashboard.html">Go to John Smith's Record</a></td> -->
+																	<td><input id="radJohn" name="radParticipantSummary" type="radio"></td>
+																	<td>John J Smith</td>
+																	<td>01/21/1976</td>
+																	<td>22</td>
+																	<td>Male</td>
+																	<td class="nowrap">321-44-5504</td>
+																	<td class="nowrap">Alleged Perpetrator/<br>Responsible Person</td>
+																	<td>Legal, Law Enforcement,<br>or Criminal Justice - Mandated</td>
+																	<td class="nowrap">123 Main Street<br>Apt 123<br>Mechanicsburg PA 17050</td>
+																	<td><a href="#">Edit</a></td>
+																</tr>
+																<tr class="add-url" data-url="dashboard">
+																	<td><input id="radMary" name="radParticipantSummary" type="radio"></td>
+																	<td>Mary J Smith</td>
+																	<td>07/28/1982</td>
+																	<td>22</td>
+																	<td>Female</td>
+																	<td>321-44-5504</td>
+																	<td>Alleged Perpetrator/<br>Responsible Person</td>
+																	<td>Legal, Law Enforcement,<br>or Criminal Justice - Mandated</td>
+																	<td>123 Main Street<br>Apt 123<br>Mechanicsburg PA 17050</td>
+																	<td><a href="#1">Edit</a></td>
+																</tr>
+																<tr class="add-url" data-url="dashboard">
+																	<td><input id="radJeff" name="radParticipantSummary" type="radio"></td>
+																	<td>Jeffrey J Smith</td>
+																	<td>08/02/1998</td>
+																	<td>22</td>
+																	<td>Male</td>
+																	<td>321-44-5504</td>
+																	<td>Alleged Perpetrator/<br>Responsible Person</td>
+																	<td>Legal, Law Enforcement,<br>or Criminal Justice - Mandated</td>
+																	<td>123 Main Street<br>Apt 123<br>Mechanicsburg PA 17050</td>
+																	<td><a href="#2">Edit</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="col-xs-18">
+														<div class="btn-group internal-actions buttons-left">
+															<button class="btn btn-primary btn-internal">Delete</button>
+														</div>
+													</div>
+												</div>
+												<div class="row"><br></div>
+												<div class="row">
+													<div class="col-xs-18">
+														<div class="internal-sections">
+															<ul class="nav nav-tabs">
+																<li class="active"><a href="#demographicInfo" data-toggle="tab">Demographic Information</a></li>
+																<li><a href="#relationshipInfo" data-toggle="tab">Relationship Information</a></li>
+																<li><a href="#addressInfo" data-toggle="tab">Address Information</a></li>
+																<li><a href="#contactInfo" data-toggle="tab">Contact Information</a></li>
+															</ul>
+															<!-- Tab panes -->
+															<div class="tab-content">
+																<div class="tab-pane active" id="demographicInfo">
+																	<div class="row">
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<div class="checkbox">
+																					<label>
+																						<input type="checkbox"> Unknown
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<div class="checkbox">
+																					<label>
+																						<input type="checkbox"> Anonymous
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<label for="txtFirstName">First Name</label>
+																				<input type="text" id="txtFirstName" placeholder="Eg., John">
+																			</div>
+																		</div>
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<label for="txtMiddleName">Middle Name</label>
+																				<input type="text" id="txtMiddleName" placeholder="Eg., Jacob">
+																			</div>
+																		</div>
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<label for="txtLastName">Last Name</label>
+																				<input type="text" id="txtLastName" placeholder="Eg., Smith">
+																			</div>
+																		</div>
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<label for="ddSuffix">Suffix</label>
+															                    <select name="ddSuffix" id="ddSuffix">
+															                        <option>- Select One -</option>
+															                        <option>Jr.</option>
+															                        <option>Sr.</option>
+															                    </select>
+																			</div>
+																		</div>
+																		<div class="col-xs-2">
+																			<div class="checkbox">
+																				<br>
+																				<a href="#5">AKA Name</a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row"><hr></div>
+																	<div class="row">
+																		<div class="col-xs-8 vertical-rule">
+																			<div class="row">
+																				<div class="col-xs-9">
+																					<div class="form-group">
+																						<label for="txtDateOfBirth">Date of Birth</label>
+																						<input type="text" id="txtDateOfBirth" placeholder="Eg., 01/21/2014">
+																						<a href="#1" class="icon-date-time"></a>
+																					</div>
+																				</div>
+																				<div class="col-xs-9">
+																					<div class="checkbox">
+																						<div class="form-group">
+																							<br>
+																							<label>
+																								<input type="checkbox"> Estimated DOB <a href="#3">(AKA DOB)</a>
+																							</label>
+																							<br>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-xs-9">
+																					<div class="form-group">
+																						<label for="txtAge">Age</label>
+																						<input type="text" id="txtAge" placeholder="Eg., 21">
+																					</div>
+																				</div>
+																				<div class="col-xs-9">
+																					<div class="form-group">
+																						<label for="txtSSN">SSN <a href="#3">(AKA SSN)</a></label>
+																						<input type="text" id="txtSSN" placeholder="Eg., 312-44-3342">
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-xs-9">
+																					<div class="form-group">
+																						<label for="txtDateOfDeath">Date of Death</label>
+																						<input type="text" id="txtDateOfDeath" placeholder="Eg., 01/21/2014">
+																						<a href="#1" class="icon-date-time"></a>
+																					</div>
+																				</div>
+																				<div class="col-xs-9">
+																					<div class="form-group">
+																						<div class="checkbox">
+																							<br>
+																							<label>
+																								<input type="checkbox"> Estimated DOD</a>
+																							</label>
+																							<br>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-xs-4 vertical-rule">
+																			<div class="row">
+																				<div class="col-xs-18">
+																					<div class="form-group">
+																						<label for="ddRace">Race</label>
+																	                    <select name="ddRace" id="ddRace">
+																	                        <option>- Select One -</option>
+																	                        <option>Jr.</option>
+																	                        <option>Sr.</option>
+																	                    </select>
+																                    </div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-xs-18">
+																					<div class="form-group">
+																						<label for="ddEthnicity">Ethnicity</label>
+																	                    <select name="ddEthnicity" id="ddEthnicity">
+																	                        <option>- Select One -</option>
+																	                        <option>Jr.</option>
+																	                        <option>Sr.</option>
+																	                    </select>
+																                    </div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-xs-18">
+																					<div class="form-group">
+																						<label for="ddGender">Gender</label>
+																	                    <select name="ddGender" id="ddGender">
+																	                        <option>- Select One -</option>
+																	                        <option>Jr.</option>
+																	                        <option>Sr.</option>
+																	                    </select>
+																                    </div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-xs-6">
+																			<div class="row">
+																				<div class="col-xs-9">
+																					<button class="btn btn-primary btn-internal">Search MCI</button>
+																				</div>
+																				<div class="col-xs-9">
+																					<p class="read-only-data">MCI ID:<span>12345534</span></p>
+																				</div>
+																			</div>
+																			<div class="row"><br></div>
+																			<div class="row">
+																				<div class="col-xs-9">
+																					<button class="btn btn-primary btn-internal">Search CWIS</button>
+																				</div>
+																				<div class="col-xs-9">
+																					<p class="read-only-data">CWIS ID:<span>123Al341111</span></p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-xs-18 text-right">
+																			<div class="btn-group">
+																				<button class="btn btn-success">Add</button>
+																				<button class="btn btn-alternate">Add Demographic Information</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="tab-pane" id="relationshipInfo">
+																	<p>Relationship Info Tab</p>
+																</div>
+																<div class="tab-pane" id="addressInfo">
+																	<p>Address Info Tab</p>
+																</div>
+																<div class="tab-pane" id="contactInfo">
+																	<p>Contact Info Tab</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="safety">
+												<p>Safety Tab</p>
+											</div>
+											<div class="tab-pane" id="allegations">
+												<p>Allegations Tab</p>
+											</div>
+											<div class="tab-pane" id="priorReferrals">
+												<p>Prior Referrals Tab</p>
+											</div>
+											<div class="tab-pane" id="transmit">
+												<p>Transmit Tab</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer text-right">
+				<div class="btn-group primary-actions">
+					<button class="btn btn-secondary">Save</button>
+					<button class="btn btn-primary">Add to Summary</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

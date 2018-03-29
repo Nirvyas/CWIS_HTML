@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <!-- JavaScripts that load template system. -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/template.js"></script>
+
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script> 
+	
+	<script type="text/javascript">
+        function toggle_tab(id) {
+		var f = document.getElementById("generated_report");
+				 f.className = 'tab-pane';
+				 f= document.getElementById("t1");
+				 
+				 f.classList.remove("active");
+				 var m = document.getElementById("t2");
+				 m.className = "active"
+            var e = document.getElementById(id);
+            
+				e.className = 'tab-pane active';
+				
+				
+            
+        }
+    </script> 
+
+    <style>
+        legend { 
+            display: block;
+            padding-left: 2px;
+            padding-right: 2px;
+            border: none;
+        }
+    </style>
+
+    <!-- Body content goes here. -->
+    <div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="2" data-broadcast-messages="no">
+        <div class="panel panel-secondary with-header-info">
+           			
+        <div class="panel-body panel-tabs">                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="personInformation">
+                        <div class="row">
+                            <div class="col-lg-18">
+                                <div class="panel panel-third">
+                                    <div class="panel-heading">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs">
+                                            <li class="active" id="t1"><a href="#afcars_search" data-toggle="tab">Create Report </a></li>
+                                            <li><a href="#generated_report" data-toggle="tab">View  Report</a></li>
+											<li id="t2"><a href="#afcars_cwis_data" data-toggle="tab">Display Report</a></li>
+											<li><a href="#view_errors" data-toggle="tab">View Errors</a></li>
+                                        </ul>
+										
+										<div class="panel-body panel-tabs">
+											<div class="tab-content">
+												<div class="tab-pane active">
+													<div id="afcars_search" class="row">
+														
+													</div>
+
+													<div class="tab-pane" id="afcars_search">   
+															<div class="row" >	
+																<div class="col-xs-8" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+																		<input type="text" id="dtofrevisedplan" style="width: 60%" value="September 2017 - February 2018">
+																	</div>
+																</div>																
+															</div>
+															<div class="row" >																	
+																<div class="col-xs-4">
+                                                                        <div class="form-group">
+                                                                            <label for="ddlCounty">Report Type</label>&nbsp;&nbsp;
+                                                                            <select style="width: 50%">
+                                                                                <option value="-1">Select...</option>
+                                                                                <option value="01">Foster Care</option>
+                                                                                <option value="02">Adoption</option>        
+                                                                            </select>
+                                                                        </div>
+																</div>
+																
+																<div class="col-xs-5">
+																	<div class="form-group">
+																		<label for="txtDateTimeReceived">Start Date</label>&nbsp;&nbsp;
+																		<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+																		<a href="#1" class="icon-date-time"></a>
+																	</div>
+																</div>   
+
+																<div class="col-xs-5">
+																	<div class="form-group">
+																		<label for="txtDateTimeReceived">End Date</label>&nbsp;&nbsp;
+																		<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+																		<a href="#1" class="icon-date-time"></a>
+																	</div>
+																</div> 
+															</div>
+															
+															<div class="row" >	
+																<div class="col-xs-5" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">MCI</label>&nbsp;&nbsp;
+																		<input type="text" id="dtofrevisedplan" style="width: 45%" >
+																	</div>
+																</div>
+<!--
+																<script>
+																	jQuery(document).ready(function(){
+																		jQuery(".chosen").chosen();
+																	});	
+                                                                 </script>      
+-->
+																
+																<div class="col-xs-8" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">County</label>&nbsp;&nbsp;																		
+																			 <select class="chosen" multiple="true" name="dropDown" id="county" style="width: 65%">
+																				<option>Adams </option>
+																				<option>Allegheny </option>
+																				<option>Armstrong </option>
+																				<option>Beaver </option>
+																				<option>Bedford </option>
+																				<option>Berks </option>
+																				<option>Blair </option>
+																				<option>Bradford </option>
+																				<option>Bucks </option>
+																				<option>Butler </option>
+																				<option>Cambria </option>
+																				<option>Cameron </option>
+																				<option>Carbon </option>
+																				<option>Centre </option>
+																				<option>Chester </option>
+																				<option>Clarion </option>
+																				<option>Clearfield </option>
+																				<option>Clinton </option>
+																				<option>Columbia </option>
+																				<option>Crawford </option>
+																				<option>Cumberland </option>
+																				<option>Dauphin </option>
+																				<option>Delaware </option>
+																				<option>Elk </option>
+																				<option>Erie </option>
+																				<option>Fayette </option>
+																				<option>Forest </option>
+																				<option>Franklin </option>
+																				<option>Fulton </option>
+																				<option>Greene </option>
+																				<option>Huntingdon </option>
+																				<option>Indiana </option>
+																				<option>Jefferson </option>
+																				<option>Juniata </option>
+																				<option>Lackawanna </option>
+																				<option>Lancaster </option>
+																				<option>Lawrence </option>
+																				<option>Lebanon </option>
+																				<option>Lehigh </option>
+																				<option>Luzerne </option>
+																				<option>Lycoming </option>
+																				<option>McKean </option>
+																				<option>Mercer </option>
+																				<option>Mifflin </option>
+																				<option>Monroe </option>
+																				<option>Montgomery </option>
+																				<option>Montour </option>
+																				<option>Northampton </option>
+																				<option>Northumberland </option>
+																				<option>Perry </option>
+																				<option>Philadelphia </option>
+																				<option>Pike </option>
+																				<option>Potter </option>
+																				<option>Schuylkill </option>
+																				<option>Snyder </option>
+																				<option>Somerset </option>
+																				<option>Sullivan </option>
+																				<option>Susquehanna </option>
+																				<option>Tioga </option>
+																				<option>Union </option>
+																				<option>Venango </option>
+																				<option>Warren </option>
+																				<option>Washington </option>
+																				<option>Wayne </option>
+																				<option>Westmoreland </option>
+																				<option>Wyoming </option>
+																				<option>York </option>
+																			</select>
+																	</div>
+																</div>
+																<div class="col-xs-8" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">System</label>&nbsp;&nbsp;
+																		<span id="MainContent_ddlCounty" title="County">
+																			 <select name="dropDown" id="county" style="width: 65%">
+																				<option>ACYS </option>
+																				<option>BERKS </option>
+																				<option>CAPS </option>
+																				<option>FACTS2 </option>
+																				<option>JCIS </option>
+																				<option>KIDS </option>																				
+																			</select>
+																		</span>
+
+																	</div>
+																</div>
+																
+															</div>
+															
+															<div class="row">
+																<div class="col-xs-12" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">Description</label>&nbsp;&nbsp;
+																		<input type="text" id="dtofrevisedplan" style="width: 85%" >
+																	</div>
+																</div>
+															</div>
+															
+																																		
+															<div class="row"><br></div>															
+																				
+															<div class="row" style="text-align: center">
+																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">Generate Report</button>
+																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+															</div>
+															<div class="row"><br></div>
+																<div class="row col-xs-18" id="showResult" style="display: none">
+																
+																<div id="afcars_search" class="row">
+																	<div class="col-xs-18">
+																		<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->
+																		<label for="txtDateTimeReceived"><h2>You will be notified as soon as the report is available.</h2></label>&nbsp;&nbsp;
+																		
+																	</div>
+																</div>	
+															</div>
+																<!--Fill everything related to family services before this -->
+													</div>	
+												</div>
+												
+												<!--Beginning of Afcars CWIS Data --> 
+												
+												<div class="tab-pane" id="afcars_cwis_data">
+															<div class="row">
+																
+															</div>
+															
+															<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h4 class="modal-title">AFCARS Report Details</h4>
+																	</div>
+																	
+																	<table class="table table-hover table-striped">
+																		<thead>
+																			<tr>
+																				<th>MCI</th>
+																				<th>Counties</th>
+																				<th>Has Errors?</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td><a href="SearchPage2.html">123456789</a></td>
+																				<td>Dauphin</td>
+																				<td>Y</td>
+																			</tr>
+																			<tr>
+																				<td>987654321</td>
+																				<td>York</td>
+																				<td> </td>
+																			</tr>
+																			<tr>
+																				<td>112233445</td>
+																				<td>Cumberland</td>
+																				<td>Y</td>
+																			</tr>
+																		</tbody>
+																	</table>
+															 </div>
+													
+															<div class="row"><br></div>
+															
+															<div class="panel-footer text-right">
+																<div class="btn-group primary-actions">
+																	 <form  method="get" class="btn-group primary-actions">
+                                                                         <input type="submit" name="ctl00$MainContent$btnClear" value="AFCARS Report" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																	<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																	</form>
+																	<form  method="get" class="btn-group primary-actions">
+																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to Counties" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																	</form>
+																</div>
+															</div>
+												</div>	
+												
+												<!--End of Afcars CWIS Data -->
+												
+												<!--Beginning of Generated Report --> 
+												<div class="tab-pane" id="generated_report">
+															<div class="row">
+																
+																<div class="row" >
+																	<div class="col-xs-18">	
+																		<div class="col-xs-7" >
+																			<div class="form-group">
+																				<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+																				<input type="text" id="dtofrevisedplan" style="width: 70%" value="September 2017 - February 2018" disabled>
+																			</div>
+																		</div>	
+																		
+																		<div class="col-xs-4">
+																			<div class="form-group">
+																				<label for="ddlCounty">Report Type</label>&nbsp;&nbsp;
+																				<input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name" value="Foster Care" disabled/>
+																			</div>
+																		</div>
+																		
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="txtDateTimeReceived">Date Created</label>&nbsp;&nbsp;
+																				<input type="text" style="width: 58%" id="txtDateTimeReceived" placeholder="Eg., 09/21/2017">
+																				<a href="#1" class="icon-date-time"></a>
+																			</div>
+																		</div>
+																			
+																	</div>  
+																</div>
+																																																																			
+																<div class="row"><br></div>															
+																					
+																<div class="row" style="text-align: center">
+																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult2')">Search</button>
+																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+																</div>
+
+																<div class="row"><br></div>
+
+																<div class="row col-xs-18" id="showResult2" style="display: none">																		
+																		<div id="afcars_search" class="row">
+																			<div class="col-xs-18">
+																				<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->																				
+																				<table class="table table-hover table-striped">
+																					<thead>
+																						<tr>
+																							<th>Date Created </th>
+																							<th>Created By</th>
+																							<th>Report Type</th>
+																							<th>Reporting Period</th>
+																							<th>Narrative</th>
+																							<th>View</th>
+																						
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>09/12/2017</td>
+																							<td>John Smith</td>
+																							<td>Foster Care</td>
+																							<td>09/01/2017  - 02/28/2018</td>
+																							<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																							<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a>
+																							
+																						</tr>
+																						<tr>
+																							<td>11/14/2017</td>
+																							<td>Jane Smiths</td>
+																							<td>Adoption</td>
+																							<td>09/01/2017  - 02/28/2018</td>
+																							<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																							
+																						</tr>																			
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>	
+																	</div>
+															</div>									
+												</div>
+												<!-- End of Generated Report -->
+												
+												<!--Beginning of View Errors -->
+												<div class="tab-pane" id="view_errors">
+													<div id="afcars_search" class="row">
+														<div class="col-xs-18">
+															<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->																				
+															<table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>MCI </th>
+																		<th>Counties</th>
+																		<th>Error Details</th>																		
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>13454555</td>
+																		<td>Adams</td>
+																		<td>Foster Care element 6 - Date of birth is missing</td>
+																	</tr>
+																	<tr>
+																		<td></td>
+																		<td></td>
+																		<td>Foster care element 50 - Year of birth of 1st foster caretake rise missing</td>
+																	</tr>																		
+
+																	<tr>
+																		<td>13454578</td>
+																		<td>Berks</td>
+																		<td>Foster Care element 6 - Date of birth is missing</td>
+																	</tr>	
+																	<tr>
+																		<td></td>
+																		<td></td>
+																		<td>Foster care element 50 - Year of birth of 1st foster caretake rise missing</td>
+																	</tr>																		
+																</tbody>
+															</table>
+														</div>
+													</div>									
+												</div>
+												
+												<!-- End of View Errors --> 
+												
+												
+											</div>
+											<!-- <div class="panel-footer text-right">
+												<div class="btn-group primary-actions">
+													 <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
+													<input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+													</form>
+													<form action="SearchPage2.html" method="get" class="btn-group primary-actions">
+													<input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+													</form>
+												</div>
+											</div> -->
+										</div>										
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>		
+			<div class="panel-footer text-right">
+				<div class="btn-group primary-actions">
+					 <!-- <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
+					<input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+					</form>
+					<form action="SearchPage2.html" method="get" class="btn-group primary-actions">
+					<input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+					</form> -->
+				</div>
+			</div>
+	</div>
+
+</html>

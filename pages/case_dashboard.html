@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <!-- JavaScripts that loads the template system. -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/template.js"></script>
+    <!-- Body content goes here. -->
+    <div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+        <div class="panel panel-primary workload-filters">
+            <div class="panel-heading">
+                <h1>Workload</h1>
+                <div class="header-actions">
+                    <a class="filter" onClick="togglePanel()">Filter By</a>
+                </div>
+            </div>
+            <div class="panel-body panel-tabs">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <!-- <li class="active"><a href="#recordType" data-toggle="tab">Record Type/Status</a></li> -->
+                    <li class="active"><a href="#countyRegion" data-toggle="tab">County/Region</a></li>
+                    <li><a href="#assignedTo" data-toggle="tab">Case Worker </a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane" id="recordType">
+                        <div class="row">
+                            <div class="col-xs-16">
+                                <h3>Case Information:</h3>
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <div class="row">
+                                            <div class="col-xs-18">
+                                                <h4>Case</h4>
+                                                <hr>
+                                            </div>
+                                            <div class="col-xs-9">
+                                                <div class="checkbox">
+                                                    <input id="chkAll" type="checkbox">
+                                                    <label for="chkAll">All</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="chkAll" type="checkbox">
+                                                    <label for="chkAll">Open</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="chkAll" type="checkbox">
+                                                    <label for="chkAll">Close</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="chkAll" type="checkbox">
+                                                    <label for="chkAll">Re-Open</label>
+                                                </div>
+                                                <!-- <div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">District Attorney</label>
+</div> -->
+                                            </div>
+                                            <!-- <div class="col-xs-9">
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Information Only</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Protective Services Alert</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Supplemntal</label>
+</div>
+</div> -->
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xs-8">
+<div class="row">
+<div class="col-xs-18">
+<h4>Clearance</h4>
+<hr>
+</div>
+<div class="col-xs-9">
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">All</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Child Care Services Employment</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Foster Care</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Adoption</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">School Employment</label>
+</div>
+</div>
+<div class="col-xs-9">
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Employment With a Significant Likelihood of Regular Contact With Children</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Volunteers</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Care Check</label>
+</div>
+</div>
+</div>
+</div> -->
+                                    <!-- <div class="col-xs-3">
+<h4>Appeals</h4>
+<hr>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">All</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Administrative</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Policy</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">BHA</label>
+</div>
+<div class="checkbox">
+<input id="chkAll" type="checkbox">
+<label for="chkAll">Secretary</label>
+</div>
+</div> -->
+                                </div>
+                            </div>
+                            <div class="col-xs-2">
+                                <h3>Status:</h3>
+                                <div class="row">
+                                    <div class="col-xs-18">
+                                        <br>
+                                        <div class="checkbox">
+                                            <input id="chkAll" type="checkbox">
+                                            <label for="chkAll">All</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="chkAll" type="checkbox">
+                                            <label for="chkAll">Pending</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="chkAll" type="checkbox">
+                                            <label for="chkAll">Open</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="assignedTo">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class='tableauPlaceholder' id='viz1521051447222' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CW&#47;CWIS_Dashboard&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CWIS_Dashboard&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CW&#47;CWIS_Dashboard&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1521051447222');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!--
+<iframe src="https://public.tableau.com/shared/PM55BG4ST?:display_count=yes"
+width="720" height="700"></iframe>
+-->
+
+        <div class="clearfix"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="clearfix"><br></div>
+        <div class="dashboard-grid">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-xs-3">FSP Review</th>
+                        <th class="col-xs-3">> 30 Days</th>
+                        <th class="col-xs-3">> 60 Days</th>
+                        <th class="col-xs-3">> 120 Days</th>
+                        <th class="col-xs-3">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Open</td>
+                        <td><a href="#55">10</a></td>
+                        <td></td>
+                        <td><a href="#55">2</a></td>
+                        <td><a href="#55">12</a></td>
+                    </tr>
+                    <tr>
+                        <td>Close</td>
+                        <td></td>
+                        <td><a href="#55">1</a></td>
+                        <td><a href="#55">3</a></td>
+                        <td><a href="#55">4</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="dashboard-grid">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-xs-3">CPP Review</th>
+                        <th class="col-xs-3">> 30 Days</th>
+                        <th class="col-xs-3">> 60 Days</th>
+                        <th class="col-xs-3">> 120 Days</th>
+                        <th class="col-xs-3">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Investigation Review</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Corrections</td>
+                        <td><a href="#55">1</a></td>
+                        <td><a href="#55">2</a></td>
+                        <td><a href="#55">3</a></td>
+                        <td><a href="#55">6</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clearfix"><br></div>
+        <!-- <div class="dashboard-grid">
+<table class="table table-hover table-striped">
+<thead>
+<tr>
+<th class="col-xs-3">Clearance</th>
+<th class="col-xs-3">0-4 Days</th>
+<th class="col-xs-3">5-9 Days</th>
+<th class="col-xs-3">10-14 Days</th>
+<th class="col-xs-3">> 14 Days</th>
+<th class="col-xs-3">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Created</td>
+<td><a href="#55">10</a></td>
+<td></td>
+<td><a href="#55">2</a></td>
+<td></td>
+<td><a href="#55">12</a></td>
+</tr>
+<tr>
+<td>Auto Investigate</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Under Review</td>
+<td></td>
+<td><a href="#55">1</a></td>
+<td><a href="#55">3</a></td>
+<td></td>
+<td><a href="#55">4</a></td>
+</tr>
+<tr>
+<td>Supervisor Review</td>
+<td><a href="#55">1</a></td>
+<td><a href="#55">2</a></td>
+<td></td>
+<td><a href="#55">3</a></td>
+<td><a href="#55">6</a></td>
+</tr>
+</tbody>
+</table>
+</div> -->
+        <div class="clearfix"><br></div>
+        <!-- <div class="dashboard-grid">
+<table class="table table-hover table-striped">
+<thead>
+<tr>
+<th class="col-xs-3">Out of State</th>
+<th class="col-xs-3">0-14 Days</th>
+<th class="col-xs-3">15-30 Days</th>
+<th class="col-xs-3">31-45 Days</th>
+<th class="col-xs-3">> 45 Days</th>
+<th class="col-xs-3">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Under Review</td>
+<td></td>
+<td><a href="#55">1</a></td>
+<td><a href="#55">3</a></td>
+<td></td>
+<td><a href="#55">4</a></td>
+</tr>
+</tbody>
+</table>
+</div> -->
+        <!-- <div class="clearfix"><br></div> -->
+        <!-- <div class="dashboard-grid">
+<table class="table table-hover table-striped">
+<thead>
+<tr>
+<th class="col-xs-3">Appeal</th>
+<th class="col-xs-3">0-30 Days</th>
+<th class="col-xs-3">31-60 Days</th>
+<th class="col-xs-3">61-90 Days</th>
+<th class="col-xs-3">> 90 Days</th>
+<th class="col-xs-3">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Appeal Created</td>
+<td><a href="#55">10</a></td>
+<td></td>
+<td><a href="#55">2</a></td>
+<td></td>
+<td><a href="#55">12</a></td>
+</tr>
+<tr>
+<td>Under Review</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Finalization</td>
+<td></td>
+<td><a href="#55">1</a></td>
+<td><a href="#55">3</a></td>
+<td></td>
+<td><a href="#55">4</a></td>
+</tr>
+</tbody>
+</table>
+</div> -->
+        <!-- <div class="clearfix"><br></div> -->
+        <!-- <div class="dashboard-grid">
+<table class="table table-hover table-striped">
+<thead>
+<tr>
+<th class="col-xs-3">Identity Request</th>
+<th class="col-xs-3">0-30 Days</th>
+<th class="col-xs-3">31-60 Days</th>
+<th class="col-xs-3">61-90 Days</th>
+<th class="col-xs-3">> 90 Days</th>
+<th class="col-xs-3">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Under Review</td>
+<td><a href="#55">1</a></td>
+<td><a href="#55">2</a></td>
+<td></td>
+<td><a href="#55">3</a></td>
+<td><a href="#55">6</a></td>
+</tr>
+</tbody>
+</table>
+</div> -->
+        <!-- <div class="clearfix"><br></div> -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1>Workload Summary</h1>
+                <div class="header-actions">
+                    <a class="manage-batch" data-toggle="modal" data-target="#baseModal">Manage Batch Assignments</a>
+                    <a class="applied-filters" data-toggle="modal" data-target="#baseModal">View Applied Filters</a>
+                </div>
+            </div>
+            <div class="panel-body panel-tabs">
+                <div class="tab-content workload-summary">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>MCI ID</th>
+                                <th>Participant Name</th>
+                                <th>Received Date</th>
+                                <th class="hidden-xs hidden-sm">Type</th>
+                                <th>Status</th>
+                                <th>Active/Inactive</th>
+                                <th class="hidden-xs hidden-sm">Case Worker Assigned To</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123456789</td>
+                                <td>John J Smith</td>
+                                <td>01/21/1976</td>
+                                <td class="hidden-xs hidden-sm">Care Check</td>
+                                <td>Open</td>
+                                <td>Active</td>
+                                <td class="hidden-xs hidden-sm">
+                                    <select name="ddAssignedTo" id="ddAssignedTo">
+                                        <option>- Select One -</option>
+                                        <option>Smith, John J</option>
+                                        <option>Smith, Jeffrey J</option>
+                                    </select>
+                                </td>
+                                <td class="nowrap"><a href="#2">View</a><a href="#2">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td>123453322</td>
+                                <td>Mary J Smith</td>
+                                <td>07/28/1982</td>
+                                <td class="hidden-xs hidden-sm">Care Check</td>
+                                <td>Open</td>
+                                <td>Active</td>
+                                <td class="hidden-xs hidden-sm">
+                                    <select name="ddAssignedTo" id="ddAssignedTo">
+                                        <option>- Select One -</option>
+                                        <option>Smith, John J</option>
+                                        <option>Smith, Jeffrey J</option>
+                                    </select>
+                                </td>
+                                <td class="nowrap"><a href="#2">View</a><a href="#2">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td>786868998</td>
+                                <td>Jeffrey J Smith</td>
+                                <td>08/02/1998</td>
+                                <td class="hidden-xs hidden-sm">Care Check</td>
+                                <td>Open</td>
+                                <td>Active</td>
+                                <td class="hidden-xs hidden-sm">
+                                    <select name="ddAssignedTo" id="ddAssignedTo">
+                                        <option>- Select One -</option>
+                                        <option>Smith, John J</option>
+                                        <option>Smith, Jeffrey J</option>
+                                    </select>
+                                </td>
+                                <td class="nowrap"><a href="#2">View</a><a href="#2">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer text-right">
+                <p class="record-count pull-left">Currently viewing 1-3 of 250 records found.</p>
+                <ul class="pagination pull-right">
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active" ><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</html>

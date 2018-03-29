@@ -1,0 +1,88 @@
+<!--
+	Base Body File
+	Created on 02/26/2014 by Corey O'Brien for Deloitte.
+-->
+
+<body>
+	<!-- Wrap all page content here. -->
+	<div id="wrapper">
+		<form role="form" action="#">
+			<header></header>
+			<!-- Begin page container. -->
+			<div id="layout-base" class="container"></div>
+		</form>
+	</div>
+	<footer></footer>
+	<!-- Begin modal container -->
+	<div id="baseModal" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Re-Evaluate Referral</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="txtCounty">ChildLine Caseworker</label>
+			                    <input type="text" id="txtCounty" class="form-control" value="Smith, John" disabled>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="txtCounty">Date and Time</label>
+			                    <input type="text" id="txtCounty" class="form-control" value="01/21/2014 10:00AM" disabled>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label for="txtCounty">Original Referral Type</label>
+			                    <input type="text" id="txtCounty" class="form-control" value="Referral" disabled>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label for="txtCounty">Original Primary Recipient</label>
+			                    <input type="text" id="txtCounty" class="form-control" value="Thompson, Mary" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="txtDateTimeReceived">County/Region Worker</label>
+								<input type="text" id="txtDateTimeReceived" value="E.g., Smith, John">
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label for="ddReasonforDate">County/Region</label>
+			                    <select name="ddReasonforDate" id="ddReasonforDate">
+			                        <option>- Select One -</option>
+			                        <option>Active</option>
+			                        <option>Inactive</option>
+			                    </select>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label for="ddReferralMethod">Reason</label>
+			                    <select name="ddReferralMethod" id="ddReferralMethod">
+			                        <option>- Select One -</option>
+			                        <option>Active</option>
+			                        <option>Inactive</option>
+			                    </select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal Body Container -->
+</body>
