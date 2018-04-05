@@ -54,11 +54,13 @@
 
                                             <li class="active"><a href="#ddddd" data-toggle="tab">Case Information</a></li>
                                             <li><a href="#participants" data-toggle="tab">Participants</a></li>
-                                            <li><a href="#collateral" data-toggle="tab">Collateral</a></li>
+                                            <li><a href="#resources" data-toggle="tab">Resources</a></li>
                                             <li><a href="#plans" data-toggle="tab">Plans</a></li>
                                             <li><a href="#services" data-toggle="tab">Family Services</a></li>
                                             <li><a href="#caseNotes" data-toggle="tab">Case Notes</a></li>
                                             <li><a href="#assignments" data-toggle="tab">Assignments</a></li>
+                                            <li><a href="#placeHome" data-toggle="tab">Placement/Home Removal</a></li>
+                                            <li><a href="#adopt" data-toggle="tab">Adoptions</a></li>
                                             <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
 
                                         </ul>
@@ -68,484 +70,8 @@
                                         <!-- Tab panes -->
                                         <div class="tab-content">
 
-
-
-
-
-
-
-
-                                            <div class="tab-pane  active" id="ddddd">	
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Case Summary Information</h2>
-                                                    </div> 
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            <label for="casname">Case ID</label>&nbsp;&nbsp;
-                                                            <input type="text" id="casname" style="max-width:50%;" value="12345" disabled>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            <label for="txtFirstName">Case Name</label>&nbsp;&nbsp;
-                                                            <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            <label for="county">County</label>&nbsp;&nbsp;
-                                                            <input name="county" type="text" autocomplete="off" style="max-width:50%;" id="county" alt="Enter First Name"value="Allegheny" disabled />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-
-                                                            <label for="caseID">County Case ID</label>&nbsp;&nbsp;
-                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="12345" disabled />  
-
-                                                        </div>
-                                                    </div>  
-
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            <label for="caseID">Case Created Date</label>&nbsp;&nbsp;
-                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="10/05/16" disabled />  
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                                <!-- Tab panes -->
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Case Status</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <!--<p>Case Status Section</p>-->
-                                                <div class="row row-padding">
-                                                    <table class="table table-hover table-striped">
-                                                        <thead>
-                                                            <tr> 
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Status</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Open/Close Date</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Updated By</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Reason</a>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr>
-                                                            <td>
-                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Open</a>
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2001</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith : John Smith</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">Outcome of Investigation</span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <div class="row"><br></div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Financial Status</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <!--<p>Financial Status Section</p>-->
-                                                <div class="row row-padding">
-                                                    <table class="table table-hover table-striped">
-                                                        <thead>
-                                                            <tr> 
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Status</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Active/Inactive Date</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Updated By</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Reason</a>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr>
-                                                            <td>
-                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Active</a>
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2001</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jdoe : John Doe</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">Outcome of Investigation</span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <div class="row"><br></div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Primary Worker assignment</h2>
-                                                    </div>
-                                                </div>
-
-                                                <!--<p>Primary Worker assignment Section</p>-->
-                                                <div class="row row-padding">
-                                                    <table class="table table-hover table-striped">
-                                                        <thead>
-                                                            <tr> 
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Last Name</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">First Name</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Worker ID</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr>
-                                                            <td>
-                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Jack</a>
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Smith</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2001</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/16/2017</span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <div class="row"><br></div>
-                                                </div>
-
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Supervisor Assignment</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <!--<p>Supervisor  assignment Section</p>-->
-                                                <div class="row row-padding">
-                                                    <table class="table table-hover table-striped">
-                                                        <thead>
-                                                            <tr> 
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Last Name</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">First Name</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Worker ID</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr>
-                                                            <td>
-                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Jane</a>
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Smith</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2001</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/16/2017</span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <div class="row"><br></div>
-                                                </div>
-
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Associated Referrals</h2>
-                                                    </div> 
-                                                </div>												
-
-                                                <!--<p>Associated Referrals  Section</p>-->
-                                                <div class="row row-padding">
-                                                    <table class="table table-hover table-striped">
-                                                        <thead>
-                                                            <tr> 
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral ID</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral Created Date</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral Type</a>
-                                                                </th>
-                                                                <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Primary Recipient</a>
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tr>
-                                                            <td>
-                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">761952</a>
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2001</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">GPS</span>
-                                                            </td>
-                                                            <td>
-                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">John Jackson</span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <div class="row"><br></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane" id="participants">
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Participant List</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                    <div class="people-entity victim">
-                                                        <h4>Jane Doe - 123456789<em class="glyphicon glyphicon-user"></em></h4>
-                                                        <p style="word-wrap: break-word;">Child</p>
-                                                        <div class="row">
-                                                            <div class="col-xs-8" ng-show="Person.ReferralPerson.ExpungedIndicator">
-                                                                <h6 style="color: red"><em class="glyphicon glyphicon-remove-sign"></em>Expunged</h6>
-                                                            </div>
-                                                        </div>
-                                                        <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
-                                                        <div class="row" style="display: none;">
-                                                            <div class="col-xs-9">
-                                                                <h5>DOB</h5>
-                                                                <p>10/05/1971</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Age</h5>
-                                                                <p>47</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Gender</h5>
-                                                                <p>M</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>SSN</h5>
-                                                                <p>123-456-7890</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Relationship</h5>
-                                                                <p>Uncle</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Person ID</h5>
-                                                                <p><b><a href="javascript:void(0)" id="MainContent_A17" onclick="OpenVPS($(this).text())">123345567</a></b></p>
-                                                            </div>
-
-                                                            <div class="col-xs-18">
-                                                                <h5>Primary Address</h5>
-                                                                <p style="word-wrap: break-word;">Camp Hill</p>
-                                                            </div>
-                                                            <div class="col-xs-18">
-                                                                <h5>Source of Knowledge</h5>
-                                                                <p>-------</p>
-                                                            </div>
-                                                            <div class="col-xs-18">
-                                                                <h5>Transmission ID</h5>
-                                                                <p style="color:gray">123456</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-18 btn-group-xs text-right">
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="showDIV('divDemographicInformation')"><em class="glyphicon glyphicon-eye-open"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit" ng-click="editInvPersonInfo(Person, $index, true)" aria-disabled="true" onclick="showDIV('divDemographicInformation')" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-pencil"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline pull-left" title="Delete" data-toggle="modal" ng-show="!ReferralReadOnly" data-target="#divDeletePerson" ng-click="SetSelectedPersontoDelete($index)"><em class="glyphicon glyphicon-trash"></em></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                    <div class="people-entity victim">
-                                                        <h4>John Doe - 987654321<em class="glyphicon glyphicon-user"></em></h4>
-                                                        <p style="word-wrap: break-word;">Parent</p>
-                                                        <div class="row"></div>
-
-                                                        <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
-                                                        <div class="row" style="display: none;">
-                                                            <div class="col-xs-9">
-                                                                <h5>DOB</h5>
-                                                                <p>10/05/1971</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Age</h5>
-                                                                <p>47</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Gender</h5>
-                                                                <p>M</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>SSN</h5>
-                                                                <p>123-456-7890</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Relationship</h5>
-                                                                <p>Uncle</p>
-                                                            </div>
-                                                            <div class="col-xs-9">
-                                                                <h5>Person ID</h5>
-                                                                <p><b><a href="javascript:void(0)" id="MainContent_A17" onclick="OpenVPS($(this).text())">123345567</a></b></p>
-                                                            </div>
-
-                                                            <div class="col-xs-18">
-                                                                <h5>Primary Address</h5>
-                                                                <p style="word-wrap: break-word;">Camp Hill</p>
-                                                            </div>
-                                                            <div class="col-xs-18">
-                                                                <h5>Source of Knowledge</h5>
-                                                                <p>-------</p>
-                                                            </div>
-                                                            <div class="col-xs-18">
-                                                                <h5>Transmission ID</h5>
-                                                                <p style="color:gray">123456</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-18 btn-group-xs text-right">
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="showDIV('divDemographicInformation')"><em class="glyphicon glyphicon-eye-open"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit" ng-click="editInvPersonInfo(Person, $index, true)" aria-disabled="true" onclick="showDIV('divDemographicInformation')" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-pencil"></em></a>
-                                                                <a href="Javascript:void(0);" class="btn btn-inline pull-left" title="Delete" data-toggle="modal" ng-show="!ReferralReadOnly" data-target="#divDeletePerson" ng-click="SetSelectedPersontoDelete($index)"><em class="glyphicon glyphicon-trash"></em></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row"><br></div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Participants Information</h2>
-                                                    </div> 
-                                                </div>
-                                                <!-- Tabbing in Participant Tab -->
-
-                                                <div class="panel panel-third">
-                                                    <div class="panel-heading">
-                                                        <!-- Nav tabs -->
-                                                        <ul class="nav nav-tabs">
-                                                            <li class="active"><a href="#demographic" data-toggle="tab">General Information</a></li>
-                                                            <li><a href="#placement" data-toggle="tab">Placement/Home Removal</a></li>
-                                                            <li><a href="#health" data-toggle="tab">Health</a></li>
-                                                            <li><a href="#edu" data-toggle="tab">Education</a></li>
-                                                            <li><a href="#adoption" data-toggle="tab">Adoption</a></li>
-                                                            <li><a href="#caseworker" data-toggle="tab">Caseworker Visitation History</a></li>
-                                                            <li><a href="#familyVisitation" data-toggle="tab">Family Visitation History</a></li>
-
-                                                        </ul>
-                                                    </div>
-
-                                                    <!--DEtails of tabs -->
-
-                                                    <div class="panel-body panel-tabs">
-                                                        <!-- Tab panes -->
-                                                        <div class="tab-content">
-
-
-
-                                                            <div class="tab-pane " id="adoptions">
-                                                                <div class="row">
-                                                                    <div class="col-lg-18">
-                                                                        <h2 class="tab-heading">Adoptions Information</h2>
-                                                                    </div> 
-                                                                </div>
-                                                                <div class="row"><br></div>
-
-                                                                <p>Adoptions Info tab</p>
-                                                                <br>																		
-                                                                <br>
-                                                            </div>
-
-
-                                                            <div class="tab-pane" id="placement">
+                                            <div class="tab-pane" id="placeHome">
+                                                
                                                                 <div class="row">
                                                                     <div class="col-lg-18">
                                                                         <h2 class="tab-heading">Removal Episodes</h2>
@@ -1507,7 +1033,623 @@
 
                                                                 <!--End temporaryabsence modal-->
                                                                 <!--  Everything related to placement goes within this-->
+                                                            
+                                            </div>
+                                            
+                                            <div class="tab-pane" id="adopt">
+                                              
+                                                                <div class="row">
+                                                                    <div class="col-lg-18">
+                                                                        <h2 class="tab-heading">Adoptions Information</h2>
+                                                                    </div> 
+                                                                </div>
+                                                                <div class="row"><br></div>
+
+                                                                <p>Adoptions Info tab</p>
+                                                                <br>																		
+                                                                <br>
+                                                            
+                                            </div>
+
+
+
+
+
+
+
+                                            <div class="tab-pane  active" id="ddddd">	
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Case Summary Information</h2>
+                                                    </div> 
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="casname">Case ID</label>&nbsp;&nbsp;
+                                                            <input type="text" id="casname" style="max-width:50%;" value="12345" disabled>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-xs-6">
+<div class="form-group">
+<label for="ddlCounty">Case Type</label>
+
+<select disabled style="max-width:50%;">
+
+<option value="01" selected>JPO</option>
+<option value="02">JPO/CCYA</option>
+<option value="03">CCYA</option>
+
+</select>
+
+</div>
+</div>
+
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="txtFirstName">Case Name</label>&nbsp;&nbsp;
+                                                            <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled />
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="county">County</label>&nbsp;&nbsp;
+                                                            <input name="county" type="text" autocomplete="off" style="max-width:50%;" id="county" alt="Enter First Name"value="Allegheny" disabled />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+
+                                                            <label for="caseID">County Case ID</label>&nbsp;&nbsp;
+                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="12345" disabled />  
+
+                                                        </div>
+                                                    </div>  
+
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="caseID">Case Created Date</label>&nbsp;&nbsp;
+                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="10/05/16" disabled />  
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                                <div class="row"><br></div>
+
+                                                <!-- Tab panes -->
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Case Status</h2>
+                                                    </div> 
+                                                </div>
+
+                                                <div class="row">
+                                                
+                                                     <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="caseID">Current Status</label>&nbsp;&nbsp;
+                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="" disabled />  
+                                                        </div>
+                                                    </div>
+                                                
+                                                
+                                                </div>
+                                                
+                                                <!--<p>Case Status Section</p>-->
+                                                <div class="row row-padding">
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Open Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Close Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Closed By</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">View</a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td>
+                                                                01/10/2016
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2017</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith : John Smith</span>
+                                                            </td>
+                                                            <td>
+                                                                <a href="Javascript:void(0);" title="View" data-toggle="modal" onclick="toggle_visibility('reasonDetail1')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                01/10/2015
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2016</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jasmith : Jane Smith</span>
+                                                            </td>
+                                                            <td>
+                                                                <a href="Javascript:void(0);" title="View" data-toggle="modal" onclick="toggle_visibility('reasonDetail1')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="row"><br></div>
+                                                </div>
+                                                
+                                                
+                                                <div id="reasonDetail1" style="display:none">
+                                                                   
+                                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Open Reason</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                    <div class="row"><br></div>
+                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Closure Reason</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            
+                                                                           <div class="row"><br></div>
+                                                                           
+                                                                           
+                                                                        </div>
+                                                                   
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Financial Status</h2>
+                                                    </div> 
+                                                </div>
+
+                                                <div class="row">
+                                                
+                                                     <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label for="caseID">Current Status</label>&nbsp;&nbsp;
+                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="" disabled />  
+                                                        </div>
+                                                    </div>
+                                                
+                                                
+                                                </div>
+                                                <!--<p>Financial Status Section</p>-->
+                                                <div class="row row-padding">
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Active Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Inactive Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Updated By</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">View</a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td>
+                                                                01/10/2016
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2017</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jdoe : John Doe</span>
+                                                            </td>
+                                                            <td>
+                                                                  <a href="Javascript:void(0);" title="View" data-toggle="modal" onclick="toggle_visibility('reasonDetail2')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                01/10/2015
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2016</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jadoe : Jamie Doe</span>
+                                                            </td>
+                                                            <td>
+                                                                  <a href="Javascript:void(0);" title="View" data-toggle="modal" onclick="toggle_visibility('reasonDetail2')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="row"><br></div>
+                                                </div>
+                                               <div id="reasonDetail2" style="display:none">
+                                                                   
+                                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Active Reason</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                    <div class="row"><br></div>
+                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Inactive Reason</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            
+                                                                           <div class="row"><br></div>
+                                                                           
+                                                                           
+                                                                        </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Primary Worker assignment</h2>
+                                                    </div>
+                                                </div>
+
+                                                <!--<p>Primary Worker assignment Section</p>-->
+                                                <div class="row row-padding">
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Last Name</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">First Name</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Worker ID</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Jack</a>
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Smith</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2001</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/16/2017</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="row"><br></div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Supervisor Assignment</h2>
+                                                    </div> 
+                                                </div>
+
+                                                <!--<p>Supervisor  assignment Section</p>-->
+                                                <div class="row row-padding">
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Last Name</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">First Name</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Worker ID</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Jane</a>
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Smith</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2001</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/16/2017</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="row"><br></div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Associated Referrals</h2>
+                                                    </div> 
+                                                </div>												
+
+                                                <!--<p>Associated Referrals  Section</p>-->
+                                                <div class="row row-padding">
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral ID</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral Created Date</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Referral Type</a>
+                                                                </th>
+                                                                <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Primary Recipient</a>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">761952</a>
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                                <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2001</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">GPS</span>
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderStatus">John Jackson</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="row"><br></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane" id="participants">
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Participant List</h2>
+                                                    </div> 
+                                                </div>
+
+                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                                    <div class="people-entity victim">
+                                                        <h4>Jane Doe - 123456789<em class="glyphicon glyphicon-user"></em></h4>
+                                                        <p style="word-wrap: break-word;">Child</p>
+                                                        <div class="row">
+                                                            <div class="col-xs-8" ng-show="Person.ReferralPerson.ExpungedIndicator">
+                                                                <h6 style="color: red"><em class="glyphicon glyphicon-remove-sign"></em>Expunged</h6>
                                                             </div>
+                                                        </div>
+                                                        <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
+                                                        <div class="row" style="display: none;">
+                                                            <div class="col-xs-9">
+                                                                <h5>DOB</h5>
+                                                                <p>10/05/1971</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Age</h5>
+                                                                <p>47</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Gender</h5>
+                                                                <p>M</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>SSN</h5>
+                                                                <p>123-456-7890</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Relationship</h5>
+                                                                <p>Uncle</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Person ID</h5>
+                                                                <p><b><a href="javascript:void(0)" id="MainContent_A17" onclick="OpenVPS($(this).text())">123345567</a></b></p>
+                                                            </div>
+
+                                                            <div class="col-xs-18">
+                                                                <h5>Primary Address</h5>
+                                                                <p style="word-wrap: break-word;">Camp Hill</p>
+                                                            </div>
+                                                            <div class="col-xs-18">
+                                                                <h5>Source of Knowledge</h5>
+                                                                <p>-------</p>
+                                                            </div>
+                                                            <div class="col-xs-18">
+                                                                <h5>Transmission ID</h5>
+                                                                <p style="color:gray">123456</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-18 btn-group-xs text-right">
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="showDIV('divDemographicInformation')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit" ng-click="editInvPersonInfo(Person, $index, true)" aria-disabled="true" onclick="showDIV('divDemographicInformation')" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-pencil"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline pull-left" title="Delete" data-toggle="modal" ng-show="!ReferralReadOnly" data-target="#divDeletePerson" ng-click="SetSelectedPersontoDelete($index)"><em class="glyphicon glyphicon-trash"></em></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                                    <div class="people-entity victim">
+                                                        <h4>John Doe - 987654321<em class="glyphicon glyphicon-user"></em></h4>
+                                                        <p style="word-wrap: break-word;">Parent</p>
+                                                        <div class="row"></div>
+
+                                                        <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
+                                                        <div class="row" style="display: none;">
+                                                            <div class="col-xs-9">
+                                                                <h5>DOB</h5>
+                                                                <p>10/05/1971</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Age</h5>
+                                                                <p>47</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Gender</h5>
+                                                                <p>M</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>SSN</h5>
+                                                                <p>123-456-7890</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Relationship</h5>
+                                                                <p>Uncle</p>
+                                                            </div>
+                                                            <div class="col-xs-9">
+                                                                <h5>Person ID</h5>
+                                                                <p><b><a href="javascript:void(0)" id="MainContent_A17" onclick="OpenVPS($(this).text())">123345567</a></b></p>
+                                                            </div>
+
+                                                            <div class="col-xs-18">
+                                                                <h5>Primary Address</h5>
+                                                                <p style="word-wrap: break-word;">Camp Hill</p>
+                                                            </div>
+                                                            <div class="col-xs-18">
+                                                                <h5>Source of Knowledge</h5>
+                                                                <p>-------</p>
+                                                            </div>
+                                                            <div class="col-xs-18">
+                                                                <h5>Transmission ID</h5>
+                                                                <p style="color:gray">123456</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-18 btn-group-xs text-right">
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="showDIV('divDemographicInformation')"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit" ng-click="editInvPersonInfo(Person, $index, true)" aria-disabled="true" onclick="showDIV('divDemographicInformation')" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-pencil"></em></a>
+                                                                <a href="Javascript:void(0);" class="btn btn-inline pull-left" title="Delete" data-toggle="modal" ng-show="!ReferralReadOnly" data-target="#divDeletePerson" ng-click="SetSelectedPersontoDelete($index)"><em class="glyphicon glyphicon-trash"></em></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row"><br></div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Participants Information</h2>
+                                                    </div> 
+                                                </div>
+                                                <!-- Tabbing in Participant Tab -->
+
+                                                <div class="panel panel-third">
+                                                    <div class="panel-heading">
+                                                        <!-- Nav tabs -->
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="active"><a href="#demographic" data-toggle="tab">General Information</a></li>
+<!--                                                            <li><a href="#placement" data-toggle="tab">Placement/Home Removal</a></li>-->
+                                                            <li><a href="#health" data-toggle="tab">Health</a></li>
+                                                            <li><a href="#edu" data-toggle="tab">Education</a></li>
+<!--                                                            <li><a href="#adoption" data-toggle="tab">Adoption</a></li>-->
+                                                            <li><a href="#caseworker" data-toggle="tab">Caseworker Visitation History</a></li>
+                                                            <li><a href="#relationship" data-toggle="tab">Relationship</a></li>
+                                                            <li><a href="#familyVisitation" data-toggle="tab">Family Visitation History</a></li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <!--DEtails of tabs -->
+
+                                                    <div class="panel-body panel-tabs">
+                                                        <!-- Tab panes -->
+                                                        <div class="tab-content">
+
+
+
+                                                            
+
+
+                                                            
 
 
 
@@ -2416,7 +2558,7 @@
                                                             <br>	
 
                                                         </div>
-                                                        <div class="row"><br> <br></div>
+                                                        <div class="row"></div>
 
 
 
@@ -2465,17 +2607,63 @@
                                                                         <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Social Security Number</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="098765432" disabled>
+                                                                        
+                                                                        <input type=text value="xxx-xx-1234" style="max-width:50%;" disabled><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#ssnDetail" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                                        
+                                                                        
+<!--                                                                        <input type="text" id="casname"  value="xxx-xx-1234" disabled></a></input>-->
                                                                     </div>
                                                                 </div>
+                                                                
+ <div id="ssnDetail" class="modal fade">
+                                                                    <div class="modal-dialog modal-lg">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Explanation</h4>
+                                                                            </div>
+
+                                                                            <div class="modal-body">
+                                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Threat Explanation</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            
+                                                                            <br>
+                                                                            
+                                                                            <div class="row row-padding">
+                                                                                <div class="col-xs-16">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtCaseworker">Protective Capacity Desscription</label>
+                                                                                        <textarea readonly class="col-xs-18" id="txtCaseworker" cols="30" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan.</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
 
                                                             </div>
 
                                                             <div class="row">
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="casname"> Federal ID</label>&nbsp;&nbsp;
+                                                                        <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
@@ -2491,15 +2679,29 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col-xs-6">
+                                                               
+                                                            </div>
+
+                                                            <div class="row">
+                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Estimated Age</label>&nbsp;&nbsp;
                                                                         <input type="text" id="casname" style="max-width:50%;" value="5" disabled>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-
-                                                            <div class="row">
+                                                                
+                                                                <div class="col-xs-6">
+                                                                        <div class="form-group">
+                                                                            <label for="dtofrevisedplan">Role</label>
+                                                                            <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;" disabled>
+                                                                                <option value="-1">Select...</option>
+                                                                                <option value="01"selected>Role 1</option>	
+                                                                                <option value="01">Role 2</option>	
+                                                                                <option value="01">Role 3</option>	
+                                                                            </select>
+                                                                             
+                                                                        </div>
+                                                                    </div>
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">Legal Sex</label>&nbsp;&nbsp;
@@ -2508,6 +2710,10 @@
                                                                     </div>
                                                                 </div> 
 
+                                                                
+                                                            </div>
+
+                                                            <div class="row">
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Self-identified Sex</label>&nbsp;&nbsp;
@@ -2521,9 +2727,6 @@
                                                                         <input type="text" id="casname" style="max-width:50%;" value="Straight" disabled>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-
-                                                            <div class="row">
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">Race</label>&nbsp;&nbsp;
@@ -2532,7 +2735,11 @@
                                                                     </div>
                                                                 </div> 
 
-                                                                <div class="col-xs-6">
+                                                                
+                                                            </div>
+
+                                                            <div class="row">
+                                                               <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Ethnicity</label>&nbsp;&nbsp;
                                                                         <input type="text" id="casname" style="max-width:50%;" value="Non-Hispanic" disabled>
@@ -2543,23 +2750,6 @@
                                                                     <div class="form-group">
                                                                         <label for="casname">Citizenship</label>&nbsp;&nbsp;
                                                                         <input type="text" id="casname" style="max-width:50%;" value="United States" disabled>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="ddlNameSuffix">Medicaid #</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="M1234567" disabled>
-
-                                                                    </div>
-                                                                </div> 
-
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="casname">Insurance #</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="DTTL987654" disabled>
                                                                     </div>
                                                                 </div>
 
@@ -2598,7 +2788,7 @@
                                                                                 <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">AKA Suffix</a>
                                                                             </th>
                                                                             <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">AKA DOB Entered</a>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Date AKA Entered</a>
                                                                             </th>
                                                                         </tr>
                                                                     </thead>
@@ -2640,9 +2830,7 @@
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
                                                                         <tr> 
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Status</a>
-                                                                            </th>
+                                                                            
                                                                             <th>
                                                                                 <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
                                                                             </th>
@@ -2656,13 +2844,7 @@
                                                                     </thead>
 
                                                                     <tr>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Inactive</span>
-                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
-
-                                                                        </td>
+                                                                        
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2013</span>
                                                                         </td>
@@ -2675,13 +2857,7 @@
                                                                     </tr>
 
                                                                     <tr>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Active</span>
-                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
-
-                                                                        </td>
+                                                                       
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/01/2017</span>
                                                                         </td>
@@ -2689,7 +2865,7 @@
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> </span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">In Foster Care</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -2699,7 +2875,7 @@
                                                             <!-- Safe Haven Baby Section --> 
                                                             <div class="row">
                                                                 <div class="col-lg-18">
-                                                                    <h2 class="tab-heading">Participant Status</h2>
+                                                                    <h2 class="tab-heading">Safe Haven Baby</h2>
                                                                 </div> 
                                                             </div>
 
@@ -2803,7 +2979,25 @@
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2010</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2017</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Divorced</span>
+                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> Michael Jackson</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2006</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2010</span>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -3012,14 +3206,14 @@
                                                             <!-- Pregnancy/Parenting Section --> 																			
                                                             <div class="row">
                                                                 <div class="col-lg-18">
-                                                                    <h2 class="tab-heading">Pregnancy/Parenting</h2>
+                                                                    <h2 class="tab-heading">AFCARS Pregnancy/Parenting</h2>
                                                                 </div> 
                                                             </div>
 
                                                             <div class="row">
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
-                                                                        <label for="casname"> Child Every Fathered or Bore A Child </label>&nbsp;&nbsp;
+                                                                        <label for="casname"> Child Ever Fathered or Bore A Child </label>&nbsp;&nbsp;
                                                                         <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
                                                                     </div>
                                                                 </div>
@@ -3031,101 +3225,37 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="casname"> Start Date of Pregnancy </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="casname"> End Date of Pregnancy </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
-                                                                    </div>
-                                                                </div>
-                                                            </div>	
-
-
-
-
+                                                               
+                                                            </div>
+                                                            
                                                             <div class="row">
-                                                                <div class="col-lg-18">
-                                                                    <h2 class="tab-heading">Relationship</h2>
-                                                                </div> 
+                                                                <div class="col-xs-6"> </div>
+                                                                <div class="col-xs-6">
+                                                            <table class="table table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th>Start Date of Pregnancy</th>
+                                                                        <th>End Date of Pregnancy</th>
+
+
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                            </table>
+                                                                </div>
+                                                                <div class="col-xs-6"></div>
                                                             </div>
 
-                                                            <div class="row">
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="ddlCounty">Role</label>
-                                                                        <!-- <span id="MainContent_ddlCounty" title="Role"> -->
-                                                                        <!-- <select name="ctl00$MainContent$ddlCounty$ddlDropDownList" id="MainContent_ddlCounty_ddlDropDownList"> -->
-                                                                        <select>
-                                                                            <option value="-1">Select...</option>
-                                                                            <option value="01">Child</option>
-                                                                            <option value="02">Father</option>
-                                                                            <option value="03">Mother</option>
-                                                                            <option value="04">Caregiver</option>
-                                                                        </select>
-                                                                        <!-- </span>	 -->
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-xs-6">
-                                                                    <div class="form-group">
-                                                                        <label for="casname">Is/Was A Household Member? </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
-                                                                    </div>
-                                                                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-                                                            </div>	
-
-                                                            <div class="row row-padding">
-                                                                <table class="table table-hover table-striped">
-                                                                    <thead>
-                                                                        <tr> 
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Client First Name</a>
-                                                                            </th>
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Client Last Name</a>
-                                                                            </th>
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Relationship to Client</a>
-                                                                            </th>
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
-                                                                            </th>
-                                                                            <th>
-                                                                                <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
-                                                                            </th>																									
-                                                                        </tr>
-                                                                    </thead>
-
-                                                                    <tr>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Robert</span>
-                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
-
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Shaw</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Father</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2010</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2017</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <div class="row"><br></div>
-                                                            </div>  
+                                                            
 
 
 
@@ -3141,8 +3271,12 @@
                                                             <div class="row">
                                                                 <div class="form-group">
                                                                     <div class="col-xs-10">
-                                                                        <label for="supervisorID">Child member of an Indiabn Tribe?</label>&nbsp;&nbsp;
+                                                                        <label for="supervisorID">Child member of an Indian Tribe?</label>&nbsp;&nbsp;
                                                                         <input type="text" id="supervisorID" style="width: 10%" value="N" disabled>
+                                                                    </div>
+                                                                    <div class="col-xs-8">
+                                                                        <label for="supervisorID">Tribe Location</label>&nbsp;&nbsp;
+                                                                        <input type="text" id="supervisorID" style="width: 70%" value="Location" disabled>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -3205,7 +3339,7 @@
 
 
 
-                                                            <div class="row"><br></div>
+                                                            
 
 
 
@@ -3217,6 +3351,95 @@
 
 
 
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="tab-pane" id="relationship">
+                                                             <div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">Relationship</h2>
+                                                                </div> 
+                                                            </div>
+
+                                                            <div class="row">
+                                                                
+
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="casname">Is/Was A Household Member? </label>&nbsp;&nbsp;
+                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
+                                                                    </div>
+                                                                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                            </div>	
+
+                                                            <div class="row row-padding">
+                                                                <table class="table table-hover table-striped">
+                                                                    <thead>
+                                                                        <tr> 
+                                                                            <th>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Client First Name</a>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Client Last Name</a>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Relationship to Client</a>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Start Date</a>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">End Date</a>
+                                                                            </th>																									
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Robert</span>
+                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Shaw</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Father</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2010</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2017</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jane</span>
+                                                                            <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Doe</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Step-father</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">06/19/2007</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2017</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <div class="row"><br></div>
+                                                            </div> 
+                                                            
                                                         </div>
                                                         <!-- End of Pregnancy/Parenting --> 
                                                         <div class="row"><br></div>	
@@ -3239,10 +3462,10 @@
 
                                         </div>
 
-                                        <div class="tab-pane" id="collateral">
+                                        <div class="tab-pane" id="resources">
                                             <div class="row">
                                                 <div class="col-lg-18">
-                                                    <h2 class="tab-heading">Collateral Information</h2>
+                                                    <h2 class="tab-heading">Resource Information</h2>
                                                 </div> 
                                             </div>
                                             <!-- Begin of Collateral Information -->
@@ -3286,8 +3509,8 @@
 
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
-                                                        <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
-                                                        <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="123456789" disabled>
+                                                        <label for="ddlNameSuffix">Organization Name</label>&nbsp;&nbsp;
+                                                        <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="" disabled>
 
                                                     </div>
                                                 </div> 
@@ -3306,7 +3529,7 @@
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname">Relationship to Case</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:50%;" value="Self" disabled>
+                                                        <input type="text" id="casname" style="max-width:50%;" value="Neighbor" disabled>
                                                     </div>
                                                 </div>
                                             </div>
