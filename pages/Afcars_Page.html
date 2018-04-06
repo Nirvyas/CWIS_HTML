@@ -157,7 +157,7 @@
 																<div class="col-xs-5">
 																	<div class="form-group">
 																		<label for="txtDateTimeReceived">Start Date</label>&nbsp;&nbsp;
-																		<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+																		  <input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
 																		<a href="#1" class="icon-date-time"></a>
 																	</div>
 																</div>   
@@ -621,19 +621,171 @@
 												<div class="tab-pane" id="afcars_cwis_data">
 															<div class="row"> </div>
 															
-															<div class="modal-content">
-																	<div class="modal-header">
-																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-																		<h4 class="modal-title">AFCARS Report Details</h4>
-																	</div>
+                                                    <div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">Summary</h2>
+                                                                </div> 
+                                                            </div>
+                                                    
+                                                     <div class="row">
+                                                                                <div class="col-xs-8">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtDateTimeReceived">Total Number of JPO Cases</label>
+                                                                                        <input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 20%" disabled>
+
+                                                                                    </div>
+                                                                                </div>   
+
+                                                     </div>
+                                                     <div class="row">
+                                                     <div class="col-xs-8">
+                                                                                    <div class="form-group">
+                                                                                        <label for="txtDateTimeReceived">Number of Deceased Children
+                                                                                    </label>
+                                                                                        <input type="text" id="txtDateTimeReceived" style="width: 20%" disabled>
+
+                                                                                    </div>
+                                                    </div> 
+                                                    </div>
+                                                    
+                                                    
+                                                   <div class="row"><div class="col-xs-8"> Reason for Death </div></div>
+                                                    
+                                                    <table class="table  table-striped">
+																		<thead>
+																			<tr>
+																				<th>Natural</th>
+																				<th>Abuse</th>
+																				<th>Reason 1</th>
+																				<th>Reason 2</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			
+																			<tr>
+																				<td>1</td>
+																				<td>2</td>
+																				<td>3</td>
+																				<td>1</td>
+																			</tr>
+																			
+																		</tbody>
+																	</table>
+                                                    
+                                                    
+															<div class="row"><br></div>
+																	<div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">AFCARS Report Details</h2>
+                                                                </div> 
+                                                            </div>
+
+<!--                                                        <h4 class="modal-title"></h4>-->
+																	<div class="row">
+                                                                 <div class="col-xs-6">
+                                                                     <div class="form-group">
+                                                                            <label for="dtofrevisedplan">County</label>
+                                                                            <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:40%;">
+                                                                                <option value="01" selected> All</option>
+                                                                                <option>Adams </option>
+																				<option>Allegheny </option>
+																				<option>Armstrong </option>
+																				<option>Beaver </option>
+																				<option>Bedford </option>
+																				<option>Berks </option>
+																				<option>Blair </option>
+																				<option>Bradford </option>
+																				<option>Bucks </option>
+																				<option>Butler </option>
+																				<option>Cambria </option>
+																				<option>Cameron </option>
+																				<option>Carbon </option>
+																				<option>Centre </option>
+																				<option>Chester </option>
+																				<option>Clarion </option>
+																				<option>Clearfield </option>
+																				<option>Clinton </option>
+																				<option>Columbia </option>
+																				<option>Crawford </option>
+																				<option>Cumberland </option>
+																				<option>Dauphin </option>
+																				<option>Delaware </option>
+																				<option>Elk </option>
+																				<option>Erie </option>
+																				<option>Fayette </option>
+																				<option>Forest </option>
+																				<option>Franklin </option>
+																				<option>Fulton </option>
+																				<option>Greene </option>
+																				<option>Huntingdon </option>
+																				<option>Indiana </option>
+																				<option>Jefferson </option>
+																				<option>Juniata </option>
+																				<option>Lackawanna </option>
+																				<option>Lancaster </option>
+																				<option>Lawrence </option>
+																				<option>Lebanon </option>
+																				<option>Lehigh </option>
+																				<option>Luzerne </option>
+																				<option>Lycoming </option>
+																				<option>McKean </option>
+																				<option>Mercer </option>
+																				<option>Mifflin </option>
+																				<option>Monroe </option>
+																				<option>Montgomery </option>
+																				<option>Montour </option>
+																				<option>Northampton </option>
+																				<option>Northumberland </option>
+																				<option>Perry </option>
+																				<option>Philadelphia </option>
+																				<option>Pike </option>
+																				<option>Potter </option>
+																				<option>Schuylkill </option>
+																				<option>Snyder </option>
+																				<option>Somerset </option>
+																				<option>Sullivan </option>
+																				<option>Susquehanna </option>
+																				<option>Tioga </option>
+																				<option>Union </option>
+																				<option>Venango </option>
+																				<option>Warren </option>
+																				<option>Washington </option>
+																				<option>Wayne </option>
+																				<option>Westmoreland </option>
+																				<option>Wyoming </option>
+																				<option>York </option>
+                                                                            </select>
+                                                                             
+                                                                        </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-xs-6">
+                                                                        <label for="dtofrevisedplan">Type</label>
+                                                                            <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;">
+                                                                                <option value="01" selected> All</option>
+                                                                                <option>Type 1 </option>
+                                                                                <option>Type 2 </option>
+                                                                            </select>
+                                                                    </div>
+                                                                <div class="col-xs-6">
+                                                                    <div class="form-group">
+                                                                        <label for="ddlNameSuffix">Only Display Reports with Errors</label>&nbsp;&nbsp;
+                                                                        <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F">
+
+                                                                    </div>
+                                                                </div> 
+
+                                                                
+                                                            </div>
 																	
 																	<table class="table table-hover table-striped">
 																		<thead>
 																			<tr>
 																				<th>MCI</th>
 																				<th>County</th>
-																				<th>Has Errors?</th>
-																				<th>Status</th>
+																				<th>Error Sent Date</th>
+																				
+                                                                                <th>Exclude from sending to County</th>
 																			</tr>
 																		</thead>
 																		<tbody>
@@ -641,24 +793,25 @@
 																				<!-- <td><a href="SearchPage2.html">123456789</a></td> -->
 																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
 																				<td>Dauphin</td>
-																				<td>Y</td>
-																				<td>Send to County</td>
+																				<td>01/01/2017</td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+                                                                                
 																			</tr>
 																			<tr>
 																				<td>987654321</td>
 																				<td>York</td>
-																				<td>Y</td>
-																				<td>Reviewed by OCYF</td>
+																				<td>01/01/2017</td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																			<tr>
 																				<td>112233445</td>
 																				<td>Cumberland</td>
-																				<td>Y</td>
-																				<td>Exclude</td>
+                                                                                <td>01/01/2017</td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																		</tbody>
 																	</table>
-															 </div>
+															
 															 
 															 
 															 <div id="runawayDetailsModal" class="modal fade">
