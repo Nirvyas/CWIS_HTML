@@ -33,8 +33,9 @@
                 </ul>
                 <!-- Referral Info Bar -->
                 <div class="header-info">
-                    <p>Date & Time Created:<span>02/16/2018 - 10:00AM</span></p>
-                    <p>Case ID:<span> </span></p>
+                    <p>Case Creation Date:<span>02/16/2018</span></p>
+                    <p>Case ID:<span>12345 </span></p>
+                    <p>County Case ID:<span>56789 </span></p>
                     <p>Created By:<span>Rick Shah</span></p>
                 </div>
             </div>
@@ -1108,7 +1109,7 @@
                                                         <div class="form-group">
 
                                                             <label for="caseID">County Case ID</label>&nbsp;&nbsp;
-                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="12345" disabled />  
+                                                            <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="56789" disabled />  
 
                                                         </div>
                                                     </div>  
@@ -1152,10 +1153,13 @@
                                                                     <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Open Date</a>
                                                                 </th>
                                                                 <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Open By</a>
+                                                                </th>
+                                                                <th>
                                                                     <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Close Date</a>
                                                                 </th>
                                                                 <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Closed By</a>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Close By</a>
                                                                 </th>
                                                                 <th>
                                                                     <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">View</a>
@@ -1169,6 +1173,9 @@
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith : John Smith</span>
                                                             </td>
                                                             <td>
                                                                 <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2017</span>
@@ -1186,6 +1193,9 @@
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jsmith : John Smith</span>
                                                             </td>
                                                             <td>
                                                                 <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2016</span>
@@ -1253,13 +1263,16 @@
                                                         <thead>
                                                             <tr> 
                                                                 <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Active Date</a>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Activated Date</a>
+                                                                </th>
+                                                                 <th>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Activated By</a>
                                                                 </th>
                                                                 <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Inactive Date</a>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Inactivated Date</a>
                                                                 </th>
                                                                 <th>
-                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Updated By</a>
+                                                                    <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Inactivated By</a>
                                                                 </th>
                                                                 <th>
                                                                     <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">View</a>
@@ -1273,6 +1286,9 @@
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jdoe : John Doe</span>
                                                             </td>
                                                             <td>
                                                                 <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2017</span>
@@ -1290,6 +1306,9 @@
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                                 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
+                                                            </td>
+                                                            <td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">c-jdoe : John Doe</span>
                                                             </td>
                                                             <td>
                                                                 <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2016</span>
@@ -2670,7 +2689,7 @@
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Date of Birth</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="01/10/2013" disabled>
+                                                                        <input type="text" id="casname" style="max-width:50%;" value="01/10/1988" disabled>
                                                                     </div>
                                                                 </div>
 
@@ -2681,26 +2700,29 @@
                                                                  <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Estimated Age</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="5" disabled>
+                                                                        <input type="text" id="casname" style="max-width:50%;" value="29" disabled>
                                                                     </div>
                                                                 </div>
                                                                 
                                                                 <div class="col-xs-6">
                                                                         <div class="form-group">
                                                                             <label for="dtofrevisedplan">Role</label>
+                                                                            <input type="text" id="casname" style="max-width:50%;" value="Victim, Child" disabled>
+<!--
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;" disabled>
                                                                                 <option value="-1">Select...</option>
                                                                                 <option value="01"selected>Role 1</option>	
                                                                                 <option value="01">Role 2</option>	
                                                                                 <option value="01">Role 3</option>	
                                                                             </select>
+-->
                                                                              
                                                                         </div>
                                                                     </div>
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">Legal Sex</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="F" disabled>
+                                                                        <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="Female" disabled>
 
                                                                     </div>
                                                                 </div> 
@@ -2712,7 +2734,7 @@
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname">Self-identified Sex</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="F" disabled>
+                                                                        <input type="text" id="casname" style="max-width:50%;" value="Female" disabled>
                                                                     </div>
                                                                 </div>
 
@@ -2867,10 +2889,10 @@
                                                                     <tr>
                                                                         
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2013</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/01/1992</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">10/01/2013</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">10/01/1999</span>
                                                                         </td>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
@@ -2880,10 +2902,10 @@
                                                                     <tr>
                                                                        
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/01/2012</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/01/1988</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> 10/01/2012</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> 10/01/1992</span>
                                                                         </td>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
@@ -2903,8 +2925,8 @@
                                                             <div class="row">
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
-                                                                        <label for="casname"> Child is in Safe Haven Baby</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:25%;" value="Y" disabled>
+                                                                        <label for="casname"> Child is a Safe Haven Baby</label>&nbsp;&nbsp;
+                                                                        <input type="text" id="casname" style="max-width:25%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>
 
@@ -2929,7 +2951,7 @@
                                                                 <div class="col-xs-15">
                                                                     <div class="form-group">
                                                                         <label for="casname">Safe Haven Baby Family Medical History Provided</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:10%;" value="Y" disabled>
+                                                                        <input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>																		
                                                             </div>
@@ -2938,7 +2960,7 @@
                                                                 <div class="col-xs-12">
                                                                     <div class="form-group">
                                                                         <label for="casname">Safe Haven Baby Family History Uploaded to PAIR</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:10%;" value="Y" disabled>
+                                                                        <input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>																		
                                                             </div>
@@ -2947,7 +2969,7 @@
                                                                 <div class="col-xs-15">
                                                                     <div class="form-group">
                                                                         <label for="casname">Was CY-981 form completed?</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:10%;" value="Y" disabled>
+                                                                        <input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>																		
                                                             </div>
@@ -3037,6 +3059,7 @@
                                                             <div class="row row-padding">
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
+                                                                        
                                                                         <tr> 
                                                                             <th>
                                                                                 <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Type</a>
@@ -3062,17 +3085,40 @@
 
                                                                         </tr>
                                                                     </thead>
-
+<tr>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">30 N Third  Rd</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">Camp Hill</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">17011</span>
+                                                        </td>
+                                                      
+                                                    </tr>
                                                                    
                                                                     <tr>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/2014</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
                                                                         </td>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
@@ -3092,10 +3138,10 @@
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/2010</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1988</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/2014</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
                                                                         </td>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">210 Summerdale Rd</span>
@@ -3238,14 +3284,14 @@
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname"> Child Ever Fathered or Bore A Child </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
+                                                                        <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
                                                                         <label for="casname"> Child Ever Pregnant</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
+                                                                        <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
                                                                     </div>
                                                                 </div>
 
@@ -3268,13 +3314,13 @@
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td> 01/01/2016</td>
-                                                                        <td>09/01/2016 </td>
+                                                                        <td> 01/01/2008</td>
+                                                                        <td>09/01/2008 </td>
                                                                         
                                                                     </tr>
                                                                     <tr>
-                                                                        <td> 01/01/2015</td>
-                                                                        <td>09/01/2015 </td>
+                                                                        <td> 01/01/2007</td>
+                                                                        <td>09/01/2007 </td>
                                                                         
                                                                     </tr>
                                                                    
@@ -3301,7 +3347,7 @@
                                                                 <div class="form-group">
                                                                     <div class="col-xs-10">
                                                                         <label for="supervisorID">Child member of an Indian Tribe?</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="supervisorID" style="width: 10%" value="N" disabled>
+                                                                        <input type="text" id="supervisorID" style="width: 10%" value="No" disabled>
                                                                     </div>
                                                                     <div class="col-xs-8">
                                                                         <label for="supervisorID">Tribe Location</label>&nbsp;&nbsp;
@@ -3314,7 +3360,7 @@
                                                                 <div class="form-group">
                                                                     <div class="col-xs-10">
                                                                         <label for="supervisorID">Parent member of an Indian Tribe?</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="supervisorID" style="width: 10%" value="N" disabled>
+                                                                        <input type="text" id="supervisorID" style="width: 10%" value="No" disabled>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -3323,7 +3369,7 @@
                                                                 <div class="form-group">
                                                                     <div class="col-xs-10">
                                                                         <label for="supervisorID">Residence on a reservation or Alaska Native Village?</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="supervisorID" style="width: 10%" value="N" disabled>
+                                                                        <input type="text" id="supervisorID" style="width: 10%" value="No" disabled>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -3435,7 +3481,7 @@
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Shaw</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Father</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Step-brother</span>
                                                                         </td>
                                                                         <td>
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2010</span>
@@ -3456,13 +3502,13 @@
                                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Doe</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Step-father</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Self</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">06/19/2007</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">06/19/1988</span>
                                                                         </td>
                                                                         <td>
-                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus">05/10/2017</span>
+                                                                            <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -3636,21 +3682,21 @@
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname"> Prefix</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:25%;" value="Miss." disabled>
+                                                        <input type="text" id="casname" style="max-width:25%;" value="Mister." disabled>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname"> First Name</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:50%;" value="Jane" disabled>
+                                                        <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname"> Middle Name</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                        <input type="text" id="casname" style="max-width:50%;" value="" disabled>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3659,7 +3705,7 @@
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname"> Last Name</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:50%;" value="Doe" disabled>
+                                                        <input type="text" id="casname" style="max-width:50%;" value="Jacob" disabled>
                                                     </div>
                                                 </div> 
 
@@ -3685,7 +3731,7 @@
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
                                                         <label for="casname">Date of Birth</label>&nbsp;&nbsp;
-                                                        <input type="text" id="casname" style="max-width:50%;" value="01/10/2013" disabled>
+                                                        <input type="text" id="casname" style="max-width:50%;" value="01/10/1988" disabled>
                                                     </div>
                                                 </div>
 
@@ -3738,17 +3784,17 @@
 
                                                         </tr>
                                                     </thead>
-
+ 
                                                    
                                                     <tr>
                                                         <td>
                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                         </td>
                                                         <td>
-                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/2014</span>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
                                                         </td>
                                                         <td>
-                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> </span>
                                                         </td>
                                                         <td>
                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
@@ -3773,10 +3819,10 @@
                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                         </td>
                                                         <td>
-                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/2010</span>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/1988</span>
                                                         </td>
                                                         <td>
-                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/2014</span>
+                                                            <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/1992</span>
                                                         </td>
                                                         <td>
                                                             <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">210 Summerdale Rd</span>
@@ -4195,6 +4241,7 @@
 																		<thead>
 																			<tr>
 																				<th>Name</th>
+                                                                                <th>Family Role</th>
 																				<th>Date of Birth</th>
 																				<th>Age</th>
 																				<th>Seen?</th>
@@ -4204,21 +4251,23 @@
 																		</thead>
 																	
 																			<tr>
-																				<td class="col-lg-4"> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_0">Karen Smith</span></td>
-																				<td class="col-lg-2"> <span id="MainContent_rptSACaregiverResults_lblCrgvrDOB_0">1/12/1980</span></td>
-																				<td class="col-lg-1"> <span id="MainContent_rptSACaregiverResults_lblCrgvrAge_0">37</span></td>
-																				<td class="col-lg-2"> <span id="MainContent_rptSACaregiverResults_lblCrgvrSeen_0">YES</span></td>
-																				<td class="col-lg-3"> <span id="MainContent_rptSACaregiverResults_lblCrgvrDateSeen_0">8/8/2017 12:00:00 AM</span></td>
-																				<td class="col-lg-6"> <span id="MainContent_rptSACaregiverResults_lblCrgvrReason_0">EXPUNGED</span></td>   
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_0">Karen Smith</span></td>
+                                                                                <td> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_0">Mother</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrDOB_0">1/12/1980</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrAge_0">37</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrSeen_0">YES</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrDateSeen_0">8/8/2017</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrReason_0">EXPUNGED</span></td>   
 																			</tr>
 																		 
 																			<tr>
-																				<td class="col-lg-4"> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_1">Sam Doe</span></td>
-																				<td class="col-lg-2"> <span id="MainContent_rptSACaregiverResults_lblCrgvrDOB_1">12/1/1988</span></td>
-																				<td class="col-lg-1"> <span id="MainContent_rptSACaregiverResults_lblCrgvrAge_1">37</span></td>
-																				<td class="col-lg-2"> <span id="MainContent_rptSACaregiverResults_lblCrgvrSeen_1">YES</span></td>
-																				<td class="col-lg-3"> <span id="MainContent_rptSACaregiverResults_lblCrgvrDateSeen_1">8/8/2017 12:00:00 AM</span></td>
-																				<td class="col-lg-6"> <span id="MainContent_rptSACaregiverResults_lblCrgvrReason_1">EXPUNGED</span></td>   
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_1">Sam Doe</span></td>
+                                                                                <td> <span id="MainContent_rptSACaregiverResults_lblCrgvrName_0">Father</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrDOB_1">12/1/1988</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrAge_1">37</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrSeen_1">YES</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrDateSeen_1">8/8/2017</span></td>
+																				<td> <span id="MainContent_rptSACaregiverResults_lblCrgvrReason_1">EXPUNGED</span></td>   
 																			</tr>
 																		 																			
 																	</table>
@@ -4641,28 +4690,32 @@
                                                             <table class="table table-hover table-striped">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Role</th>
                                                                         <th>Name</th>
+                                                                        <th>Role</th>
+                                                                        <th>Age</th>
                                                                         <th>Highest Risk Level</th>
                                                                         <th>Risk Details</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td>Child</td>
                                                                         <td>Joe Smith</td>
+                                                                        <td>Child</td>
+                                                                         <td>12</td>
                                                                         <td>No Risk</td>
                                                                         <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivChildInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>Parent</td>
                                                                         <td>Jill Smith</td>
+                                                                        <td>Parent</td>
+                                                                         <td>45</td>
                                                                         <td>Moderate</td>
                                                                         <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivParentInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>Parent</td>
                                                                         <td>Ian Smith</td>
+                                                                        <td>Parent</td>
+                                                                         <td>42</td>
                                                                         <td>Low</td>
                                                                         <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('DivParentInfo')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
                                                                     </tr>
@@ -4867,7 +4920,7 @@ EMOTIONAL STATUS  </td>
                                                         <!-- <p>Family Service Tab</p> -->
                                                         <div class="row">
                                                             <div class="col-xs-18">
-                                                                <h2 class="tab-heading">Family Service Plan Information</h2>
+                                                                <h2 class="tab-heading">Family Service Plan</h2>
                                                             </div>
                                                         </div>
 
@@ -4917,28 +4970,35 @@ EMOTIONAL STATUS  </td>
   <a href="#">&raquo;</a>
 </div>
                                                             </center>
+                                                        <div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">Plan Dates</h2>
+                                                                </div> 
+                                                            </div>
                                                         
-<!--
                                                         <div class="row">
                                                             <div class="row row-padding">															
                                                                 <div class="row">
                                                                     <div class="col-xs-6">
                                                                         <div class="form-group">
                                                                             <label for="dtofinitplan">Date of Initial Plan</label>
-                                                                            <input type="text" id="dtofrevisedplan" style="width: 30%" value="07/01/2017" disabled>
+                                                                            <input type="text" id="dtofrevisedplan" style="width: 30%" value="03/01/2016" disabled>
                                                                             
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-xs-6">
+                                                                        
                                                                         <div class="form-group">
                                                                             <label for="dtofrevisedplan">Date Of Plan</label>
+<!--
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;">
                                                                                 <option value="-1">Select...</option>
                                                                                 <option value="01">07/01/2017</option>	
                                                                                 <option value="01">01/01/2018</option>	
                                                                                 <option value="01">07/01/2018</option>	
                                                                             </select>
-                                                                             <input type="text" id="dtofrevisedplan" style="width: 50%" value="07/01/2017" disabled> 
+-->
+                                                                             <input type="text" id="dtofrevisedplan" style="width: 50%" value="03/01/2017" disabled> 
                                                                         </div>
                                                                     </div>
                                                                     
@@ -4957,7 +5017,6 @@ EMOTIONAL STATUS  </td>
 			                                                                
                                                             </div>
                                                         </div>
--->
 
                                                         <br><br>									
 
@@ -5073,7 +5132,7 @@ EMOTIONAL STATUS  </td>
                                                                     <tr>
                                                                         <td>Crystal Smith</td>
                                                                         <td>Child entered Substitute Care with Goal of</td>
-                                                                        <td>Return to parent, guardian or other custodian. Court Approval date - 10/01/2017</td>
+                                                                        <td>Return to parent, guardian or other custodian  (Court Approval Date: 10/01/2017)</td>
                                                                         
 
 
@@ -5357,9 +5416,24 @@ EMOTIONAL STATUS  </td>
                                                         </div>
 
 
+                                                        <div class="row">
+                                                        <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Plan Narrative</h2>
+                                                        </div> 
+                                                             </div>
+                                                            <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <label for="text">Narrative</label>
+                                                                </div>
+                                                        </div>
+                                                        <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <textarea readonly class="col-xs-35" id="text" cols="145" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. </textarea>
+                                                                </div>
+                                                            </div>
+                                                       
 
-
-
+                                                        <div class="row"><br></div>
                                                         <!-- ++++ Family Service Plan End ++++ -->
 
                                                         <!-- This is Participant invite and signature --> 
@@ -5583,7 +5657,12 @@ EMOTIONAL STATUS  </td>
 </div>
                                                             </center>
                                                         
-                                                        <hr/>
+                                                        <div class="row"><br><br></div>
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Plan Dates</h2>
+                                                            </div> 
+                                                        </div>
                                                         <div class="row">
                                                             <div class="row row-padding">												
                                                                 <div class="row">
@@ -5980,6 +6059,21 @@ EMOTIONAL STATUS  </td>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        
+                                                                        <div class="row">
+                                                                            <div class="col-xs-7">
+                                                                                <div class="form-group">
+                                                                                    <label for="famStrength">Placement Continues to be Necessary</label>
+                                                                                    <input type="checkbox" id="famStrength" style="width: 20%" value="Type 1" checked disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-9">
+                                                                                <div class="form-group">
+                                                                                    <label for="dtofrevisedplan">Expected Length of Placement in Months</label>&nbsp;&nbsp;
+                                                                                    <input type="text" id="dtofrevisedplan" style="width: 20%" value="10" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                         <div class="row"><br></div>
                                                                         
                                                                         <div class="row">
@@ -6132,9 +6226,19 @@ EMOTIONAL STATUS  </td>
                                                                             <div class="col-xs-6">
                                                                                 <div class="form-group">
                                                                                     <label for="txtCaseworker">Circumstances that made Placement Necessary</label>
-                                                                                    <textarea readonly class="col-xs-35" id="txtCaseworker" cols="75" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. </textarea>
+                                                                                    <textarea readonly id="txtCaseworker" cols="140" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. </textarea>
                                                                                 </div>
                                                                             </div>
+                                                                            
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtCaseworker">Circumstances and Concerns During Review Period</label>
+                                                                                    <textarea readonly id="txtCaseworker" cols="140" rows="5">Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. </textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            
                                                                         </div>
 
 
@@ -6421,7 +6525,7 @@ EMOTIONAL STATUS  </td>
 
                                                         <th>Service Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>Service Category &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Service &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>CCYA Provided &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>Participant(s) &nbsp;<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 

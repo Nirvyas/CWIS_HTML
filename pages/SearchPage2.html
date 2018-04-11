@@ -32,170 +32,189 @@
 					</ul>
 				</div>
 				<div class="panel-body panel-tabs">
-					<div class="tab-content">
-						<div class="tab-pane active">
-							<div id="MainContent_srchCriteria" class="row">
-								<div class="col-xs-18">
-									<h2 class="tab-heading">Search Criteria</h2>
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div id="MainContent_srchCriteria" class="row">
+                        <div class="col-xs-18">
+                            <h2 class="tab-heading">Search Criteria</h2>
 
-									<div class="col-xs-4">
-										<div class="form-group">
-											<div class="radio">
-												<label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID"></label>
-												<input id="MainContent_rdoPersonID" type="radio" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" /><label for="MainContent_rdoPersonID">CWIS Case ID</label>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<div class="radio">
-												<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
-												<input id="MainContent_rdoMCIID" type="radio" name="ctl00$MainContent$Identifier" value="rdoMCIID" /><label for="MainContent_rdoMCIID">Country Case ID</label>
-											</div>
-										</div>
-									</div>
-									
-									<div class="col-xs-3">
-										<div class="form-group">
-											<span id="MainContent_txtID" title="ID"><input name="ctl00$MainContent$txtID$txtTextboxNumeric" type="text" autocomplete="off" maxlength="15" id="MainContent_txtID_txtTextboxNumeric" title="Enter Numeric Value" /></span>
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="radio" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" /><label for="MainContent_rdoPersonID">CWIS Case ID</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+                                        <input id="MainContent_rdoMCIID" type="radio" name="ctl00$MainContent$Identifier" value="rdoMCIID" /><label for="MainContent_rdoMCIID">Country Case ID</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+                                        <input id="MainContent_rdoMCIID" type="radio" name="ctl00$MainContent$Identifier" value="rdoMCIID" /><label for="MainContent_rdoMCIID">MCI ID</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <span id="MainContent_txtID" title="ID"><input name="ctl00$MainContent$txtID$txtTextboxNumeric" type="text" autocomplete="off" maxlength="15" id="MainContent_txtID_txtTextboxNumeric" title="Enter Numeric Value" /></span>
 
-										</div>
-									</div>
-								</div>
-							</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-							<div id="MainContent_divEmptyRow" class="row">
-								<br />
-							</div>
+                    <div id="MainContent_divEmptyRow" class="row">
+                        <br />
+                    </div>
 
-							<div class="row">
-								<div class="col-xs-18">
-									<h2 class="tab-heading">Advanced Search Criteria</h2>
+                    <div class="row">
+                        <div class="col-xs-18">
+                            <h2 class="tab-heading">Advanced Search Criteria</h2>
+                        </div>
+                            <div class="col-xs-6">
+	                                    <div class="form-group"> 
+											<label for="txtFirstName">Date Case Opened</label>
+											<input name="txtFirstName" type="text" autocomplete="off" style="max-width:30%;" id="txtFirstName" alt="Enter First Name" value="01/01/1993" disabled/>
+										</div>
+	                         </div>
+	                           
+                             <div class="col-xs-6">
+                                 <div class="form-group">
+                                    <label for="ddlNameSuffix">Case Status</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+										
+										<option value="003">Open</option>
+										<option value="004">Close</option>
+									</select>
+                                </div>
+                            </div>  
+                        
+                        <div class="col-xs-6">
+                                 <div class="form-group">
+                                    <label for="ddlNameSuffix">Fiscal Status</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+										<option value="001">Active</option>
+										<option value="002">Inactive</option>
+										
+									</select>
+                                </div>
+                            </div>  
+							
+							
+                       
+                    </div>
 
-									<div class="col-xs-8">
-												<div class="form-group
-													<label for="txtFirstName">Date Case Opened</label>
-													<input name="txtFirstName" type="text" autocomplete="off" style="max-width:30%;" id="txtFirstName" alt="Enter First Name" value="01/01/1993" disabled/>
-												</div>
-									 </div>
-									   
-									 <div class="col-xs-8">
-										 <div class="form-group">
-											<label for="ddlNameSuffix">Status</label>
-											<select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
-												<option value="-1">Select...</option>
-												<option value="001">Active</option>
-												<option value="002">Inactive</option>
-												<option value="003">Open</option>
-												<option value="004">Close</option>
-											</select>
-										</div>
-									</div>  
-									
-									
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xs-18">
-								
-									<div class="col-xs-8">
-										<div class="form-group">
-											<label for="txtFirstName">Case Name</label>
-											<input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%;" id="txtFirstName" alt="Enter First Name" value="John Doe Case" disabled/>
-										</div>
-									</div>
-									
-									<div class="col-xs-8">
-										 <div class="form-group">
-											<label for="ddlNameSuffix">County</label>
-											<select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
-												<option value="-1">Select...</option>
-													<option value="01">Adams</option>
-													<option value="02">Allegheny</option>
-													<option value="03">Armstrong</option>
-													<option value="04">Beaver</option>
-													<option value="05">Bedford</option>
-													<option value="06">Berks</option>
-													<option value="07">Blair</option>
-													<option value="08">Bradford</option>
-													<option value="09">Bucks</option>
-													<option value="10">Butler</option>
-													<option value="11">Cambria</option>
-													<option value="12">Cameron</option>
-													<option value="13">Carbon</option>
-													<option value="14">Centre</option>
-													<option value="15">Chester</option>
-													<option value="16">Clarion</option>
-													<option value="17">Clearfield</option>
-													<option value="18">Clinton</option>
-													<option value="19">Columbia</option>
-													<option value="20">Crawford</option>
-													<option value="21">Cumberland</option>
-													<option value="22">Dauphin</option>
-													<option value="23">Delaware</option>
-													<option value="24">Elk</option>
-													<option value="25">Erie</option>
-													<option value="26">Fayette</option>
-													<option value="27">Forest</option>
-													<option value="28">Franklin</option>
-													<option value="29">Fulton</option>
-													<option value="30">Greene</option>
-													<option value="31">Huntingdon</option>
-													<option value="32">Indiana</option>
-													<option value="33">Jefferson</option>
-													<option value="34">Juniata</option>
-													<option value="35">Lackawanna</option>
-													<option value="36">Lancaster</option>
-													<option value="37">Lawrence</option>
-													<option value="38">Lebanon</option>
-													<option value="39">Lehigh</option>
-													<option value="40">Luzerne</option>
-													<option value="41">Lycoming</option>
-													<option value="42">McKean</option>
-													<option value="43">Mercer</option>
-													<option value="44">Mifflin</option>
-													<option value="45">Monroe</option>
-													<option value="46">Montgomery</option>
-													<option value="47">Montour</option>
-													<option value="48">Northampton</option>
-													<option value="49">Northumberland</option>
-													<option value="50">Perry</option>
-													<option value="51">Philadelphia</option>
-													<option value="52">Pike</option>
-													<option value="53">Potter</option>
-													<option value="54">Schuylkill</option>
-													<option value="55">Snyder</option>
-													<option value="56">Somerset</option>
-													<option value="57">Sullivan</option>
-													<option value="58">Susquehanna</option>
-													<option value="59">Tioga</option>
-													<option value="60">Union</option>
-													<option value="61">Venango</option>
-													<option value="62">Warren</option>
-													<option value="63">Washington</option>
-													<option value="64">Wayne</option>
-													<option value="65">Westmoreland</option>
-													<option value="66">Wyoming</option>
-													<option value="67">York</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="panel-footer text-right">
-						<div class="btn-group primary-actions">
-							 <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
-							<input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-							</form>
-							<form action="SearchPage2.html" method="get" class="btn-group primary-actions">
-							<input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-							</form>
-						</div>
-					</div>
-				</div>
+                    <div class="row">
+						
+						
+							<div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="txtFirstName">Case Name</label>
+                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%;" id="txtFirstName" alt="Enter First Name" value="John Doe Case" disabled/>
+                                </div>
+                            </div>
+							
+							<div class="col-xs-6">
+                                 <div class="form-group">
+                                    <label for="ddlNameSuffix">County</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+											<option value="01">Adams</option>
+											<option value="02">Allegheny</option>
+											<option value="03">Armstrong</option>
+											<option value="04">Beaver</option>
+											<option value="05">Bedford</option>
+											<option value="06">Berks</option>
+											<option value="07">Blair</option>
+											<option value="08">Bradford</option>
+											<option value="09">Bucks</option>
+											<option value="10">Butler</option>
+											<option value="11">Cambria</option>
+											<option value="12">Cameron</option>
+											<option value="13">Carbon</option>
+											<option value="14">Centre</option>
+											<option value="15">Chester</option>
+											<option value="16">Clarion</option>
+											<option value="17">Clearfield</option>
+											<option value="18">Clinton</option>
+											<option value="19">Columbia</option>
+											<option value="20">Crawford</option>
+											<option value="21">Cumberland</option>
+											<option value="22">Dauphin</option>
+											<option value="23">Delaware</option>
+											<option value="24">Elk</option>
+											<option value="25">Erie</option>
+											<option value="26">Fayette</option>
+											<option value="27">Forest</option>
+											<option value="28">Franklin</option>
+											<option value="29">Fulton</option>
+											<option value="30">Greene</option>
+											<option value="31">Huntingdon</option>
+											<option value="32">Indiana</option>
+											<option value="33">Jefferson</option>
+											<option value="34">Juniata</option>
+											<option value="35">Lackawanna</option>
+											<option value="36">Lancaster</option>
+											<option value="37">Lawrence</option>
+											<option value="38">Lebanon</option>
+											<option value="39">Lehigh</option>
+											<option value="40">Luzerne</option>
+											<option value="41">Lycoming</option>
+											<option value="42">McKean</option>
+											<option value="43">Mercer</option>
+											<option value="44">Mifflin</option>
+											<option value="45">Monroe</option>
+											<option value="46">Montgomery</option>
+											<option value="47">Montour</option>
+											<option value="48">Northampton</option>
+											<option value="49">Northumberland</option>
+											<option value="50">Perry</option>
+											<option value="51">Philadelphia</option>
+											<option value="52">Pike</option>
+											<option value="53">Potter</option>
+											<option value="54">Schuylkill</option>
+											<option value="55">Snyder</option>
+											<option value="56">Somerset</option>
+											<option value="57">Sullivan</option>
+											<option value="58">Susquehanna</option>
+											<option value="59">Tioga</option>
+											<option value="60">Union</option>
+											<option value="61">Venango</option>
+											<option value="62">Warren</option>
+											<option value="63">Washington</option>
+											<option value="64">Wayne</option>
+											<option value="65">Westmoreland</option>
+											<option value="66">Wyoming</option>
+											<option value="67">York</option>
+									</select>
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer text-right">
+                <div class="btn-group primary-actions">
+                     <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
+                    <input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+                    </form>
+                    <form action="SearchPage2.html" method="get" class="btn-group primary-actions">
+                    <input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+                    </form>
+                </div>
+            </div>
+        </div>
 			</div>
 
 			<div class="row">
