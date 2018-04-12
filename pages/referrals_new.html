@@ -61,7 +61,7 @@
                                             <li><a href="#caseNotes" data-toggle="tab">Case Notes</a></li>
                                             <!-- <li><a href="#assignments" data-toggle="tab">Assignments</a></li> -->
                                             <li><a href="#placeHome" data-toggle="tab">Placement/Removal</a></li>
-                                            <li><a href="#adopt" data-toggle="tab">Adoptions</a></li>
+                                            <li><a href="#adopt" data-toggle="tab">Adoption/PLC</a></li>
                                             <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
 
                                         </ul>
@@ -269,28 +269,81 @@
                                                                                 <div class="row">
                                                                                     <div class="col-xs-6">                                                                                        
                                                                                             <label for="txtDateTimeReceived">Discharge Reason</label>&nbsp;&nbsp;
-                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 70%">                                                                                       
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
                                                                                     </div>   
 
                                                                                     <div class="col-xs-10">                                                                                        
                                                                                             <label for="txtDateTimeReceived">Discharge To</label>&nbsp;&nbsp;
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">                                                                                       
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
                                                                                     </div> 
                                                                                 </div>
 																				
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-12">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Discharge Address</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 70%">
+																				<div class="row"><br></div>
+																				
+																				<div class="row">
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 1</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>   
 
-                                                                                        </div>
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 2</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 3</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
                                                                                     </div>  
                                                                                 </div>
+																				
+																				<div class="row"><br></div>
+																				
+																				<div class="row">                                                                                     
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">City </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">State/Region/Province</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+                                                                                </div>
+																				
+																				<div class="row"><br></div>																				
+																				
+																				<div class="row">
+                                                                                    <div class="col-xs-7">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Country</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 70%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-7">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">County</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">                                                                                       
+                                                                                    </div> 
+                                                                                </div>
+																				<div class="row"><br></div>
+                                                                                
                                                                                 <!-- Everything inside removal information goes beofer this div-->
                                                                             </div>
                                                                         </div>
                                                                     </div>
+																	
+																	<!-- Discharge Address section -->
+																		
+																	
+																	
+																	
+																	<!-- End of Discharge Address section --> 
 
                                                                     <!--Show or hide the div on clicking the eye icon end here-->
 
@@ -298,7 +351,7 @@
 
                                                                 <div class="row">
                                                                     <div class="col-lg-18">
-                                                                        <h2 class="tab-heading">Removal History</h2>
+                                                                        <h2 class="tab-heading">Placement Setting</h2>
                                                                     </div> 
                                                                 </div>
                                                                 <table class="table table-hover table-striped">
@@ -467,12 +520,15 @@
                                                                 <div id="placementDetailsModal" class="modal fade">
                                                                     <div class="modal-dialog modal-lg">
                                                                         <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                                <h4 class="modal-title">Placement Details</h4>
+                                                                            <div class="modal-header">																			
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>																				
+                                                                                <h4 class="modal-title">Placement Information</h4>
                                                                             </div>
 
                                                                             <div class="modal-body">
+																				<div class="col-lg-18">
+																					<h2 class="tab-heading">Placement Details</h2>
+																				</div> 
 
                                                                                 <div class="row">
                                                                                     <div class="col-xs-6">                                                                                       
@@ -532,11 +588,6 @@
 																				<div class="row"><br></div>
 																				
                                                                                 <div class="row">
-                                                                                    <div class="col-xs-6">
-																							<label for="txtDateTimeReceived">Foster Family Home &nbsp;</label>
-                                                                                            <input type="checkbox" id="txtDateTimeReceived" checked disabled>
-                                                                                    </div>   
-																					
                                                                                     <div class="col-xs-12">                                                                                       
                                                                                             <label for="txtDateTimeReceived">Foster  Home Type &nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" value="Group Home" checked disabled style="width: 60%">
@@ -549,26 +600,161 @@
                                                                                     <div class="col-xs-18">
 																						<label for="txtDateTimeReceived">Relationship To Caregiver</label>
                                                                                         <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+                                                                                    </div>  
+                                                                                </div>
+																				
+																				<div class="row"><br></div>
+																				
+																				 <div class="row">																				 
+																					<div class="col-xs-6">
+																							<label for="txtDateTimeReceived">Private/Public Placement &nbsp;&nbsp;</label>
+                                                                                            <input type="checkbox" id="txtDateTimeReceived" checked disabled>
+                                                                                    </div> 
+																					
+                                                                                    <div class="col-xs-12">
+																						<label for="txtDateTimeReceived">Physical Placement Setting  &nbsp;&nbsp;</label>
+                                                                                        <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+                                                                                    </div> 
+                                                                                </div>
+																				
+																				<div class="row"><br></div>
+																				
+																				<div class="row">	
+																					<div class="col-xs-15">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Private Agency Living Arrangement</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+                                                                                        </div>
+																					</div>
+																				</div>
+																				
+																				<div class="row"><br></div>
+																				
+																				<div class="row">
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 1</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
                                                                                     </div>   
 
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 2</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 3</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>  
                                                                                 </div>
+																				
+																				<div class="row"><br></div>
+																				
+																				<div class="row">                                                                                     
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">City </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">State/Region/Province</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 30%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+                                                                                </div>
+																				
+																				<div class="row"><br></div>																				
+																				
+																				<div class="row">
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Country</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">County</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+                                                                                </div>
+																				
+																				<div class="row"><br></div>
+																				
                                                                             </div>
 																																						
                                                                             <div class="row"><br></div>
-                                                                            <div class="modal-header">
+																			
+																				<div class="modal-header">
+																					<h4 class="modal-title">Voluntary Placement Agreement Details</h4>
+																				</div>
 
+																				<div class="modal-body">
+																					<div class="row">
+																						<div class="col-xs-9">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Placement Agreement Date &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+																							</div>
+																						</div>  
+																						
+																						<div class="col-xs-9">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Agreement Signing Date &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+																							</div>
+																						</div> 																						
+																					</div>
+
+																					<div class="row">																					
+																						<div class="col-xs-18">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Parents/Legal Guardian Name &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
+																							</div>
+																						</div> 
+																					</div>
+																					
+																					<div class="row">	
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">CCYA Worker ID &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+																							</div>
+																						</div>
+																						
+																						<div class="col-xs-10">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">CCYA Worker Signing Date &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+																							</div>
+																						</div>	
+																					</div>
+																					
+																					<div class="row">
+																						<div class="col-xs-18">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Placement Agreement Reason &nbsp;&nbsp;</label>
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				
+																			<div class="row"><br></div>
+																			
+                                                                            <div class="modal-header">
                                                                                 <h4 class="modal-title">Placement Efforts</h4>
                                                                             </div>
 
                                                                             <div class="modal-body">
-
-
-
-
                                                                                 <div class="row">
                                                                                     <div class="col-xs-12">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Effort to Place with Relative</label>
+                                                                                            <label for="txtDateTimeReceived">Effort to Place with Relative/Kin &nbsp;&nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
 
                                                                                         </div>
@@ -579,7 +765,7 @@
                                                                                 <div class="row">
                                                                                     <div class="col-xs-12">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Reason Not Placed with Relative</label>
+                                                                                            <label for="txtDateTimeReceived">Reason Not Placed with Relative/Kin &nbsp;&nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
 
                                                                                         </div>
@@ -595,9 +781,8 @@
                                                                                         </div>
                                                                                     </div> 
                                                                                 </div>
+																				
                                                                                 <div class="row">
-
-
                                                                                     <div class="col-xs-6">
                                                                                         <div class="form-group">
                                                                                             <label for="txtDateTimeReceived">Siblings Placed Together</label>
@@ -613,28 +798,16 @@
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
 
                                                                                         </div>
-                                                                                    </div>   
-
-
-
-
-
-
-
+                                                                                    </div> 
 
                                                                                 </div>
 
                                                                                 <div class="row">
-
-
                                                                                     <div class="col-xs-10">
                                                                                         <div class="form-group">
                                                                                             <label for="txtDateTimeReceived">Placement Matching considerations:</label>
-
-
                                                                                         </div>
                                                                                     </div> 
-
                                                                                 </div>
 
                                                                                 <div class="row">
@@ -654,20 +827,11 @@
                                                                                         <input type="checkbox" name="cpp_athome" value="1" disabled>Culture
                                                                                     </div>
                                                                                 </div>
-
-
-
-
-
-
-
-
                                                                             </div>
 
                                                                             <div class="row"><br></div>
 
                                                                             <div class="modal-header">
-
                                                                                 <h4 class="modal-title">Foster Parent Details</h4>
                                                                             </div>
 
@@ -691,121 +855,51 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-
-
-
                                                                             </div>
 
                                                                             <div class="row"><br></div>
 
                                                                             <div class="modal-header">
-
                                                                                 <h4 class="modal-title">Provider Details</h4>
                                                                             </div>
 
                                                                             <div class="modal-body">
-
-                                                                                <div class="row">
+                                                                                <div class="row">                                                                                    
                                                                                     <div class="col-xs-9">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Physical Placement Settings</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-                                                                                    <div class="col-xs-9">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Provider Name</label>
+                                                                                            <label for="txtDateTimeReceived">Provider Name &nbsp;&nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
-
                                                                                         </div>
                                                                                     </div> 
-
+																					
+																					<div class="col-xs-7">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Provider Unit Type &nbsp;&nbsp;</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+                                                                                        </div>
+                                                                                    </div> 
+																					
                                                                                 </div>
 
-
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-7">
+                                                                                <div class="row">                                                                                   
+                                                                                    <div class="col-xs-18">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Provider Unit Type</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-                                                                                    <div class="col-xs-11">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Other Living Arrangement Type</label>
+                                                                                            <label for="txtDateTimeReceived">Other Living Arrangement Type &nbsp;&nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
 
                                                                                         </div>
-                                                                                    </div> 
-
-
-
-
-
+                                                                                    </div>
                                                                                 </div>
-
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-9">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Primary Agency Living Arrangement</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-                                                                                    <div class="col-xs-9">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Location of Living Arrangmeent</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
-
-                                                                                        </div>
-                                                                                    </div> 
-
-                                                                                </div>
-
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-9">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Jurisdiction</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-
-
-                                                                                </div>
-
-
-
                                                                             </div>
+																			
 
 
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
-
-
-
-
-                                                                <!--                                                                 End Placement Modal-->
-
-
-
-                                                                <!--                                                                        Begin temporary absence modal-->
+                                                                <!--  End Placement Modal-->
+                                                                <!-- Begin temporary absence modal-->
 
                                                                 <div id="temporaryAbsence" class="modal fade">
                                                                     <div class="modal-dialog modal-lg">
@@ -835,119 +929,96 @@
                                                                                     <div class="col-xs-6">
                                                                                         <div class="form-group">
                                                                                             <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
-                                                                                            <a href="#">  12345
+                                                                                            <a href="#">  12345678
                                                                                             </a>
 
                                                                                         </div>
                                                                                     </div>  
                                                                                 </div>
 
-
                                                                                 <div class="row">
                                                                                     <div class="col-xs-8">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Temporary Absence Start Date</label>
+                                                                                            <label for="txtDateTimeReceived">Temporary Absence Start Date&nbsp;&nbsp;</label>
                                                                                             <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Temporary Absence End Date</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
-
-                                                                                        </div>
-                                                                                    </div> 
-                                                                                </div>
-                                                                                <div class="row">
-
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Reason for Absence</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
-
-                                                                                        </div>
-                                                                                    </div> 
-
-
-
-                                                                                </div>
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Address Line 1</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
-
-                                                                                        </div>
-                                                                                    </div> 
-                                                                                </div>
-                                                                                <div class="row">
-
-
-
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Address Line 2</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
-
-                                                                                        </div>
-                                                                                    </div> 
-                                                                                </div>
-                                                                                <div class="row">
-
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Address Line 3</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
-
-                                                                                        </div>
-                                                                                    </div> 
-
-
-
-                                                                                </div>
-
-
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-5">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">City</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-
-
-                                                                                    <div class="col-xs-8">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">State</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
-
-                                                                                        </div>
-                                                                                    </div> 
-                                                                                    <div class="col-xs-5">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Zip/Postal Code</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 45%">
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-5">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">County</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
 
                                                                                         </div>
                                                                                     </div>  
+
+                                                                                    <div class="col-xs-8">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Temporary Absence End Date&nbsp;&nbsp;</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
+
+                                                                                        </div>
+                                                                                    </div> 
                                                                                 </div>
+																				
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-15">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtDateTimeReceived">Reason for Absence&nbsp;&nbsp;</label>
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
+                                                                                        </div>
+                                                                                    </div> 
+                                                                                </div>
+																				
+                                                                               <div class="row">
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 1</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 2</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Address Line 3</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>  
+                                                                                </div>
+																				
+																				<div class="row"><br></div>
+																				
+																				<div class="row">                                                                                     
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">City </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+																					<div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">State/Region/Province</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 30%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+																					
+                                                                                </div>
+																				
+																				<div class="row"><br></div>																				
+																				
+																				<div class="row">
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">Country</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                                    </div>   
+
+                                                                                    <div class="col-xs-6">                                                                                        
+                                                                                            <label for="txtDateTimeReceived">County</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                                    </div> 
+                                                                                </div>
+																				
+																				<div class="row"><br></div>
+																			   
+																			   
+																			   
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -958,23 +1029,370 @@
                                                             
                                             </div>
                                             
-                                            <div class="tab-pane" id="adopt">
-                                              
-                                                                <div class="row">
-                                                                    <div class="col-lg-18">
-                                                                        <h2 class="tab-heading">Adoptions Information</h2>
-                                                                    </div> 
-                                                                </div>
-                                                                <div class="row"><br></div>
+											<!-- Begin of Adoption Tab --> 
+											
+                                            <div class="tab-pane" id="adopt">                                              
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Adoptions/PLC Information</h2>
+														</div> 
+													</div>
+													
+															<table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>MCI ID (Fed ID)</th>
+																		<th>Child Name</th>
+																		<th>Adoption/PLC</th>
+																		<th>Finalization/Legalization Date</th>
+																		<th>View</th>
+																		
+																	</tr>
+																</thead>
+																<tbody>
+																	 <tr>
+																		<td>12345678 </td>
+																		<td>John Smith</td>
+																		<td>Adoption</td>
+																		<td>01/01/2016</td>																		
+																		<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
-                                                                <p>Adoptions Info tab</p>
-                                                                <br>																		
-                                                                <br>
+																		</td>
+																	</tr>
+																
+																	<tr>
+																		<td>987654321 </td>
+																		<td>Jane Doe </td>
+																		<td>PLC</td>
+																		<td>01/20/2014</td>
+																		<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+																	</tr>
+																	
+																</tbody>
+															</table>
+															
+													<div class="row" id="adoptionDetails" style="display:none">
+														<div class="panel-heading">
+															<!-- Nav tabs -->
+															<ul class="nav nav-tabs">
+																<li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+															</ul>
+														</div>
+                                                        <div class="panel-body panel-tabs">               
+                                                            <div class="tab-content">
+																<div class="tab-pane active" id="">
+																	<div class="row">
+																		<div class="col-lg-18">
+																			<h2 class="tab-heading">Child Details</h2>
+																		</div>
+																	</div>
+																
+																	 <div class="row">
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																			</div>
+																		</div>
+																		
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																					
+																			</div>
+																		</div>
+
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																				<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																			</div>
+																		</div>
+																	</div>
+																	
+																	
+																	<div class="row">
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="casname">Provider Name </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																			</div>
+																		</div>
+																		
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																					
+																			</div>
+																		</div>
+
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<label for="txtFirstName">Voluntary Post-Agreement </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value=" " disabled>
+																				<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																			</div>
+																		</div>
+																	</div>
+																	
+																	<div class="row">
+																		<div class="col-xs-6">
+																			<label for="casname">Agreement Entered </label>&nbsp;&nbsp;
+																			<input type="text" id="casname" style="max-width:50%;" value=" " disabled>																			
+																		</div>
+
+																		<div class="col-xs-6">
+																			<label for="txtFirstName">Person who Signed Agreement </label>&nbsp;&nbsp;
+																			<input type="text" id="casname" style="max-width:30%;" value=" " disabled>																				
+																		</div>
+																			
+																		<div class="col-xs-6">
+																			<label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+																			<input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+																		</div>
+																	</div>
+																	
+																	<div class="row"><br></div>
+																	
+																	<div class="row">													
+																		<div class="col-xs-12">																			
+																			<label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+																			<input type="text" id="casname" style="max-width:50%;" value=" " disabled>		
+																		</div>													
+																	</div>
+																	
+																	<div class="row"><br><br></div>	
+																	
+																	<div class="row">
+																		<div class="col-lg-18">
+																			<h2 class="tab-heading">Adoptive Parent Details</h2>
+																		</div> 
+																	</div>	
+																	
+																	<div class="row">
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<a href="#">  Jane Smith </a>
+																			</div>
+																		</div>
+																		<div class="col-xs-6">
+																			<div class="form-group">
+																				<a href="#">  Joe Smith</a>
+																			</div>
+																		</div>
+																	</div>
+																	
+																	<div class="row"><br></div>																			
+																	
+																	<div class="row">
+																		<div class="col-lg-18">
+																			<h2 class="tab-heading">Disruption/Dissolution</h2>
+																		</div> 
+																	</div>													
+														
+																	<table class="table table-hover table-striped">
+																		<thead>
+																			<tr>
+																				<th>Disruption/Dissolution Date</th>
+																				<th>Reason</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			 <tr>
+																				<td>12/01/2015 </td>
+																				<td>Adopted</td>
+																			</tr>
+																		
+																			<tr>
+																				<td>01/01/2014 </td>
+																				<td>PLC</td>
+																			</tr>	
+																		  
+																		</tbody>
+																	</table>
+																	
+																	<div class="row"><br></div>		
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Annual Contract</h2>
+																			</div> 
+																		</div>													
+															
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Date Sent </th>
+																					<th>Notes</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				 <tr>
+																					<td>12/01/2015 </td>
+																					<td>Adopted</td>
+																				</tr>
+																			
+																				<tr>
+																					<td>01/01/2014 </td>
+																					<td>PLC</td>
+																				</tr>	
+																			  
+																			</tbody>
+																		</table>
+																	
+																	<div class="row"><br></div>		
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Payment Detail </h2>
+																			</div> 
+																		</div>													
+															
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Monthly Per Diem</th>
+																					<th>Daily Subsidy Amount</th>
+																					<th>Subsidy Start Date</th>
+																					<th>Subsidy End Date</th>
+																					<th>Rate Start Date</th>
+																					<th>Rate End Date</th>
+																					<th>Agreement Start Date</th>
+																					<th>Agreement End Date</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				 <tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																				</tr>
+																			
+																				<tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																					<td>12/01/2014 </td>
+																					<td>12/31/2014 </td>
+																					<td>12/01/2014 </td>
+																					<td>12/31/2014 </td>
+																					<td>12/01/2014 </td>
+																					<td>12/31/2014 </td>
+																				</tr>	
+																			  
+																			</tbody>
+																		</table>
+																	
+																</div>
+															</div>
+														</div>
+													</div>																
+																	
+															
+															
+																	
+																	
+
+
+																	<!-- Begin modal container -->
+																	<div id="runawayDetailsModal" class="modal fade">
+																		<div class="modal-dialog modal-lg">
+																			<div class="modal-content">
+																				<div class="modal-header">
+																					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																					<h4 class="modal-title">Runaway Details</h4>
+																				</div>
+
+																				<div class="modal-body">
+
+																					<!-- <div class="row">
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="casname">First Name</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="casname">Last Name</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+																								<a href="#">  12345678
+																								</a>
+
+																							</div>
+																						</div>  
+																					</div> -->
+
+
+																					<!-- <div class="row">
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+																							</div>
+																						</div>   
+
+
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+																							</div>
+																						</div> 
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+																							</div>
+																						</div> 
+																					</div> -->
+
+
+																					<!-- <div class="row">
+																						<div class="col-xs-9">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Upload to NCMEC</label>
+																								<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+																							</div>
+																						</div>   
+
+																						<div class="col-xs-9">
+																							<div class="form-group">
+																								<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+																								<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+																							</div>
+																						</div> 
+
+																					</div> -->
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- End of Modal --> 
                                                             
                                             </div>
 
 
-
+											<!-- End of Adoption Tab --> 
 
 
 
@@ -993,20 +1411,16 @@
                                                         </div>
                                                     </div>
                                                     
-                                                    <div class="col-xs-6">
-<div class="form-group">
-<label for="ddlCounty">Case Type</label>
-
-<select disabled style="max-width:50%;">
-
-<option value="01" selected>JPO</option>
-<option value="02">JPO/CCYA</option>
-<option value="03">CCYA</option>
-
-</select>
-
-</div>
-</div>
+													<div class="col-xs-6">
+														<div class="form-group">
+															<label for="ddlCounty">Case Type</label>
+																<select disabled style="max-width:50%;">
+																	<option value="01" selected>JPO</option>
+																	<option value="02">JPO/CCYA</option>
+																	<option value="03">CCYA</option>
+																</select>
+														</div>
+													</div>
 
                                                     <div class="col-xs-6">
                                                         <div class="form-group">
@@ -1014,11 +1428,8 @@
                                                             <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled />
                                                         </div>
                                                     </div>
-                                                    
-                                                    
-
-                                                    
                                                 </div>
+												
                                                 <div class="row">
                                                     <div class="col-xs-6">
                                                         <div class="form-group">
