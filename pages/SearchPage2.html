@@ -6,9 +6,7 @@
 	<!-- Body content goes here. -->
 	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
 		<div class="container">
-                <div class="row">
-                    <br />
-                </div>
+                
                 <div id="validationControl">
 					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
                 </div>
@@ -72,9 +70,7 @@
                         </div>
                     </div>
 
-                    <div id="MainContent_divEmptyRow" class="row">
-                        <br />
-                    </div>
+                   
 
                     <div class="row">
                         <div class="col-xs-18">
@@ -250,10 +246,13 @@
 														<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Name</a>
 													</th>
 													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Created Date</a>
+														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Date Case Opened </a>
 													</th>
 													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Status</a>
+														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Status</a>
+													</th>
+                                                    <th>
+														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Fiscal Status</a>
 													</th>
 													<th>
 														<a id="MainContent_rptSearchResults_lnkHeaderConfidential" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderInvestigationOutcome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Confidential </a>
@@ -279,6 +278,35 @@
 												</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
+												</td>
+                                                <td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Active</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCounty">Dauphin</span>
+												</td>
+											</tr>
+                                    <tr>
+												<td>
+													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">7352387</a>
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+													
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jane Smith Case</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/01/1997</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
+												</td>
+                                                <td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Inactive</span>
 												</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
