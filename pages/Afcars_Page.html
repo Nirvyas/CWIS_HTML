@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+<body>
     <!-- JavaScripts that load template system. -->
     <script src="../js/jquery-1.11.0.min.js"></script>
     <script src="../js/template.js"></script>
+	<script src="../js/scripts.js"></script>
 
     <script type="text/javascript">
         function toggle_visibility(id) {
@@ -104,11 +106,27 @@
             var e = document.getElementById(id);
             
 				e.className = 'tab-pane active';
+			
+			var c = document.getElementById("t3");				
+                c.style.display = 'block';
+				c.className = 'tab-pane active';
+			var f = document.getElementById("t2");	
+						
+				f.className = 'tab-pane inactive';
 				
 				
             
         }
     </script> 
+	
+    <script type="text/javascript">
+        function toggle_tabdisplay(id) {
+            var e = document.getElementById(afcars_cwis_data);
+        
+                e.style.display = 'block';
+        }
+    </script> 
+	
 
     <style>
         legend { 
@@ -132,16 +150,16 @@
                                     <div class="panel-heading">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
-                                            <li class="active" id="t1"><a href="#afcars_search" data-toggle="tab">Create Report </a></li>
-                                            <li><a href="#generated_report" data-toggle="tab">View  Report</a></li>
-											<li id="t2"><a href="#afcars_cwis_data" data-toggle="tab">Display Report</a></li>
+                                            <li class="active" id="t1" ><a href="#afcars_search" data-toggle="tab">Create Report </a></li>
+                                            <li id="t2" ><a href="#generated_report" data-toggle="tab">View Generated Reports</a></li>
+											<li id="t3" style="display:none"><a href="#afcars_cwis_data" data-toggle="tab">Display Report Details </a></li>
 											<!-- <li><a href="#view_errors" data-toggle="tab">View Errors</a></li> -->
                                         </ul>
 										
+										
+										
 										<div class="panel-body panel-tabs">
 											<div class="tab-content">
-												
-													
 
 													<div class="tab-pane active" id="afcars_search">   
 															<div class="row" >	
@@ -528,6 +546,7 @@
 												
 												<!--Beginning of Afcars CWIS Data/ Display Report Tab --> 
 												
+												
 												<div class="tab-pane" id="afcars_cwis_data">
 															<div class="row"> </div>
 															
@@ -535,31 +554,203 @@
                                                                 <div class="col-lg-18">
                                                                     <h2 class="tab-heading">Summary</h2>
                                                                 </div> 
-                                                            </div>
-                                                    
-                                                     <div class="row">
-                                                                                <div class="col-xs-8">
-                                                                                    <div class="form-group">
-                                                                                        <label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>
-<!--                                                                                        <input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 20%" disabled>-->
-
-                                                                                    </div>
-                                                                                </div>   
-
                                                      </div>
-                                                     <div class="row">
-                                                     <div class="col-xs-8">
-                                                                                    <div class="form-group">
-                                                                                        <label for="txtDateTimeReceived">Number of Deceased Children : 5
-                                                                                    </label>
-<!--                                                                                        <input type="text" id="txtDateTimeReceived" style="width: 20%" disabled>-->
+                                                    
+													
+													
+												<!---ljsklsjal-->
+												
+												 <div class="row">
+													<div class="col-xs-6">
+														<div class="form-group">
+															<label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>
+														</div>
+													</div> 															 
+                                                 </div>
+												 
+												 <table class="table  table-striped">
+														<thead>
+															<tr>
+																<th>Number of Deceased Children</th>
+																<th>Pie Chart</th>
+																<th>Legend</th>
+															</tr>
+														</thead>
+														<tbody>															
+															<tr>
+																<td>5</td>
+																<td>
+																	<div class="col-xs-8">
+																		<canvas id="myCanvas"></canvas>
+																		<!-- <div id="myLegend"></div> -->
+																	</div>
+																</td>
+																<td>
+																	<div class="col-xs-10">
+																			<!-- <canvas id="myCanvas"></canvas> -->
+																			<div id="myLegend"></div>
+																	</div>																
+																</td>																
+															</tr>															
+														</tbody>
+												</table>
+												 
+												
+												<!-- <div class="col-xs-12" style="text-align:justify">
+													<canvas id="myCanvas"></canvas>
+													<div id="myLegend"></div>
+												</div> -->
+												
+												
+														<script type="text/javascript">
+															var myCanvas = document.getElementById("myCanvas");
+															myCanvas.width = 200;
+															myCanvas.height = 200;
 
-                                                                                    </div>
-                                                    </div> 
+															var ctx = myCanvas.getContext("2d");
+															function drawLine(ctx, startX, startY, endX, endY){
+																ctx.beginPath();
+																ctx.moveTo(startX,startY);
+																ctx.lineTo(endX,endY);
+																ctx.stroke();
+															}
+															function drawArc(ctx, centerX, centerY, radius, startAngle, endAngle){
+																ctx.beginPath();
+																ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+																ctx.stroke();
+															}
+															function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
+																ctx.fillStyle = color;
+																ctx.beginPath();
+																ctx.moveTo(centerX,centerY);
+																ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+																ctx.closePath();
+																ctx.fill();
+															}
+
+															var myVinyls = {
+																"Natural": 2,
+																"Abuse": 1,
+																"Neglect": 1,
+																"Depressed": 1
+															};
+
+															var Piechart = function(options){
+																this.options = options;
+																this.canvas = options.canvas;
+																this.ctx = this.canvas.getContext("2d");
+																this.colors = options.colors;
+
+																this.draw = function(){
+																	var total_value = 0;
+																	var color_index = 0;
+																	for (var categ in this.options.data){
+																		var val = this.options.data[categ];
+																		total_value += val;
+																	}
+
+
+																	var start_angle = 0;
+																	for (categ in this.options.data){
+																		val = this.options.data[categ];
+																		var slice_angle = 2 * Math.PI * val / total_value;
+
+																		drawPieSlice(
+																			this.ctx,
+																			this.canvas.width/2,
+																			this.canvas.height/2,
+																			Math.min(this.canvas.width/2,this.canvas.height/2),
+																			start_angle,
+																			start_angle+slice_angle,
+																			this.colors[color_index%this.colors.length]
+																		);
+
+																		start_angle += slice_angle;
+																		color_index++;
+																	}
+
+																	//drawing a white circle over the chart
+																	//to create the doughnut chart
+																	if (this.options.doughnutHoleSize){
+																		drawPieSlice(
+																			this.ctx,
+																			this.canvas.width/2,
+																			this.canvas.height/2,
+																			this.options.doughnutHoleSize * Math.min(this.canvas.width/2,this.canvas.height/2),
+																			0,
+																			2 * Math.PI,
+																			"#ff0000"
+																		);
+																	}
+
+																	start_angle = 0;
+																	for (categ in this.options.data){
+																		val = this.options.data[categ];
+																		slice_angle = 2 * Math.PI * val / total_value;
+																		var pieRadius = Math.min(this.canvas.width/2,this.canvas.height/2);
+																		var labelX = this.canvas.width/2 + (pieRadius / 2) * Math.cos(start_angle + slice_angle/2);
+																		var labelY = this.canvas.height/2 + (pieRadius / 2) * Math.sin(start_angle + slice_angle/2);
+
+																		if (this.options.doughnutHoleSize){
+																			var offset = (pieRadius * this.options.doughnutHoleSize ) / 2;
+																			labelX = this.canvas.width/2 + (offset + pieRadius / 2) * Math.cos(start_angle + slice_angle/2);
+																			labelY = this.canvas.height/2 + (offset + pieRadius / 2) * Math.sin(start_angle + slice_angle/2);               
+																		}
+
+																		var labelText = Math.round(100 * val / total_value);
+																		this.ctx.fillStyle = "white";
+																		this.ctx.font = "bold 17px Arial";
+																		this.ctx.fillText(labelText+"%", labelX,labelY);
+																		start_angle += slice_angle;
+																	}
+
+
+
+																}
+																if (this.options.legend){
+																	color_index = 0;
+																	var legendHTML = "";
+																	for (categ in this.options.data){
+																		legendHTML += "<div><span style='display:inline-block;width:15px;background-color:"+this.colors[color_index++]+";'>&nbsp;</span><span style='font-size:15px'> "+categ+"</span></div>";
+																	}
+																	this.options.legend.innerHTML = legendHTML;
+																}
+
+															}
+
+															var myLegend = document.getElementById("myLegend");
+
+															var myDougnutChart = new Piechart(
+																{
+																	canvas:myCanvas,
+																	data:myVinyls,
+																	colors:["#fde23e","#f16e23", "#57d9ff","#937e88"],
+																	legend:myLegend
+																}
+															);
+															myDougnutChart.draw();
+
+
+
+														</script>
+													
+													<!--askldjlasj-->
+
+											
+                                                    
+													
+													<div class="row">
+														 <div class="col-xs-18">
+																<div class="form-group">
+																	<label for="txtDateTimeReceived">Footnote </label>&nbsp;&nbsp;
+																	<input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 93%" value="Testing for Footnote ">
+																</div>
+														</div> 
                                                     </div>
                                                     
+													
                                                     
-                                                   <div class="row"><div class="col-xs-8"> <b><i>Reason for Death </i></b></div></div>
+                                                   <!-- <div class="row"><div class="col-xs-8"> <b><i>Reason for Death </i></b></div></div>
                                                     
                                                     <table class="table  table-striped">
 																		<thead>
@@ -580,18 +771,19 @@
 																			</tr>
 																			
 																		</tbody>
-																	</table>
+													</table> -->
                                                     
                                                     
 															<div class="row"><br></div>
-																	<div class="row">
+															
+															<div class="row">
                                                                 <div class="col-lg-18">
                                                                     <h2 class="tab-heading">AFCARS Report Details</h2>
                                                                 </div> 
                                                             </div>
 
 <!--                                                        <h4 class="modal-title"></h4>-->
-																	<div class="row">
+															<div class="row">
                                                                  <div class="col-xs-6">
                                                                      <div class="form-group">
                                                                             <label for="dtofrevisedplan">County</label>
@@ -670,11 +862,11 @@
                                                                 </div>
                                                                 
                                                                 <div class="col-xs-6">
-                                                                        <label for="dtofrevisedplan">Type</label>
+                                                                        <label for="dtofrevisedplan">Record Submitted to ACF</label>&nbsp;&nbsp;	
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;">
                                                                                 <option value="01" selected> All</option>
-                                                                                <option>Foster Care </option>
-                                                                                <option>Adoption</option>
+                                                                                <option>Yes</option>
+                                                                                <option>No</option>
                                                                             </select>
                                                                     </div>
                                                                 <div class="col-xs-6">
@@ -683,9 +875,15 @@
                                                                         <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F">
 
                                                                     </div>
+                                                                </div>                                                                 
+                                                            </div>
+															
+															<div class="row"><br></div>
+															
+															<div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">AFCARS Report Details - Foster Care</h2>
                                                                 </div> 
-
-                                                                
                                                             </div>
 																	
 																	<table class="table table-hover table-striped">
@@ -693,48 +891,102 @@
 																			<tr>
 																				<th>MCI</th>
 																				<th>County</th>
-																				<th>AFCARS Type </th>
+																				<!-- <th>AFCARS Type </th> -->
 																				<th>Error Details</th>
-																				<th>Error Sent Date</th>							<th>Comments</th>													
+																				<th>Error Sent Date</th>
+																				<th>Comments</th>													
                                                                                 <th>Exclude Errors</th>
 																			</tr>
 																		</thead>
 																		<tbody>
 																			<tr>
-																				<!-- <td><a href="SearchPage2.html">123456789</a></td> -->
 																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
 																				<td>Dauphin</td>
-																				<td>Foster Care</td>
+																				<!-- <td>Foster Care</td> -->
 																				<td>Data Element 6 - Date of birth is missing</td>
 																				<td>01/01/2017</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-                                                    </textarea></span></td>
+																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
                                                                                 
 																			</tr>
 																			<tr>
 																				<td>987654321</td>
 																				<td>York</td>
-																				<td>Foster Care</td>
+																				<!-- <td>Foster Care</td> -->
 																				<td>Data Element 7 - First Name is missing</td>
                                                                                 <td> </td>
 																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-                                                    </textarea></span></td>
+																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																			<tr>
 																				<td>112233445</td>
 																				<td>Cumberland</td>
-																				<td>Adoption</td>
+																				<!-- <td>Adoption</td> -->
 																				<td>Data Element 8 - Placement Information missing</td>
                                                                                 <td>01/01/2017</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-                                                    </textarea></span></td>
+																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																		</tbody>
 																	</table>
 															
+															<div class="row"><br></div>
+															
+															<div class="row">
+                                                                <div class="col-lg-18">
+                                                                    <h2 class="tab-heading">AFCARS Report Details - Adoption</h2>
+                                                                </div> 
+                                                            </div>
+																	
+																	<table class="table table-hover table-striped">
+																		<thead>
+																			<tr>
+																				<th>MCI</th>
+																				<th>County</th>
+																				<!-- <th>AFCARS Type </th> -->
+																				<th>Error Details</th>
+																				<th>Error Sent Date</th>
+																				<th>Comments</th>													
+                                                                                <th>Exclude Errors</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
+																				<td>Dauphin</td>
+																				<!-- <td>Foster Care</td> -->
+																				<td>Data Element 6 - Date of birth is missing</td>
+																				<td>01/01/2017</td>
+                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																				</textarea></span></td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+                                                                                
+																			</tr>
+																			<tr>
+																				<td>987654321</td>
+																				<td>York</td>
+																				<!-- <td>Foster Care</td> -->
+																				<td>Data Element 7 - First Name is missing</td>
+                                                                                <td> </td>
+																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																				</textarea></span></td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+																			</tr>
+																			<tr>
+																				<td>112233445</td>
+																				<td>Cumberland</td>
+																				<!-- <td>Adoption</td> -->
+																				<td>Data Element 8 - Placement Information missing</td>
+                                                                                <td>01/01/2017</td>
+                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																				</textarea></span></td>
+																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+																			</tr>
+																		</tbody>
+																	</table>															
 															 
 															 
 															 <div id="runawayDetailsModal" class="modal fade">
@@ -1845,9 +2097,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-															 
-													
-															<div class="row"><br></div>
 															
 															<div class="panel-footer text-right">
 																<div class="btn-group primary-actions">
@@ -1856,20 +2105,17 @@
 																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Save Comments" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
 																	</form>
                                                                     <form  method="get" class="btn-group primary-actions">
-																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Send Error(s) to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
 																	</form>
 																	
-                                                                    <form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
+                                                                    <!-- <form  method="get" class="btn-group primary-actions">
 																	<input type="submit" name="ctl00$MainContent$btnClear" value="View AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
 																	</form>
                                                                     
                                                                     
-																	 <form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
+																	 <form  method="get" class="btn-group primary-actions">
 																	<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-																	</form>
-                                                                    
-                                                                    
-																	
+																	</form> -->
 																</div>
 															</div>
 												</div>	
@@ -1890,10 +2136,10 @@
 																		</div>	
 																		
 																		
-																		<div class="col-xs-6">
+																		<div class="col-xs-8">
 																			<div class="form-group">
-																				<label for="txtDateTimeReceived">Date Created</label>&nbsp;&nbsp;
-																				<input type="text" style="width: 58%" id="txtDateTimeReceived" placeholder="Eg., 09/21/2017">
+																				<label for="txtDateTimeReceived">Date Report Generated </label>&nbsp;&nbsp;
+																				<input type="text" style="width: 60%" id="txtDateTimeReceived" placeholder="09/21/2017">
 																				<a href="#1" class="icon-date-time"></a>
 																			</div>
 																		</div>
@@ -1922,6 +2168,7 @@
 																							<th>Report Type</th>
 																							<th>Reporting Period</th>
 																							<th>Narrative</th>
+																							<th>Date Submitted to ACF</th>
 																							<th>View</th>
 																						
 																						</tr>
@@ -1930,19 +2177,28 @@
 																						<tr>
 																							<td>09/12/2017</td>
 																							<td>John Smith</td>
-																							<td>Foster Care</td>
+																							<td>Semi-annual</td>
 																							<td>09/01/2017  - 02/28/2018</td>
 																							<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+                                                                                            <td>03/20/2018</td>
                                                                                             <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																							
+																							
+
 																							
 																						</tr>
 																						<tr>
 																							<td>11/14/2017</td>
 																							<td>Jane Smiths</td>
-																							<td>Adoption</td>
+																							<td>Semi-annual</td>
 																							<td>09/01/2017  - 02/28/2018</td>
 																							<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+                                                                                            <td>03/30/2018</td>
 																							<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																							
+
 																							
 																						</tr>																			
 																					</tbody>
@@ -1950,7 +2206,29 @@
 																			</div>
 																		</div>	
 																	</div>
-															</div>									
+															</div>
+
+																<div class="panel-footer text-right">
+																	<div class="btn-group primary-actions">
+																		
+																		<!-- <form  method="get" class="btn-group primary-actions">
+																		<input type="submit" name="ctl00$MainContent$btnSearch" value="Save Comments" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																		</form>
+																		<form  method="get" class="btn-group primary-actions">
+																		<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																		</form> -->
+																		
+																		<form  method="get" class="btn-group primary-actions">
+																		<input type="submit" name="ctl00$MainContent$btnClear" value="View AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																		</form>
+																		
+																		
+																		 <form  method="get" class="btn-group primary-actions">
+																		<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																		</form>
+																		
+																	</div>
+																</div>															
 												</div>
 												<!-- End of Generated Report -->
 												
@@ -2032,5 +2310,5 @@
 	
 		<script src="../CWIS_HTML_03282018_V_1_0/js/script.js"></script>  
 		<script src="/CWIS_HTML_03282018_V_1_0/js/jquery.selectlistactions.js"></script>
-		
+</body>
 </html>
