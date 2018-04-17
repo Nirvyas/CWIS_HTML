@@ -558,22 +558,51 @@
                                                     
 													
 													
-												<!---ljsklsjal-->
+												<!---Pie Chart details-->
+												<div class="row">	
+													<div class="col-xs-8">													
+															<div class="row row-padding">															
+																	<label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>																
+															</div>
+															
+															<div class="row"><br></div>
+															<div class="row"><br></div>
+															<div class="row"><br></div>
+															<div class="row"><br></div>
+															
+															<div class="row row-padding">															
+																	<label for="txtDateTimeReceived">Total Number of Deceased : 5 </label>															
+															</div>
+													</div> 
 												
-												 <div class="row">
+													
+													<div class="col-xs-4">
+														<div class="form-group">
+															<canvas id="myCanvas"></canvas>
+														</div>
+													</div> 	
+
+													<div class="col-xs-4">
+														<div class="form-group">
+															<div id="myLegend"></div>
+														</div>
+													</div> 													
+                                                 </div>
+												 
+												 <!--  <div class="row">
 													<div class="col-xs-6">
 														<div class="form-group">
-															<label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>
+															<label for="txtDateTimeReceived">Total Number of Deceased : 5</label>
 														</div>
 													</div> 															 
                                                  </div>
 												 
-												 <table class="table  table-striped">
+												 <table class="table"  style="border: 0px">
 														<thead>
 															<tr>
-																<th>Number of Deceased Children</th>
-																<th>Pie Chart</th>
-																<th>Legend</th>
+																<th style="border: 0px">Number of Deceased Children</th>
+																<th style="border: 0px">Pie Chart</th>
+																<th style="border: 0px">Legend</th>
 															</tr>
 														</thead>
 														<tbody>															
@@ -582,25 +611,19 @@
 																<td>
 																	<div class="col-xs-8">
 																		<canvas id="myCanvas"></canvas>
-																		<!-- <div id="myLegend"></div> -->
+																		
 																	</div>
 																</td>
 																<td>
 																	<div class="col-xs-10">
-																			<!-- <canvas id="myCanvas"></canvas> -->
+																			
 																			<div id="myLegend"></div>
 																	</div>																
 																</td>																
 															</tr>															
 														</tbody>
-												</table>
-												 
-												
-												<!-- <div class="col-xs-12" style="text-align:justify">
-													<canvas id="myCanvas"></canvas>
-													<div id="myLegend"></div>
-												</div> -->
-												
+												</table> -->
+												 												
 												
 														<script type="text/javascript">
 															var myCanvas = document.getElementById("myCanvas");
@@ -734,7 +757,7 @@
 
 														</script>
 													
-													<!--askldjlasj-->
+													<!--Pie Chart End-->
 
 											
                                                     
@@ -747,27 +770,25 @@
 																</div>
 														</div> 
                                                     </div>
+                                                    													
                                                     
-													
-                                                    
-                                                   <!-- <div class="row"><div class="col-xs-8"> <b><i>Reason for Death </i></b></div></div>
+                                                  <!--  <div class="row"><div class="col-xs-8"> <b>Details for JPO and Deceased </b></div></div>
                                                     
                                                     <table class="table  table-striped">
 																		<thead>
 																			<tr>
-																				<th>Natural</th>
-																				<th>Abuse</th>
-																				<th>Neglect</th>
-																				<th>Reason 4</th>
+																				<th>MCI</th>
+																				<th>Type</th>																				
 																			</tr>
 																		</thead>
-																		<tbody>
-																			
+																		<tbody>																			
 																			<tr>
-																				<td>1</td>
-																				<td>2</td>
-																				<td>1</td>
-																				<td>1</td>
+																				<td>123456789</td>
+																				<td>JPO</td>
+																			</tr>
+																			<tr>
+																				<td>987654321</td>
+																				<td>Deceased</td>
 																			</tr>
 																			
 																		</tbody>
@@ -784,7 +805,7 @@
 
 <!--                                                        <h4 class="modal-title"></h4>-->
 															<div class="row">
-                                                                 <div class="col-xs-6">
+                                                                 <div class="col-xs-5">
                                                                      <div class="form-group">
                                                                             <label for="dtofrevisedplan">County</label>
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:40%;">
@@ -861,18 +882,36 @@
                                                                         </div>
                                                                 </div>
                                                                 
-                                                                <div class="col-xs-6">
+                                                                <div class="col-xs-5">
                                                                         <label for="dtofrevisedplan">Record Submitted to ACF</label>&nbsp;&nbsp;	
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;">
                                                                                 <option value="01" selected> All</option>
                                                                                 <option>Yes</option>
                                                                                 <option>No</option>
                                                                             </select>
-                                                                    </div>
-                                                                <div class="col-xs-6">
+                                                                </div>
+																
+																<div class="col-xs-3">
+                                                                        <label for="dtofrevisedplan">Deceased</label>&nbsp;&nbsp;	
+                                                                            <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:40%;">
+                                                                                <option value="01" selected> All</option>
+                                                                                <option>Yes</option>
+                                                                                <option>No</option>
+                                                                            </select>
+                                                                </div>
+																
+																<div class="col-xs-2">
+                                                                        <label for="dtofrevisedplan">JPO</label>&nbsp;&nbsp;	
+                                                                            <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:60%;">
+                                                                                <option value="01" selected> All</option>
+                                                                                <option>Yes</option>
+                                                                                <option>No</option>
+                                                                            </select>
+                                                                </div>
+                                                                <div class="col-xs-3">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">Display Errors Only</label>&nbsp;&nbsp;
-                                                                        <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F">
+                                                                        <input type="checkbox" id="ddlNameSuffix" style="max-width:40%;" value="F">
 
                                                                     </div>
                                                                 </div>                                                                 
@@ -891,9 +930,11 @@
 																			<tr>
 																				<th>MCI</th>
 																				<th>County</th>
-																				<!-- <th>AFCARS Type </th> -->
+																				
 																				<th>Error Details</th>
 																				<th>Error Sent Date</th>
+																				<th>JPO</th>
+																				<th>Deceased</th>
 																				<th>Comments</th>													
                                                                                 <th>Exclude Errors</th>
 																			</tr>
@@ -902,9 +943,11 @@
 																			<tr>
 																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
 																				<td>Dauphin</td>
-																				<!-- <td>Foster Care</td> -->
+																				
 																				<td>Data Element 6 - Date of birth is missing</td>
 																				<td>01/01/2017</td>
+																				<td>Y</td>
+																				<td>N</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
@@ -913,9 +956,11 @@
 																			<tr>
 																				<td>987654321</td>
 																				<td>York</td>
-																				<!-- <td>Foster Care</td> -->
+																				
 																				<td>Data Element 7 - First Name is missing</td>
                                                                                 <td> </td>
+																				<td>Y</td>
+																				<td>N</td>
 																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
@@ -923,9 +968,11 @@
 																			<tr>
 																				<td>112233445</td>
 																				<td>Cumberland</td>
-																				<!-- <td>Adoption</td> -->
+																				
 																				<td>Data Element 8 - Placement Information missing</td>
                                                                                 <td>01/01/2017</td>
+																				<td>Y</td>
+																				<td>N</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
@@ -949,6 +996,7 @@
 																				<!-- <th>AFCARS Type </th> -->
 																				<th>Error Details</th>
 																				<th>Error Sent Date</th>
+																				<th>Deceased</th>
 																				<th>Comments</th>													
                                                                                 <th>Exclude Errors</th>
 																			</tr>
@@ -960,6 +1008,7 @@
 																				<!-- <td>Foster Care</td> -->
 																				<td>Data Element 6 - Date of birth is missing</td>
 																				<td>01/01/2017</td>
+																				<td>N</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
@@ -971,6 +1020,7 @@
 																				<!-- <td>Foster Care</td> -->
 																				<td>Data Element 7 - First Name is missing</td>
                                                                                 <td> </td>
+																				<td>N</td>
 																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
@@ -981,6 +1031,7 @@
 																				<!-- <td>Adoption</td> -->
 																				<td>Data Element 8 - Placement Information missing</td>
                                                                                 <td>01/01/2017</td>
+																				<td>Y</td>
                                                                                 <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																				</textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
