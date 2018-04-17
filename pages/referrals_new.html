@@ -1988,7 +1988,7 @@
                                                     <!--                                                            <li><a href="#adoption" data-toggle="tab">Adoption</a></li>-->
                                                     <li><a href="#caseworker" data-toggle="tab">Caseworker Visitation History</a></li>
                                                     <li><a href="#relationship" data-toggle="tab">Relationship</a></li>
-                                                    <li><a href="#familyVisitation" data-toggle="tab">Family Visitation History</a></li>
+<!--                                                    <li><a href="#familyVisitation" data-toggle="tab">Family Visitation History</a></li>-->
 
                                                 </ul>
                                             </div>
@@ -4179,7 +4179,7 @@ Adoption Information
                                                                 <td>Dauphin</td>
                                                                 <td>Jim Smith, Karen Smith</td>
                                                                 <td>Y</td>
-                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
 
 
@@ -4191,7 +4191,7 @@ Adoption Information
                                                                 <td>Dauphin</td>
                                                                 <td>Jim SMith, Karen Smith</td>
                                                                 <td>N</td>
-                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
 
 
@@ -4203,7 +4203,7 @@ Adoption Information
                                                                 <td>Dauphin</td>
                                                                 <td>Jim SMith, Karen Smith</td>
                                                                 <td>N</td>
-                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
 
 
@@ -4227,7 +4227,7 @@ Adoption Information
                                                                 <td>Dauphin</td>
                                                                 <td>James Smith</td>
                                                                 <td>Y</td>
-                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('traffic')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
 
 
@@ -4239,7 +4239,7 @@ Adoption Information
                                                                 <td>Dauphin</td>
                                                                 <td>Rachel Smith</td>
                                                                 <td>Y</td>
-                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+                                                                <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('traffic')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
 
 
@@ -4261,12 +4261,112 @@ Adoption Information
 
 
                                                     <div class="row" id="visibleBelow" style="display:none">
-                                                        <!-- <div class="panel-heading">                                                                   
-<ul class="nav nav-tabs">
-<li class="active"><a href="#recordType" data-toggle="tab">Assessment Information</a></li>
-</ul>
+                                                        
+                                                        <div class="panel-body panel-tabs">
+                                                            <!-- Tab panes -->
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane active" id="">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-18">
+                                                                            <h2 class="tab-heading">Assessment Details</h2>
+                                                                        </div>
+                                                                    </div>
 
-</div> -->
+
+
+                                                                    <div class="row"><br></div>
+
+
+                                                                    <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                            <div class="form-group">
+                                                                                <label for="txtDateTimeReceived">Date of Screening</label>
+                                                                                <input type="text" id="txtDateTimeReceived" placeholder="01/07/2018" style="width: 60%" disabled>
+
+                                                                            </div>
+                                                                        </div>   
+
+
+
+<!--
+                                                                        <div class="col-xs-6">
+                                                                            <div class="form-group">
+                                                                                <label for="txtDateTimeReceived">Assessor Name</label>
+                                                                                <input type="text" id="txtDateTimeReceived" style="width: 40%" disabled>
+
+                                                                            </div>
+                                                                        </div> 
+-->
+                                                                        <div class="col-xs-6">
+                                                                            <div class="form-group">
+                                                                                <label for="txtDateTimeReceived">Agency</label>
+                                                                                <input type="text" id="txtDateTimeReceived" style="width: 50%" value="Dauphin" disabled>
+
+                                                                            </div>
+                                                                        </div> 
+
+                                                                    </div>
+                                                                    <div class="row row-padding">
+
+                                                                        <table class="table table-hover table-striped">
+                                                                            <thead>
+                                                                                <tr>
+
+                                                                                    <th>MCI ID</th>
+                                                                                    <th>Name</th>
+                                                                                    <th>Role</th>
+
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>123456789</td>
+                                                                                    <td>Jim Smith</td>
+                                                                                    <td>Child</td>
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>987654321</td>
+                                                                                    <td>Karen Smith</td>
+                                                                                    <td>Mother</td>
+
+
+                                                                                </tr>
+
+                                                                            </tbody>
+                                                                        </table>
+
+
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-14">
+                                                                            <div class="form-group">
+                                                                                <label for="txtDateTimeReceived">Outcome</label>
+                                                                                <textarea readonly class="col-xs-18" id="txtCaseworker" cols="45" rows="5" disabled>Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children’s basic needs are being met.</textarea>
+
+                                                                            </div>
+                                                                        </div>  
+
+
+                                                                    </div>
+
+
+                                                                    <div class="row"> <br></div>
+
+
+
+
+                                                                    <!--                                                                                 Everything inside removal information goes beofer this div-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--Show or hide the div on clicking the eye icon end here-->
+
+                                                    </div> 
+                                                     <div class="row" id="visibleBelow1" style="display:none">
+                                                        
                                                         <div class="panel-body panel-tabs">
                                                             <!-- Tab panes -->
                                                             <div class="tab-content">
@@ -4367,7 +4467,44 @@ Adoption Information
 
                                                         <!--Show or hide the div on clicking the eye icon end here-->
 
-                                                    </div>  
+                                                    </div> 
+                                                    <div class="row row-padding" id="traffic" style="display: none">
+                                                    
+                                                    <div class="row">
+                                                                        <div class="col-lg-18">
+                                                                            <h2 class="tab-heading">Sex/Labor Trafficking</h2>
+                                                                        </div>
+                                                                    </div>
+                                                        
+                                                        
+                                                         <div class="row">
+                                                                        <div class="col-xs-6">
+                                                                            <div class="form-group">
+                                                                                <label for="txtDateTimeReceived">Child was a victim</label>
+                                                                                <input type="text" id="txtDateTimeReceived" value="Prior to entering Foster Care" style="width: 60%" disabled>
+
+                                                                            </div>
+                                                                        </div>   
+
+
+
+                                                                       
+
+                                                                    </div>
+                                                        
+                                                        <div class="row">
+                                                        <div class="col-xs-14">
+                                                        <input type="checkbox" id="casname" checked disabled>
+                                                        <label for="txtDateTimeReceived">Report made to Law Enforcement on Date</label>
+                                                      <input type="text" id="txtDateTimeReceived" value="10/17/2016" style="width: 30%" disabled>
+                                                            </div>
+                                                        
+                                                        
+                                                        </div>
+                                                        <div class="row"><br></div>
+                                                    
+                                                    
+                                                    </div>
                                                 </div>
 
 
@@ -6444,16 +6581,22 @@ were cooperative in the process.
                                                             <div class="row"><br></div>
 
 
-                                                            <div class="row row padding">
+                                                            <div class="row row-padding">
                                                                 <div class="col-xs-6">
-                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="cpp_athome" value="1" disabled> Child has Individualized Education Program
+                                                                    &nbsp;
                                                                 </div>
-                                                                <div class="col-xs-4">
-                                                                    <input type="checkbox" name="cpp_athome" value="2" disabled>Child has 504 Plan
+                                                                <div class="col-xs-10">
+                                                                    <div class="row">
+                                                                        <input type="checkbox" name="cpp_athome" checked="checked" value="3" disabled>Child has Surrogate Education Decision Maker
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <input type="checkbox" name="cpp_athome" value="1" disabled> Child has Individualized Education Program
+                                                                    </div>
+                                                                    <div class="row">
+                                                                      <input type="checkbox" name="cpp_athome" value="2" disabled>Child has 504 Plan
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col-xs-6">
-                                                                    <input type="checkbox" name="cpp_athome" checked="checked" value="3" disabled>Child has Surrogate Education Decision Maker
-                                                                </div>
+                                                               
 
                                                             </div>
                                                             <br>
