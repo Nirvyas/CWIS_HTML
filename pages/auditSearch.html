@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+	<!-- Body content goes here. -->
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+		<div class="container">
+                
+                <div id="validationControl">
+					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
+                </div>
+                
+			<div class="panel panel-secondary with-header-info">
+				<!-- Header Tabs -->
+				<div class="panel-heading">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						
+						<li class="active">
+							<a id="MainContent_lnkPersonSearch" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$lnkPersonSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Audit Log Search</a></li>
+					</ul>
+				</div>
+				<div class="panel-body panel-tabs">
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div id="MainContent_srchCriteria" class="row">
+                        <div class="col-xs-18">
+                            <h2 class="tab-heading">Search Criteria</h2>
+
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="radio" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" /><label for="MainContent_rdoPersonID">User ID</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+                                        <input id="MainContent_rdoMCIID" type="radio" name="ctl00$MainContent$Identifier" value="rdoMCIID" /><label for="MainContent_rdoMCIID"> Case ID</label>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <span id="MainContent_txtID" title="ID"><input name="ctl00$MainContent$txtID$txtTextboxNumeric" type="text" autocomplete="off" maxlength="15" id="MainContent_txtID_txtTextboxNumeric" title="Enter Numeric Value" /></span>
+
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-xs-7">
+                                <label for="ddlNameSuffix">County</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+											<option value="01">Adams</option>
+											<option value="02">Allegheny</option>
+											<option value="03">Armstrong</option>
+											<option value="04">Beaver</option>
+											<option value="05">Bedford</option>
+											<option value="06">Berks</option>
+											<option value="07">Blair</option>
+											<option value="08">Bradford</option>
+											<option value="09">Bucks</option>
+											<option value="10">Butler</option>
+											<option value="11">Cambria</option>
+											<option value="12">Cameron</option>
+											<option value="13">Carbon</option>
+											<option value="14">Centre</option>
+											<option value="15">Chester</option>
+											<option value="16">Clarion</option>
+											<option value="17">Clearfield</option>
+											<option value="18">Clinton</option>
+											<option value="19">Columbia</option>
+											<option value="20">Crawford</option>
+											<option value="21">Cumberland</option>
+											<option value="22">Dauphin</option>
+											<option value="23">Delaware</option>
+											<option value="24">Elk</option>
+											<option value="25">Erie</option>
+											<option value="26">Fayette</option>
+											<option value="27">Forest</option>
+											<option value="28">Franklin</option>
+											<option value="29">Fulton</option>
+											<option value="30">Greene</option>
+											<option value="31">Huntingdon</option>
+											<option value="32">Indiana</option>
+											<option value="33">Jefferson</option>
+											<option value="34">Juniata</option>
+											<option value="35">Lackawanna</option>
+											<option value="36">Lancaster</option>
+											<option value="37">Lawrence</option>
+											<option value="38">Lebanon</option>
+											<option value="39">Lehigh</option>
+											<option value="40">Luzerne</option>
+											<option value="41">Lycoming</option>
+											<option value="42">McKean</option>
+											<option value="43">Mercer</option>
+											<option value="44">Mifflin</option>
+											<option value="45">Monroe</option>
+											<option value="46">Montgomery</option>
+											<option value="47">Montour</option>
+											<option value="48">Northampton</option>
+											<option value="49">Northumberland</option>
+											<option value="50">Perry</option>
+											<option value="51">Philadelphia</option>
+											<option value="52">Pike</option>
+											<option value="53">Potter</option>
+											<option value="54">Schuylkill</option>
+											<option value="55">Snyder</option>
+											<option value="56">Somerset</option>
+											<option value="57">Sullivan</option>
+											<option value="58">Susquehanna</option>
+											<option value="59">Tioga</option>
+											<option value="60">Union</option>
+											<option value="61">Venango</option>
+											<option value="62">Warren</option>
+											<option value="63">Washington</option>
+											<option value="64">Wayne</option>
+											<option value="65">Westmoreland</option>
+											<option value="66">Wyoming</option>
+											<option value="67">York</option>
+									</select>
+                            </div>
+                            
+                        </div>
+                        <div class="row"><br></div>
+                        <div class="row row-padding">
+
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="ddlCounty">Start Date</label>
+                                        <input type="text" id="txtDateTimeReceived" placeholder="01/21/2014" style="width: 65%">
+                                        <a href="#1" class="icon-date-time"></a>
+                                    </div>
+                                </div>   
+                                
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="txtDateTimeReceived">End Date</label>
+                                        <input type="text" id="txtDateTimeReceived" placeholder="01/21/2014" style="width: 65%">
+                                        <a href="#1" class="icon-date-time" ></a>
+                                    </div>
+                                </div> 
+                            </div>
+                    </div>
+
+                   
+
+<!--
+                    <div class="row">
+                        <div class="col-xs-18">
+                            <h2 class="tab-heading">Advanced Search Criteria</h2>
+                        </div>
+                            <div class="col-xs-6">
+	                                    <div class="form-group"> 
+											<label for="txtFirstName">Date Case Opened</label>
+											<input name="txtFirstName" type="text" autocomplete="off" style="max-width:30%;" id="txtFirstName" alt="Enter First Name" value="01/01/1993" disabled/>
+										</div>
+	                         </div>
+	                           
+                             <div class="col-xs-6">
+                                 <div class="form-group">
+                                    <label for="ddlNameSuffix">Case Status</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+										
+										<option value="003">Open</option>
+										<option value="004">Close</option>
+									</select>
+                                </div>
+                            </div>  
+                        
+                        <div class="col-xs-6">
+                                 <div class="form-group">
+                                    <label for="ddlNameSuffix">Fiscal Status</label>
+                                    <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
+										<option value="-1">Select...</option>
+										<option value="001">Active</option>
+										<option value="002">Inactive</option>
+										
+									</select>
+                                </div>
+                            </div>  
+							
+							
+                       
+                    </div>
+-->
+
+<!--
+                    <div class="row">
+						
+						
+							<div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="txtFirstName">Case Name</label>
+                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%;" id="txtFirstName" alt="Enter First Name" value="John Doe Case" disabled/>
+                                </div>
+                            </div>
+							
+							<div class="col-xs-6">
+                                 <div class="form-group">
+                                    
+                                </div>
+                            </div>
+                       
+                    </div>
+-->
+                </div>
+            </div>
+            <div class="panel-footer text-right">
+                <div class="btn-group primary-actions">
+<!--                     <form action="SearchPage1.html" method="get" class="btn-group primary-actions">-->
+                    <input type="button" name="ctl00$MainContent$btnClear" value="Clear" onclick="toggle_visibility('personResulta')" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+<!--                    </form>-->
+<!--                    <form action="SearchPage2.html" method="get" class="btn-group primary-actions">-->
+                    <input type="button" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" onclick="toggle_visibility('personResulta')"/>
+<!--                    </form>-->
+                </div>
+            </div>
+        <div id="personResulta" style="display: none">
+	
+			
+				<div class="panel-body panel-tabs">
+					<div class="tab-content">
+						<div class="tab-pane active" id="clearanceInformation">
+							<!-- Clearance Information -->
+							<div class="row">
+								<div class="col-lg-18">
+									<h2 class="tab-heading">Search Results</h2>
+
+								</div>
+							</div>
+
+							<div class="row row-padding">
+								<table class="table table-hover table-striped">
+											<thead>
+												<tr> 
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">User ID</a>
+													</th>
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">County Code</a>
+													</th>
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case ID </a>
+													</th>
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case County Code</a>
+													</th>
+                                                    <th>
+														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Action Type Code</a>
+													</th>
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderConfidential" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderInvestigationOutcome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Date/Time </a>
+													</th>
+													<th>
+														<a id="MainContent_rptSearchResults_lnkHeaderCounty" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderWorkFlowStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Source Type Code </a>
+													</th>
+												</tr>
+											</thead>
+										
+											<tr>
+												<td>
+													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">b-werstu</a>
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+													
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">01 - Adams</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">123456</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">774637</span>
+												</td>
+                                                <td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">V-View</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">02/22/2016</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCounty">Case</span>
+												</td>
+											</tr>
+                                   <tr>
+												<td>
+													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">b-werstu</a>
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+													
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">01 - Adams</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">123456</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">774637</span>
+												</td>
+                                                <td>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">V-View</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">02/22/2016</span>
+												</td>
+												<td>
+													<span id="MainContent_rptSearchResults_lnkHeaderCounty">Case</span>
+												</td>
+											</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer text-right">
+					<!-- <div class="btn-group primary-actions">
+						<p class="record-count pull-left">
+							<span id="MainContent_lblPageStart">Currently viewing 1-</span><span id="MainContent_lblPageEnd">1</span><span id="MainContent_lblTotalRecords"> of 1 records found. </span>&nbsp;
+						</p>
+						
+						
+						<div class="clearfix"></div>
+					</div> -->
+					<div class="row">
+						<div class="col-xs-18 text-right">
+							
+							<form action="#" method="get" class="btn-group primary-actions">
+							<input type="button" name="ctl00$MainContent$btnClose" value="Close" id="MainContent_btnClose" tabindex="29" title="Close" class="btn btn-primary" />
+							</form>
+						</div>
+					</div>
+
+				</div>
+			    
+
+
+            <script type="text/javascript">
+                head.ready(function () {
+                    $('.megamenu').accessibleMegaMenu();
+
+                    // hack so that the megamenu doesn't show flash of css animation after the page loads.
+                    setTimeout(function () {
+                        $('body').removeClass('init');
+                    }, 500);
+
+                    //Remove code if not required -- Start
+
+
+                    //$(".navbar-select").change(function () {
+                    //    var str = $(this).find(":selected").text();
+
+                    //    if (str == "Active") {
+                    //        $(".navbar-select").attr("class", "navbar-select active");
+                    //    } else if (str == "Inactive") {
+                    //        $(".navbar-select").attr("class", "navbar-select inactive");
+                    //    }
+
+                    //}).trigger('change');
+                    //Remove code if not required -- End
+
+                });
+            </script>
+
+
+            <!-- Begin modal container -->
+            <div id="regionalUserConfirmation" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Referral Type Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-18">
+                                    <h4>Do you want to create a Complaint?</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(''); __doPostBack('ctl00$btnNo','')" id="btnNo" type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                            <button onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(''); __doPostBack('ctl00$btnYes','')" id="btnYes" type="button" class="btn btn-primary" data-toggle="modal">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="CICOModal" class="modal fade" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Checked - Out</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row row-padding">
+                                <div class="col-lg-17">
+                                    <div id="lblLockedByText"></div>
+                                </div>
+                            </div>
+                            <div class="row row-padding">
+                                <div class="col-lg-17">
+                                    <label>To access a read-only copy, please click the "View" button.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="pull-left"><input type="submit" name="ctl00$btnForceCheckIn" value="Force Check In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnForceCheckIn&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnForceCheckIn" class="btn btn-internal btn-primary" /></div>                        
+                            <input type="submit" name="ctl00$btnOK" value="Cancel" onclick="hideCICOModal();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnOK&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnOK" class="btn btn-internal btn-primary" />
+                            <input type="submit" name="ctl00$btnViewReadOnly" value="View" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnViewReadOnly&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnViewReadOnly" class="btn btn-internal btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivUserLocked" class="modal fade" data-backdrop="static" data-keyboard="false" style="z-index: 9999;">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content" id="UserLockedPopupMessage">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span id="LabelLockedBy"></span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-internal btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- End Modal Body Container -->
+        
+
+
+
+    </div>
+        </div>
+			</div>
+
+			<div class="row">
+				<br />
+			</div>
+			<div class="row">
+				<br />
+			</div>
+		</div>
+
+           
+	</div>
+</html>
