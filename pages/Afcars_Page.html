@@ -145,12 +145,24 @@
 
 													<div class="tab-pane active" id="afcars_search">   
 															<div class="row" >	
+                                                                <div class="col-xs-8" >
+																	<div class="form-group">
+																		<label for="dtofrevisedplan">Reporting Type</label>&nbsp;&nbsp;
+																		<span id="MainContent_ddlCounty" title="County">
+																			 <select name="dropDown" id="county" style="width: 65%">
+																				<option selected>Semi-annual</option>
+																				<option>Annual</option>
+                                                                            </select>
+																		</span>
+																	</div>
+																</div>	
 																<div class="col-xs-8" >
 																	<div class="form-group">
 																		<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
 																		<input type="text" id="dtofrevisedplan" style="width: 60%" value="September 2017 - February 2018">
 																	</div>
-																</div>																
+																</div>		
+                                                                
 															</div>
 															<div class="row" >															
 																
@@ -161,6 +173,8 @@
 																		<a href="#1" class="icon-date-time"></a>
 																	</div>
 																</div>   
+                                                                <div class="col-xs-3">
+                                                                </div>
 
 																<div class="col-xs-5">
 																	<div class="form-group">
@@ -172,7 +186,7 @@
 															</div>
 															
 															<div class="row" >	
-																<div class="col-xs-5" >
+																<div class="col-xs-8" >
 																	<div class="form-group">
 																		<label for="dtofrevisedplan">MCI</label>&nbsp;&nbsp;
 																		<input type="text" id="dtofrevisedplan" style="width: 45%" >
@@ -526,8 +540,8 @@
                                                      <div class="row">
                                                                                 <div class="col-xs-8">
                                                                                     <div class="form-group">
-                                                                                        <label for="txtDateTimeReceived">Total Number of JPO Cases</label>
-                                                                                        <input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 20%" disabled>
+                                                                                        <label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>
+<!--                                                                                        <input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 20%" disabled>-->
 
                                                                                     </div>
                                                                                 </div>   
@@ -536,9 +550,9 @@
                                                      <div class="row">
                                                      <div class="col-xs-8">
                                                                                     <div class="form-group">
-                                                                                        <label for="txtDateTimeReceived">Number of Deceased Children
+                                                                                        <label for="txtDateTimeReceived">Number of Deceased Children : 5
                                                                                     </label>
-                                                                                        <input type="text" id="txtDateTimeReceived" style="width: 20%" disabled>
+<!--                                                                                        <input type="text" id="txtDateTimeReceived" style="width: 20%" disabled>-->
 
                                                                                     </div>
                                                     </div> 
@@ -561,7 +575,7 @@
 																			<tr>
 																				<td>1</td>
 																				<td>2</td>
-																				<td>3</td>
+																				<td>1</td>
 																				<td>1</td>
 																			</tr>
 																			
@@ -665,7 +679,7 @@
                                                                     </div>
                                                                 <div class="col-xs-6">
                                                                     <div class="form-group">
-                                                                        <label for="ddlNameSuffix">Only Display Reports with Errors</label>&nbsp;&nbsp;
+                                                                        <label for="ddlNameSuffix">Display Errors Only</label>&nbsp;&nbsp;
                                                                         <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F">
 
                                                                     </div>
@@ -681,8 +695,8 @@
 																				<th>County</th>
 																				<th>AFCARS Type </th>
 																				<th>Error Details</th>
-																				<th>Error Sent Date</th>																				
-                                                                                <th>Exclude</th>
+																				<th>Error Sent Date</th>							<th>Comments</th>													
+                                                                                <th>Exclude Errors</th>
 																			</tr>
 																		</thead>
 																		<tbody>
@@ -693,6 +707,8 @@
 																				<td>Foster Care</td>
 																				<td>Data Element 6 - Date of birth is missing</td>
 																				<td>01/01/2017</td>
+                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+                                                    </textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
                                                                                 
 																			</tr>
@@ -701,7 +717,9 @@
 																				<td>York</td>
 																				<td>Foster Care</td>
 																				<td>Data Element 7 - First Name is missing</td>
-																				<td>01/01/2017</td>
+                                                                                <td> </td>
+																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+                                                    </textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																			<tr>
@@ -710,6 +728,8 @@
 																				<td>Adoption</td>
 																				<td>Data Element 8 - Placement Information missing</td>
                                                                                 <td>01/01/2017</td>
+                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+                                                    </textarea></span></td>
 																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																			</tr>
 																		</tbody>
@@ -720,101 +740,1108 @@
 															 <div id="runawayDetailsModal" class="modal fade">
                                                                     <div class="modal-dialog modal-lg">
                                                                         <div class="modal-content">
-                                                                            <div class="modal-header">
+                                                                            
+                                                                             <div class="modal-header">
                                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                                <h4 class="modal-title">Foster Care Details</h4>
+                                                                                <h4 class="modal-title">AFCARS Elements</h4>
                                                                             </div>
-
                                                                             <div class="modal-body">
 
                                                                                 <div class="row">
-                                                                                    <div class="col-xs-6">
-                                                                                        <div class="form-group">
-                                                                                            <label for="casname">First Name</label>&nbsp;&nbsp;
-                                                                                            <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                    <div class="col-xs-6">
-                                                                                        <div class="form-group">
-                                                                                            <label for="casname">Last Name</label>&nbsp;&nbsp;
-                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                    <div class="col-xs-6">
+                                                                                    <div class="col-xs-5">
                                                                                         <div class="form-group">
                                                                                             <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
                                                                                             <a href="#">123456789
                                                                                             </a>
 
                                                                                         </div>
-                                                                                    </div>  
+                                                                                    </div>
+                                                                                    <div class="col-xs-5">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">First Name</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:40%;" value="John" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-5">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Last Name</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
+
+                                                                                      
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                <div class="col-xs-5">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Case Number</label>&nbsp;&nbsp;
+                                                                                            <a href="referrals_new.html">54321
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                 <div class="col-xs-5">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">County</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Allegheny" disabled>
+                                                                                        </div>
+                                                                                 </div>
+                                                                                
+                                                                                
                                                                                 </div>
 
 
+
+                                                                            </div>
+                                                                            <div class="modal-header">
+                                                                              
+                                                                                <h4 class="modal-title">Foster Care Data Elements</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+
                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">1. Title IV-E Agency</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:80%;" value="67" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">2. Report Period Ending Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="10/01/2017" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">3. Local Agency (FIPS Code)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="255010" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">4. Record Number</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div> 
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">5. Date of Most Recent Periodic Review</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="09/01/2017" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">6. Date of Birth</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="09/01/1987" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
                                                                                     <div class="col-xs-8">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Reporting Period</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%" value="01/01/2017-07/01/2017">
-
+                                                                                            <label for="casname">7.Sex</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="M" disabled>
                                                                                         </div>
-                                                                                    </div>   
-
-                                                                                    <div class="col-xs-6">
+                                                                                    </div>
+                                                                                    <div class="col-xs-8">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Local FIPS Code</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 25%" value="22">
-
+                                                                                            <label for="casname">8. Race</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="Alaska Native" disabled>
                                                                                         </div>
-                                                                                    </div> 
-																					
-																					
+                                                                                    </div>
 
                                                                                 </div>
-
-
                                                                                 <div class="row">
-																				
-																					<div class="col-xs-4">
+                                                                                   
+                                                                                    <div class="col-xs-16">
                                                                                         <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Sex</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%" value="Male">
-
+                                                                                            <label for="casname">9. Hispanic or Latino Ethnicity</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
                                                                                         </div>
-																					</div>
-																					
-                                                                                    <div class="col-xs-6">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Date of Birth</label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%" value="02/01/2017">
-
-                                                                                        </div>
-                                                                                    </div>   
-
-																					<div class="col-xs-7">
-                                                                                        <div class="form-group">
-                                                                                            <label for="txtDateTimeReceived">Record Number </label>
-                                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%" value="AX12C1N09">
-
-                                                                                        </div>
-                                                                                    </div>                                   
-																					
-																					
+                                                                                    </div>
 
                                                                                 </div>
-																				
-																				<div class="row">
-																					<div class="col-xs-5">
-																							<div class="form-group">
-																								<label for="txtDateTimeReceived">Race</label>
-																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%" value="White">
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">10. Has the Child been Clinically Diagnosed as having a Disability(ies)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
 
-																							</div>
-																					</div> 
-																				</div>
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">11. Mental Retardation</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">12. Visually or Hearing Impaired</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">13. Physically Disabled</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">14. Emotionally Disturbed (DSM-IV)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">15. Other Medically Diagnosed Condition Requiring Special Care</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">16. Has Child Ever been Adopted?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="N" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">17. If yes, How Old was Child When Adoption Was Legalized?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="10" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">18. Date of First Removal from Home</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">19. Total number of Removals from Home to Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">20. Date Child was Discharged from last Foster Care episode.</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">21. Date of Latest Removal from Home</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">22. Removal Transaction Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">23. Date of Placement in current Foster Care Setting</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">24. Number of Previous Placement Settings During This Removal Episode?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">25. Manner of Removal from Home for Current Removal Episode</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="10/01/2011" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">26.Physical Abuse (alleged/reported)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">27. Sexual Abuse (alleged/reported)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">28. Neglect (alleged/reported)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">29. Alcohol Abuse (parent)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">30. Drug Abuse (parent)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">31. Drug Abuse (child)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">32. Alcohol Abuse (child)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">33. Child's Disability</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">34. Child's Behavior Problem</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">35. Death of Parent(s)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">36. Incarceration of Parent(s)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">37. Caretaker’s Inability to Cope Due to Illness or Other Reason</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="0" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">38. Abandonment</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">39. Relinquishment</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">40. Inadequate Housing</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">41. Current Placement Setting
+                                                                                            </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">42. Placement Out-of-State/Tribal Service Area</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">43. Most Recent Case Plan Goal</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">44. Caretaker Family Structure</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">45. Year of Birth (1st Principal Caretaker)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">46. Year of Birth (2nd Principal Caretaker - if applicable)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-18">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">47. Date of Mother's Parental Rights Termination (if applicable)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">48. Date of Legal or Putative Father's Parental Rights Termination (if applicable)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">49. Foster Family Structure</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">49. Foster Family Structure</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">50. Year of Birth (1st Foster Caretaker)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">51. Year of Birth (2nd Foster Caretaker)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">52. Race of 1st Foster Caretaker</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">53. Hispanic or Latino Ethnicity of 1st Foster Caretaker</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">54. Race of 2nd Foster Caretaker(if applicable)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">55. Hispanic or Latino Ethnicity of 1s2ndt Foster Caretaker(if applicable)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">56. Date of Discharge from Foster Care</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">57. Foster Care Discharge Transaction Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">58. Reason for Discharge</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">59. Title IV-E (Foster Care)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">60. Title IV-E (Adoption Assistance)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">61. Title IV-A</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">62. Title IV-D (Child Support)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">63. Title XIX (Medicaid)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">64. SSI or Other Social Security Benefits</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">65. None of the Above</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:60%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">66. Amount of Monthly Foster Care Payment</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:40%;" value="1" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+
+                                                                               
+
+
                                                                             </div>
+                                                                             <div class="modal-header">
+                                                                              
+                                                                                <h4 class="modal-title">Adoption Data Elements</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">1. Title IV-E Agency</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:80%;" value="67" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">2. Report Period Ending Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="10/01/2017" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">3. Record Number</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div> 
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">4. Title IV-E Agency Involvement</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">5. Child’s Date of Birth</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">6. Sex</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">7. Child’s race</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                 <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">8. Hispanic or Latino Ethnicity</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">9. Has the title IV-E agency determined that the child has special needs?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">10. Primary Factor or Condition for Special Needs</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">11. Type of Disability-Mental Retardation</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div><div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">12. Type of Disability-Visually or Hearing Impaired</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div><div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">13. Type of Disability-Physically Disabled</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">14. Type of Disability-Emotionally Disturbed</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">15. Type of Disability-Other medically diagnosed condition</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">16. Mother's year of birth</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">18. Was the Mother Married at the Time of the Child's Birth?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">19. Date of Mother’s termination of parental rights</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">20. Date of Father’s termination of parental rights</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">21. Date adoption legalized</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">22. Adoptive parents’ family structure</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">23. Year of birth (Adoptive Mother)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">24. Year of birth (Adoptive Father)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">25. Race (Adoptive mother)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">26. Hispanic or Latino Ethnicity (Adoptive mother)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">27. Race (Adoptive Father)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">28. Hispanic or Latino ethnicity(Adoptive father)</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">29. Relationship-Stepparent</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">30. Relationship-Other relative</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">31. Relationship-Foster parent</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">32. Relationship-Other non-relative</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">33. Child was placed from</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">34. Child was placed by</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">35. Is the child receiving a monthly subsidy?</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:35%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">36. Monthly amount</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   
+                                                                                    <div class="col-xs-16">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">37. Adoption assistance – IV-E</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:70%;" value="123sdfgh56er4" disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -824,15 +1851,25 @@
 															
 															<div class="panel-footer text-right">
 																<div class="btn-group primary-actions">
-																	<form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
-																	<input type="submit" name="ctl00$MainContent$btnClear" value="AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+                                                                    
+                                                                    <form  method="get" class="btn-group primary-actions">
+																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Save Comments" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
 																	</form>
+                                                                    <form  method="get" class="btn-group primary-actions">
+																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																	</form>
+																	
+                                                                    <form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
+																	<input type="submit" name="ctl00$MainContent$btnClear" value="View AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+																	</form>
+                                                                    
+                                                                    
 																	 <form  method="get" class="btn-group primary-actions"><!--action="SearchPage1.html"-->
 																	<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
 																	</form>
-																	<form  method="get" class="btn-group primary-actions">
-																	<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to Counties" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-																	</form>
+                                                                    
+                                                                    
+																	
 																</div>
 															</div>
 												</div>	
