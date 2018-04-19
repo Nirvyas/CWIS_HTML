@@ -96,19 +96,20 @@
 	
 	<script type="text/javascript">
         function toggle_tab(id) {
-		var f = document.getElementById("generated_report");
+		/* var f = document.getElementById("generated_report");
 				 f.className = 'tab-pane';
 				 f= document.getElementById("t1");
 				 
-				 f.classList.remove("active");
+				 f.classList.remove("active"); 
+		
 				 var m = document.getElementById("t2");
 				 m.className = "active"
             var e = document.getElementById(id);
             
 				e.className = 'tab-pane active';
-			
+		*/	
 			var c = document.getElementById("t3");				
-                c.style.display = 'block';
+        /*        c.style.display = 'block'; */
 				c.className = 'tab-pane active';
 			var f = document.getElementById("t2");	
 						
@@ -121,13 +122,13 @@
 	
     <script type="text/javascript">
         function toggle_tabdisplay(id) {
-            var e = document.getElementById(afcars_cwis_data);
+            var e = document.getElementById(id);
         
                 e.style.display = 'block';
         }
     </script> 
 	
-
+	
     <style>
         legend { 
             display: block;
@@ -136,6 +137,8 @@
             border: none;
         }
     </style>
+	
+	
 
     <!-- Body content goes here. -->
     <div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="2" data-broadcast-messages="no">
@@ -150,9 +153,10 @@
                                     <div class="panel-heading">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
-                                            <li class="active" id="t1" ><a href="#afcars_search" data-toggle="tab">Create Report </a></li>
-                                            <li id="t2" ><a href="#generated_report" data-toggle="tab">View Generated Reports</a></li>
-											<li id="t3" style="display:none"><a href="#afcars_cwis_data" data-toggle="tab">Display Report Details </a></li>
+                                            <li class="active" id="t1" ><a href="#afcars_search" data-toggle="tab">Create/View Generated Report </a></li>
+                                            <li id="t2" style="display:none"><a href="#generated_report" data-toggle="tab">View Generated Reports</a></li>
+											<li id="t3" style="display:none"><a href="#view_errors" data-toggle="tab">View Errors</a></li>
+											<li id="t4" style="display:none"><a href="#afcars_cwis_data" data-toggle="tab">Display Report Details </a></li>
 											<!-- <li><a href="#view_errors" data-toggle="tab">View Errors</a></li> -->
                                         </ul>
 										
@@ -160,7 +164,6 @@
 										
 										<div class="panel-body panel-tabs">
 											<div class="tab-content">
-
 													<div class="tab-pane active" id="afcars_search">   
 															<div class="row" >	
                                                                 <div class="col-xs-8" >
@@ -168,8 +171,8 @@
 																		<label for="dtofrevisedplan">Reporting Type</label>&nbsp;&nbsp;
 																		<span id="MainContent_ddlCounty" title="County">
 																			 <select name="dropDown" id="county" style="width: 65%">
-																				<option selected>Semi-annual</option>
-																				<option>Annual</option>
+																				<option selected>Final</option>
+																				<option>Trial</option>
                                                                             </select>
 																		</span>
 																	</div>
@@ -226,108 +229,10 @@
 																		</span>
 
 																	</div>
-																</div>
-																
-															</div>
+																</div>																
+															</div>                                                     
                                                         
-                                                        
-                                                        <div class="row style-select">
-<!--
-  <div class="col-md-6">
-    <label class="control-label">Superheroes</label>
-    <select multiple class="form-control" id="StaffList">
-      <option value="123">Superman</option>
-      <option value="456">Batman</option>
-      <option value="789">Spiderman</option>
-      <option value="654">Captain America</option>
-    </select>
-  </div>
--->
-  <div class="col-md-6">
-<!--
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-        <input type="button" id="btnAvenger" value="Add Avenger" class="btn btn-default" />
-      </div>
-      <div class="col-md-9 col-sm-9 col-xs-9">
-        <label class="control-label">Avengers</label>
-        <div class="selected-left">
-          <select multiple class="form-control" id="PresenterList">
-            <option value="856">Iron Man</option>
-          </select>
-        </div>
-        <div class="selected-right">
-          <button type="button" class="btn btn-default btn-sm" id="btnAvengerUp">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnAvengerDown">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnRemoveAvenger">
-            <span class="glyphicon glyphicon-remove"></span>
-          </button>
-        </div>
-      </div>
-    </div>
--->
-
-<!--
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-        <input type="button" id="btnShield" value="Add S.H.I.E.L.D." class="btn btn-default" />
-      </div>
-      <div class="col-md-9 col-sm-9 col-xs-9">
-        <label class="control-label">S.H.I.E.L.D.</label>
-        <div class="selected-left">
-          <select multiple class="form-control" id="ContactList">
-            <option value="765">Nick Fury</option>
-            <option value="698">The Hulk</option>
-          </select>
-        </div>
-        <div class="selected-right">
-          <button type="button" class="btn btn-default btn-sm" id="btnShieldUp">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnShieldDown">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnRemoveShield">
-            <span class="glyphicon glyphicon-remove"></span>
-          </button>
-        </div>
-      </div>
-    </div>
--->
-
-<!--
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-        <input type="button" id="btnJusticeLeague" value="Add Justice League" class="btn btn-default" />
-      </div>
-      <div class="col-md-9 col-sm-9 col-xs-9">
-        <label class="control-label">Justice League</label>
-        <div class="selected-left">
-          <select multiple class="form-control" id="FacilitatorList">
-
-          </select>
-        </div>
-        <div class="selected-right">
-          <button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueUp">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueDown">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-sm" id="btnRemoveJusticeLeague">
-            <span class="glyphicon glyphicon-remove"></span>
-          </button>
-        </div>
-      </div>
-    </div>
--->
-  </div>
-</div>
-<p>&nbsp;</p>
+                                                      
 																<div class="row style-select">
 																	 <div class="col-md-12">
 																		<div class="subject-info-box-1">
@@ -426,88 +331,88 @@
 																	</div>
 																</div>
 
-<script>
-  $('#btnAvenger').click(function(e) {
-    $('select').moveToList('#StaffList', '#PresenterList');
-    e.preventDefault();
-  });
+																<script>
+																  $('#btnAvenger').click(function(e) {
+																	$('select').moveToList('#StaffList', '#PresenterList');
+																	e.preventDefault();
+																  });
 
-  $('#btnRemoveAvenger').click(function(e) {
-    $('select').removeSelected('#PresenterList');
-    e.preventDefault();
-  });
+																  $('#btnRemoveAvenger').click(function(e) {
+																	$('select').removeSelected('#PresenterList');
+																	e.preventDefault();
+																  });
 
-  $('#btnAvengerUp').click(function(e) {
-    $('select').moveUpDown('#PresenterList', true, false);
-    e.preventDefault();
-  });
+																  $('#btnAvengerUp').click(function(e) {
+																	$('select').moveUpDown('#PresenterList', true, false);
+																	e.preventDefault();
+																  });
 
-  $('#btnAvengerDown').click(function(e) {
-    $('select').moveUpDown('#PresenterList', false, true);
-    e.preventDefault();
-  });
+																  $('#btnAvengerDown').click(function(e) {
+																	$('select').moveUpDown('#PresenterList', false, true);
+																	e.preventDefault();
+																  });
 
-  $('#btnShield').click(function(e) {
-    $('select').moveToList('#StaffList', '#ContactList');
-    e.preventDefault();
-  });
+																  $('#btnShield').click(function(e) {
+																	$('select').moveToList('#StaffList', '#ContactList');
+																	e.preventDefault();
+																  });
 
-  $('#btnRemoveShield').click(function(e) {
-    $('select').removeSelected('#ContactList');
-    e.preventDefault();
-  });
+																  $('#btnRemoveShield').click(function(e) {
+																	$('select').removeSelected('#ContactList');
+																	e.preventDefault();
+																  });
 
-  $('#btnShieldUp').click(function(e) {
-    $('select').moveUpDown('#ContactList', true, false);
-    e.preventDefault();
-  });
+																  $('#btnShieldUp').click(function(e) {
+																	$('select').moveUpDown('#ContactList', true, false);
+																	e.preventDefault();
+																  });
 
-  $('#btnShieldDown').click(function(e) {
-    $('select').moveUpDown('#ContactList', false, true);
-    e.preventDefault();
-  });
+																  $('#btnShieldDown').click(function(e) {
+																	$('select').moveUpDown('#ContactList', false, true);
+																	e.preventDefault();
+																  });
 
-  $('#btnJusticeLeague').click(function(e) {
-    $('select').moveToList('#StaffList', '#FacilitatorList');
-    e.preventDefault();
-  });
+																  $('#btnJusticeLeague').click(function(e) {
+																	$('select').moveToList('#StaffList', '#FacilitatorList');
+																	e.preventDefault();
+																  });
 
-  $('#btnRemoveJusticeLeague').click(function(e) {
-    $('select').removeSelected('#FacilitatorList');
-    e.preventDefault();
-  });
+																  $('#btnRemoveJusticeLeague').click(function(e) {
+																	$('select').removeSelected('#FacilitatorList');
+																	e.preventDefault();
+																  });
 
-  $('#btnJusticeLeagueUp').click(function(e) {
-    $('select').moveUpDown('#FacilitatorList', true, false);
-    e.preventDefault();
-  });
+																  $('#btnJusticeLeagueUp').click(function(e) {
+																	$('select').moveUpDown('#FacilitatorList', true, false);
+																	e.preventDefault();
+																  });
 
-  $('#btnJusticeLeagueDown').click(function(e) {
-    $('select').moveUpDown('#FacilitatorList', false, true);
-    e.preventDefault();
-  });
+																  $('#btnJusticeLeagueDown').click(function(e) {
+																	$('select').moveUpDown('#FacilitatorList', false, true);
+																	e.preventDefault();
+																  });
 
-  $('#btnRight').click(function(e) {
-    $('select').moveToListAndDelete('#lstBox1', '#lstBox2');
-    e.preventDefault();
-  });
+																  $('#btnRight').click(function(e) {
+																	$('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+																	e.preventDefault();
+																  });
 
-  $('#btnAllRight').click(function(e) {
-    $('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
-    e.preventDefault();
-  });
+																  $('#btnAllRight').click(function(e) {
+																	$('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+																	e.preventDefault();
+																  });
 
-  $('#btnLeft').click(function(e) {
-    $('select').moveToListAndDelete('#lstBox2', '#lstBox1');
-    e.preventDefault();
-  });
+																  $('#btnLeft').click(function(e) {
+																	$('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+																	e.preventDefault();
+																  });
 
-  $('#btnAllLeft').click(function(e) {
-    $('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
-    e.preventDefault();
-  });
+																  $('#btnAllLeft').click(function(e) {
+																	$('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+																	e.preventDefault();
+																  });
 
-</script>
+																</script>
 
 															
 															<div class="row">
@@ -520,26 +425,87 @@
 															</div>
 															
 																																		
-															<div class="row"><br></div>															
+															<div class="row"><br></div>	
+
 																				
-															<div class="row" style="text-align: center">
+															<div class="row" style="text-align: right">
 																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">Generate Report</button>
+																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('iskodikha')">View Generated Report</button>
 																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
 															</div>
 															<div class="row"><br></div>
-																<div class="row col-xs-18" id="showResult" style="display: none">
-																
-																<div id="afcars_search" class="row">
-                                                                    <div class="col-xs-5"></div>
-																	<div class="col-xs-8">
-																		
-																		<h4>You will be notified as soon as the report is available.</h4>
-																		
-																	</div>
-                                                                    <div class="col-xs-5"></div>
+																<div class="row col-xs-18" id="showResult" style="display: none">																
+																	<div id="afcars_search" class="row">
+																		<div class="col-xs-5"></div>
+																			<div class="col-xs-8">																		
+																				<h4>You will be notified as soon as the report is available.</h4>																		
+																			</div>
+																		<div class="col-xs-5"></div>
+																	</div>	
+																	 
+																	 <div class="row"><br></div>
+																	
 																</div>	
-                                                                    <div class="row"><br></div>
-															</div>
+																	
+																<div class="row" id="iskodikha" style="display: none" >	<!-- id="showResult2" style="display: none" -->																	
+																		<div class="row row-padding">
+																			<div class="col-xs-18">	
+																				<div class="row row-padding">
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>  </th>
+																								<th>Date Created </th>
+																								<th>Created By</th>
+																								<th>Report Type</th>
+																								<th>Reporting Period</th>
+																								<th>Narrative</th>
+																								<th>Date Submitted to ACF</th>
+																								<!-- <th>View</th> -->
+																							
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																								<td>09/12/2017</td>
+																								<td>John Smith</td>
+																								<td>Final</td>
+																								<td>09/01/2017  - 02/28/2018</td>
+																								<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																								<td>03/20/2018</td>
+																							   <!--  <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+		
+																							</tr>
+																							<tr>
+																								<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																								<td>11/14/2017</td>
+																								<td>Jane Smiths</td>
+																								<td>Trial</td>
+																								<td>09/01/2017  - 02/28/2018</td>
+																								<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																								<td> </td>
+																								<!-- <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+																								
+																							</tr>																			
+																						</tbody>
+																					</table>
+																				</div>
+																			</div>
+																		</div>
+																		
+																		
+                                                                    <div class="row" style="text-align: right">
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t4')">View Report Details</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">View AFCARS Data File</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">Transmit to ACF</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
+																		
+																	</div>                                                                  
+																</div>
+																	
+															
 																<!--Fill everything related to family services before this -->
 													</div>	
 												
@@ -562,27 +528,41 @@
 												<div class="row">	
 													<div class="col-xs-8">													
 															<div class="row row-padding">															
-																	<label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>																
+																	<label for="txtDateTimeReceived">Total Number of Foster Care Children : 10</label>																
 															</div>
 															
 															<div class="row"><br></div>
+															
+															<div class="row row-padding">															
+																	<label for="txtDateTimeReceived">Total Number of Adopted Children : 5</label>																
+															</div>
 															<div class="row"><br></div>
-															<div class="row"><br></div>
+															
+															<div class="row row-padding">															
+																	<label for="txtDateTimeReceived">Total Number of JPO Cases : 7</label>																
+															</div>
 															<div class="row"><br></div>
 															
 															<div class="row row-padding">															
 																	<label for="txtDateTimeReceived">Total Number of Deceased : 5 </label>															
 															</div>
+															
+															<div class="row"><br></div>
+															
+															<div class="row row-padding">															
+																	<label for="txtDateTimeReceived">Total Number of Missing Children : 3 </label>															
+															</div>
 													</div> 
 												
 													
-													<div class="col-xs-4">
+													<div class="col-xs-5">
 														<div class="form-group">
+															<label for="txtDateTimeReceived" style="align: center"><b>Total Number of Deceased Children</b></label>	
 															<canvas id="myCanvas"></canvas>
 														</div>
 													</div> 	
 
-													<div class="col-xs-4">
+													<div class="col-xs-3">
 														<div class="form-group">
 															<div id="myLegend"></div>
 														</div>
@@ -766,34 +746,10 @@
 														 <div class="col-xs-18">
 																<div class="form-group">
 																	<label for="txtDateTimeReceived">Footnote </label>&nbsp;&nbsp;
-																	<input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 93%" value="Testing for Footnote ">
+																	<input type="text" id="txtDateTimeReceived" placeholder="7" style="width: 93%" value="Total Number of JPO Cases : 7   Total Number of Deceased : 5 ">
 																</div>
 														</div> 
                                                     </div>
-                                                    													
-                                                    
-                                                  <!--  <div class="row"><div class="col-xs-8"> <b>Details for JPO and Deceased </b></div></div>
-                                                    
-                                                    <table class="table  table-striped">
-																		<thead>
-																			<tr>
-																				<th>MCI</th>
-																				<th>Type</th>																				
-																			</tr>
-																		</thead>
-																		<tbody>																			
-																			<tr>
-																				<td>123456789</td>
-																				<td>JPO</td>
-																			</tr>
-																			<tr>
-																				<td>987654321</td>
-																				<td>Deceased</td>
-																			</tr>
-																			
-																		</tbody>
-													</table> -->
-                                                    
                                                     
 															<div class="row"><br></div>
 															
@@ -882,14 +838,14 @@
                                                                         </div>
                                                                 </div>
                                                                 
-                                                                <div class="col-xs-5">
+                                                                <!-- <div class="col-xs-5">
                                                                         <label for="dtofrevisedplan">Record Submitted to ACF</label>&nbsp;&nbsp;	
                                                                             <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;">
                                                                                 <option value="01" selected> All</option>
                                                                                 <option>Yes</option>
                                                                                 <option>No</option>
                                                                             </select>
-                                                                </div>
+                                                                </div> -->
 																
 																<div class="col-xs-3">
                                                                         <label for="dtofrevisedplan">Deceased</label>&nbsp;&nbsp;	
@@ -908,136 +864,195 @@
                                                                                 <option>No</option>
                                                                             </select>
                                                                 </div>
-                                                                <div class="col-xs-3">
+                                                                <!-- <div class="col-xs-3">
                                                                     <div class="form-group">
                                                                         <label for="ddlNameSuffix">Display Errors Only</label>&nbsp;&nbsp;
                                                                         <input type="checkbox" id="ddlNameSuffix" style="max-width:40%;" value="F">
 
                                                                     </div>
-                                                                </div>                                                                 
+                                                                </div>  -->                                                                
                                                             </div>
 															
 															<div class="row"><br></div>
 															
-															<div class="row">
-                                                                <div class="col-lg-18">
-                                                                    <h2 class="tab-heading">AFCARS Report Details - Foster Care</h2>
-                                                                </div> 
-                                                            </div>
-																	
-																	<table class="table table-hover table-striped">
-																		<thead>
-																			<tr>
-																				<th>MCI</th>
-																				<th>County</th>
-																				
-																				<th>Error Details</th>
-																				<th>Error Sent Date</th>
-																				<th>JPO</th>
-																				<th>Deceased</th>
-																				<th>Comments</th>													
-                                                                                <th>Exclude Errors</th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																			<tr>
-																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
-																				<td>Dauphin</td>
-																				
-																				<td>Data Element 6 - Date of birth is missing</td>
-																				<td>01/01/2017</td>
-																				<td>Y</td>
-																				<td>N</td>
-                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-                                                                                
-																			</tr>
-																			<tr>
-																				<td>987654321</td>
-																				<td>York</td>
-																				
-																				<td>Data Element 7 - First Name is missing</td>
-                                                                                <td> </td>
-																				<td>Y</td>
-																				<td>N</td>
-																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-																			</tr>
-																			<tr>
-																				<td>112233445</td>
-																				<td>Cumberland</td>
-																				
-																				<td>Data Element 8 - Placement Information missing</td>
-                                                                                <td>01/01/2017</td>
-																				<td>Y</td>
-																				<td>N</td>
-                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-																			</tr>
-																		</tbody>
-																	</table>
-															
-															<div class="row"><br></div>
-															
-															<div class="row">
-                                                                <div class="col-lg-18">
-                                                                    <h2 class="tab-heading">AFCARS Report Details - Adoption</h2>
-                                                                </div> 
-                                                            </div>
-																	
-																	<table class="table table-hover table-striped">
-																		<thead>
-																			<tr>
-																				<th>MCI</th>
-																				<th>County</th>
-																				<!-- <th>AFCARS Type </th> -->
-																				<th>Error Details</th>
-																				<th>Error Sent Date</th>
-																				<th>Deceased</th>
-																				<th>Comments</th>													
-                                                                                <th>Exclude Errors</th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																			<tr>
-																				<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
-																				<td>Dauphin</td>
-																				<!-- <td>Foster Care</td> -->
-																				<td>Data Element 6 - Date of birth is missing</td>
-																				<td>01/01/2017</td>
-																				<td>N</td>
-                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-                                                                                
-																			</tr>
-																			<tr>
-																				<td>987654321</td>
-																				<td>York</td>
-																				<!-- <td>Foster Care</td> -->
-																				<td>Data Element 7 - First Name is missing</td>
-                                                                                <td> </td>
-																				<td>N</td>
-																				<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-																			</tr>
-																			<tr>
-																				<td>112233445</td>
-																				<td>Cumberland</td>
-																				<!-- <td>Adoption</td> -->
-																				<td>Data Element 8 - Placement Information missing</td>
-                                                                                <td>01/01/2017</td>
-																				<td>Y</td>
-                                                                                <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																				</textarea></span></td>
-																				<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
-																			</tr>
-																		</tbody>
-																	</table>															
+																<div class="panel panel-third">
+																	<div class="panel-heading">
+																		<!-- Nav tabs -->
+																		<ul class="nav nav-tabs">
+																			<li class="active"><a href="#foster_care" data-toggle="tab">Foster Care</a></li>
+																			<li><a href="#adoption" data-toggle="tab">Adoption</a></li>
+																			<li><a href="#miss_child" data-toggle="tab">Missing Children</a></li>
+																			
+																		</ul>
+																	</div>
+
+																	<div class="panel-body panel-tabs">
+																		<!-- Tab panes -->
+																		<div class="tab-content">
+																			<div class="tab-pane" id="foster_care">
+																				<div class="row">
+																					<div class="col-lg-18">
+																						<h2 class="tab-heading">Foster Care Information</h2>
+																					</div> 
+																				</div>								
+																				<table class="table">
+																					<thead>
+																						<tr>
+																							<th>MCI</th>
+																							<th>First Name</th>
+																							<th>Last Name</th>																							
+																							<th>Date of Birth</th>
+																							<th>Gender</th>
+																							<th>Date of First Removal</th>																							
+																							<th>JPO</th>
+																							<th>Deceased</th>
+																							
+																							<th>Has Errors </th>
+																								
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
+																							<td>John</td>	
+																							<td>Smith</td>
+																							<td>01/01/2017</td>
+																							<td>M</td>
+																							<td>12/01/2017</td>
+																							<td>Y</td>
+																							<td>N</td>
+																							<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="2" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,3000);" >
+																							</textarea></span></td> -->
+																							<td> N</td>
+																							
+																						</tr>
+																						<tr>
+																							<td>987654321</td>
+																							<td>Jane</td>	
+																							<td>Doe</td>
+																							<td>02/14/2013</td>																							
+																							<td>F</td>
+																							<td>02/14/2014</td>
+																							<td>Y</td>
+																							<td>N</td>
+																							<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="2" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,3000);" >
+																							</textarea></span></td> -->
+																							<td> N</td>
+																						</tr>
+																						<tr>
+																							<td>112233445</td>
+																							<td>Jimmy</td>																							
+																							<td>Johnson</td>
+																							<td>01/01/2010</td>
+																							<td>M</td>
+																							<td>02/01/2011</td>
+																							<td>Y</td>
+																							<td>N</td>
+																							<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="2" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,3000);" >
+																							</textarea></span></td> -->
+																							<td> N</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																			
+																			<div class="tab-pane" id="adoption">
+																				<div class="row">
+																					<div class="col-lg-18">
+																						<h2 class="tab-heading">Adoption Information</h2>
+																					</div> 
+																				</div>										
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>MCI</th>
+																								<th>First Name</th>
+																								<th>Last Name</th>
+																								<th>Date of Birth</th>
+																								<th>Gender</th>
+																								<th>Date of Adoption</th>
+																								<!-- <th>Comments</th> -->
+																								<th> Has Errors </th>
+																								
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
+																								<td>Sam</td>
+																								<td>Neil</td>
+																								<td>10/01/2012</td>
+																								<td>M</td>
+																								<td>01/01/2017</td>
+																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td> -->
+																								<td> N</td>
+																								
+																							</tr>
+																							<tr>
+																								<td>987654321</td>
+																								<td>Julie</td>
+																								<td>Doe</td>
+																								<td>03/12/2010</td>
+																								<td>F</td>
+																								<td>05/11/2015</td>
+																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td> -->
+																								<td>N</td>
+																							</tr>
+																							
+																						</tbody>
+																					</table>
+																			</div>
+																			
+																			<div class="tab-pane" id="miss_child">
+																				<div class="row">
+																					<div class="col-lg-18">
+																						<h2 class="tab-heading">Missing Children Information</h2>
+																					</div> 
+																				</div>										
+																				<table class="table table-hover table-striped">
+																					<thead>
+																						<tr>
+																							<th>MCI</th>
+																							<th>First Name</th>
+																							<th>Last Name</th>
+																							<th>Date of Birth</th>
+																							<th>Gender</th>
+																							<th>Date Child was Missing</th>
+																							<!-- <th>Comments</th> -->
+																							<!-- <th>Error Indicator</th> -->
+																						</tr>
+																					</thead>																					
+																					<tbody>
+																							<tr>
+																								<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">111222333</a>
+																								<td>Jack</td>
+																								<td>Johnson</td>
+																								<td>09/21/2009</td>
+																								<td>M</td>
+																								<td>01/01/2017</td>
+																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td> -->
+																							</tr>
+																							<tr>
+																								<td>321654012</td>
+																								<td>Jackie</td>
+																								<td>Smith</td>
+																								<td>11/22/2008</td>
+																								<td>F</td>
+																								<td>12/21/2017</td>
+																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td> -->
+																							</tr>
+																						</tbody>
+																						
+																				</table>
+																			</div>
+																		</div>
+																	</div>
+																</div>														
 															 
 															 
 															 <div id="runawayDetailsModal" class="modal fade">
@@ -1072,8 +1087,6 @@
                                                                                             <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
                                                                                         </div>
                                                                                     </div>
-                                                                                    
-
                                                                                       
                                                                                 </div>
                                                                                 <div class="row">
@@ -1084,19 +1097,15 @@
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>
-                                                                                 <div class="col-xs-5">
-                                                                                        <div class="form-group">
-                                                                                            <label for="casname">County</label>&nbsp;&nbsp;
-                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Allegheny" disabled>
-                                                                                        </div>
-                                                                                 </div>
-                                                                                
-                                                                                
+																					 <div class="col-xs-5">
+																							<div class="form-group">
+																								<label for="casname">County</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="Allegheny" disabled>
+																							</div>
+																					 </div>
                                                                                 </div>
-
-
-
                                                                             </div>
+																			
                                                                             <div class="modal-header">
                                                                               
                                                                                 <h4 class="modal-title">Foster Care Data Elements</h4>
@@ -1772,11 +1781,8 @@
                                                                                     </div>
 
                                                                                 </div>
-
-                                                                               
-
-
                                                                             </div>
+																			
                                                                              <div class="modal-header">
                                                                               
                                                                                 <h4 class="modal-title">Adoption Data Elements</h4>
@@ -2143,8 +2149,6 @@
 
                                                                                 </div>
                                                                             </div>
-
-                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2177,171 +2181,224 @@
 												<div class="tab-pane" id="generated_report">
 															<div class="row">
 																
-																<div class="row" >
+																<!--<div class="row" >
 																	<div class="col-xs-18">	
+																		<div class="col-xs-4" >
+																			<div class="form-group">
+																				<label for="dtofrevisedplan">Reporting Type</label>&nbsp;&nbsp;
+																				<span id="MainContent_ddlCounty" title="County">
+																					 <select name="dropDown" id="county" style="width: 40%">
+																						<option selected>Final</option>
+																						<option>Trial</option>
+																					</select>
+																				</span>
+																			</div>
+																		</div>	
+																	
 																		<div class="col-xs-7" >
 																			<div class="form-group">
 																				<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
-																				<input type="text" id="dtofrevisedplan" style="width: 70%" value="September 2017 - February 2018" disabled>
+																				<input type="text" id="dtofrevisedplan" style="width: 58%" value="September 2017 - February 2018" disabled>
 																			</div>
 																		</div>	
 																		
 																		
-																		<div class="col-xs-8">
+																		<div class="col-xs-5">
 																			<div class="form-group">
 																				<label for="txtDateTimeReceived">Date Report Generated </label>&nbsp;&nbsp;
-																				<input type="text" style="width: 60%" id="txtDateTimeReceived" placeholder="09/21/2017">
+																				<input type="text" style="width: 40%" id="txtDateTimeReceived" placeholder="09/21/2017">
 																				<a href="#1" class="icon-date-time"></a>
 																			</div>
 																		</div>
+																		
+																		 <div class="col-xs-3">
+																			<div class="form-group">
+																				<label for="ddlNameSuffix">Transmitted to ACF </label>&nbsp;&nbsp;
+																				<input type="checkbox" id="ddlNameSuffix" style="max-width:40%;" value="F">
+
+																			</div>
+																		</div>  
 																			
 																	</div>  
-																</div>
+																</div> -->
 																																																																			
-																<div class="row"><br></div>															
+																<!-- <div class="row"><br></div>															
 																					
 																<div class="row" style="text-align: center">
 																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult2')">Search</button>
 																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
 																</div>
 
-																<div class="row"><br></div>
+																<div class="row"><br></div> -->
 
-																<div class="row col-xs-18" id="showResult2" style="display: none">																		
-																		<div id="afcars_search" class="row row-padding">
-																			<div class="col-xs-18">
-																				<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->																				
-																				<table class="table table-hover table-striped">
-																					<thead>
-																						<tr>
-																							<th>Date Created </th>
-																							<th>Created By</th>
-																							<th>Report Type</th>
-																							<th>Reporting Period</th>
-																							<th>Narrative</th>
-																							<th>Date Submitted to ACF</th>
-																							<th>View</th>
-																						
-																						</tr>
-																					</thead>
-																					<tbody>
-																						<tr>
-																							<td>09/12/2017</td>
-																							<td>John Smith</td>
-																							<td>Semi-annual</td>
-																							<td>09/01/2017  - 02/28/2018</td>
-																							<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
-                                                                                            <td>03/20/2018</td>
-                                                                                            <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
-
+																<!-- <div class="row col-xs-18" id="showResult2">																	
+																		<div class="row row-padding">
+																			<div class="col-xs-18">	
+																				<div class="row row-padding">
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>  </th>
+																								<th>Date Created </th>
+																								<th>Created By</th>
+																								<th>Report Type</th>
+																								<th>Reporting Period</th>
+																								<th>Narrative</th>
+																								<th>Date Submitted to ACF</th>
+																								<th>View</th>
 																							
-																							
-
-																							
-																						</tr>
-																						<tr>
-																							<td>11/14/2017</td>
-																							<td>Jane Smiths</td>
-																							<td>Semi-annual</td>
-																							<td>09/01/2017  - 02/28/2018</td>
-																							<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
-                                                                                            <td>03/30/2018</td>
-																							<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
-
-																							
-
-																							
-																						</tr>																			
-																					</tbody>
-																				</table>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																								<td>09/12/2017</td>
+																								<td>John Smith</td>
+																								<td>Final</td>
+																								<td>09/01/2017  - 02/28/2018</td>
+																								<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																								<td>03/20/2018</td>
+																							    <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+		
+																							</tr>
+																							<tr>
+																								<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																								<td>11/14/2017</td>
+																								<td>Jane Smiths</td>
+																								<td>Trial</td>
+																								<td>09/01/2017  - 02/28/2018</td>
+																								<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																								<td>03/30/2018</td>
+																								<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+																								
+																							</tr>																			
+																						</tbody>
+																					</table>
+																				</div>
 																			</div>
 																		</div>
-                                                                    
-                                                                    <div class="panel-footer text-right">
-																	<div class="btn-group primary-actions">
-																		
-																		<!-- <form  method="get" class="btn-group primary-actions">
-																		<input type="submit" name="ctl00$MainContent$btnSearch" value="Save Comments" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-																		</form>
-																		<form  method="get" class="btn-group primary-actions">
-																		<input type="submit" name="ctl00$MainContent$btnSearch" value="Send to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-																		</form> -->
-																		
-																		<form  method="get" class="btn-group primary-actions">
-																		<input type="submit" name="ctl00$MainContent$btnClear" value="View AFCARS Data File" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-																		</form>
 																		
 																		
-																		 <form  method="get" class="btn-group primary-actions">
-																		<input type="submit" name="ctl00$MainContent$btnClear" value="Transmit to ACF" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-																		</form>
+                                                                    <div class="row" style="text-align: right">
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">View Report</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">View AFCARS Data File</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Transmit to ACF</button>
+																		<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
 																		
 																	</div>
-																</div>
+                                                                 
+																</div> -->
                                                                     
                                                                     
 																	</div>
 															</div>
+															
+															<!--Beginning of View Errors -->												
+																	<div class="tab-pane" id="view_errors">
+																		<div class="row">
+																			<div class="col-xs-18">
+																				
+																				<div class="row row-padding">
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>  </th>
+																								<th>MCI </th>
+																								<th>First Name </th>
+																								<th>Last Name</th>
+																								<th>Date of Birth</th>
+																								<th>Gender</th>																								
+																								<th>County</th>
+																								<th>Error Details</th>
+																								<th>Error sent date</th>
+																								<th>Comments</th>	
+																								<th>Exclude Error </th>	
+																								
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> <input type ="checkbox"></td>
+																								<td>13454555</td>
+																								<td>John</td>
+																								<td>Smith</td>
+																								<td>01/01/2017</td>
+																								<td>M</td>																								
+																								<td>Adams</td>
+																								<td>Foster Care element 6 - Date of birth is missing</td>
+																								<td>05/12/2017</td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,2000);" >
+																								</textarea></span></td>
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>																		
+																								
+																							</tr>
+																							<tr>
+																								<td> <input type ="checkbox"></td>
+																								<td>13454555</td>
+																								<td>John</td>
+																								<td>Smith</td>
+																								<td>01/01/2017</td>
+																								<td>M</td>																								
+																								<td>Adams</td>
+																								<td>Foster Care element 6 - Date of birth is missing</td>
+																								<td> </td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,2000);" >
+																								</textarea></span></td>
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+																							</tr>																		
+
+																							<tr>
+																								<td> <input type ="checkbox"></td>
+																								<td>13454555</td>
+																								<td>John</td>
+																								<td>Smith</td>
+																								<td>01/01/2017</td>
+																								<td>M</td>																								
+																								<td>Adams</td>
+																								<td>Foster Care element 6 - Date of birth is missing</td>
+																								<td> </td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="30" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,2000);" >
+																								</textarea></span></td>
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
+																							</tr>	
+																																									
+																						</tbody>
+																					</table>
+																				</div>
+																			</div>
+																		</div>
+
+																				<div class="panel-footer text-right">
+																					<div class="btn-group primary-actions">
+																						
+																						<form  method="get" class="btn-group primary-actions">
+																						<input type="submit" name="ctl00$MainContent$btnSearch" value="Save Comments" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																						</form>
+																						<form  method="get" class="btn-group primary-actions">
+																						<input type="submit" name="ctl00$MainContent$btnSearch" value="Send Error(s) to County(ies)" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
+																						</form>
+																						
+																					</div>
+																				</div>													
+																	</div>
+																</div>
+																	
+															<!-- End of View Errors --> 
+															
+															
+															
+											</div>
 
 																															
-												</div>
+												
 												<!-- End of Generated Report -->
 												
-												<!--Beginning of View Errors -->
-												<div class="tab-pane" id="view_errors">
-													<div id="afcars_search" class="row">
-														<div class="col-xs-18">
-															<!-- <h2 class="tab-heading">AFCARS CWIS Data Criteria</h2 -->																				
-															<table class="table table-hover table-striped">
-																<thead>
-																	<tr>
-																		<th>MCI </th>
-																		<th>Counties</th>
-																		<th>Error Details</th>																		
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr>
-																		<td>13454555</td>
-																		<td>Adams</td>
-																		<td>Foster Care element 6 - Date of birth is missing</td>
-																	</tr>
-																	<tr>
-																		<td></td>
-																		<td></td>
-																		<td>Foster care element 50 - Year of birth of 1st foster caretake rise missing</td>
-																	</tr>																		
-
-																	<tr>
-																		<td>13454578</td>
-																		<td>Berks</td>
-																		<td>Foster Care element 6 - Date of birth is missing</td>
-																	</tr>	
-																	<tr>
-																		<td></td>
-																		<td></td>
-																		<td>Foster care element 50 - Year of birth of 1st foster caretake rise missing</td>
-																	</tr>																		
-																</tbody>
-															</table>
-														</div>
-													</div>									
-												</div>
 												
-												<!-- End of View Errors --> 
 												
 												
 											</div>
-											<!-- <div class="panel-footer text-right">
-												<div class="btn-group primary-actions">
-													 <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
-													<input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-													</form>
-													<form action="SearchPage2.html" method="get" class="btn-group primary-actions">
-													<input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-													</form>
-												</div>
-											</div> -->
+											
 										</div>										
                                     </div>
 								</div>
@@ -2349,16 +2406,11 @@
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
+			
 		</div>		
 			<div class="panel-footer text-right">
 				<div class="btn-group primary-actions">
-					 <!-- <form action="SearchPage1.html" method="get" class="btn-group primary-actions">
-					<input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-					</form>
-					<form action="SearchPage2.html" method="get" class="btn-group primary-actions">
-					<input type="submit" name="ctl00$MainContent$btnSearch" value="Search" id="MainContent_btnSearch" class="btn btn-internal btn-primary" action="#searchResult"/>
-					</form> -->
+					 
 				</div>
 			</div>
 	</div>
