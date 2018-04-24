@@ -153,8 +153,8 @@
                                     <div class="panel-heading">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
-                                            <li class="active" id="t1" ><a href="#afcars_search" data-toggle="tab">Create/View Reports </a></li>
-                                            <li id="t2" style="display:none"><a href="#generated_report" data-toggle="tab">View Generated Reports</a></li>
+                                            <li class="active" id="t1" ><a href="#afcars_search" data-toggle="tab">Create Reports </a></li>
+                                            <li id="t2" ><a href="#generated_report" data-toggle="tab">View Generated Reports</a></li>
 											<li id="t3" style="display:none"><a href="#view_errors" data-toggle="tab">View Errors</a></li>
 											<li id="t4" style="display:none"><a href="#afcars_cwis_data" data-toggle="tab">Display Report Details </a></li>
 											<!-- <li><a href="#view_errors" data-toggle="tab">View Errors</a></li> -->
@@ -430,7 +430,7 @@
 																				
 															<div class="row" style="text-align: right">
 																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">Generate Report</button>
-																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('iskodikha')">View Generated Reports</button>
+																<!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('iskodikha')">View Generated Reports</button> -->
 																<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
 															</div>
 															<div class="row"><br></div>
@@ -547,7 +547,7 @@
 													</div> 
 												
 													
-													<div class="col-xs-5">
+													<!-- <div class="col-xs-5">
 														<div class="form-group">
 															<label for="txtDateTimeReceived" style="align: center"><b>Total Number of Deceased Children</b></label>	
 															<canvas id="myCanvas"></canvas>
@@ -558,8 +558,8 @@
 														<div class="form-group">
 															<div id="myLegend"></div>
 														</div>
-													</div> 													
-                                                 </div>
+													</div> 	 -->												
+                                                </div>
 												 
 												 <!--  <div class="row">
 													<div class="col-xs-6">
@@ -732,9 +732,9 @@
 													<!--Pie Chart End-->
 
 											
-                                                    
+                                                    <div class="row"><br></div>
 													
-													<div class="row">
+													<div class="row ">
 														 <div class="col-xs-18">
 																<div class="form-group">
 																	<label for="txtDateTimeReceived">Footnote </label>&nbsp;&nbsp;
@@ -877,7 +877,8 @@
 																			<li class="active"><a href="#foster_care" data-toggle="tab">Foster Care</a></li>
 																			<li><a href="#adoption" data-toggle="tab">Adoption</a></li>
 																			<li><a href="#miss_child" data-toggle="tab">Missing Children</a></li>
-																			
+																			<li><a href="#view_afcars_foster_elements" data-toggle="tab">Display Foster Care Elements</a></li>
+																			<li><a href="#view_afcars_adoption_elements" data-toggle="tab">Display Adoption Elements</a></li>
 																		</ul>
 																	</div>
 
@@ -999,26 +1000,325 @@
 																					</table>
 																			</div>
 																			
+																			
 																			<div class="tab-pane" id="miss_child">
 																				<div class="row">
 																					<div class="col-lg-18">
 																						<h2 class="tab-heading">Missing Children Information</h2>
 																					</div> 
 																				</div>										
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>MCI</th>
+																								<th>First Name</th>
+																								<th>Last Name</th>
+																								<th>Date of Birth</th>
+																								<th>Gender</th>
+																								<!-- <th>Date of Adoption</th>
+																								<th>Comments</th>
+																								<th> Has Errors </th> -->
+																								
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
+																								<td>Sam</td>
+																								<td>Neil</td>
+																								<td>10/01/2012</td>
+																								<td>M</td>
+																								<!-- <td>01/01/2017</td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td> N</td> -->
+																								
+																							</tr>
+																							<tr>
+																								<td>987654321</td>
+																								<td>Julie</td>
+																								<td>Doe</td>
+																								<td>03/12/2010</td>
+																								<td>F</td>
+																								<!-- <td>05/11/2015</td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td>N</td> -->
+																							</tr>
+																							
+																						</tbody>
+																					</table>
+																			</div>
+																			
+																			<div class="tab-pane" id="view_afcars_foster_elements">
+																				<div class="row">
+																					<div class="col-lg-18">
+																						<h2 class="tab-heading">AFCARS Foster Care Data Elements</h2>
+																					</div> 
+																				</div>		
+
 																				<table class="table table-hover table-striped">
 																					<thead>
 																						<tr>
-																							<th>MCI</th>
-																							<th>First Name</th>
-																							<th>Last Name</th>
-																							<th>Date of Birth</th>
-																							<th>Gender</th>
-																							<th>Date Child was Missing</th>
-																							<!-- <th>Comments</th> -->
-																							<!-- <th>Error Indicator</th> -->
+																							<th>1. Title IV-E Agency</th>
+																							<th>2. Report Period Ending Date</th>
+																							<th>3. Local Agency (FIPS Code)</th>
+																							<th>4. Record Number</th>
+																							<th>5. Date of Most Recent Periodic Review</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> 67</td>
+																							<td> 10/01/2017</td>
+																							<td> 25</td>
+																							<td> 000-123456789A</td>
+																							<td> 09/01/2017</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>6. Date of Birth</th>
+																							<th>7. Sex</th>
+																							<th>8. Race</th>
+																							<th>9. Hispanic or Latino Ethnicity</th>
+																							<th>10. Has the Child been Clinically Diagnosed as having a Disability(ies)</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> 09/01/1987</td>
+																							<td> M</td>
+																							<td> Alaska Native</td>
+																							<td> N</td>
+																							<td> N</td>
+																						</tr>
+																					</tbody>
+																																										
+																					<thead>
+																						<tr>
+																							<th>11. Mental Retardation</th>
+																							<th>12. Visually or Hearing Impaired</th>
+																							<th>13. Physically Disabled</th>
+																							<th>14. Emotionally Disturbed (DSM-IV)</th>
+																							<th>15. Other Medically Diagnosed Condition Requiring Special Care</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> N</td>
+																							<td> N</td>
+																							<td> N</td>
+																							<td> N</td>
+																							<td> N</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>16. Has Child Ever been Adopted?</th>
+																							<th>17. If yes, How Old was Child When Adoption Was Legalized?</th>
+																							<th>18. Date of First Removal from Home</th>
+																							<th>19. Total number of Removals from Home to Date</th>
+																							<th>20. Date Child was Discharged from last Foster Care episode.</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> N</td>
+																							<td> 10 </td>
+																							<td> 10/01/2011</td>
+																							<td> 1</td>
+																							<td> 10/01/2011</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>21. Date of Latest Removal from Home</th>
+																							<th>22. Removal Transaction Date</th>
+																							<th>23. Date of Placement in current Foster Care Setting</th>
+																							<th>24. Number of Previous Placement Settings During This Removal Episode?</th>
+																							<th>25. Manner of Removal from Home for Current Removal Episode</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> 10/01/2011</td>
+																							<td> 10/01/2011</td>
+																							<td> 10/01/2011</td>
+																							<td> 12</td>
+																							<td> Adoption</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>26.Physical Abuse (alleged/reported)</th>
+																							<th>27. Sexual Abuse (alleged/reported)</th>
+																							<th>28. Neglect (alleged/reported)</th>
+																							<th>29. Alcohol Abuse (parent)</th>
+																							<th>30. Drug Abuse (parent)</th>
 																						</tr>
 																					</thead>																					
 																					<tbody>
+																						<tr>
+																							<td> alleged</td>
+																							<td> alleged</td>
+																							<td> alleged</td>
+																							<td> Father</td>
+																							<td> Father</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>31. Drug Abuse (child)</th>
+																							<th>32. Alcohol Abuse (child)</th>
+																							<th>33. Child's Disability</th>
+																							<th>34. Child's Behavior Problem</th>
+																							<th>35. Death of Parent(s)</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> No</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>36. Incarceration of Parent(s)</th>
+																							<th>37. Caretaker’s Inability to Cope Due to Illness or Other Reason</th>
+																							<th>38. Abandonment</th>
+																							<th>39. Relinquishment</th>
+																							<th>40. Inadequate Housing</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> No</td>
+																							<td> Yes</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>41. Current Placement Setting</th>
+																							<th>42. Placement Out-of-State/Tribal Service Area</th>
+																							<th>43. Most Recent Case Plan Goal</th>
+																							<th>44. Caretaker Family Structure</th>
+																							<th>45. Year of Birth (1st Principal Caretaker)</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> Foster Home</td>
+																							<td> No</td>
+																							<td> 1/3/2018</td>
+																							<td> Mom, Dad, Uncle</td>
+																							<td> 1965</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>46. Year of Birth (2nd Principal Caretaker - if applicable)</th>
+																							<th>47. Date of Mother's Parental Rights Termination (if applicable)</th>
+																							<th>48. Date of Legal or Putative Father's Parental Rights Termination (if applicable)</th>
+																							<th>49. Foster Family Structure</th>
+																							<th>50. Foster Family Structure</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> 10/1/1972</td>
+																							<td> 10/21/2012</td>
+																							<td> None</td>
+																							<td> Mom, Dad, Uncle</td>
+																							<td> Mom, Dad, Uncle</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>51. Year of Birth (1st Foster Caretaker)</th>
+																							<th>52. Year of Birth (2nd Foster Caretaker)</th>
+																							<th>53. Race of 1st Foster Caretaker</th>
+																							<th>54. Hispanic or Latino Ethnicity of 1st Foster Caretaker</th>
+																							<th>55. Race of 2nd Foster Caretaker(if applicable)</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> 10/1/1972</td>
+																							<td> 10/1/1972</td>
+																							<td> American</td>
+																							<td> No</td>
+																							<td> American</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>56. Hispanic or Latino Ethnicity of 1s2ndt Foster Caretaker(if applicable)</th>
+																							<th>57. Date of Discharge from Foster Care</th>
+																							<th>58. Foster Care Discharge Transaction Date</th>
+																							<th>59. Reason for Discharge</th>
+																							<th>60. Title IV-E (Foster Care)</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> No</td>
+																							<td> 03/27/2016</td>
+																							<td> 03/27/2016</td>
+																							<td> Adoption</td>
+																							<td> Yes</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>61. Title IV-E (Adoption Assistance)</th>
+																							<th>62. Title IV-A</th>
+																							<th>63. Title IV-D (Child Support)</th>
+																							<th>64. Title XIX (Medicaid)</th>
+																							<th>65. SSI or Other Social Security Benefits</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> Yes</td>
+																							<td> No</td>
+																							<td> Yes</td>
+																							<td> Yes</td>
+																							<td> No</td>
+																						</tr>
+																					</tbody>
+																					
+																					<thead>
+																						<tr>
+																							<th>66. None of the Above</th>
+																							<th>67. Amount of Monthly Foster Care Payment</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td> Yes</td>
+																							<td> 2000</td>
+																						</tr>
+																					</tbody>
+																					
+																																										
+																					<!-- <tbody>
 																							<tr>
 																								<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">111222333</a>
 																								<td>Jack</td>
@@ -1026,9 +1326,6 @@
 																								<td>09/21/2009</td>
 																								<td>M</td>
 																								<td>01/01/2017</td>
-																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
-																								</textarea></span></td>
-																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td> -->
 																							</tr>
 																							<tr>
 																								<td>321654012</td>
@@ -1037,14 +1334,207 @@
 																								<td>11/22/2008</td>
 																								<td>F</td>
 																								<td>12/21/2017</td>
-																								<!-- <td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
 																								</textarea></span></td>
-																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td> -->
+																								<td> <input type="checkbox" id="ddlNameSuffix" style="max-width:50%;" value="F"></td>
 																							</tr>
-																						</tbody>
+																						</tbody> -->
 																						
 																				</table>
 																			</div>
+																			
+																			<div class="tab-pane" id="view_afcars_adoption_elements">
+																				<div class="row">
+																					<div class="col-lg-18">
+																						<h2 class="tab-heading">AFCARS Adoption Data Elements</h2>
+																					</div> 
+																				</div>										
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>1. Title IV-E Agency</th>
+																								<th>2. Report Period Ending Date</th>
+																								<th>3. Record Number</th>
+																								<th>4. Title IV-E Agency Involvement</th>
+																								<th>5. Child’s Date of Birth</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																					
+																						<thead>
+																							<tr>
+																								<th>6. Sex</th>
+																								<th>7. Child’s race</th>
+																								<th>8. Hispanic or Latino Ethnicity</th>
+																								<th>9. Has the title IV-E agency determined that the child has special needs?</th>
+																								<th>10. Primary Factor or Condition for Special Needs</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																						
+																						<thead>
+																							<tr>
+																								<th>11. Type of Disability-Mental Retardation</th>
+																								<th>12. Type of Disability-Visually or Hearing Impaired</th>
+																								<th>13. Type of Disability-Physically Disabled</th>
+																								<th>14. Type of Disability-Emotionally Disturbed</th>
+																								<th>15. Type of Disability-Other medically diagnosed condition</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																						
+																						<thead>
+																							<tr>
+																								<th>16. Mother's year of birth</th>
+																								<th>17. Was the Mother Married at the Time of the Child's Birth?</th>
+																								<th>18. Date of Mother’s termination of parental rights</th>
+																								<th>19. Date of Father’s termination of parental rights</th>
+																								<th>20. Date adoption legalized</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																						
+																						<thead>
+																							<tr>																								
+																								<th>21. Adoptive parents’ family structure</th>
+																								<th>22. Year of birth (Adoptive Mother)</th>
+																								<th>23. Year of birth (Adoptive Father)</th>
+																								<th>24. Race (Adoptive mother)</th>
+																								<th>25. Hispanic or Latino Ethnicity (Adoptive mother)</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																						
+																						<thead>
+																							<tr>
+																								<th>26. Race (Adoptive Father)</th>
+																								<th>27. Hispanic or Latino ethnicity(Adoptive father)</th>
+																								<th>28. Relationship-Stepparent</th>
+																								<th>29. Relationship-Other relative</th>
+																								<th>30. Relationship-Foster parent</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>
+																						
+																						<thead>
+																							<tr>
+																								<th>31. Relationship-Other non-relative</th>
+																								<th>32. Child was placed from</th>
+																								<th>33. Child was placed by</th>
+																								<th>34. Is the child receiving a monthly subsidy?</th>
+																								<th>35. Monthly amount</th>
+																								<th>36. Adoption assistance – IV-E</th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td> Yes</td>
+																								<td> No</td>
+																								<td> Yes</td>
+																								<td> Yes</td>
+																								<td> No</td>
+																							</tr>
+																						</tbody>																						
+
+																					
+																					
+																					
+																					
+																					
+																						<!-- <thead>
+																							<tr>
+																								<th>MCI</th>
+																								<th>First Name</th>
+																								<th>Last Name</th>
+																								<th>Date of Birth</th>
+																								<th>Gender</th>
+																								<th>Date of Adoption</th>
+																								<th>Comments</th>
+																								<th> Has Errors </th>
+																								
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a>
+																								<td>Sam</td>
+																								<td>Neil</td>
+																								<td>10/01/2012</td>
+																								<td>M</td>
+																								<td>01/01/2017</td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td> N</td>
+																								
+																							</tr>
+																							<tr>
+																								<td>987654321</td>
+																								<td>Julie</td>
+																								<td>Doe</td>
+																								<td>03/12/2010</td>
+																								<td>F</td>
+																								<td>05/11/2015</td>
+																								<td><span id="MainContent_txtContactSummary" autopostback="true"><textarea name="ctl00$MainContent$txtContactSummary$txtTextbox" rows="3" cols="50" id="MainContent_txtContactSummary_txtTextbox" alt="Enter Contact Summary" onkeyup="CheckMaxCharacters(this,8000);" >
+																								</textarea></span></td>
+																								<td>N</td>
+																							</tr>
+																							
+																						</tbody> -->
+																					</table>
+																			</div>
+																			
+																			
+																			
+																			
+																			
+																			
 																		</div>
 																	</div>
 																</div>														
@@ -2174,7 +2664,353 @@
 												
 												<!--Beginning of Generated Report --> 
 												<div class="tab-pane" id="generated_report">
-															<div class="row">
+												
+												
+														<!-- <div class="tab-pane active" id="afcars_search">  -->  
+																<div class="row" >	
+																	<div class="col-xs-8" >
+																		<div class="form-group">
+																			<label for="dtofrevisedplan">Reporting Type</label>&nbsp;&nbsp;
+																			<span id="MainContent_ddlCounty" title="County">
+																				 <select name="dropDown" id="county" style="width: 65%">
+																					<option selected>Final</option>
+																					<option>Trial</option>
+																				</select>
+																			</span>
+																		</div>
+																	</div>	
+																	<div class="col-xs-8" >
+																		<div class="form-group">
+																			<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+																			<input type="text" id="dtofrevisedplan" style="width: 60%" value="September 2017 - February 2018">
+																		</div>
+																	</div>		
+																	
+																</div>
+																<div class="row" >															
+																	
+																	<div class="col-xs-5">
+																		<div class="form-group">
+																			<label for="txtDateTimeReceived">Start Date</label>&nbsp;&nbsp;
+																			  <input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+																			<a href="#1" class="icon-date-time"></a>
+																		</div>
+																	</div>   
+																	<div class="col-xs-3">
+																	</div>
+
+																	<div class="col-xs-5">
+																		<div class="form-group">
+																			<label for="txtDateTimeReceived">End Date</label>&nbsp;&nbsp;
+																			<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+																			<a href="#1" class="icon-date-time"></a>
+																		</div>
+																	</div> 
+																</div>
+																
+																<div class="row" >	
+																	<div class="col-xs-8" >
+																		<div class="form-group">
+																			<label for="dtofrevisedplan">MCI</label>&nbsp;&nbsp;
+																			<input type="text" id="dtofrevisedplan" style="width: 45%" >
+																		</div>
+																	</div>
+																																	
+																	<div class="col-xs-8" >
+																		<div class="form-group">
+																			<label for="dtofrevisedplan">System</label>&nbsp;&nbsp;
+																			<span id="MainContent_ddlCounty" title="County">
+																				 <select name="dropDown" id="county" style="width: 65%">
+																					<option>ACYS </option>
+																					<option>BERKS </option>
+																					<option>CAPS </option>
+																					<option>FACTS2 </option>
+																					<option>JCIS </option>
+																					<option>KIDS </option>																				
+																				</select>
+																			</span>
+
+																		</div>
+																	</div>																
+																</div>                                                     
+															
+														  
+																	<div class="row style-select">
+																		 <div class="col-md-12">
+																			<div class="subject-info-box-1">
+																				  <label>Available Counties</label>
+																				 <select multiple class="form-control" id="lstBox1">
+																					<option>Adams </option>
+																					<option>Allegheny </option>
+																					<option>Armstrong </option>
+																					<option>Beaver </option>
+																					<option>Bedford </option>
+																					<option>Berks </option>
+																					<option>Blair </option>
+																					<option>Bradford </option>
+																					<option>Bucks </option>
+																					<option>Butler </option>
+																					<option>Cambria </option>
+																					<option>Cameron </option>
+																					<option>Carbon </option>
+																					<option>Centre </option>
+																					<option>Chester </option>
+																					<option>Clarion </option>
+																					<option>Clearfield </option>
+																					<option>Clinton </option>
+																					<option>Columbia </option>
+																					<option>Crawford </option>
+																					<option>Cumberland </option>
+																					<option>Dauphin </option>
+																					<option>Delaware </option>
+																					<option>Elk </option>
+																					<option>Erie </option>
+																					<option>Fayette </option>
+																					<option>Forest </option>
+																					<option>Franklin </option>
+																					<option>Fulton </option>
+																					<option>Greene </option>
+																					<option>Huntingdon </option>
+																					<option>Indiana </option>
+																					<option>Jefferson </option>
+																					<option>Juniata </option>
+																					<option>Lackawanna </option>
+																					<option>Lancaster </option>
+																					<option>Lawrence </option>
+																					<option>Lebanon </option>
+																					<option>Lehigh </option>
+																					<option>Luzerne </option>
+																					<option>Lycoming </option>
+																					<option>McKean </option>
+																					<option>Mercer </option>
+																					<option>Mifflin </option>
+																					<option>Monroe </option>
+																					<option>Montgomery </option>
+																					<option>Montour </option>
+																					<option>Northampton </option>
+																					<option>Northumberland </option>
+																					<option>Perry </option>
+																					<option>Philadelphia </option>
+																					<option>Pike </option>
+																					<option>Potter </option>
+																					<option>Schuylkill </option>
+																					<option>Snyder </option>
+																					<option>Somerset </option>
+																					<option>Sullivan </option>
+																					<option>Susquehanna </option>
+																					<option>Tioga </option>
+																					<option>Union </option>
+																					<option>Venango </option>
+																					<option>Warren </option>
+																					<option>Washington </option>
+																					<option>Wayne </option>
+																					<option>Westmoreland </option>
+																					<option>Wyoming </option>
+																					<option>York </option>
+																				 </select>
+																			</div>
+
+																				<div class="subject-info-arrows text-center">
+																					  <input type='button' id='btnAllRight' value='>>' style="height:40px;width:40px;"/>
+																					  <br />
+																					  <input type='button' id='btnRight' value='>' style="height:40px;width:40px;"/>
+																					  <br />
+																					  <input type='button' id='btnLeft' value='<' style="height:40px;width:40px;"/>
+																					  <br />
+																					<input type='button' id='btnAllLeft' value='<<' style="height:40px;width:40px;"/>
+																				</div>
+
+																				<div class="subject-info-box-2">
+																				  <label>Counties You Have Selected</label>
+																				  <select multiple class="form-control" id="lstBox2">
+																					
+																				  </select>
+																				</div>
+
+																				<div class="clearfix"></div>
+																				  <br/>
+																				  <br/>
+																		</div>
+																	</div>
+
+																	<script>
+																	  $('#btnAvenger').click(function(e) {
+																		$('select').moveToList('#StaffList', '#PresenterList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnRemoveAvenger').click(function(e) {
+																		$('select').removeSelected('#PresenterList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnAvengerUp').click(function(e) {
+																		$('select').moveUpDown('#PresenterList', true, false);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnAvengerDown').click(function(e) {
+																		$('select').moveUpDown('#PresenterList', false, true);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnShield').click(function(e) {
+																		$('select').moveToList('#StaffList', '#ContactList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnRemoveShield').click(function(e) {
+																		$('select').removeSelected('#ContactList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnShieldUp').click(function(e) {
+																		$('select').moveUpDown('#ContactList', true, false);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnShieldDown').click(function(e) {
+																		$('select').moveUpDown('#ContactList', false, true);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnJusticeLeague').click(function(e) {
+																		$('select').moveToList('#StaffList', '#FacilitatorList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnRemoveJusticeLeague').click(function(e) {
+																		$('select').removeSelected('#FacilitatorList');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnJusticeLeagueUp').click(function(e) {
+																		$('select').moveUpDown('#FacilitatorList', true, false);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnJusticeLeagueDown').click(function(e) {
+																		$('select').moveUpDown('#FacilitatorList', false, true);
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnRight').click(function(e) {
+																		$('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnAllRight').click(function(e) {
+																		$('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnLeft').click(function(e) {
+																		$('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+																		e.preventDefault();
+																	  });
+
+																	  $('#btnAllLeft').click(function(e) {
+																		$('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+																		e.preventDefault();
+																	  });
+
+																	</script>
+
+																
+																<div class="row">
+																	<div class="col-xs-12" >
+																		<div class="form-group">
+																			<label for="dtofrevisedplan">Description</label>&nbsp;&nbsp;
+																			<input type="text" id="dtofrevisedplan" style="width: 85%" >
+																		</div>
+																	</div>
+																</div>
+																
+																																			
+																<div class="row"><br></div>	
+
+																					
+																<div class="row" style="text-align: right">
+																	<!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">Generate Report</button> -->
+																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('iskodikha2')">View Generated Reports</button>
+																	<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+																</div>
+																<div class="row"><br></div>
+																	<div class="row col-xs-18" id="showResult" style="display: none">																
+																		<div id="afcars_search" class="row">
+																			<div class="col-xs-5"></div>
+																				<div class="col-xs-8">																		
+																					<h4>You will be notified as soon as the report is available.</h4>																		
+																				</div>
+																			<div class="col-xs-5"></div>
+																		</div>	
+																		 
+																		 <div class="row"><br></div>
+																		
+																	</div>	
+																		
+																	<div class="row" id="iskodikha2" style="display: none" >	<!-- id="showResult2" style="display: none" -->																	
+																			<div class="row row-padding">
+																				<div class="col-xs-18">	
+																					<div class="row row-padding">
+																						<table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>  </th>
+																									<th>Date Created </th>
+																									<th>Created By</th>
+																									<th>Report Type</th>
+																									<th>Reporting Period</th>
+																									<th>Narrative</th>
+																									<th>Date Submitted to ACF</th>
+																									<!-- <th>View</th> -->
+																								
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																									<td>09/12/2017</td>
+																									<td>John Smith</td>
+																									<td>Final</td>
+																									<td>09/01/2017  - 02/28/2018</td>
+																									<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																									<td>03/20/2018</td>
+																								   <!--  <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+			
+																								</tr>
+																								<tr>
+																									<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																									<td>11/14/2017</td>
+																									<td>Jane Smiths</td>
+																									<td>Trial</td>
+																									<td>09/01/2017  - 02/28/2018</td>
+																									<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																									<td> </td>
+																									<!-- <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+																									
+																								</tr>																			
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																			
+																			
+																		<div class="row" style="text-align: right">
+																			<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t4')">View Report Details</button>
+																			<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button>
+																			<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">View AFCARS Data File</button>
+																			<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">Transmit to ACF</button>
+																			<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
+																			
+																		</div>                                                                  
+																	</div>
+																		
+																
+																	<!--Fill everything related to family services before this -->
+														<!-- </div> -->	
+												
 																
 																<!--<div class="row" >
 																	<div class="col-xs-18">	
@@ -2286,8 +3122,8 @@
 																</div> -->
                                                                     
                                                                     
-																	</div>
-															</div>
+															
+												</div>
 															
 															<!--Beginning of View Errors -->												
 																	<div class="tab-pane" id="view_errors">
