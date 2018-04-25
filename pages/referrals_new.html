@@ -1812,9 +1812,8 @@
                                                     <th>Phone Number</th>
                                                     <th>Phone Type</th>
 
-                                                    <th>Work Extension</th>
-                                                    <th>Start Date</th>
-                                                    <th>End Date</th>
+                                                    <th>Extension</th>
+                                                    
 
 
 
@@ -1827,8 +1826,7 @@
                                                     <td>717-652-3432 </td>
                                                     <td>Work </td>
                                                     <td>04 </td>
-                                                    <td> 11/20/2017</td>
-                                                    <td> </td>
+                                                    
 
                                                 </tr>
                                                 <tr>
@@ -1836,8 +1834,7 @@
                                                     <td>717-234-1265 </td>
                                                     <td>Work </td>
                                                     <td>06 </td>
-                                                    <td> 02/12/2016</td>
-                                                    <td> 10/12/2017</td>
+                                                    
 
                                                 </tr>
 
@@ -2015,11 +2012,13 @@
                                             <div class="people-entity victim">
                                                 <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
                                                 <p style="word-wrap: break-word;">Child</p>
+<!--
                                                 <div class="row">
                                                     <div class="col-xs-8" ng-show="Person.ReferralPerson.ExpungedIndicator">
                                                         <h6 style="color: red"><em class="glyphicon glyphicon-remove-sign"></em>Expunged</h6>
                                                     </div>
                                                 </div>
+-->
                                                 <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
                                                 <div class="row" style="display: none;">
                                                     <div class="col-xs-9">
@@ -2138,12 +2137,13 @@
                                                 <!-- Nav tabs -->
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#demographic" data-toggle="tab">General Information</a></li>
+                                                    <li><a href="#relationship" data-toggle="tab">Relationship</a></li>
                                                     <!--                                                            <li><a href="#placement" data-toggle="tab">Placement/Home Removal</a></li>-->
                                                     <!--                                                    <li><a href="#health" data-toggle="tab">Health</a></li>-->
                                                     <!--                                                    <li><a href="#edu" data-toggle="tab">Education</a></li>-->
                                                     <!--                                                            <li><a href="#adoption" data-toggle="tab">Adoption</a></li>-->
                                                     <li><a href="#caseworker" data-toggle="tab">Caseworker Visitation History</a></li>
-                                                    <li><a href="#relationship" data-toggle="tab">Relationship</a></li>
+                                                    
                                                     <!--                                                    <li><a href="#familyVisitation" data-toggle="tab">Family Visitation History</a></li>-->
 
                                                 </ul>
@@ -2943,42 +2943,44 @@
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="col-xs-6">
+                                                        <div class="col-xs-3">
                                                             <div class="form-group">
                                                                 <label for="casname"> Prefix</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:25%;" value="Miss." disabled>
+                                                                <input type="text" id="casname" style="max-width:40%;" value="Miss." disabled>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-xs-6">
+                                                        <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> First Name</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Jane" disabled>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-xs-6">
+                                                        <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> Middle Name</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
                                                             </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xs-6">
+                                                        
+                                                        <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> Last Name</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Doe" disabled>
                                                             </div>
                                                         </div> 
 
-                                                        <div class="col-xs-6">
+                                                        <div class="col-xs-3">
                                                             <div class="form-group">
                                                                 <label for="casname"> Suffix</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
                                                             </div>
                                                         </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname">Social Security Number</label>&nbsp;&nbsp;
@@ -3003,7 +3005,7 @@
                                                                             <div class="col-xs-16">
                                                                                 <div class="form-group">
 
-                                                                                    <input type="text" id="casname" style="max-width:25%;" value="123-45-678" disabled>
+                                                                                    <input type="text" id="casname" style="max-width:25%;" value="123-45-1234" disabled>
 
                                                                                 </div>
                                                                             </div>
@@ -3015,15 +3017,10 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
-                                                    </div>
-
-                                                    <div class="row">
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname"> Federal Reporting ID</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
+                                                                <input type="text" id="casname" style="max-width:25%;" value="456234987" disabled>
                                                             </div>
                                                         </div>
 
@@ -3035,21 +3032,23 @@
                                                             </div>
                                                         </div> 
 
-                                                        <div class="col-xs-6">
-                                                            <div class="form-group">
-                                                                <label for="casname">Date of Birth</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="01/10/1988" disabled>
-                                                            </div>
-                                                        </div>
-
 
                                                     </div>
 
                                                     <div class="row">
+                                                        
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Date of Birth</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="01/05/1999" disabled>
+                                                            </div>
+                                                        </div>
+                                                        
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname">Estimated Age</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="29" disabled>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="19" disabled>
                                                             </div>
                                                         </div>
 
@@ -3068,6 +3067,12 @@
 
                                                             </div>
                                                         </div>
+
+
+                                                    </div>
+
+                                                    <div class="row">
+                                                        
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="ddlNameSuffix">Legal Sex</label>&nbsp;&nbsp;
@@ -3075,12 +3080,8 @@
 
                                                             </div>
                                                         </div> 
-
-
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xs-6">
+                                                        
+                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname">Self-identified Sex</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Female" disabled>
@@ -3093,19 +3094,20 @@
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Straight" disabled>
                                                             </div>
                                                         </div>
-                                                        <div class="col-xs-6">
-                                                            <div class="form-group">
-                                                                <label for="ddlNameSuffix">Race</label>&nbsp;&nbsp;
-                                                                <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="American" disabled>
-
-                                                            </div>
-                                                        </div> 
 
 
                                                     </div>
 
                                                     <div class="row">
+                                                       
                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="ddlNameSuffix">Race</label>&nbsp;&nbsp;
+                                                                <input type="text" id="ddlNameSuffix" style="max-width:83%;" value="American" disabled>
+
+                                                            </div>
+                                                        </div> 
+                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname">Ethnicity</label>&nbsp;&nbsp;
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Non-Hispanic" disabled>
@@ -3119,23 +3121,54 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-xs-6">
-                                                            <div class="form-group">
-                                                                <label for="casname">Drivers License</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="123456" disabled>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
 
                                                     <div class="row">
+                                                       
+
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
-                                                                <label for="casname">Is this a Shared Case?</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                                <label for="casname">Drivers License</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="334567854" disabled>
                                                             </div>
                                                         </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Date of Death</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="-" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            
+                                                            <div class="form-group"><label for="casname">Reason for Death</label>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="N/A" disabled>
+                                                                </div>
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    
 
+                                                    
+                                                    
+                                                    <div class="row"><br></div>
 
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Shared Case Responsibility</h2>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="row">
+                                                     <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Current Status</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Shared" disabled>
+                                                            </div>
+                                                        </div>
+                                                    
                                                     </div>
                                                     <div class="row row-padding">
                                                         <table class="table table-hover table-striped">
@@ -3151,8 +3184,8 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>Data</td>
-                                                                    <td>Data</td>
+                                                                    <td>07/06/2013</td>
+                                                                    <td>08/09/2013</td>
 
 
                                                                 </tr>
@@ -3162,8 +3195,6 @@
 
 
                                                     </div>
-                                                    <div class="row"><br></div>
-
                                                     <!-- AKA Information -->
                                                     <div class="row">
                                                         <div class="col-lg-18">
@@ -3197,17 +3228,17 @@
 
                                                             <tr>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Mr.</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms. </span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
 
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">John</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Janice</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Jackson</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">John</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">Smith</span>
@@ -3222,14 +3253,14 @@
 
                                                             <tr>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Mr.</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms.</span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
 
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jack</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Janet</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Jacob</span>
@@ -3271,26 +3302,27 @@
                                                                 </tr>
                                                             </thead>
 
+                                                           
+
                                                             <tr>
 
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/01/1992</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/19/2009</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">10/01/1999</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> 08/23/2013</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
                                                                 </td>
                                                             </tr>
-
-                                                            <tr>
+                                                             <tr>
 
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/01/1988</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/06/2000</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> 10/01/1992</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">05/18/2009</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
@@ -3377,7 +3409,7 @@
                                                             <tr>
 
                                                                 <th>Type of Trafficking</th>
-                                                                <th>Occurence</th>
+                                                                
                                                                 <th>Report made to Law Enforcement</th>
                                                                 <th>Date Report Was Made </th>
 
@@ -3388,14 +3420,14 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>Sex</td>
-                                                                <td>Prior </td>
+                                                                
                                                                 <td>Yes </td>
                                                                 <td>10/10/2013</td>
 
                                                             </tr>
                                                             <tr>
                                                                 <td>Labor</td>
-                                                                <td>After</td>
+                                                                
                                                                 <td>Yes</td>
                                                                 <td>10/10/2015</td>
 
@@ -3497,12 +3529,7 @@
                                                                     <th>
                                                                         <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Type</a>
                                                                     </th>
-                                                                    <th>
-                                                                        <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Start Date</a>
-                                                                    </th>
-                                                                    <th>
-                                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address End Date</a>
-                                                                    </th>
+                                                                    
                                                                     <th>
                                                                         <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address</a>
                                                                     </th>
@@ -3515,6 +3542,13 @@
                                                                     <th>
                                                                         <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Zip</a>
                                                                     </th>
+                                                                    
+                                                                    <th>
+                                                                        <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Start Date</a>
+                                                                    </th>
+                                                                    <th>
+                                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address End Date</a>
+                                                                    </th>
 
                                                                 </tr>
                                                             </thead>
@@ -3522,12 +3556,7 @@
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                                 </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
-                                                                </td>
+                                                                
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">30 N Third  Rd</span>
                                                                 </td>
@@ -3540,6 +3569,12 @@
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17011</span>
                                                                 </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                                </td>
 
                                                             </tr>
 
@@ -3547,12 +3582,7 @@
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                                 </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
-                                                                </td>
+                                                                
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
                                                                 </td>
@@ -3565,17 +3595,18 @@
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
                                                                 </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                                 </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1988</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
-                                                                </td>
+                                                                
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">210 Summerdale Rd</span>
                                                                 </td>
@@ -3587,6 +3618,12 @@
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1988</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -3611,7 +3648,7 @@
                                                                         <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Phone Number</a>
                                                                     </th>
                                                                     <th>
-                                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Extension (If Applicable)</a>
+                                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Extension</a>
                                                                     </th>
                                                                     <th>
                                                                         <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Parent/Legal Guardian Number</a>
@@ -3709,7 +3746,7 @@ Adoption Information
                                                     <!-- Pregnancy/Parenting Section --> 																			
                                                     <div class="row">
                                                         <div class="col-lg-18">
-                                                            <h2 class="tab-heading">AFCARS Pregnancy/Parenting</h2>
+                                                            <h2 class="tab-heading">Pregnancy/Parenting</h2>
                                                         </div> 
                                                     </div>
 
@@ -3790,7 +3827,7 @@ Adoption Information
                                                         </div>
 
                                                         <div class="col-xs-8">
-                                                            <label for="supervisorID">Tribe Name</label>&nbsp;&nbsp;
+                                                            <label for="supervisorID">Tribe Location</label>&nbsp;&nbsp;
                                                             <input type="text" id="supervisorID" style="width: 70%" value="Location" disabled>
                                                         </div>                                                               
                                                     </div>
@@ -3864,7 +3901,7 @@ Adoption Information
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname">Is/Was A Household Member? </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:20%;" value="Y" disabled>
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
                                                             </div>
                                                         </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                                                     </div>	
@@ -4101,42 +4138,44 @@ Adoption Information
                                     </div>
                                     <!-- Begin of Collateral Information -->
                                     <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname"> Prefix</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:25%;" value="Mister." disabled>
-                                            </div>
-                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Prefix</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:40%;" value="Miss." disabled>
+                                                            </div>
+                                                        </div>
 
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname"> First Name</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
-                                            </div>
-                                        </div>
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> First Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Jane" disabled>
+                                                            </div>
+                                                        </div>
 
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname"> Middle Name</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Middle Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Last Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Doe" disabled>
+                                                            </div>
+                                                        </div> 
+
+                                                        <div class="col-xs-3">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Suffix</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                     <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname"> Last Name</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:50%;" value="Jacob" disabled>
-                                            </div>
-                                        </div> 
-
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname"> Suffix</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
-                                            </div>
-                                        </div>
+                                        
 
                                         <div class="col-xs-6">
                                             <div class="form-group">
@@ -4145,24 +4184,20 @@ Adoption Information
 
                                             </div>
                                         </div> 
-
-                                    </div>
-
-                                    <div class="row">
-
-                                        <div class="col-xs-6">
-                                            <div class="form-group">
-                                                <label for="casname">Date of Birth</label>&nbsp;&nbsp;
-                                                <input type="text" id="casname" style="max-width:50%;" value="01/10/1988" disabled>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xs-6">
+                                         <div class="col-xs-6">
                                             <div class="form-group">
                                                 <label for="casname">Relationship to Case</label>&nbsp;&nbsp;
                                                 <input type="text" id="casname" style="max-width:50%;" value="Neighbor" disabled>
                                             </div>
                                         </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        
+
+                                       
                                     </div>
 
 
@@ -4182,12 +4217,7 @@ Adoption Information
                                                     <th>
                                                         <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Type</a>
                                                     </th>
-                                                    <th>
-                                                        <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Start Date</a>
-                                                    </th>
-                                                    <th>
-                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address End Date</a>
-                                                    </th>
+                                                    
                                                     <th>
                                                         <a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address</a>
                                                     </th>
@@ -4203,6 +4233,12 @@ Adoption Information
                                                     <th>
                                                         <a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Country</a>
                                                     </th>
+                                                    <th>
+                                                        <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address Start Date</a>
+                                                    </th>
+                                                    <th>
+                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Address End Date</a>
+                                                    </th>
 
                                                 </tr>
                                             </thead>
@@ -4212,12 +4248,7 @@ Adoption Information
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                 </td>
-                                                <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
-                                                </td>
-                                                <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> </span>
-                                                </td>
+                                                
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
                                                 </td>
@@ -4233,6 +4264,12 @@ Adoption Information
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">USA</span>
                                                 </td>
+                                                <td>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                </td>
+                                                <td>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> </span>
+                                                </td>
                                             </tr>
 
 
@@ -4240,12 +4277,7 @@ Adoption Information
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
                                                 </td>
-                                                <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/1988</span>
-                                                </td>
-                                                <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/1992</span>
-                                                </td>
+                                                
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">210 Summerdale Rd</span>
                                                 </td>
@@ -4260,6 +4292,12 @@ Adoption Information
                                                 </td>
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">USA</span>
+                                                </td>
+                                                <td>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/1988</span>
+                                                </td>
+                                                <td>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/1992</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -4284,7 +4322,7 @@ Adoption Information
                                                         <a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Phone Number</a>
                                                     </th>
                                                     <th>
-                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Extension (If Applicable)</a>
+                                                        <a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Extension</a>
                                                     </th>																		
                                                 </tr>
                                             </thead>
@@ -8973,7 +9011,7 @@ Child has Disability or need Requiring Services
             <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
             <!--a href="../pages/dashboard.html" -->                                        
             <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-            <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Add Case for Review</a>
+            <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" id="" tabindex="0">Add Case for Review</a>
             <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
         </div>
         <!-- End modal container -->
