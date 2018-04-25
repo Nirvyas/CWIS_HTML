@@ -15,6 +15,13 @@
                 e.style.display = 'block';
         }
     </script> 
+	
+	    <script type="text/javascript">        
+        function CloseWindow() {
+            window.close();
+            return false;
+        }
+		</script>
     
     <script>
     (function($) {
@@ -455,12 +462,12 @@
 																						<thead>
 																							<tr>
 																								<th>  </th>
-																								<th>Date Created </th>
-																								<th>Created By</th>
-																								<th>Report Type</th>
-																								<th>Reporting Period</th>
-																								<th>Narrative</th>
-																								<th>Date Submitted to ACF</th>
+																								<th>Date Created <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																								<th>Created By<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																								<th>Report Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																								<th>Reporting Period<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																								<th>Narrative<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																								<th>Date Submitted to ACF<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 																								<!-- <th>View</th> -->
 																							
 																							</tr>
@@ -894,14 +901,14 @@
 																				<table class="table">
 																					<thead>
 																						<tr>
-																							<th>MCI</th>
-																							<th>First Name</th>
-																							<th>Last Name</th>																							
-																							<th>Date of Birth</th>
-																							<th>Gender</th>
-																							<th>Date of First Removal</th>																							
-																							<th>JPO</th>
-																							<th>Deceased</th>
+																							<th>MCI<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																							<th>First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																							<th>Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																							
+																							<th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																							<th>Gender<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																							<th>Date of First Removal<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																							
+																							<th>JPO<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																							<th>Deceased<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 																							
 																							<th>Has Errors </th>
 																								
@@ -910,7 +917,8 @@
 																					<tbody>
 																						<tr>
 																							<!-- <td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a> -->
-																							<td><a href="Javascript:void(0);" title="MCI" ng-click="InitiateReevaluation(true)" tabindex="0" onclick="toggle_tabdisplay('view_afcars_foster_elements')">123456789</a>
+																							<!-- <td><a href="Javascript:void(0);" title="MCI" ng-click="InitiateReevaluation(true)" tabindex="0" onclick="toggle_tabdisplay('view_afcars_foster_elements')">123456789</a> -->
+																							<td><a href="../pages/afcars_data_elements.html" title="MCI" data-toggle="modal" ng-click="InitiateReevaluation(false)">123456789</a>
 																							<td>John</td>	
 																							<td>Smith</td>
 																							<td>01/01/2017</td>
@@ -1010,7 +1018,26 @@
 																						</table>
 																					</div>
 																					
-																					<div class="row"><br></div>
+																					
+																					<div>
+																						<table id="tblOne" class="table">
+																							<tr>
+																								<thead>
+																									<th>Error</th>
+																									<th>Date Error Generated</th>
+																									<th>Error Source</th>
+																									<th>Sent to County</th>																								
+																								</thead>
+																							</tr>
+																							
+																							<tr>
+																							<td>1. Title IV-E Agency Value out of range</td>
+																							<td>03/15/2018</td>
+																							<td>DQU</td>
+																							<td>Yes</td>
+																							</tr>
+																						</table>
+																					</div>
 																					
 																					<div>																						
 																						<table id="tblOne" class="table" style="width:49%; float:left">																							
@@ -1095,8 +1122,6 @@
 																						</table>	
 																					</div>
 																					
-																					<div class="row"><br></div>
-																					
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">		
 																							<tr>
@@ -1155,6 +1180,33 @@
 																					</div>
 																					
 																					<div class="row"><br></div>
+																					
+																					<div>
+																						<table id="tblOne" class="table">
+																							<tr>
+																								<thead>
+																									<th>Error</th>
+																									<th>Date Error Generated</th>
+																									<th>Error Source</th>
+																									<th>Sent to County</th>																								
+																								</thead>
+																							</tr>
+																							
+																							<tr>
+																							<td>22. Removal Transaction Date - Inconsistent Date with Date of Placement</td>
+																							<td>03/15/2018</td>
+																							<td>DQU</td>
+																							<td>Yes</td>
+																							</tr>
+																							<tr>
+																							<td>23. Date of Placement in current Foster Care Setting - Inconsistent Date with Removal Transaction Date</td>
+																							<td>03/15/2018</td>
+																							<td>DQU</td>
+																							<td>Yes</td>
+																							</tr>
+																						</table>
+																					</div>
+																					
 																					
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
@@ -1258,7 +1310,6 @@
 																						</table>
 																					</div>
 																					
-																					<div class="row"><br></div>
 																					
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
@@ -1292,7 +1343,6 @@
 																						</table>
 																					</div>
 																					
-																					<div class="row"><br></div>
 																					
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
@@ -1309,13 +1359,23 @@
 																							<td>3</td>
 																							</tr>
 																						</table>
+																						
+																						<table id="tblTwo" style="display:none" class="table" style="width:50%; float:right">
+																							<tr> </tr>
+																							<tr> 
+																								<td> </td>
+																								<td> </td>
+																								<td> </td>
+																							</tr>
+																						</table>
+																						
 																					</div>
 																					
-																					<div class="row"><br></div>
+																					<div class="row"><br><br></div>																					
 																					
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
-																						<tr>
+																							<tr>
 																								<thead><h5><b>Principal Caretaker's Information</b></h5>
 																									<th>AFCARS Field</th>
 																									<th>CWIS Value</th>
@@ -1347,10 +1407,13 @@
 																							<td>10/01/1972</td>
 																							<td>1972</td>
 																							</tr>
+																							
 																						</table>
 																					</div>
+																					
+																					<div class="row"><br><br></div>		
 																							
-																				<div class="row"><br></div>																					
+																																								
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
 																						<tr>
@@ -1383,7 +1446,7 @@
 																						</table>
 																					</div>
 																							
-																				<div class="row"><br></div>																					
+																																								
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
 																						<tr>
@@ -1440,8 +1503,9 @@
 																							</tr>
 																						</table>
 																					</div>
-																							
-																				<div class="row"><br></div>																					
+																					
+																					<div class="row"><br><br></div>																						
+																																						
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
 																						<tr>
@@ -1461,6 +1525,16 @@
 																							<td>03/27/2016</td>
 																							<td>20160327</td>
 																							</tr>
+																						</table>
+																						
+																						<table id="tblTwo" class="table" style="width:50%; float:right">
+																							<tr>
+																								<thead>																								
+																									<th>AFCARS Field</th>
+																									<th>CWIS Value</th>
+																									<th>AFCARS Value</th>
+																								</thead>
+																							</tr>
 																							<tr>
 																							<td>58. Reason for Discharge</td>
 																							<td>Adoption</td>
@@ -1468,8 +1542,9 @@
 																							</tr>
 																						</table>
 																					</div>
-																							
-																				<div class="row"><br></div>																					
+																					
+																					<div class="row"><br><br></div>
+																																								
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
 																						<tr>
@@ -1526,8 +1601,9 @@
 																							</tr>
 																						</table>
 																					</div>
-																							
-																				<div class="row"><br></div>																					
+																					
+																					<div class="row"><br><br></div>						
+																																								
 																					<div>
 																						<table id="tblOne" class="table" style="width:49%; float:left">	
 																						<tr>
@@ -1546,7 +1622,7 @@
 																						</table> 
 																					</div>
 																					
-																					<div>
+																					<!-- <div>
 																						<table id="tblOne" class="table">
 																							<tr>
 																								<thead>
@@ -1564,7 +1640,7 @@
 																							<td>Yes</td>
 																							</tr>
 																						</table>
-																					</div>
+																					</div> -->
 																					
 																					<!-- <table class="table">
 																						<thead>
@@ -1770,15 +1846,13 @@
 																							</tr>
 																						</tbody>
 																					</table> -->
+																					
+																					
+																				
+																					
 																				</div>
 																				
-																				
-																				
-																				
-																				
-																				
-																				
-																				
+																					
 																				
 																			</div>
 																			
@@ -1805,8 +1879,9 @@
 																						</thead>
 																						<tbody>
 																							<tr>
-																								<!-- <td><a href="Javascript:void(0);" title="MCI" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">123456789</a> -->
-																								<td><a href="Javascript:void(0);" title="MCI" ng-click="InitiateReevaluation(true)" tabindex="0" onclick="toggle_tabdisplay('view_afcars_adoption_elements')">123456789</a>
+																								<td><a href="../pages/afcars_data_elements.html" title="MCI" data-toggle="modal" ng-click="InitiateReevaluation(false)">123456789</a>
+																								<!-- <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Add Case for Review</a> -->
+																								<!-- <td><a href="Javascript:void(0);" title="MCI" ng-click="InitiateReevaluation(true)" tabindex="0" onclick="toggle_tabdisplay('view_afcars_adoption_elements')">123456789</a> -->
 																								<td>Sam</td>
 																								<td>Neil</td>
 																								<td>10/01/2012</td>
@@ -1953,215 +2028,424 @@
 																								</tbody> -->																						
 
 																							<div>
-																							<table id="tblOne" class="table" style="width:49%; float:left">
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>General Information</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>																								
+																									<tr>
+																									<td>1. Title IV-E Agency</td>
+																									<td>67</td>
+																									<td>67</td>
+																									</tr>
+																									<tr>
+																									<td>2. Report Period Ending Date</td>
+																									<td>10/01/2017</td>
+																									<td>201710</td>
+																									</tr>
+																								</table>
+																						
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>3. Record Number</td>
+																									<td>000-123456789A</td>
+																									<td>00123456789A</td>
+																									</tr>
+																									<tr>
+																									<td>4. Title IV-E Agency Involvement</td>
+																									<td>25012</td>
+																									<td>1</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div>
+																							<table id="tblOne" class="table">
 																								<tr>
 																									<thead>
-																										<th>AFCARS Field</th>
-																										<th>CWIS Value</th>
-																										<th>AFCARS Value</th>																								
+																										<th>Error</th>
+																										<th>Date Error Generated</th>
+																										<th>Error Source</th>
+																										<th>Sent to County</th>																								
 																									</thead>
 																								</tr>
 																								
 																								<tr>
-																								<td>1. Title IV-E Agency</td>
-																								<td>67</td>
-																								<td>67</td>
-																								</tr>
-																								<tr>
-																								<td>2. Report Period Ending Date</td>
-																								<td>10/01/2017</td>
-																								<td>201710</td>
-																								</tr>
-																								<tr>
-																								<td>3. Record Number</td>
-																								<td>000-123456789A</td>
-																								<td>00123456789A</td>
-																								</tr>
-																								<tr>
-																								<td>4. Title IV-E Agency Involvement</td>
-																								<td>25012</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>5. Child’s Date of Birth</td>
-																								<td>09/01/2007</td>
-																								<td>200709</td>
-																								</tr>
-																								<tr>
-																								<td>6. Sex</td>
-																								<td>M</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>7. Child’s race</td>
-																								<td>Alaska Native</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>8. Hispanic or Latino Ethnicity</td>
-																								<td>N</td>
-																								<td>2</td>
-																								</tr>
-																								<tr>
-																								<td>9. Has the title IV-E agency determined that the child has special needs?</td>
-																								<td>N</td>
-																								<td>2</td>
-																								</tr>
-																								<tr>
-																								<td>10. Primary Factor or Condition for Special Needs</td>
-																								<td>Age</td>
-																								<td>2</td>
-																								</tr>
-																								<tr>
-																								<td>11. Type of Disability-Mental Retardation</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>12. Type of Disability-Visually or Hearing Impaired</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>13. Type of Disability-Physically Disabled</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>14. Type of Disability-Emotionally Disturbed</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>15. Type of Disability-Other medically diagnosed condition</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>16. Mother's year of birth</td>
-																								<td>1980</td>
-																								<td>1980</td>
-																								</tr>
-																								<tr>
-																								<td>17. Father’s year of birth</td>
-																								<td>1977</td>
-																								<td>1977</td>
-																								</tr>
-																								<tr>
-																								<td>18. Was the Mother Married at the Time of the Child's Birth?</td>
+																								<td>1. Title IV-E Agency Value - out of range</td>
+																								<td>03/15/2018</td>
+																								<td>DQU</td>
 																								<td>Yes</td>
-																								<td>1</td>
 																								</tr>
-																								
 																							</table>
-																							<table id="tblTwo" class="table" style="width:50%; float:right">
+																						</div>
+																							
+																							<div class="row"></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Child's Demographic Information</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>5. Child's Date of Birth</td>
+																									<td>09/01/2007</td>
+																									<td>200709</td>
+																									</tr>
+																									<tr>
+																									<td>6. Sex</td>
+																									<td>M</td>
+																									<td>1</td>
+																									</tr>
+																								</table>
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>7. Child’s race</td>
+																									<td>Alaska Native</td>
+																									<td>1</td>
+																									</tr>
+																									<tr>
+																									<td>8. Hispanic or Latino Ethnicity</td>
+																									<td>N</td>
+																									<td>2</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div>
+																							<table id="tblOne" class="table">
 																								<tr>
-																									<thead>																								
-																										<th>AFCARS Field</th>
-																										<th>CWIS Value</th>
-																										<th>AFCARS Value</th>
+																									<thead>
+																										<th>Error</th>
+																										<th>Date Error Generated</th>
+																										<th>Error Source</th>
+																										<th>Sent to County</th>																								
 																									</thead>
 																								</tr>
 																								
 																								<tr>
-																								<td>19. Date of Mother’s termination of parental rights</td>
-																								<td>04/12/2017</td>
-																								<td>20170412</td>
-																								</tr>
-																								<tr>
-																								<td>20. Date of Father’s termination of parental rights</td>
-																								<td>04/12/2017</td>
-																								<td>20170412</td>
-																								</tr>
-																								<tr>
-																								<td>21. Date adoption legalized</td>
-																								<td>07/15/2017</td>
-																								<td>20170715</td>
-																								</tr>
-																								<tr>
-																								<td>22. Adoptive parents’ family structure</td>
-																								<td>Married Couple</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>23. Year of birth (Adoptive Mother)</td>
-																								<td>1982</td>
-																								<td>1982</td>
-																								</tr>
-																								<tr>
-																								<td>24. Year of birth (Adoptive Father)</td>
-																								<td>1980</td>
-																								<td>1980</td>
-																								</tr>
-																								<tr>
-																								<td>25. Race (Adoptive mother)</td>
-																								<td>American</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>26. Hispanic or Latino Ethnicity (Adoptive mother)</td>
-																								<td>N</td>
-																								<td>2</td>
-																								</tr>
-																								<tr>
-																								<td>27. Race (Adoptive Father)</td>
-																								<td>American</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>28. Hispanic or Latino ethnicity(Adoptive father)</td>
-																								<td>N</td>
-																								<td>2</td>
-																								</tr>
-																								<tr>
-																								<td>29. Relationship-Stepparent</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>30. Relationship-Other relative</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>31. Relationship-Foster parent</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>32. Relationship-Other non-relative</td>
-																								<td>NA</td>
-																								<td>0</td>
-																								</tr>
-																								<tr>
-																								<td>33. Child was placed from</td>
-																								<td>Within State</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>34. Child was placed by</td>
-																								<td>Public Agency</td>
-																								<td>1</td>
-																								</tr>
-																								<tr>
-																								<td>35. Is the child receiving a monthly subsidy?</td>
+																								<td>5. Child’s Date of Birth - Inconsistent with Adoption Date</td>
+																								<td>03/15/2018</td>
+																								<td>DQU</td>
 																								<td>Yes</td>
-																								<td>1</td>
 																								</tr>
-																								<tr>
-																								<td>36. Monthly amount</td>
-																								<td>2000</td>
-																								<td>2000</td>
-																								</tr>
-																								<tr>
-																								<td>37. Adoption assistance – IV-E</td>
-																								<td>Yes</td>
-																								<td>1</td>
-																								</tr>
-																							</table> 
+																							</table>
+																						</div>
+																							<div class="row"></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Special Needs Status</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>9. Has the title IV-E agency determined that the child has special needs?</td>
+																									<td>N</td>
+																									<td>2</td>
+																									</tr>
+																									<tr>
+																									<td>10. Primary Factor or Condition for Special Needs</td>
+																									<td>Age</td>
+																									<td>2</td>
+																									</tr>
+																									<tr>
+																									<td>11. Type of Disability-Mental Retardation</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>12. Type of Disability-Visually or Hearing Impaired</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																								</table>
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>13. Type of Disability-Physically Disabled</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>14. Type of Disability-Emotionally Disturbed</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>15. Type of Disability-Other medically diagnosed condition</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div class="row"><br><br></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Birth Parents</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>16. Mother's year of birth</td>
+																									<td>1980</td>
+																									<td>1980</td>
+																									</tr>
+																								</table>
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>17. Father’s year of birth</td>
+																									<td>1977</td>
+																									<td>1977</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div class="row"><br><br></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Court Actions</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>18. Was the Mother Married at the Time of the Child's Birth?</td>
+																									<td>Yes</td>
+																									<td>1</td>
+																									</tr>	
+																									<tr>
+																									<td>19. Date of Mother’s termination of parental rights</td>
+																									<td>04/12/2017</td>
+																									<td>20170412</td>
+																									</tr>
+																								</table>
+																						
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>20. Date of Father’s termination of parental rights</td>
+																									<td>04/12/2017</td>
+																									<td>20170412</td>
+																									</tr>
+																									<tr>
+																									<td>21. Date adoption legalized</td>
+																									<td>07/15/2017</td>
+																									<td>20170715</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div class="row"><br><br></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Adoptive Parents</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>22. Adoptive parents’ family structure</td>
+																									<td>Married Couple</td>
+																									<td>1</td>
+																									</tr>
+																									<tr>
+																									<td>23. Year of birth (Adoptive Mother)</td>
+																									<td>1982</td>
+																									<td>1982</td>
+																									</tr>
+																									<tr>
+																									<td>24. Year of birth (Adoptive Father)</td>
+																									<td>1980</td>
+																									<td>1980</td>
+																									</tr>
+																									<tr>
+																									<td>25. Race (Adoptive mother)</td>
+																									<td>American</td>
+																									<td>1</td>
+																									</tr>
+																									<tr>
+																									<td>26. Hispanic or Latino Ethnicity (Adoptive mother)</td>
+																									<td>N</td>
+																									<td>2</td>
+																									</tr>
+																									<tr>
+																									<td>27. Race (Adoptive Father)</td>
+																									<td>American</td>
+																									<td>1</td>
+																									</tr>
+																								</table>
+																						
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>28. Hispanic or Latino ethnicity(Adoptive father)</td>
+																									<td>N</td>
+																									<td>2</td>
+																									</tr>
+																									<tr>
+																									<td>29. Relationship-Stepparent</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>30. Relationship-Other relative</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>31. Relationship-Foster parent</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																									<tr>
+																									<td>32. Relationship-Other non-relative</td>
+																									<td>NA</td>
+																									<td>0</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div class="row"><br><br></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Placement Information</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>33. Child was placed from</td>
+																									<td>Within State</td>
+																									<td>1</td>
+																									</tr>
+																								</table>
+																						
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>34. Child was placed by</td>
+																									<td>Public Agency</td>
+																									<td>1</td>
+																									</tr>
+																								</table>
+																							</div>
+																							
+																							<div class="row"><br><br></div>
+																							
+																							<div>
+																									
+																								<table id="tblOne" class="table" style="width:49%; float:left">
+																									<tr>
+																										<thead><h5><b>Adoption Subsidy</b></h5>
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>																								
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>35. Is the child receiving a monthly subsidy?</td>
+																									<td>Yes</td>
+																									<td>1</td>
+																									</tr>
+																									<tr>
+																									<td>36. Monthly amount</td>
+																									<td>2000</td>
+																									<td>2000</td>
+																									</tr>
+																								</table>
+																						
+																								<table id="tblTwo" class="table" style="width:50%; float:right">
+																									<tr>
+																										<thead>																								
+																											<th>AFCARS Field</th>
+																											<th>CWIS Value</th>
+																											<th>AFCARS Value</th>
+																										</thead>
+																									</tr>
+																									<tr>
+																									<td>37. Adoption assistance – IV-E</td>
+																									<td>Yes</td>
+																									<td>1</td>
+																									</tr>
+																								</table> 
 																						</div>
 																						
-																						<div>
+																						<!-- <div>
 																							<table id="tblOne" class="table">
 																								<tr>
 																									<thead>
@@ -2179,7 +2463,7 @@
 																								<td>Yes</td>
 																								</tr>
 																							</table>
-																						</div>
+																						</div> -->
 																							
 																							
 																							
@@ -2224,10 +2508,6 @@
 																								</tbody> -->
 																							</table>
 																					</div>
-																					
-																					
-																					
-																					
 																					
 																			</div>
 																			
@@ -2289,6 +2569,12 @@
 																			
 																		</div>
 																	</div>
+																	
+																					<div class="primary-actions">
+																						<div class="btn-group">																						
+																							<input type="submit" name="ctl00$MainContent$btnClose" value="Close" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClose&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClose" class="btn btn-primary" />
+																						</div>
+																					</div>
 																</div>														
 															 
 															 

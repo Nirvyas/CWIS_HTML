@@ -87,17 +87,19 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>MCI ID (Fed ID)</th>
-                                                            <th>Child Name</th>
-                                                            <th>Removal Start Date</th>
-                                                            <th>Removal End Date</th>
-                                                            <th>Discharge Reason</th>
+                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+															<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Removal Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Removal End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Discharge Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>12345678</td>
+															<td>987654321A</td>
                                                             <td>John Smith</td>
                                                             <td>01/21/2014</td>
                                                             <td>01/01/2016</td>
@@ -109,6 +111,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>12345678</td>
+															<td>112233445B</td>
                                                             <td>John Smith</td>
                                                             <td>01/21/2012</td>
                                                             <td>01/20/2014</td>
@@ -168,7 +171,7 @@
 
                                                                     <div class="col-xs-6">
                                                                         <div class="form-group">
-                                                                            <label for="ddlNameSuffix">MCI ID  (Fed ID) </label>&nbsp;&nbsp;
+                                                                            <label for="ddlNameSuffix">MCI ID  </label>&nbsp;&nbsp;
                                                                             <a href="#">  12345678
                                                                             </a>
 
@@ -204,7 +207,7 @@
                                                                     <div class="col-xs-6">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Removal Reason</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="txtDateTimeReceived" value="Adopted" disabled style="width: 50%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="Unsafe Circumstances" disabled style="width: 50%">
 
                                                                         </div>
                                                                     </div> 
@@ -262,7 +265,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-6">                                                                                       
                                                                         <label for="txtDateTimeReceived">Removal End Date/Time</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2016" style="width: 60%" disabled>                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2016 10:00 AM" style="width: 60%" disabled>                                                                                       
                                                                     </div>   
 
                                                                     <div class="col-xs-10">                                                                                       
@@ -319,7 +322,7 @@
                                                                     </div>   
 
                                                                     <div class="col-xs-6">                                                                                        
-                                                                        <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
+                                                                        <label for="txtDateTimeReceived">Zip </label>&nbsp;&nbsp;
                                                                         <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
                                                                     </div> 
 
@@ -364,11 +367,11 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Location</th>
-                                                            <th>Type</th>
-                                                            <th>Start Date</th>
-                                                            <th>End Date</th>
-                                                            <th>End Reason</th>
+                                                            <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>End Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View</th>
 
 
@@ -377,11 +380,11 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Removal </td>
-                                                            <td>Adopted</td>
-                                                            <td>01/21/2014</td>
+                                                            <td>Placement </td>
+                                                            <td>Foster Family</td>
+                                                            <td>01/20/2014</td>
                                                             <td>01/01/2016</td>
-                                                            <td>Adopted</td>
+                                                            <td>Return to Parents</td>
                                                             <td><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#placementDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
 
                                                             </td>
@@ -390,9 +393,9 @@
                                                         <tr>
                                                             <td>Placement </td>
                                                             <td>Group Home</td>
-                                                            <td>01/21/2012</td>
+                                                            <td>01/20/2012</td>
                                                             <td>01/20/2014</td>
-                                                            <td>Foster Care</td>
+                                                            <td>Loss Restrictive</td>
                                                             <td><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#placementDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
 
                                                             </td>
@@ -400,9 +403,9 @@
                                                         <tr>
                                                             <td>Runaway</td>
                                                             <td> - </td>
-                                                            <td>02/01/2010</td>
+                                                            <td>01/31/2010</td>
                                                             <td>01/20/2012</td>                                                                            
-                                                            <td> - </td>
+                                                            <td> Found </td>
                                                             <td><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#runawayDetailsModal" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
 
                                                             </td>
@@ -444,21 +447,21 @@
                                                             <div class="modal-body">
 
                                                                 <div class="row">
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-5">
                                                                         <div class="form-group">
                                                                             <label for="casname">First Name</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                                            <input type="text" id="casname" style="max-width:40%;" value="John" disabled>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <div class="form-group">
                                                                             <label for="casname">Last Name</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+                                                                            <input type="text" id="casname" style="max-width:40%;" value="Smith" disabled>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <div class="form-group">
                                                                             <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
                                                                             <a href="#">  12345678
@@ -466,39 +469,49 @@
 
                                                                         </div>
                                                                     </div>  
+																	
+																	<div class="col-xs-5">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">Federal ID</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:50%;" value="987654321B" disabled>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
 
 
                                                                 <div class="row">
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-9">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="02/01/2010 02:01 PM" disabled style="width: 50%">
 
                                                                         </div>
                                                                     </div>   
 
 
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-9">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="01/20/2012 11:54 AM" disabled style="width: 50%">
 
                                                                         </div>
                                                                     </div> 
 
-                                                                    <div class="col-xs-6">
-                                                                        <div class="form-group">
-                                                                            <label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
-
-                                                                        </div>
-                                                                    </div> 
+                                                                    
                                                                 </div>
 
 
                                                                 <div class="row">
+																
+																	<div class="col-xs-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="txtDateTimeReceived" value="Placement" disabled style="width: 50%">
+
+                                                                        </div>
+                                                                    </div> 
+																	
                                                                     <div class="col-xs-9">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Upload to NCMEC</label>
@@ -506,16 +519,6 @@
 
                                                                         </div>
                                                                     </div>   
-
-                                                                    <!--
-<div class="col-xs-9">
-<div class="form-group">
-<label for="txtDateTimeReceived">Diligent Efforts to Locate</label>
-<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
-
-</div>
-</div> 
--->
 
                                                                 </div>
                                                             </div>
@@ -540,22 +543,27 @@
                                                                 </div> 
 
                                                                 <div class="row">
-                                                                    <div class="col-xs-6">                                                                                       
+                                                                    <div class="col-xs-4">                                                                                       
                                                                         <label for="casname">First Name</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="John" disabled>                                                                                       
+                                                                        <input type="text" id="casname" style="max-width:40%;" value="John" disabled>                                                                                       
                                                                     </div>
 
-                                                                    <div class="col-xs-6">                                                                                        
+                                                                    <div class="col-xs-4">                                                                                        
                                                                         <label for="casname">Last Name</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>                                                                                       
+                                                                        <input type="text" id="casname" style="max-width:40%;" value="Smith" disabled>                                                                                       
                                                                     </div>
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <!-- <div class="form-group"> -->
                                                                         <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
                                                                         <a href="#">  12345678  </a>
                                                                         <!--  </div> -->
                                                                     </div>  
+																	
+																	<div class="col-xs-6">                                                                                        
+                                                                        <label for="casname">Federal ID</label>&nbsp;&nbsp;
+                                                                        <input type="text" id="casname" style="max-width:50%;" value="987654321A" disabled>                                                                                       
+                                                                    </div>
                                                                 </div>
 
                                                                 <div class="row"><br></div>
@@ -564,14 +572,14 @@
                                                                 <div class="row">                                                                                    
                                                                     <div class="col-lg-8">
                                                                         <label for="txtDateTimeReceived">Placement Start Date</label>
-                                                                        <input type="text" id="txtDateTimeReceived" value="01/21/2012" disabled style="width: 30%">																							
+                                                                        <input type="text" id="txtDateTimeReceived" value="01/21/2012 08:15 AM" disabled style="width: 30%">																							
 
                                                                     </div>  
 
 
                                                                     <div class="col-xs-8">                                                                                        
                                                                         <label for="txtDateTimeReceived">Placement End Date</label>
-                                                                        <input type="text" id="txtDateTimeReceived" value="01/20/2014" disabled style="width: 30%">                                                                                   
+                                                                        <input type="text" id="txtDateTimeReceived" value="01/20/2014 03:24 PM" disabled style="width: 30%">                                                                                   
                                                                     </div>   
 
                                                                     <div class="col-xs-2">
@@ -671,7 +679,7 @@
                                                                     </div>   
 
                                                                     <div class="col-xs-6">                                                                                        
-                                                                        <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
+                                                                        <label for="txtDateTimeReceived">Zip </label>&nbsp;&nbsp;
                                                                         <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
                                                                     </div> 
 
@@ -783,7 +791,7 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-18">
                                                                         <div class="form-group">
-                                                                            <label for="txtDateTimeReceived" style="align-content: center">Description of Efforts made</label><br>
+                                                                            <label for="txtDateTimeReceived" style="align-content: center">Description of Efforts</label><br>
 
                                                                             <textarea readonly id="txtDateTimeReceived" cols="80" rows="4" disabled>Crystal and Colin actively participate in the safety assessment and are cooperative with the development and implementation of the Safety Plan. The physical home environment was free of safety hazards. Children's basic needs are being met.</textarea>
 
@@ -814,23 +822,52 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-10">
                                                                         <div class="form-group">
-                                                                            <label for="txtDateTimeReceived">Placement Matching considerations:</label>
+                                                                            <label for="txtDateTimeReceived">Placement Matching Considerations:</label>
                                                                         </div>
                                                                     </div> 
                                                                 </div>
 
                                                                 <div class="row">
-                                                                    <div class="col-xs-8">
-                                                                        <input type="checkbox" name="cpp_athome" value="1" disabled checked>Race
+                                                                    <div class="col-xs-2">
+                                                                        <!-- <input type="checkbox" name="cpp_athome" value="1" disabled checked> -->
+																		<label>Race</label>
                                                                     </div>
+																	
+																	<div class="col-xs-6">
+																		<select id="example-getting-started" multiple="multiple">
+																			<option value="american">American Indian or Alaska Native</option>
+																			<option value="asian">Asian</option>
+																			<option value="black">Black or African American</option>
+																			<option value="hawaiian">Native Hawaiian or Other Pacific Islander</option>
+																			<option value="white">White</option>
+																			<option value="undetermined">Unable to Determine</option>
+																		</select>
+																	</div>
+																	
+																	 <div class="col-xs-2">
+                                                                        <!-- <input type="checkbox" name="cpp_athome" value="1" disabled checked> -->
+																		<label>Ethnicity</label>
+                                                                    </div>
+																	
+																	<div class="col-xs-6">
+																		<select id="example-getting-started" multiple="multiple">
+																			<option value="hispanic">Hispanic or Latino</option>
+																			<option value="nonhispanic">Not Hispanic or Latino </option>
+																		
+																		</select>
+																	</div>
+																
                                                                 </div>
-                                                                <div class="row"><br></div>
+                                                                
+																
+																<div class="row"><br></div>
+																<!-- 
                                                                 <div class="row">
                                                                     <div class="col-xs-8">
                                                                         <input type="checkbox" name="cpp_athome" value="1" disabled>Ethnicity
                                                                     </div>
                                                                 </div>
-                                                                <div class="row"><br></div>
+                                                                <div class="row"><br></div> -->
                                                                 <div class="row">
                                                                     <div class="col-xs-8">
                                                                         <input type="checkbox" name="cpp_athome" value="1" disabled>Culture
@@ -936,35 +973,42 @@
                                                             <div class="modal-body">
 
                                                                 <div class="row">
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <div class="form-group">
                                                                             <label for="casname">First Name</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                                            <input type="text" id="casname" style="max-width:40%;" value="John" disabled>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <div class="form-group">
                                                                             <label for="casname">Last Name</label>&nbsp;&nbsp;
-                                                                            <input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+                                                                            <input type="text" id="casname" style="max-width:40%;" value="Smith" disabled>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-xs-6">
+                                                                    <div class="col-xs-4">
                                                                         <div class="form-group">
                                                                             <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
                                                                             <a href="#">  12345678
                                                                             </a>
 
                                                                         </div>
-                                                                    </div>  
+                                                                    </div> 
+
+																	 <div class="col-xs-5">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">Federal ID</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:60%;" value="987654321B" disabled>
+                                                                        </div>
+                                                                    </div>  																	
                                                                 </div>
 
                                                                 <div class="row">
                                                                     <div class="col-xs-8">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Temporary Absence Start Date&nbsp;&nbsp;</label>
-                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="01/01/2010 10:06 AM" disabled style="width: 30%">
 
                                                                         </div>
                                                                     </div>  
@@ -972,7 +1016,7 @@
                                                                     <div class="col-xs-8">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Temporary Absence End Date&nbsp;&nbsp;</label>
-                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="01/31/2010 09:32 PM" disabled style="width: 30%">
 
                                                                         </div>
                                                                     </div> 
@@ -982,7 +1026,7 @@
                                                                     <div class="col-xs-15">
                                                                         <div class="form-group">
                                                                             <label for="txtDateTimeReceived">Reason for Absence&nbsp;&nbsp;</label>
-                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 70%">
+                                                                            <input type="text" id="txtDateTimeReceived" value="Injury/Surgery" disabled style="width: 70%">
                                                                         </div>
                                                                     </div> 
                                                                 </div>
@@ -999,12 +1043,12 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-6">                                                                                        
                                                                         <label for="txtDateTimeReceived">Address Line 1</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" value="321 Front St" disabled style="width: 50%">                                                                                       
                                                                     </div>   
 
                                                                     <div class="col-xs-6">                                                                                        
                                                                         <label for="txtDateTimeReceived">Address Line 2</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" value="Room # 620" disabled style="width: 50%">                                                                                       
                                                                     </div> 
 
                                                                     <div class="col-xs-6">                                                                                        
@@ -1019,17 +1063,17 @@
 
                                                                     <div class="col-xs-6">                                                                                        
                                                                         <label for="txtDateTimeReceived">City </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" value="Harrisburg" disabled style="width: 50%">                                                                                       
                                                                     </div> 
 
                                                                     <div class="col-xs-6">                                                                                        
-                                                                        <label for="txtDateTimeReceived">State/Region/Province</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 30%">                                                                                       
+                                                                        <label for="txtDateTimeReceived">State</label>&nbsp;&nbsp;
+                                                                        <input type="text" id="txtDateTimeReceived" value="PA" disabled style="width: 30%">                                                                                       
                                                                     </div>   
 
                                                                     <div class="col-xs-6">                                                                                        
-                                                                        <label for="txtDateTimeReceived">Zip/Postal Code </label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                        <label for="txtDateTimeReceived">Zip </label>&nbsp;&nbsp;
+                                                                        <input type="text" id="txtDateTimeReceived" value="17011" disabled style="width: 50%">                                                                                       
                                                                     </div> 
 
                                                                 </div>
@@ -1039,12 +1083,12 @@
                                                                 <div class="row">
                                                                     <div class="col-xs-6">                                                                                        
                                                                         <label for="txtDateTimeReceived">Country</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" value="" disabled style="width: 50%">                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" value="USA" disabled style="width: 50%">                                                                                       
                                                                     </div>   
 
                                                                     <div class="col-xs-6">                                                                                        
                                                                         <label for="txtDateTimeReceived">County</label>&nbsp;&nbsp;
-                                                                        <input type="text" id="txtDateTimeReceived" disabled style="width: 50%">                                                                                       
+                                                                        <input type="text" id="txtDateTimeReceived" value="Dauphin" disabled style="width: 50%">                                                                                       
                                                                     </div> 
                                                                 </div>
 
@@ -1074,10 +1118,11 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>MCI ID (Fed ID)</th>
-                                                            <th>Child Name</th>
-                                                            <th>Adoption/PLC</th>
-                                                            <th>Finalization/Legalization Date</th>
+                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+															<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View</th>
 
                                                         </tr>
@@ -1085,6 +1130,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>12345678 </td>
+															<td>987654321A </td>
                                                             <td>John Smith</td>
                                                             <td>Adoption</td>
                                                             <td>01/01/2016</td>																		
@@ -1095,6 +1141,7 @@
 
                                                 <tr>
                                                     <td>987654321 </td>
+													<td>112233445B </td>
                                                     <td>Jane Doe </td>
                                                     <td>PLC</td>
                                                     <td>01/20/2014</td>
@@ -1124,14 +1171,14 @@
                                                             <div class="col-xs-6">
                                                                 <div class="form-group">
                                                                     <label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-xs-6">
                                                                 <div class="form-group">
                                                                     <label for="ddlCounty">State Name</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
 
                                                                 </div>
                                                             </div>
@@ -1150,14 +1197,14 @@
                                                             <div class="col-xs-6">
                                                                 <div class="form-group">
                                                                     <label for="casname">Provider Name </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-xs-6">
                                                                 <div class="form-group">
                                                                     <label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="Hospital" disabled>
 
                                                                 </div>
                                                             </div>
@@ -1174,12 +1221,12 @@
                                                         <div class="row">
                                                             <div class="col-xs-6">
                                                                 <label for="casname">Agreement Entered </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value=" " disabled>																			
+                                                                <input type="text" id="casname" style="max-width:50%;" value="04/10/2011" disabled>																			
                                                             </div>
 
                                                             <div class="col-xs-6">
                                                                 <label for="txtFirstName">Person who Signed Agreement </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value=" " disabled>																				
+                                                                <input type="text" id="casname" style="max-width:30%;" value="John Smith " disabled>																				
                                                             </div>
 
                                                             <div class="col-xs-6">
@@ -1250,19 +1297,22 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Disruption/Dissolution Date</th>
-                                                                    <th>Reason</th>
+                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																	<th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>12/01/2015 </td>
-                                                                    <td>Adopted</td>
+                                                                    <td>Dissolution</td>
+																	<td>Dissolution Resolved</td>
                                                                 </tr>
 
                                                                 <tr>
                                                                     <td>01/01/2014 </td>
-                                                                    <td>PLC</td>
+																	<td>Disruption</td>
+                                                                    <td>Disruption Resolved</td>
                                                                 </tr>	
 
                                                             </tbody>
@@ -1271,26 +1321,26 @@
                                                         <div class="row"><br></div>		
                                                         <div class="row">
                                                             <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Annual Contract</h2>
+                                                                <h2 class="tab-heading">Annual Contact</h2>
                                                             </div> 
                                                         </div>													
 
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Date Sent </th>
-                                                                    <th>Notes</th>
+                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>12/01/2015 </td>
-                                                                    <td>Adopted</td>
+                                                                    <td>Contact Sent</td>
                                                                 </tr>
 
                                                                 <tr>
                                                                     <td>01/01/2014 </td>
-                                                                    <td>PLC</td>
+                                                                    <td>Contact Sent</td>
                                                                 </tr>	
 
                                                             </tbody>
@@ -1306,23 +1356,27 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Monthly Per Diem</th>
-                                                                    <th>Daily Subsidy Amount</th>
-                                                                    <th>Subsidy Start Date</th>
+                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                   <!--  <th>Subsidy Start Date</th>
                                                                     <th>Subsidy End Date</th>
                                                                     <th>Rate Start Date</th>
-                                                                    <th>Rate End Date</th>
-                                                                    <th>Agreement Start Date</th>
-                                                                    <th>Agreement End Date</th>
+                                                                    <th>Rate End Date</th> -->
+																	<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+																	<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
                                                                     <td>$1050 </td>
                                                                     <td>$35</td>
-                                                                    <td>12/01/2015 </td>
+                                                                    <!-- <td>12/01/2015 </td>
                                                                     <td>12/31/2015 </td>
                                                                     <td>12/01/2015 </td>
+                                                                    <td>12/31/2015 </td> -->
+																	<td>12/01/2015 </td>
                                                                     <td>12/31/2015 </td>
                                                                     <td>12/01/2015 </td>
                                                                     <td>12/31/2015 </td>
@@ -1331,10 +1385,12 @@
                                                                 <tr>
                                                                     <td>$1050 </td>
                                                                     <td>$35</td>
-                                                                    <td>12/01/2014 </td>
+                                                                    <!-- <td>12/01/2014 </td>
                                                                     <td>12/31/2014 </td>
                                                                     <td>12/01/2014 </td>
-                                                                    <td>12/31/2014 </td>
+                                                                    <td>12/31/2014 </td> -->
+																	<td>12/01/2015 </td>
+                                                                    <td>12/31/2015 </td>
                                                                     <td>12/01/2014 </td>
                                                                     <td>12/31/2014 </td>
                                                                 </tr>	
@@ -1535,10 +1591,10 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Open Date</th>
-                                                        <th>Open By</th>
-                                                        <th>Close Date</th>
-                                                        <th>Close By</th>
+                                                        <th>Open Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Open By<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Close Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Close By<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>View</th>
                                                     </tr>
                                                 </thead>
@@ -1638,10 +1694,10 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Activated Date</th>
-                                                        <th>Activated By</th>
-                                                        <th>Inactivated Date</th>
-                                                        <th>Inactivated By</th>
+                                                        <th>Activated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Activated By<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Inactivated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Inactivated By<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>View</th>
                                                     </tr>
                                                 </thead>
@@ -1729,15 +1785,15 @@
                                                 <tr>
 
 
-                                                    <th>Address Line 1</th>
-                                                    <th>Address Line 2</th>
+                                                    <th>Address Line 1<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Line 2<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                    <th>City</th>
-                                                    <th>State</th>
-                                                    <th>Zip</th>
-                                                    <th>County</th>
-                                                    <th>Address Start Date</th>
-                                                    <th>Address End Date</th>
+                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
 
@@ -1789,12 +1845,12 @@
                                                 <tr>
 
 
-                                                    <th>Phone Number</th>
-                                                    <th>Phone Type</th>
+                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                    <th>Work Extension</th>
-                                                    <th>Start Date</th>
-                                                    <th>End Date</th>
+                                                    <th>Work Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
 
@@ -1836,11 +1892,11 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Last Name</th>
-                                                        <th>First Name</th>
-                                                        <th>Worker ID</th>
-                                                        <th>Start Date</th>
-                                                        <th>End Date</th>
+                                                        <th>Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
 
@@ -1881,11 +1937,11 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Last Name</th>
-                                                        <th>First Name</th>
-                                                        <th>Worker ID</th>
-                                                        <th>Start Date</th>
-                                                        <th>End Date</th>
+                                                        <th>Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
 
@@ -1926,10 +1982,10 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Referral ID</th>
-                                                        <th>Referral Created Date</th>
-                                                        <th>Referral Type</th>
-                                                        <th>Primary Recipient</th>
+                                                        <th>Referral ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Referral Created Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Referral Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Primary Recipient<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
 
@@ -2117,10 +2173,10 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Caseworker ID</th>
-                                                                    <th>Date of Visit</th>
-                                                                    <th>Duration</th>
-                                                                    <th>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                                                                    <th>Caseworker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date of Visit<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                 </tr>
                                                             </thead>
@@ -2213,22 +2269,22 @@
                                                                                         <tr> 
                                                                                             <th>
                                                                                                 School Name
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>
                                                                                                 Start Date
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>
                                                                                                 End Date
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>
                                                                                                 School Type
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>
                                                                                                 School District
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>
                                                                                                 Reason for School Change
-                                                                                            </th>
+                                                                                            <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
 
@@ -2294,10 +2350,10 @@
                                                                                             <tr> 
                                                                                                 <th>
                                                                                                     Needs Identified
-                                                                                                </th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                                 <th>
                                                                                                     Met
-                                                                                                </th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                                             </tr>
                                                                                         </thead>
@@ -2339,10 +2395,10 @@
                                                                                             <tr> 
                                                                                                 <th>
                                                                                                     Services Needed
-                                                                                                </th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                                 <th>
                                                                                                     Services Provided
-                                                                                                </th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                                             </tr>
                                                                                         </thead>
@@ -2396,13 +2452,13 @@
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Child Name</th>
-                                                                <th>Healthcare Record</th>
-                                                                <th>Assessment Performed</th>
-                                                                <th>Currently Under Medication</th>
-                                                                <th>Substance Abuse</th>
-                                                                <th>Disability</th>
-                                                                <th>Financial Assistance</th>
+                                                                <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Healthcare Record<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Assessment Performed<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Currently Under Medication<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Substance Abuse<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Disability<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Financial Assistance<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 <th>View</th>
 
 
@@ -2541,7 +2597,7 @@
                                                                             </div> 
                                                                             <div class="col-xs-5">
                                                                                 <div class="form-group">
-                                                                                    <label for="txtDateTimeReceived">Zip/Postal Code</label>
+                                                                                    <label for="txtDateTimeReceived">Zip</label>
                                                                                     <input type="text" id="txtDateTimeReceived" disabled style="width: 45%">
 
                                                                                 </div>
@@ -2652,10 +2708,10 @@
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>Medication Name</th>
-                                                                                    <th>Precription Date</th>
-                                                                                    <th>Discontinued Date</th>
-                                                                                    <th> Classification</th>
+                                                                                    <th>Medication Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                    <th>Precription Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                    <th>Discontinued Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                    <th> Classification<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                                 </tr>
                                                                             </thead>
@@ -3095,8 +3151,8 @@
                                                                 <tr>
 
 
-                                                                    <th>Start Date</th>
-                                                                    <th>End Date</th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                                 </tr>
@@ -3126,12 +3182,12 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr> 
-                                                                    <th>AKA Prefix</th>
-                                                                    <th>AKA First Name</th>
-                                                                    <th>AKA Middle Name</th>
-                                                                    <th>AKA Last Name</th>
-                                                                    <th>AKA Suffix</th>
-                                                                    <th>Date AKA Entered</th>
+                                                                    <th>AKA Prefix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>AKA First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>AKA Middle Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>AKA Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>AKA Suffix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date AKA Entered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -3199,9 +3255,9 @@
                                                             <thead>
                                                                 <tr> 
 
-                                                                    <th>Start Date</th>
-                                                                    <th>End Date</th>
-                                                                    <th>Reason for Inactivation</th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Reason for Inactivation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -3310,10 +3366,10 @@
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Type of Trafficking</th>
-                                                                <th>Occurence</th>
-                                                                <th>Report made to Law Enforcement</th>
-                                                                <th>Date Report Was Made </th>
+                                                                <th>Type of Trafficking<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Occurence<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Report made to Law Enforcement<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Date Report Was Made <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
 
@@ -3359,10 +3415,10 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr> 
-                                                                    <th>Status </th>
-                                                                    <th>Spouse</th>
-                                                                    <th>Start Date</th>
-                                                                    <th>End Date</th>																									
+                                                                    <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Spouse<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																									
                                                                 </tr>
                                                             </thead>
 
@@ -3420,13 +3476,13 @@
                                                             <thead>
 
                                                                 <tr> 
-                                                                    <th>Address Type</th>
-                                                                    <th>Address Start Date</th>
-                                                                    <th>Address End Date</th>
-                                                                    <th>Address</th>
-                                                                    <th>City</th>
-                                                                    <th>State</th>
-                                                                    <th>Zip</th>
+                                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                 </tr>
                                                             </thead>
@@ -3516,10 +3572,10 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr> 
-                                                                    <th>Phone Type</th>
-                                                                    <th>Phone Number</th>
-                                                                    <th>Extension (If Applicable)</th>
-                                                                    <th>Parent/Legal Guardian Number</th>
+                                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Extension (If Applicable)<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Parent/Legal Guardian Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                 </tr>
                                                             </thead>
@@ -3642,8 +3698,8 @@ Adoption Information
                                                             <thead>
                                                                 <tr>
 
-                                                                    <th>Start Date of Pregnancy</th>
-                                                                    <th>End Date of Pregnancy</th>
+                                                                    <th>Start Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>End Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
 
@@ -3777,11 +3833,11 @@ Adoption Information
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr> 
-                                                                    <th>Client First Name</th>
-                                                                    <th>Client Last Name</th>
-                                                                    <th>Relationship to Client</th>
-                                                                    <th>Start Date</th>
-                                                                    <th>End Date</th>																									
+                                                                    <th>Client First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Client Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Relationship to Client<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																									
                                                                 </tr>
                                                             </thead>
 
@@ -4073,14 +4129,14 @@ Adoption Information
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr> 
-                                                    <th>Address Type</th>
-                                                    <th>Address Start Date</th>
-                                                    <th>Address End Date</th>
-                                                    <th>Address</th>
-                                                    <th>City</th>
-                                                    <th>State</th>
-                                                    <th>Zip</th>
-                                                    <th>Country</th>
+                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Country<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                 </tr>
                                             </thead>
@@ -4155,9 +4211,9 @@ Adoption Information
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr> 
-                                                    <th>Phone Type</th>
-                                                    <th>Phone Number</th>
-                                                    <th>Extension (If Applicable)</th>																		
+                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Extension (If Applicable)<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																		
                                                 </tr>
                                             </thead>
 
@@ -4224,11 +4280,11 @@ Adoption Information
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Assessment Date</th>
-                                                                <th>Assessment Type</th>
-                                                                <th>Worker ID:Name </th>
-                                                                <th>Supervisor ID:Name </th>
-                                                                <th>Supervisor Approval Date</th>
+                                                                <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 <th>View</th>
 
 
@@ -4290,13 +4346,13 @@ Adoption Information
                                                             <table class="table table-hover table-striped">																	   
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Name</th>
-                                                                        <th>Date of Birth</th>
-                                                                        <th>Age</th>
+                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                                        <th>Date Seen</th>  
-                                                                        <th>Date Placed in Setting</th>
-                                                                        <th>Interval</th>                
+                                                                        <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>  
+                                                                        <th>Date Placed in Setting<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Interval<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                
                                                                         
                                                                     </tr>
                                                                 </thead>
@@ -4328,11 +4384,11 @@ Adoption Information
                                                             <table class="table table-hover table-striped">																							   
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Name</th>
-                                                                        <th>Age</th>
-                                                                        <th>Role in Household</th>
-                                                                        <th>Date Last Seen</th>
-                                                                        <th>Affiliated County</th>
+                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Role in Household<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Date Last Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Affiliated County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                                     </tr>
@@ -4370,8 +4426,8 @@ Adoption Information
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Child</th>
-                                                                            <th>Safety Decision</th>
+                                                                            <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                             <th>View</th>
                                                                         </tr>
@@ -4393,8 +4449,8 @@ Adoption Information
                                                                 <table class="table table-hover table-striped"  style="width: 97%">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Safety Indicator</th>
-                                                                            <th>Home</th>
+                                                                            <th>Safety Indicator<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th>Home<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                                         </tr>
@@ -4630,12 +4686,12 @@ Adoption Information
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Date of Assessment</th>
-                                                            <th>Name of Assessment</th>
-                                                            <th>Type of Assessment</th>
-                                                            <th>Assessment Agency</th>
-                                                            <th>Participants</th>
-                                                            <th>Court Ordered</th>
+                                                            <th>Date of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Name of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Type of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Assessment Agency<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Participants<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Court Ordered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View</th>
 
 
@@ -4786,8 +4842,8 @@ Adoption Information
                                                                             <tr>
 
                                                                                 
-                                                                                <th>Name</th>
-                                                                                <th>Role</th>
+                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                             </tr>
                                                                         </thead>
@@ -4883,8 +4939,8 @@ Adoption Information
                                                                             <tr>
 
                                                                                 
-                                                                                <th>Name</th>
-                                                                                <th>Role</th>
+                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                             </tr>
                                                                         </thead>
@@ -4957,11 +5013,11 @@ Adoption Information
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Assessment Date</th>
-                                                            <th>Assessment Type</th>
-                                                            <th>Worker ID:Name </th>
-                                                            <th>Supervisor ID:Name </th>
-                                                            <th>Supervisor Approval Date</th>
+                                                            <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View</th>
 
 
@@ -5032,12 +5088,12 @@ Adoption Information
                                                         <table class="table table-hover table-striped">																	   
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Name</th>
-                                                                    <th>Date of Birth</th>
-                                                                    <th>Age</th>
-                                                                    <th>Seen?</th>
-                                                                    <th>Date Seen</th>                                                    
-                                                                    <th>Reason Not Seen</th>
+                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                    
+                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -5075,13 +5131,13 @@ Adoption Information
                                                         <table class="table table-hover table-striped">																							   
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Name</th>
-                                                                    <th>Family Role</th>
-                                                                    <th>Date of Birth</th>
-                                                                    <th>Age</th>
-                                                                    <th>Seen?</th>
-                                                                    <th>Date Seen</th>                                                    
-                                                                    <th>Reason Not Seen</th>
+                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Family Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                    
+                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -5116,8 +5172,8 @@ Adoption Information
                                                             <table class="table table-hover table-striped">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Child</th>
-                                                                        <th>Safety Decision</th>
+                                                                        <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                         <th>View</th>
                                                                     </tr>
@@ -5155,11 +5211,11 @@ Adoption Information
                                                                                     <thead>
                                                                                         <tr>
 
-                                                                                            <th>Safety Threat</th>
+                                                                                            <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <!--
 <th>Protective Service Capacity</th>
 <th>Protective Capacity Status</th>
--->                                                                        <th>Explanation</th>
+-->                                                                        <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                             <th>View</th>
                                                                                         </tr>
                                                                                     </thead>
@@ -5250,11 +5306,11 @@ Adoption Information
                                                                                                     <thead>
                                                                                                         <tr>
 
-                                                                                                            <th>Caregiver</th>
+                                                                                                            <th>Caregiver<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                                                                            <th>Protective Service Capacity</th>
-                                                                                                            <th>Protective Capacity Status</th>
-                                                                                                            <th>Explanation</th>
+                                                                                                            <th>Protective Service Capacity<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                            <th>Protective Capacity Status<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                            <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                                                                         </tr>
                                                                                                     </thead>
@@ -5325,9 +5381,9 @@ and use drugs.</textarea>
                                                                                 <thead>
                                                                                     <tr>
 
-                                                                                        <th>Safety Threat</th>
+                                                                                        <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                                                        <th>Explanations</th>
+                                                                                        <th>Explanations<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
@@ -5614,11 +5670,11 @@ and use drugs.</textarea>
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Assessment Date</th>
-                                                    <th>Assessment Type</th>
-                                                    <th>Worker ID:Name </th>
-                                                    <th>Supervisor ID:Name </th>
-                                                    <th>Supervisor Approval Date</th>
+                                                    <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>View</th>
 
 
@@ -5725,11 +5781,11 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Role</th>
-                                                        <th>Age</th>
-                                                        <th>Highest Risk Level</th>
-                                                        <th>Risk Details</th>
+                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Highest Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Risk Details<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -5764,9 +5820,9 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Risk Factor</th>
+                                                        <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                        <th>Risk Level</th>
+                                                        <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -5802,9 +5858,9 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Risk Factor</th>
+                                                        <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                        <th>Risk Level</th>
+                                                        <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -5859,8 +5915,8 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Family Environment</th>
-                                                        <th>Risk Level</th>
+                                                        <th>Family Environment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -5960,10 +6016,10 @@ and use drugs.</textarea>
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Plan Date </th>
-                                                    <th>Worker ID:Name </th>
-                                                    <th>Supervisor ID:Name </th>
-                                                    <th>Supervisor Approval Date</th>
+                                                    <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>View</th>
 
 
@@ -6156,9 +6212,9 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Child </th>
-                                                            <th>Permanency Goal </th>
-                                                            <th>Imminent Risk / Substitute Care Goal </th>
+                                                            <th>Child <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Permanency Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Imminent Risk / Substitute Care Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                         </tr>
@@ -6260,10 +6316,10 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Objective </th>
-                                                        <th>Participants </th>
-                                                        <th>Status </th>
-                                                        <th>Needs Addressed </th>
+                                                        <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Needs Addressed <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                         <th>View </th>
 
                                                     </tr>
@@ -6329,10 +6385,10 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Task </th>
-                                                            <th>Participants </th>
-                                                            <th>Status </th>
-                                                            <th>Service</th>
+                                                            <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Service<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                             <th>View </th>
 
                                                         </tr>
@@ -6464,11 +6520,11 @@ and use drugs.</textarea>
                                                             <table class="table table-hover table-striped">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Participant</th>
-                                                                        <th>Relationship to Child</th>
-                                                                        <th> Date of Signature</th>																						
-                                                                        <th>Plan/Rights Sent Date</th>
-                                                                        <th>Method of Delivery</th>
+                                                                        <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Relationship to Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																						
+                                                                        <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                         <th> View </th>
                                                                     </tr>
                                                                 </thead>
@@ -6645,10 +6701,10 @@ and use drugs.</textarea>
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Plan Date </th>
-                                                    <th>Worker ID:Name </th>
-                                                    <th>Supervisor ID:Name </th>
-                                                    <th>Supervisor Approval Date</th>
+                                                    <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>View</th>
 
 
@@ -7482,9 +7538,9 @@ Child has Disability or need Requiring Services
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Objective </th>
-                                                        <th>Participants </th>
-                                                        <th>Status </th>
+                                                        <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                         <th>View </th>
 
@@ -7551,9 +7607,9 @@ Child has Disability or need Requiring Services
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Task </th>
-                                                            <th>Participants </th>
-                                                            <th>Status </th>
+                                                            <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
                                                             <th>View </th>
 
@@ -7676,13 +7732,13 @@ Child has Disability or need Requiring Services
                                         <table class="table table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>Participant Name</th>
-                                                    <th>Refused/Limited</th>
-                                                    <th>Frequency/Duration</th>
-                                                    <th>Level of Supervision</th>
-                                                    <th>Location</th>
-                                                    <th>Transportation Responsibility</th>
-                                                    <th>Accommodation/ Barriers</th>
+                                                    <th>Participant Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Refused/Limited<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Frequency/Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Level of Supervision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Transportation Responsibility<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Accommodation/ Barriers<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -7743,11 +7799,11 @@ Child has Disability or need Requiring Services
                                                             <table class="table table-hover table-striped">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Participant</th>
+                                                                        <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
-                                                                        <th> Date of Signature</th>																						
-                                                                        <th>Plan/Rights Sent Date</th>
-                                                                        <th>Method of Delivery</th>
+                                                                        <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																						
+                                                                        <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                         <th> View </th>
                                                                     </tr>
                                                                 </thead>
@@ -7938,10 +7994,10 @@ Child has Disability or need Requiring Services
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Child</th>
-                                                        <th>Date of Screening</th>
-                                                        <th>Need for Early Intervention Services</th>
-                                                        <th>Date of Referral for Early Intervention Services</th>                                                                        
+                                                        <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Date of Screening<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Need for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Date of Referral for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody>
