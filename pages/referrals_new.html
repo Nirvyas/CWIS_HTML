@@ -13,6 +13,22 @@
                 e.style.display = 'block';
         }
     </script> 
+    <script type="text/javascript">
+        function toggle_Note(id) {
+            var e = document.getElementById(id);
+            
+                e.style.display = 'none';
+            
+        }
+    </script> 
+    <script type="text/javascript">
+        function toggle_vis(id) {
+            var e = document.getElementById(id);
+            
+                e.style.display = 'block';
+            
+        }
+    </script>
 
     <style>
         legend { 
@@ -39,6 +55,8 @@
                     <p>Case Name:<span>SmithCase</span></p>
                     <p>County:<span>Allegheny</span></p>
                     <p>Region:<span>West</span></p>
+                    <br>
+                    <span id="showHide" > <p>Note:<span>This Case is Under Review</span></p></span>
 
                 </div>
             </div>
@@ -48,7 +66,7 @@
                     <div class="tab-pane active" id="personInformation">
                         <div class="row">
                             <div class="col-lg-18">
-                                <h2 class="tab-heading">Case Information</h2>
+                                
 
                                 <!-- <div class="row"><br></div> -->
                                 <div class="panel panel-third">
@@ -56,15 +74,15 @@
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
 
-                                            <li class="active"><a href="#ddddd" data-toggle="tab">Case Information</a></li>
-                                            <li><a href="#participants" data-toggle="tab">Participants</a></li>
-                                            <li><a href="#resources" data-toggle="tab">Resources</a></li> 
-                                            <li><a href="#plans" data-toggle="tab">Plans</a></li>
-                                            <li><a href="#services" data-toggle="tab">Family Services</a></li>
-                                            <li><a href="#caseNotes" data-toggle="tab">Case Notes</a></li>
+                                            <li class="active"><a href="#ddddd" data-toggle="tab" >Case Information</a></li>
+                                            <li><a href="#participants" data-toggle="tab" >Participants</a></li>
+                                            <li><a href="#resources" data-toggle="tab" >Resources</a></li> 
+                                            <li><a href="#plans" data-toggle="tab" >Plans</a></li>
+                                            <li><a href="#services" data-toggle="tab" >Family Services</a></li>
+                                            <li><a href="#caseNotes" data-toggle="tab" >Case Notes</a></li>
                                             <!-- <li><a href="#assignments" data-toggle="tab">Assignments</a></li> -->
-                                            <li><a href="#placeHome" data-toggle="tab">Placement/Removal</a></li>
-                                            <li><a href="#adopt" data-toggle="tab">Adoption/PLC</a></li>
+                                            <li><a href="#placeHome" data-toggle="tab" >Placement/Removal</a></li>
+                                            <li><a href="#adopt" data-toggle="tab" >Adoption/PLC</a></li>
                                             <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
 
                                         </ul>
@@ -1060,6 +1078,14 @@
                                                 <!--End temporaryabsence modal-->
                                                 <!--  Everything related to placement goes within this-->
 
+                                                <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                             </div>
 
                                             <!-- Begin of Adoption Tab --> 
@@ -1442,7 +1468,14 @@
                                             </div>
                                         </div>
                                         <!-- End of Modal --> 
+<div class="modal-footer">
 
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
 
 
@@ -1461,10 +1494,19 @@
                                             <div class="col-xs-6">
                                                 <div class="form-group">
                                                     <label for="casname">Case ID</label>&nbsp;&nbsp;
-                                                    <input type="text" id="casname" style="max-width:50%;" value="445668" disabled>
+                                                    <input type="text" id="casname" style="max-width:50%;" value="12345" disabled>
                                                 </div>
                                             </div>
+                                            <div class="col-xs-6">
+                                                <div class="form-group">
 
+                                                    <label for="caseID">County Case ID</label>&nbsp;&nbsp;
+                                                    <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="56789" disabled />  
+
+                                                </div>
+                                            </div> 
+
+<!--
                                             <div class="col-xs-6">
                                                 <div class="form-group">
                                                     <label for="ddlCounty">Case Type</label>
@@ -1475,6 +1517,7 @@
                                                     </select>
                                                 </div>
                                             </div>
+-->
 
                                             <div class="col-xs-6">
                                                 <div class="form-group">
@@ -1491,19 +1534,12 @@
                                                     <input name="county" type="text" autocomplete="off" style="max-width:50%;" id="county" alt="Enter First Name"value="Allegheny" disabled />
                                                 </div>
                                             </div>
-                                            <div class="col-xs-6">
-                                                <div class="form-group">
-
-                                                    <label for="caseID">County Case ID</label>&nbsp;&nbsp;
-                                                    <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" alt="Enter First Name"value="56789" disabled />  
-
-                                                </div>
-                                            </div>  
+                                             
 
                                             <div class="col-xs-6">
                                                 <div class="form-group">
                                                     <label for="caseID">Case Created Date</label>&nbsp;&nbsp;
-                                                    <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="10/05/16" disabled />  
+                                                    <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="01/10/2015" disabled />  
                                                 </div>
                                             </div>
 
@@ -1638,7 +1674,7 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Activated Date</th>
+                                                        <th>Activate Date</th>
                                                         <th>Activated By</th>
                                                         <th>Inactivated Date</th>
                                                         <th>Inactivated By</th>
@@ -1729,8 +1765,8 @@
                                                 <tr>
 
 
-                                                    <th>Address Line 1</th>
-                                                    <th>Address Line 2</th>
+                                                    <th>Address Type</th>
+                                                    <th>Address </th>
 
                                                     <th>City</th>
                                                     <th>State</th>
@@ -1746,13 +1782,13 @@
                                             <tbody>
                                                 <tr>
 
-                                                    <td>345 Star Drive  </td>
-                                                    <td>Apt 4 </td>
+                                                    <td> Home </td>
+                                                    <td> 345 Star DriveApt 4 </td>
                                                     <td>Harrisburg </td>
                                                     <td>PA </td>
                                                     <td>17120 </td>
                                                     <td>Dauphin </td>
-                                                    <td> 03/12/2017</td>
+                                                    <td> 11/24/2016</td>
                                                     <td> </td>
 
 
@@ -1760,8 +1796,8 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>123 Tree Lane </td>
-                                                    <td>Apt 8 </td>
+                                                    <td>Home </td>
+                                                    <td>123 Tree Lane Apt 8 </td>
                                                     <td>Harrisburg </td>
                                                     <td>PA </td>
                                                     <td>17025 </td>
@@ -1805,7 +1841,7 @@
 
                                                     <td>717-652-3432 </td>
                                                     <td>Work </td>
-                                                    <td>04 </td>
+                                                    <td>047 </td>
                                                     
 
                                                 </tr>
@@ -1813,7 +1849,7 @@
 
                                                     <td>717-234-1265 </td>
                                                     <td>Work </td>
-                                                    <td>06 </td>
+                                                    <td>063 </td>
                                                     
 
                                                 </tr>
@@ -1927,9 +1963,27 @@
                                                         <th>Referral Created Date</th>
                                                         <th>Referral Type</th>
                                                         <th>Primary Recipient</th>
+                                                        <th>Persons<th>
                                                     </tr>
                                                 </thead>
+                                                <tr>
+                                                    <td>
+                                                        <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">433224</a>
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/15/2016</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">GPS</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">Adams</span>
+                                                    </td>
+                                                    <td>Brent Jones - 444333<br>Sally Musser - 543332</td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">761952</a>
@@ -1944,12 +1998,99 @@
                                                         <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">GPS</span>
                                                     </td>
                                                     <td>
-                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">John Jackson</span>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">Lancaster</span>
                                                     </td>
+                                                    <td>Sam Miller - 956632<br>Troy Smith - 663763</td>
                                                 </tr>
                                             </table>
                                             <div class="row"><br></div>
                                         </div>
+                                        
+                                        
+                                         <div class="row">
+                                            <div class="col-lg-18">
+                                                <h2 class="tab-heading">Associated Cases</h2>
+                                            </div> 
+                                        </div>												
+
+                                        <!--<p>Associated Referrals  Section</p>-->
+                                        <div class="row row-padding">
+                                            <table class="table table-hover table-striped">
+                                                <thead>
+                                                    <tr> 
+                                                        <th>Case ID</th>
+                                                        <th>Assigned County</th>
+                                                        <th>Created Date</th>
+                                                        <th>Persons</th>
+                                                    </tr>
+                                                </thead>
+<tr>
+                                                    <td>
+                                                        <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">556789</a>
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Adams</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">11/14/2017</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">
+                                                        Amy Smith - 113455<br> Fred Marks - 224689 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">434544</a>
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Dauphin</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">09/18/2017</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">
+                                                        Ron Smith - 776754<br> Tom Gibson - 876443 </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">233458</a>
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+                                                        <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Lancaster</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/11/2016</span>
+                                                    </td>
+                                                    <td>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderStatus">
+                                                        Mike Jones - 234586<br> Sam Hughes - 456789 <br> Don Johnson - 748648</span>
+                                                    </td>
+                                                </tr>
+                                                
+                                                
+                                            </table>
+                                            <div class="row"><br></div>
+                                        </div>
+                                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" id="" tabindex="0">Add Case for Review</a>
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
 
                                     <div class="tab-pane" id="participants">
@@ -1971,6 +2112,7 @@
                                                     </div>
                                                 </div>
 -->
+<!--
                                                 <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
                                                 <div class="row" style="display: none;">
                                                     <div class="col-xs-9">
@@ -2011,6 +2153,7 @@
                                                         <p style="color:gray">123456</p>
                                                     </div>
                                                 </div>
+-->
 
                                             </div>
                                         </div>
@@ -2022,6 +2165,7 @@
                                                 <p style="word-wrap: break-word;">Parent</p>
                                                 <div class="row"></div>
 
+<!--
                                                 <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
                                                 <div class="row" style="display: none;">
                                                     <div class="col-xs-9">
@@ -2062,6 +2206,7 @@
                                                         <p style="color:gray">123456</p>
                                                     </div>
                                                 </div>
+-->
                                                 <!--
 <div class="row">
 <div class="col-xs-18 btn-group-xs text-right">
@@ -3156,8 +3301,9 @@
                                                     <div class="row row-padding">
                                                         <table class="table table-hover table-striped">
                                                             <thead>
-                                                                <tr> 
+                                                                <tr> <th>AKA Type</th>
                                                                     <th>AKA Prefix</th>
+                                                                    
                                                                     <th>AKA First Name</th>
                                                                     <th>AKA Middle Name</th>
                                                                     <th>AKA Last Name</th>
@@ -3167,6 +3313,9 @@
                                                             </thead>
 
                                                             <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Nickname</span>
+                                                                </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms. </span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
@@ -3187,11 +3336,13 @@
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus"> </span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2013</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/05/2017</span>
                                                                 </td>
                                                             </tr>
 
-                                                            <tr>
+                                                            <tr><td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Maiden Name</span>
+                                                                </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms.</span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
@@ -3225,6 +3376,18 @@
                                                             <h2 class="tab-heading">Participant Status</h2>
                                                         </div> 
                                                     </div>
+                                                    
+                                                    <div class="row">
+
+                                            <div class="col-xs-6">
+                                                <div class="form-group">
+                                                    <label for="caseID">Current Status</label>&nbsp;&nbsp;
+                                                    <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="Active" disabled />  
+                                                </div>
+                                            </div>
+
+
+                                        </div>
                                                     <div class="row row-padding">
                                                         <table class="table table-hover table-striped">
                                                             <thead>
@@ -3334,7 +3497,7 @@
 
                                                     <div class="row">
                                                         <div class="col-lg-18">
-                                                            <h2 class="tab-heading">Trafficking</h2>
+                                                            <h2 class="tab-heading">Human Trafficking</h2>
                                                         </div>
                                                     </div>
 
@@ -3346,6 +3509,7 @@
                                                                 
                                                                 <th>Report made to Law Enforcement</th>
                                                                 <th>Date Report Was Made </th>
+                                                            
 
 
 
@@ -3369,6 +3533,16 @@
 
                                                         </tbody>
                                                     </table>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Child was a Victim of Human Trafficking in Another State </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
 
 
 
@@ -3400,7 +3574,7 @@
 
                                                             <tr>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Married</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Divorced</span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
@@ -3410,7 +3584,7 @@
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jill Jackson</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2010</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">12/29/2017</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
@@ -3418,20 +3592,20 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Divorced</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Married</span>
                                                                     <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
 <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
 
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> Michael Jackson</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> Jill Jackson</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">03/15/2006</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">02/03/2017</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/14/2010</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">12/28/2017</span>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -3473,6 +3647,31 @@
                                                                 </td>
                                                                 
                                                                 <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1234 Chester St</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Gettysburg</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17054</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">08/24/2013</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+                                                                
+                                                                <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">30 N Third  Rd</span>
                                                                 </td>
                                                                 <td>
@@ -3485,10 +3684,10 @@
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17011</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/19/2009</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">08/23/2013</span>
                                                                 </td>
 
                                                             </tr>
@@ -3511,10 +3710,10 @@
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/06/2000</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1999</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/18/2009</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -3535,10 +3734,10 @@
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1988</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/05/1999</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/17/1992</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/05/2000</span>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -3694,13 +3893,13 @@ Adoption Information
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td> 01/01/2008</td>
-                                                                    <td>09/01/2008 </td>
+                                                                    <td> 10/01/2017</td>
+                                                                    <td>07/20/2018 </td>
 
                                                                 </tr>
                                                                 <tr>
-                                                                    <td> 01/01/2007</td>
-                                                                    <td>09/01/2007 </td>
+                                                                    <td> 10/10/2015</td>
+                                                                    <td>07/01/2016 </td>
 
                                                                 </tr>
 
@@ -3864,7 +4063,7 @@ Adoption Information
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Self</span>
                                                                 </td>
                                                                 <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">06/19/1988</span>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/05/1999</span>
                                                                 </td>
                                                                 <td>
                                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
@@ -3891,7 +4090,14 @@ Adoption Information
 
                                     <!-- End of Tabbing in Participant Tab -->	
 
+<div class="modal-footer">
 
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
 
 
                                 </div>
@@ -3917,6 +4123,7 @@ Adoption Information
 </div>
 -->
                                             </div>
+<!--
                                             <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
                                             <div class="row" style="display: none;">
                                                 <div class="col-xs-9">
@@ -3957,6 +4164,7 @@ Adoption Information
                                                     <p style="color:gray">123456</p>
                                                 </div>
                                             </div>
+-->
                                             <!--
 <div class="row">
 <div class="col-xs-18 btn-group-xs text-right">
@@ -3977,6 +4185,7 @@ Adoption Information
                                             <p style="word-wrap: break-word;">Resource</p>
                                             <div class="row"></div>
 
+<!--
                                             <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
                                             <div class="row" style="display: none;">
                                                 <div class="col-xs-9">
@@ -4017,6 +4226,7 @@ Adoption Information
                                                     <p style="color:gray">123456</p>
                                                 </div>
                                             </div>
+-->
                                             <!--
 <div class="row">
 <div class="col-xs-18 btn-group-xs text-right">
@@ -4041,28 +4251,28 @@ Adoption Information
                                                         <div class="col-xs-3">
                                                             <div class="form-group">
                                                                 <label for="casname"> Prefix</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:40%;" value="Miss." disabled>
+                                                                <input type="text" id="casname" style="max-width:40%;" value="Mr." disabled>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> First Name</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="Jane" disabled>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Rithwik" disabled>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> Middle Name</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="-" disabled>
                                                             </div>
                                                         </div>
                                                         
                                                         <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> Last Name</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="Doe" disabled>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Jacob" disabled>
                                                             </div>
                                                         </div> 
 
@@ -4080,7 +4290,7 @@ Adoption Information
                                         <div class="col-xs-6">
                                             <div class="form-group">
                                                 <label for="ddlNameSuffix">Organization Name</label>&nbsp;&nbsp;
-                                                <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="" disabled>
+                                                <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="-" disabled>
 
                                             </div>
                                         </div> 
@@ -4136,16 +4346,16 @@ Adoption Information
                                                 </td>
                                                 
                                                 <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1235 Chester St</span>
                                                 </td>
                                                 <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Mechanicsburg</span>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Gettysburg</span>
                                                 </td>
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
                                                 </td>
                                                 <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17054</span>
                                                 </td>
                                                 <td>
                                                     <span id="MainContent_rptSearchResults_lnkHeaderStatus">USA</span>
@@ -4183,7 +4393,7 @@ Adoption Information
                                                     <span id="MainContent_rptSearchResults_lnkHeaderCaseName">04/07/1988</span>
                                                 </td>
                                                 <td>
-                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/1992</span>
+                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">10/16/1999</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -4227,6 +4437,14 @@ Adoption Information
                                     </div>											
 
                                     <!--End of Collateral Information --> 
+                                    <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+           
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                 </div>
 
 
@@ -5626,7 +5844,14 @@ and use drugs.</textarea>
 
 
                                             <br>	
-                                            </br>
+                                            <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
 
                                     <!--
@@ -5649,6 +5874,14 @@ and use drugs.</textarea>
                                         </div>
                                         <div class="row"><br></div>
                                         <p>Safety Plan Tab</p>
+                                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            \
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
 
                                     <div class="tab-pane" id="risk">											
@@ -5991,7 +6224,14 @@ and use drugs.</textarea>
                                             </div>															
                                         </div>
 
+<div class="modal-footer">
 
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
 
                                         <!-- Everything pertaining to risk tab is within this div-->
                                     </div>
@@ -6660,6 +6900,14 @@ and use drugs.</textarea>
                                             </div>
 
                                         </div>
+                                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                         <!-- End of Casework/Supervisor sign div--> 
                                     </div>
                                     <!-- End of to FSP -->
@@ -7355,6 +7603,24 @@ Child has Disability or need Requiring Services
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-14">
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="famStrength" value="Type 1" disabled>
+                                                                    <label for="famStrength">Placement Location is more than 150 miles from Child's Community</label>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-xs-18">
+                                                                <div class="form-group">
+                                                                    <label for="txtCaseworker" >Explanation for Placement being more than 150 miles from Child's Community</label>
+                                                                    <input type="text" id="dtofrevisedplan" style="width: 50%" value="N/A" disabled>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
                                                         <div class="row"><br></div>
 
@@ -7926,6 +8192,15 @@ Child has Disability or need Requiring Services
 
 
                                         <!--                                                        Everything inside child permanency plan should be inside here-->
+                                        
+                                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
 
                                     <!-- End of CHild Permanency Plan -- > 
@@ -8016,6 +8291,15 @@ Child has Disability or need Requiring Services
                                         </div>
                                         <br>	
                                         <!--   Everything pertaining to ASQ should be inside this section-->
+                                        
+                                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                                     </div>
                                     <!--End of ASQ Tab code --> 
 
@@ -8446,6 +8730,14 @@ Child has Disability or need Requiring Services
 
                         </div>
                         <!--Fill everything related to family services before this -->
+                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                     </div>
 
                     <!-- End of Services Tab --> 
@@ -8463,18 +8755,20 @@ Child has Disability or need Requiring Services
 
                         <div class="row">
 
-                            <div class="col-xs-5">
+                            <div class="col-xs-4">
                                 <div class="form-group">
-                                    <label for="ddlCounty">Date Range </label>
-                                    <input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014 10:00AM" style="width: 65%">
-                                    <a href="#1" class="icon-date-time"></a>
+                                    <label for="ddlCounty">From </label>
+                                    <input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/01/2017" style="width: 70%">
                                 </div>
-                            </div>   
+                            
+                                    <a href="#1" class="icon-date-time" ></a>
+                                </div>
+                            
                             <div class="col-xs-2" style="text-align: right"> To </div>
                             <div class="col-xs-4">
                                 <div class="form-group">
 
-                                    <input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014 10:00AM" >
+                                    <input type="text" id="txtDateTimeReceived" placeholder="Eg., 01/01/2016 " >
                                     <a href="#1" class="icon-date-time" ></a>
                                 </div>
                             </div> 
@@ -8483,12 +8777,12 @@ Child has Disability or need Requiring Services
 
                             <div class="col-xs-6">
                                 <div class="form-group">
-                                    <label for="ddlCounty">Purpose</label>
+                                    <label for="ddlCounty">Purpose of Contact</label>
                                     <span id="MainContent_ddlCounty" title="County">
-                                        <select name="dropDown" id="abcd" style="width: 65%">
-                                            <option value="-1">Select...</option>
-                                            <option value="01">Purpose 1</option>
-                                            <option value="02">Purpose 2</option>
+                                        <select name="dropDown" id="abcd" style="width: 50%">
+                                            
+                                            <option value="01" selected>Ongoing casework </option>
+                                            <option value="02"></option>
                                             <option value="03">Purpose 3</option>
                                         </select>
                                     </span>
@@ -8497,12 +8791,12 @@ Child has Disability or need Requiring Services
 
                             <div class="col-xs-6">
                                 <div class="form-group">
-                                    <label for="ddlCounty">Type</label>
+                                    <label for="ddlCounty">Type of Contact</label>
                                     <span id="MainContent_ddlCounty" title="County">
                                         <select name="dropDown" id="abcd" style="width: 65%">
-                                            <option value="-1">Select...</option>
-                                            <option value="01">Type 1</option>
-                                            <option value="02">Type 2</option>
+                                            
+                                            <option value="01" selected>Telephone</option>
+                                            <option value="02">Email or Fax</option>
                                             <option value="03">Type 3</option>
                                         </select>
                                     </span>
@@ -8514,11 +8808,11 @@ Child has Disability or need Requiring Services
 
                             <div class="col-xs-6">
                                 <div class="form-group">
-                                    <label for="ddlCounty">Participants</label>
+                                    <label for="ddlCounty">Participant</label>
                                     <span id="MainContent_ddlCounty" title="County">
                                         <select name="dropDown" id="abcd" style="width: 65%">
-                                            <option value="-1">Select...</option>
-                                            <option value="01">Participant 1</option>
+                                            
+                                            <option value="01" selected>James Smith</option>
                                             <option value="02">Participant 2</option>
                                             <option value="03">Participant 3</option>
                                         </select>
@@ -8531,8 +8825,8 @@ Child has Disability or need Requiring Services
                                     <label for="ddlCounty">Safety Decision</label>
                                     <span id="MainContent_ddlCounty" title="County">
                                         <select name="dropDown" id="abcd" style="width: 65%">
-                                            <option value="-1">Select...</option>
-                                            <option value="01">Safe</option>
+                                            
+                                            <option value="01" selected>Safe</option>
                                             <option value="02">Unsafe</option>
                                             <option value="03">Safe with Plan</option>
                                             <option value="03">Not Applicable</option>
@@ -8546,8 +8840,8 @@ Child has Disability or need Requiring Services
                                     <label for="ddlCounty">Location</label>
                                     <span id="MainContent_ddlCounty" title="County">
                                         <select name="dropDown" id="abcd" style="width: 65%">
-                                            <option value="-1">Select...</option>
-                                            <option value="01">Primary Place of Residence</option>
+                                            
+                                            <option value="01" selected>Primary Place of Residence</option>
                                             <option value="02">Other Location</option>
 
                                         </select>
@@ -8584,7 +8878,7 @@ Child has Disability or need Requiring Services
                                         <td>10/02/2017 1:05PM</td>
                                         <td>Ongoing casework with family accepted for services</td>
                                         <td>Telephone</td>
-                                        <td>Jane Smith</td>
+                                        <td>James Smith</td>
                                         <td>Safe</td>
                                         <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('caseDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
@@ -8594,7 +8888,7 @@ Child has Disability or need Requiring Services
                                         <td>10/02/2017 1:05PM</td>
                                         <td>Other Collateral</td>
                                         <td>Email or Fax</td>
-                                        <td>Sam Smith</td>
+                                        <td>Karen Smith</td>
                                         <td>Not Applicable</td>
                                         <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('caseDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
@@ -8603,11 +8897,9 @@ Child has Disability or need Requiring Services
 
                                 </tbody>
                             </table>
-
-                        </div>
-
-
-                        <div class="row" id="caseDetails" style="display: none">
+                            
+                            
+                            <div class="row" id="caseDetails" style="display: none">
 
 
 
@@ -8636,8 +8928,8 @@ Child has Disability or need Requiring Services
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <label for="txtMiddleName">Contact Type </label>
-                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="Correspondence"  disabled/>
+                                            <label for="txtMiddleName">Type of Contact</label>
+                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="Telephone"  disabled/>
 
                                         </div>
                                     </div>
@@ -8648,7 +8940,7 @@ Child has Disability or need Requiring Services
                                         <div class="form-group">
                                             <label for="txtDateContact">Duration </label>
                                             <div id="txtDpContactDate" class="input-group date cdatetimepicker">
-                                                <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="10 months"  disabled/>
+                                                <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="30 Minutes"  disabled/>
 
                                             </div>
                                         </div>
@@ -8669,14 +8961,14 @@ Child has Disability or need Requiring Services
                                     <div class="col-lg-10">
                                         <div class="form-group">
                                             <label for="lstContParticipant">Contact Participants</label>
-                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="Jane Smith, Same Smith"  disabled/>
+                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="James Smith"  disabled/>
 
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
                                             <label for="ddlPurposeContact">Purpose of Contact *</label>
-                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="FGDM/Family Group Conference"  disabled/>
+                                            <input name="ctl00$MainContent$txtDateContact$txtTextbox" type="text" autocomplete="off" id="MainContent_txtDateContact_txtTextbox" value="Ongoing casework with family accepted for services"  disabled/>
 
                                         </div>
                                     </div>
@@ -8833,6 +9125,21 @@ Child has Disability or need Requiring Services
 
                             </div>
                         </div>
+                            
+                            
+                            <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
+
+                        </div>
+
+
+                        
 
 
 
@@ -8864,6 +9171,14 @@ Child has Disability or need Requiring Services
                         </div>
                         <div class="row"><br></div>											
                         <p>Assignments Tab</p>
+                        <div class="modal-footer">
+
+            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+            <!--a href="../pages/dashboard.html" -->                                        
+            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+            
+            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+        </div>
                     </div>
 
                     <!-- End of Assignments tab--> 
@@ -8877,14 +9192,7 @@ Child has Disability or need Requiring Services
         </div>
 
         <!-- Begin modal container -->
-        <div class="modal-footer">
-
-            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
-            <!--a href="../pages/dashboard.html" -->                                        
-            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-            <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" id="" tabindex="0">Add Case for Review</a>
-            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
-        </div>
+        
         <!-- End modal container -->
 
     </div>
