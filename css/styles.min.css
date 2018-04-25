@@ -157,6 +157,15 @@ body-list {
 .tabContent {
     display:none;
 }
+.multiselect-container>li>a>label {
+  padding: 4px 20px 3px 20px;
+}
+
+textarea, input[type="text"]{
+    background-color: gainsboro
+}
+
+
 
 
 
