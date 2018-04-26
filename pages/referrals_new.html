@@ -1701,6 +1701,7 @@
                                                         c-jsmith: John Smith
                                                     </td>
                                                 </tr>
+<!--
                                                 <tr>
                                                     <td>
                                                         01/10/2015
@@ -1716,6 +1717,7 @@
                                                     <td>c-jsmith: John Smith
                                                     </td>
                                                 </tr>
+-->
                                             </table>
                                             <div class="row"><br></div>
                                             
@@ -2494,6 +2496,62 @@
 </div>
 </div>
 -->
+                                            </div>
+                                        </div>
+                                         <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                            <div class="people-entity victim">
+                                                <h4>Robert Shaw<em class="glyphicon glyphicon-user"></em></h4>
+                                                <p style="word-wrap: break-word;">Child</p>
+<!--
+                                                <div class="row">
+                                                    <div class="col-xs-8" ng-show="Person.ReferralPerson.ExpungedIndicator">
+                                                        <h6 style="color: red"><em class="glyphicon glyphicon-remove-sign"></em>Expunged</h6>
+                                                    </div>
+                                                </div>
+-->
+<!--
+                                                <h5 onclick="ShowDetails(this)" id="ViewDetails-{{$index}}"><a href="Javascript:void(0);">View Details <em class="glyphicon glyphicon-chevron-down"></em></a></h5>
+                                                <div class="row" style="display: none;">
+                                                    <div class="col-xs-9">
+                                                        <h5>DOB</h5>
+                                                        <p>10/05/1971</p>
+                                                    </div>
+                                                    <div class="col-xs-9">
+                                                        <h5>Age</h5>
+                                                        <p>47</p>
+                                                    </div>
+                                                    <div class="col-xs-9">
+                                                        <h5>Gender</h5>
+                                                        <p>M</p>
+                                                    </div>
+                                                    <div class="col-xs-9">
+                                                        <h5>SSN</h5>
+                                                        <p>123-456-7890</p>
+                                                    </div>
+                                                    <div class="col-xs-9">
+                                                        <h5>Relationship</h5>
+                                                        <p>Uncle</p>
+                                                    </div>
+                                                    <div class="col-xs-9">
+                                                        <h5>Person ID</h5>
+                                                        <p><b><a href="javascript:void(0)" id="MainContent_A17" onclick="OpenVPS($(this).text())">123345567</a></b></p>
+                                                    </div>
+
+                                                    <div class="col-xs-18">
+                                                        <h5>Primary Address</h5>
+                                                        <p style="word-wrap: break-word;">Camp Hill</p>
+                                                    </div>
+                                                    <div class="col-xs-18">
+                                                        <h5>Source of Knowledge</h5>
+                                                        <p>-------</p>
+                                                    </div>
+                                                    <div class="col-xs-18">
+                                                        <h5>Transmission ID</h5>
+                                                        <p style="color:gray">123456</p>
+                                                    </div>
+                                                </div>
+-->
+
                                             </div>
                                         </div>
 
@@ -3394,7 +3452,7 @@
                                                         <div class="col-xs-6">
                                                             <div class="form-group">
                                                                 <label for="casname"> Federal Reporting ID</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:25%;" value="456234987" disabled>
+                                                                <input type="text" id="casname" style="max-width:35%;" value="456234987" disabled>
                                                             </div>
                                                         </div>
 
@@ -3735,7 +3793,7 @@
                                                         <div class="col-xs-15">
                                                             <div class="form-group">
                                                                 <label for="casname">Facility Address where Safe Haven Baby was relinquished</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="Address Line 1, 2, 3, City, State, Zip" disabled>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="1820 N 6th Street, Harrisburg PA, 17102" disabled>
                                                             </div>
                                                         </div>																				
                                                     </div>
@@ -3785,7 +3843,7 @@
                                                             <tr>
 
                                                                 <th>Type of Trafficking<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Occurence<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                
                                                                 <th>Report made to Law Enforcement<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                 <th>Date Report Was Made <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
@@ -3907,12 +3965,13 @@
                                                                 <tr> 
 
                                                                     <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    
                                                                     <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                     <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                     <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                     <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                                 </tr>
@@ -4034,7 +4093,7 @@
 
                                                                     <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                     <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Extension (If Applicable)<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                                     <th>Parent/Legal Guardian Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
@@ -4602,13 +4661,14 @@ Adoption Information
                                                 <tr> 
 
                                                     <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    
                                                     <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>Country<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
 
 
                                                 </tr>
@@ -4689,7 +4749,7 @@ Adoption Information
 
                                                     <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
                                                     <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Extension (If Applicable)<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																		
+                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																		
 
                                                 </tr>
                                             </thead>
