@@ -86,14 +86,24 @@
                         <div class="col-xs-18">
                             <h2 class="tab-heading">Advanced Search Criteria</h2>
                         </div>
-                            <div class="col-xs-6">
-	                                    <div class="form-group"> 
-											<label for="txtFirstName">Date Case Opened</label>
-											<input name="txtFirstName" type="text" autocomplete="off" style="max-width:30%;" id="txtFirstName" alt="Enter First Name" value="01/01/2010" disabled/>
-										</div>
-	                         </div>
-	                           
-                             <div class="col-xs-6">
+                            <div class="row row-padding">
+
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="ddlCounty">Case Created From Date</label>
+                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2016" style="width: 50%; background-color: white">
+                                        <a href="#1" class="icon-date-time"></a>
+                                    </div>
+                                </div>   
+                                
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="txtDateTimeReceived">Case Created To Date</label>
+                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2017" style="width: 50%; background-color: white">
+                                        <a href="#1" class="icon-date-time" ></a>
+                                    </div>
+                                </div> 
+                                <div class="col-xs-6">
                                  <div class="form-group">
                                     <label for="ddlNameSuffix">Case Status</label>
                                     <select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:50%;">
@@ -103,7 +113,10 @@
 										<option value="004">Close</option>
 									</select>
                                 </div>
-                            </div>  
+                            </div>
+                            </div>
+	                           
+                               
                         
                         <div class="col-xs-6">
                                  <div class="form-group">
@@ -115,19 +128,12 @@
 										
 									</select>
                                 </div>
-                            </div>  
-							
-							
-                       
-                    </div>
-
-                    <div class="row">
-						
-						
-							<div class="col-xs-6">
+                            </div> 
+                        
+                        <div class="col-xs-6">
                                 <div class="form-group">
                                     <label for="txtFirstName">Case Name</label>
-                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%;" id="txtFirstName" alt="Enter First Name" value="John Doe Case" disabled/>
+                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%; background-color: white" id="txtFirstName" alt="Enter First Name" value="John Doe Case" />
                                 </div>
                             </div>
 							
@@ -206,8 +212,12 @@
 									</select>
                                 </div>
                             </div>
+							
+							
                        
                     </div>
+
+                   
                     
                     <div class="panel-footer text-right">
                 <div class="btn-group primary-actions">
@@ -250,7 +260,7 @@
 														<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Name</a>
 													</th>
 													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Date Case Opened </a>
+														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Created Date</a>
 													</th>
 													<th>
 														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Status</a>
@@ -467,7 +477,6 @@
                         <div class="col-xs-18">
                             <h2 class="tab-heading">Search Criteria</h2>
 
-<!--
                             <div class="col-xs-2">
                                 <div class="form-group">
                                     <div class="radio">
@@ -476,7 +485,6 @@
                                     </div>
                                 </div>
                             </div>
--->
                             <div class="col-xs-2">
                                 <div class="form-group">
                                     <div class="radio">
@@ -485,6 +493,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <div class="radio">
@@ -496,7 +505,7 @@
                             
                             <div class="col-xs-3">
                                 <div class="form-group">
-                                    <span id="MainContent_txtID" title="ID"><input name="ctl00$MainContent$txtID$txtTextboxNumeric" type="text" autocomplete="off" maxlength="15" id="MainContent_txtID_txtTextboxNumeric" title="Enter Numeric Value" /></span>
+                                    <span id="MainContent_txtID" title="ID"><input name="ctl00$MainContent$txtID$txtTextboxNumeric" type="text" autocomplete="off" maxlength="15" id="MainContent_txtID_txtTextboxNumeric" title="Enter Numeric Value" style="background-color: white" /></span>
 
                                 </div>
                             </div>
@@ -514,19 +523,19 @@
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtFirstName">First Name</label><br />
-                                    <span id="MainContent_txtFirstName" title="First Name"><input name="ctl00$MainContent$txtFirstName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtFirstName_txtTextbox" alt="Enter First Name" /></span>
+                                    <span id="MainContent_txtFirstName" title="First Name"><input name="ctl00$MainContent$txtFirstName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtFirstName_txtTextbox" alt="Enter First Name" style="background-color: white"></span>
                                 </div>
                             </div>
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtMiddleName">Middle Name</label><br />
-                                    <span id="MainContent_txtMiddleName" title="Middle Name"><input name="ctl00$MainContent$txtMiddleName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtMiddleName_txtTextbox" alt="Enter Middle Name" /></span>
+                                    <span id="MainContent_txtMiddleName" title="Middle Name"><input name="ctl00$MainContent$txtMiddleName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtMiddleName_txtTextbox" alt="Enter Middle Name" style="background-color: white"/></span>
                                 </div>
                             </div>
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtLastName">Last Name</label><br />
-                                    <span id="MainContent_txtLastName" title="Last Name"><input name="ctl00$MainContent$txtLastName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtLastName_txtTextbox" alt="Enter Last Name" /></span>
+                                    <span id="MainContent_txtLastName" title="Last Name"><input name="ctl00$MainContent$txtLastName$txtTextbox" type="text" autocomplete="off" maxlength="32" id="MainContent_txtLastName_txtTextbox" alt="Enter Last Name" style="background-color: white"/></span>
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -565,14 +574,14 @@
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtSSN">SSN</label><br />
-                                    <span id="MainContent_txtSSN" title="SSN"><input name="ctl00$MainContent$txtSSN$txtTextboxNumeric" type="text" autocomplete="off" maxlength="9" id="MainContent_txtSSN_txtTextboxNumeric" title="Enter Numeric Value" /></span>
+                                    <span id="MainContent_txtSSN" title="SSN"><input name="ctl00$MainContent$txtSSN$txtTextboxNumeric" type="text" autocomplete="off" maxlength="9" id="MainContent_txtSSN_txtTextboxNumeric" title="Enter Numeric Value" style="background-color: white"/></span>
                                 </div>
                             </div>
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtDOB">Date of Birth</label><br />
                                     <div class="input-group date cdatepicker">
-                                        <span id="MainContent_txtDOB" title="Date of Birth"><input name="ctl00$MainContent$txtDOB$txtTextbox" type="text" autocomplete="off" maxlength="20" id="MainContent_txtDOB_txtTextbox" alt="Enter Date of Birth" /></span>
+                                        <span id="MainContent_txtDOB" title="Date of Birth"><input name="ctl00$MainContent$txtDOB$txtTextbox" type="text" autocomplete="off" maxlength="20" id="MainContent_txtDOB_txtTextbox" alt="Enter Date of Birth" style="background-color: white"/></span>
                                         <span id="MainContent_spanDOB" class="input-group-addon"><a class="icon-date"></a></span>
                                     </div>
                                 </div>
@@ -595,7 +604,7 @@
                             <div class="col-xs-4">
                                 <div class="form-group">
                                     <label for="txtCity">City</label><br />
-                                    <span id="MainContent_txtCity" title="City"><input name="ctl00$MainContent$txtCity$txtTextbox" type="text" autocomplete="off" maxlength="28" id="MainContent_txtCity_txtTextbox" alt="Enter City" /></span>
+                                    <span id="MainContent_txtCity" title="City"><input name="ctl00$MainContent$txtCity$txtTextbox" type="text" autocomplete="off" maxlength="28" id="MainContent_txtCity_txtTextbox" alt="Enter City" style="background-color: white"/></span>
                                 </div>
                             </div>
                             <div class="col-xs-4">
