@@ -166,5 +166,34 @@ textarea, input[type="text"]{
 
 
 
+.newul {
+    list-style-type: none;
+    margin: 1;
+    padding: 0;
+    width: 120px;
+    background-color: #f1f1f1;
+    position: inherit
+}
+
+.newlia {
+    display: block;
+    color: #000;
+    padding: 6px 10px;
+    text-decoration: none;
+    border: 1px solid green; /* Green border */
+}
+
+.newliactive {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    display: block;
+  
+}
+
+.newlia:hover {
+    background-color: #555;
+    color: white;
+}
 
 
