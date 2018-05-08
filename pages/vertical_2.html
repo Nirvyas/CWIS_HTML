@@ -209,6 +209,42 @@
                                                             <div class="tab-pane active" id="">
                                                                 <div class="row">
                                                                     <div class="col-lg-18">
+                                                                        <h2 class="tab-heading">Primary Caretakers Removed</h2>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                            <div class="people-entity victim">
+                                                <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+                                                <p style="word-wrap: break-word;">Parent</p>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                            <div class="people-entity victim">
+                                                <h4>John Doe<em class="glyphicon glyphicon-user"></em></h4>
+                                                <p style="word-wrap: break-word;">Parent</p>
+                                                <div class="row"></div>
+
+
+                                            </div>
+                                        </div>
+                                                                <div class="col-xs-10">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">Caretaker's Family Structure</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:50%;" value="Married Couple" disabled>
+                                                                        </div>
+                                                                    </div>
+                                       
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                <div class="row">
+                                                                    <div class="col-lg-18">
                                                                         <h2 class="tab-heading">Child Details</h2>
                                                                     </div>
                                                                 </div>
@@ -819,6 +855,22 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                
+                                                                <div class="row">	
+                                                                    <div class="col-xs-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDateTimeReceived">Court Petition Date &nbsp;&nbsp;</label>
+                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-xs-10">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDateTimeReceived">Court Order Date &nbsp;&nbsp;</label>
+                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
+                                                                        </div>
+                                                                    </div>	
+                                                                </div>
                                                             </div>
 
                                                             <div class="row"><br></div>
@@ -1176,7 +1228,48 @@
 
                                             <!-- Begin of Adoption Tab --> 
 
-                                            <div class="tab-pane" id="adopt">                                              
+                                            <div class="tab-pane" id="adopt"> 
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
+                                                    </div> 
+                                                </div>
+                                                
+                                                 <table class="table table-hover table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>12345678 </td>
+                                                            <td>987654321A </td>
+                                                            <td>John Smith</td>
+                                                            <td>Adoption</td>
+                                                            
+
+                                                    </tr>
+                                                   
+
+                                                <tr>
+                                                    <td>987654321 </td>
+                                                    <td>112233445B </td>
+                                                    <td>Jane Doe </td>
+                                                    <td>PLC</td>
+                                                    																	
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                                
+                                                
                                                 <div class="row">
                                                     <div class="col-lg-18">
                                                         <h2 class="tab-heading">Adoptions/PLC Information</h2>
@@ -1204,8 +1297,8 @@
                                                             <td>01/01/2016</td>																		
                                                             <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
-                                                    </td>
                                                     </tr>
+                                                   
 
                                                 <tr>
                                                     <td>987654321 </td>
@@ -2414,6 +2507,47 @@
 
                                     <div class="tab-pane" id="participants">
 
+                                        
+<!--                Verticalization of Participants starts here                        -->
+                                        
+                                        
+  <div class="panel panel-third">
+<div class="panel-heading">
+    
+                <div class="col-xs-2">
+
+                    <ul class="newul">
+                        <li><a id="s1" class="newliactive" onclick="demoFn('s1', 's2')">In-Home Safety Assessment</a></li>
+                        <li><a id="s3" class="newlia" onclick="demoFn('s3', 's4')">Out-of-Home Safety Assessment</a></li>
+                        <li><a id="s5" class="newlia" onclick="demoFn('s5', 's6')">Risk Assessment</a></li>
+                        <li><a id="s7" class="newlia" onclick="demoFn('s7', 's8')">Family Service Plan</a></li>
+                        <li><a id="s9" class="newlia" onclick="demoFn('s9', 's10')">Child Permanency Plan</a></li>
+                        <li><a id="s11" class="newlia" onclick="demoFn('s11', 's12')">ASQ</a></li>
+                        <li><a id="s13" class="newlia" onclick="demoFn('s13', 's14')">Other Plans & Assessments</a></li>
+                        
+
+
+                    </ul>
+                </div>  
+      </div>
+                    </div>
+                                        
+         
+    <!--                Verticalization of Participants ends here                      -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
                                         <div class="row">
                                             <div class="col-lg-18">
                                                 <h2 class="tab-heading">Participant List</h2>
@@ -4686,7 +4820,7 @@ Adoption Information
                 <div class="col-xs-2">
 
                     <ul class="newul">
-                        <li><a id="s1" class="newliactive" onclick="demoFn('s1', 's2')" >In-Home Safety Assessment</a></li>
+                        <li><a id="s1" class="newliactive" onclick="demoFn('s1', 's2')">In-Home Safety Assessment</a></li>
                         <li><a id="s3" class="newlia" onclick="demoFn('s3', 's4')">Out-of-Home Safety Assessment</a></li>
                         <li><a id="s5" class="newlia" onclick="demoFn('s5', 's6')">Risk Assessment</a></li>
                         <li><a id="s7" class="newlia" onclick="demoFn('s7', 's8')">Family Service Plan</a></li>
