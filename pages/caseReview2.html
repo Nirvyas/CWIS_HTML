@@ -17,6 +17,10 @@
     </script>
     
 	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+        
+         <div style="float: right">
+      <p> <b>Note:  </b>Case Participant is Under Review</p>
+        </div>
 		<div class="container">
                 
                 <div id="validationControl">
@@ -29,9 +33,9 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs">
 						<li  class="active">
-							<a id="MainContent_lnkPersonSearch" href="#addSomething" data-toggle="tab">Add Case for Review</a></li>
+							<a id="MainContent_lnkPersonSearch" href="#addSomething" data-toggle="tab">Add Case Participant for Review</a></li>
 						<li>
-							<a id="MainContent_lnkPersonSearch" href="#viewSomething" data-toggle="tab">View Case Review</a></li>
+							<a id="MainContent_lnkPersonSearch" href="#viewSomething" data-toggle="tab">View Case Participant Review</a></li>
                         
 					</ul>
 				</div>
@@ -335,14 +339,21 @@
 							</div>
 						
 			  </div>
-                 <div class="tab-pane active" id="addSomething">
+                  <div class="tab-pane active" id="addSomething">
                       <div id="MainContent_srchCriteria" class="row">
                         
-                        <div class="col-xs-4">
+                        <div class="col-xs-5">
                             
                             
                             <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
                                          Case ID
+                            <input type="text" style="width: 60%; background-color: white">
+                                </div>
+                          <div class="col-xs-5">
+                            
+                            
+                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+                                         MCI ID
                             <input type="text" style="width: 60%; background-color: white">
                                 </div>
                                 <div class="col-xs-6">
@@ -358,8 +369,12 @@
                             
                             
                         </div>
+                     </div>
+                     <br>
+                     
+                     <div id="MainContent_srchCriteria" class="row">
                         
-                       <div class="col-xs-2" style="text-align: right">
+                       <div class="col-xs-2" style="text-align: center">
                         <div class="row"><label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Comments</div>
                             <div class="row">
                                 

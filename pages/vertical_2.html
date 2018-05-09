@@ -96,7 +96,7 @@
                     <p>County:<span>Allegheny</span></p>
                     <p>Region:<span>West</span></p>
                     <br>
-                    <span id="showHide" > <p>Note:<span>This Case is Under Review</span></p></span>
+                    
 
                 </div>
             </div>
@@ -2500,7 +2500,7 @@
                                         <div class="modal-footer">
 
 
-                                            <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" id="" tabindex="0">Add Case for Review</a>
+                                          
                                             <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
                                         </div>
                                     </div>
@@ -3621,8 +3621,16 @@
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Shared" disabled>
                                                             </div>
                                                         </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Type of Shared Case</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Formal" disabled>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
+                                                    
+                                                    
                                                     <div class="row row-padding">
                                                         <table class="table table-hover table-striped">
                                                             <thead>
@@ -3648,6 +3656,39 @@
 
 
                                                     </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Dependent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Delinquent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <br>
                                                     <!-- AKA Information -->
                                                     <div class="row">
                                                         <div class="col-lg-18">
@@ -4297,6 +4338,62 @@ Adoption Information
                                                         </div>                                                               
                                                     </div>
                                                     <div class="row"><br></div>
+                                                    
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Disability/Medical Condition</h2>
+                                                        </div> 
+                                                    </div>
+                                                    
+                                                    
+                                                    
+                                                     <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Identification Date by CCYF worker<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                     <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                     <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                     <th>Self Reported / Clinically Diagnosed<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    
+
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Mental Retardation </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Physically Disabled </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Emotionally Disturbed (DSMIV) </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    <td> </td>
+                                                                    
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
                                                     <!--
 <div class="row">
 <div class="col-xs-10">
@@ -4451,8 +4548,9 @@ Adoption Information
                                         <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
                                         <!--a href="../pages/dashboard.html" -->                                        
                                         <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-
+   <a class="btn btn-internal btn-primary" href="../pages/caseReview.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" id="" tabindex="0">Add Case Participant for Review</a>
                                         <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+                                       
                                     </div>
 
 
@@ -4798,7 +4896,7 @@ Adoption Information
                                         <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
                                         <!--a href="../pages/dashboard.html" -->                                        
                                         <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-
+                                        
                                         <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
                                     </div>
                                 </div>
