@@ -20,6 +20,7 @@
             if(window.activeList != undefined){
                 var e = document.getElementById(window.activeList);
                 e.className = 'newlia';
+                document.getElementById('s1').className = 'newlia';
             }
             else{
                 window.activeList = "s1";
@@ -29,6 +30,7 @@
             if(window.activeBody != undefined){
                 var e = document.getElementById(window.activeBody);
                 e.style.display = 'none';
+                document.getElementById('s2').style.display = 'none';
             }
             else{
                  window.activeBody = "s2";
@@ -40,15 +42,72 @@
             var listItem = document.getElementById(lid);
 
             listItem.className = 'newliactive';
+            document.getElementById('s101').className = 'newliactive';
 
             var bodyItem = document.getElementById(cid);
 
             bodyItem.style.display = 'block';
+            document.getElementById('s102').style.display = 'block';
 
             window.activeList = lid;
             window.activeBody = cid;
             
         }
+        function demoFn2(lid, cid) {
+            
+            if(window.activeList != undefined){
+                var e = document.getElementById(window.activeList);
+                e.className = 'newlia';
+                document.getElementById('s101').className = 'newlia';
+            }
+            else{
+                window.activeList = "s101";
+                var e = document.getElementById(window.activeList);
+                e.className = 'newlia';
+            }
+            if(window.activeBody != undefined){
+                var e = document.getElementById(window.activeBody);
+                e.style.display = 'none';
+                document.getElementById('s102').style.display = 'none';
+            }
+            else{
+                 window.activeBody = "s102";
+                var e = document.getElementById(window.activeBody);
+                e.style.display = 'none';
+            }
+
+
+            var listItem = document.getElementById(lid);
+
+            listItem.className = 'newliactive';
+            document.getElementById('s1').className = 'newliactive';
+
+            var bodyItem = document.getElementById(cid);
+
+            bodyItem.style.display = 'block';
+            document.getElementById('s2').style.display = 'block';
+
+            window.activeList = lid;
+            window.activeBody = cid;
+            
+        }
+        
+      function  visibleFn(lid){
+          
+          
+          
+          var f = document.getElementById('noteParti');
+          if(lid == 'partClicked'){
+              //make the note visible
+              
+              f.style.display = 'block';
+          }
+          else{
+              //make note invisible
+              
+              f.style.display = 'none';
+          }
+      }
     </script> 
     <script type="text/javascript">
         function toggle_Note(id) {
@@ -95,6 +154,7 @@
                     <p>Case Name:<span>SmithCase</span></p>
                     <p>County:<span>Allegheny</span></p>
                     <p>Region:<span>West</span></p>
+                    <p id="noteParti" style="display: none">Note: <span>Case Participant is Under Review</span></p>
                     <br>
                     
 
@@ -116,15 +176,15 @@
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
 
-                                            <li class="active"><a href="#ddddd" data-toggle="tab" >Case Information</a></li>
-                                            <li><a href="#participants" data-toggle="tab" >Participants</a></li>
-                                            <li><a href="#resources" data-toggle="tab" >Resources</a></li> 
-                                            <li><a href="#plans" data-toggle="tab" >Plans</a></li>
-                                            <li><a href="#services" data-toggle="tab" >Family Services</a></li>
-                                            <li><a href="#caseNotes" data-toggle="tab" >Case Notes</a></li>
+                                            <li class="active"><a href="#ddddd" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Information</a></li>
+                                            <li id="participantLi"><a href="#participants" data-toggle="tab" onclick="visibleFn('partClicked')">Participants</a></li>
+                                            <li><a href="#resources" data-toggle="tab" onclick="visibleFn('noneClicked')">Resources</a></li> 
+                                            <li><a href="#plans" data-toggle="tab" onclick="visibleFn('noneClicked')">Plans</a></li>
+                                            <li><a href="#services" data-toggle="tab" onclick="visibleFn('noneClicked')">Family Services</a></li>
+                                            <li><a href="#caseNotes" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Notes</a></li>
                                             <!-- <li><a href="#assignments" data-toggle="tab">Assignments</a></li> -->
-                                            <li><a href="#placeHome" data-toggle="tab" >Placement/Removal</a></li>
-                                            <li><a href="#adopt" data-toggle="tab" >Adoption/PLC</a></li>
+                                            <li><a href="#placeHome" data-toggle="tab" onclick="visibleFn('noneClicked')" onclick="visibleFn('noneClicked')">Placement/Removal</a></li>
+                                            <li><a href="#adopt" data-toggle="tab" onclick="visibleFn('noneClicked')">Adoption/PLC</a></li>
                                             <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
 
                                         </ul>
@@ -1270,20 +1330,20 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>12345678 </td>
-                                                            <td>987654321A </td>
-                                                            <td>John Smith</td>
-                                                            <td>Adoption</td>
+                                                            <td>John Smith </td>
+                                                            <td>987654 </td>
+                                                            <td>06/01/2017</td>
+                                                            <td>10/01/2017</td>
                                                             
 
                                                     </tr>
                                                    
 
                                                 <tr>
-                                                    <td>987654321 </td>
-                                                    <td>112233445B </td>
                                                     <td>Jane Doe </td>
-                                                    <td>PLC</td>
+                                                    <td>112233 </td>
+                                                    <td>10/01/2017 </td>
+                                                    <td>12/01/2017</td>
                                                     																	
                                                 </tr>
 
@@ -2548,32 +2608,7 @@
                                     <div class="tab-pane" id="participants">
 
                                         
-<!--                Verticalization of Participants starts here                        -->
-                                        
-                                        
-  <div class="panel panel-third">
-<div class="panel-heading">
-    
-                <div class="col-xs-2">
 
-                    <ul class="newul">
-                        <li><a id="s1" class="newliactive" onclick="demoFn('s1', 's2')">In-Home Safety Assessment</a></li>
-                        <li><a id="s3" class="newlia" onclick="demoFn('s3', 's4')">Out-of-Home Safety Assessment</a></li>
-                        <li><a id="s5" class="newlia" onclick="demoFn('s5', 's6')">Risk Assessment</a></li>
-                        <li><a id="s7" class="newlia" onclick="demoFn('s7', 's8')">Family Service Plan</a></li>
-                        <li><a id="s9" class="newlia" onclick="demoFn('s9', 's10')">Child Permanency Plan</a></li>
-                        <li><a id="s11" class="newlia" onclick="demoFn('s11', 's12')">ASQ</a></li>
-                        <li><a id="s13" class="newlia" onclick="demoFn('s13', 's14')">Other Plans & Assessments</a></li>
-                        
-
-
-                    </ul>
-                </div>  
-      </div>
-                    </div>
-                                        
-         
-    <!--                Verticalization of Participants ends here                      -->
                                         
                                         
                                         
@@ -2587,7 +2622,7 @@
                                         
                                         
                                         
-                                        
+                                       <div class="row"> <br></div>
                                         <div class="row">
                                             <div class="col-lg-18">
                                                 <h2 class="tab-heading">Participant List</h2>
@@ -3429,6 +3464,887 @@
 
 
                                                 <div class="tab-pane active" id="demographic">
+                                                    
+                                                    
+<!--                Verticalization of Participants starts here                        -->
+                                        
+                                        
+  <div class="panel panel-third">
+<div class="panel-heading">
+    
+                <div class="col-xs-2">
+
+                    <ul class="newul">
+                        <li><a id="s101" class="newliactive" onclick="demoFn2('s101', 's102')">General Information</a></li>
+                        <li><a id="s103" class="newlia" onclick="demoFn2('s103', 's104')">Human Trafficking</a></li>
+                        <li><a id="s105" class="newlia" onclick="demoFn2('s105', 's106')">Contact Information</a></li>
+                        <li><a id="s107" class="newlia" onclick="demoFn2('s107', 's108')">Additional Information</a></li>
+                        
+                        
+
+
+                    </ul>
+                </div> 
+    
+    
+        <div class="col-xs-16" id="s102" style="display: block"> <div class="tab-pane">	
+                    <div class="tab-content"><div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Demographic Information</h2>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-3">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Prefix</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:40%;" value="Miss." disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> First Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Jane" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Middle Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="John" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-4">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Last Name</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Doe" disabled>
+                                                            </div>
+                                                        </div> 
+
+                                                        <div class="col-xs-3">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Suffix</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:25%;" value=" " disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Social Security Number</label>&nbsp;&nbsp;
+
+                                                                <input type=text value="xxx-xx-1234" style="max-width:40%;" disabled><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#ssnDetail" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
+
+
+                                                                <!--                                                                        <input type="text" id="casname"  value="xxx-xx-1234" disabled></a></input>-->
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="ssnDetail" class="modal fade">
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                        <h4 class="modal-title">SSN</h4>
+                                                                    </div>
+
+                                                                    <div class="modal-body">
+                                                                        <div class="row row-padding">
+                                                                            <div class="col-xs-16">
+                                                                                <div class="form-group">
+
+                                                                                    <input type="text" id="casname" style="max-width:25%;" value="123-45-1234" disabled>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Federal Reporting ID</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:35%;" value="456234987" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+                                                                <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="123456789" disabled>
+
+                                                            </div>
+                                                        </div> 
+
+
+                                                    </div>
+
+                                                    <div class="row">
+
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Date of Birth</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="01/05/1999" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Estimated Age</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="19" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="dtofrevisedplan">Role</label>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Victim, Child" disabled>
+                                                                <!--
+<select name="ctl00$MainContent$ddlNameSuffix$ddlDropDownList" id="ddlNameSuffix" style="max-width:30%;" disabled>
+<option value="-1">Select...</option>
+<option value="01"selected>Role 1</option>	
+<option value="01">Role 2</option>	
+<option value="01">Role 3</option>	
+</select>
+-->
+
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="ddlNameSuffix">Legal Sex</label>&nbsp;&nbsp;
+                                                                <input type="text" id="ddlNameSuffix" style="max-width:50%;" value="Female" disabled>
+
+                                                            </div>
+                                                        </div> 
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Self-identified Sex</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Female" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Sexual Orientation</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Straight" disabled>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="ddlNameSuffix">Race</label>&nbsp;&nbsp;
+                                                                <input type="text" id="ddlNameSuffix" style="max-width:83%;" value="American" disabled>
+
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Ethnicity</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Non-Hispanic" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Citizenship</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="United States" disabled>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="row">
+
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Drivers License</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="334567854" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Date of Death</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="-" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+
+                                                            <div class="form-group"><label for="casname">Reason for Death</label>
+                                                                <input type="text" id="casname" style="max-width:50%;" value="N/A" disabled>
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                    </div>
+
+
+
+
+                                                    <div class="row"><br></div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Shared Case Responsibility</h2>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Current Status</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Shared" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Type of Shared Case</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Formal" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="row row-padding">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+
+
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>07/06/2013</td>
+                                                                    <td>08/09/2013</td>
+
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Dependent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Delinquent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <br>
+                                                    <!-- AKA Information -->
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">AKA Information</h2>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="row row-padding">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+
+                                                                <tr> 
+                                                                    <th>AKA Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Prefix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Middle Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Suffix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date AKA Entered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Nickname</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms. </span>
+                                                                    <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
+
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Janice</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">John</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Smith</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus"> </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">03/05/2017</span>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr><td>
+                                                                <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Maiden Name</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Ms.</span>
+                                                                    <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
+
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Janet</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Jacob</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Smith</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus"> </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">01/10/2012</span>
+                                                                </td>
+                                                            </tr>
+
+                                                        </table>
+                                                        <div class="row"><br></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Participant Status</h2>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="caseID">Current Status</label>&nbsp;&nbsp;
+                                                                <input name="caseID" type="text" autocomplete="off" style="max-width:50%;" id="caseID" value="Active" disabled />  
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="row row-padding">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr> 
+
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Reason for Inactivation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                </tr>
+                                                            </thead>
+
+
+
+                                                            <tr>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/19/2009</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate"> 08/23/2013</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/06/2000</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">05/18/2009</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Got Adopted</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <div class="row"><br></div>
+                                                    </div>
+
+                                                    <!-- Safe Haven Baby Section --> 
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Safe Haven Baby</h2>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Is Child a Safe Haven Baby?</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:25%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="casname">Facility Type where Safe Haven Baby was relinquished</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="Harrisburg Fire Station" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">		
+                                                        <div class="col-xs-15">
+                                                            <div class="form-group">
+                                                                <label for="casname">Facility Address where Safe Haven Baby was relinquished</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="1820 N 6th Street, Harrisburg PA, 17102" disabled>
+                                                            </div>
+                                                        </div>																				
+                        </div></div></div></div>
+    <div class="col-xs-16" id="s104" style="display: none"><div class="tab-pane">	
+        <div class="tab-content">   <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Human Trafficking</h2>
+                                                        </div>
+                                                    </div>
+
+                                                    <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr>
+
+                                                                <th>Type of Trafficking<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+                                                                <th>Report made to Law Enforcement<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Date Report Was Made <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+
+
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Sex</td>
+
+                                                                <td>Yes </td>
+                                                                <td>10/10/2013</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Labor</td>
+
+                                                                <td>Yes</td>
+                                                                <td>10/10/2015</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Child was a Victim of Human Trafficking in Another State </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div></div></div></div>
+    <div class="col-xs-16" id="s106" style="display: none"><div class="tab-pane">	
+        <div class="tab-content"> <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Address Information</h2>
+                                                        </div> 
+                                                    </div>																		
+
+                                                    <div class="row row-padding">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+
+                                                                <tr> 
+
+                                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+                                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1234 Chester St</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Gettysburg</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17054</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">08/24/2013</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"></span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">30 N Third  Rd</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Camp Hill</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17011</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/19/2009</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">08/23/2013</span>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">1437 Apple Circle</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Mechanicsburg</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/06/2000</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">05/18/2009</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">210 Summerdale Rd</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">Enola</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">PA</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">17055</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/05/1999</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">03/05/2000</span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <div class="row"><br></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Phone Information</h2>
+                                                        </div> 
+                                                    </div>
+
+
+                                                    <div class="row row-padding">
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr> 
+
+                                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Parent/Legal Guardian Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Home</span>																								
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">717-123-0456</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">717-001-0101</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Cell</span>																								
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">717-099-0109</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">717-567-8901</span>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+                                                        <div class="row"><br></div>
+                                                    </div></div></div></div>
+    <div class="col-xs-16" id="s108" style="display: none"><div class="tab-pane">	
+        <div class="tab-content"><div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Pregnancy/Parenting</h2>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Child Ever Fathered or Bore A Child </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname"> Child Ever Pregnant</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="row row-padding">
+
+
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>Start Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td> 10/01/2017</td>
+                                                                    <td>07/20/2018 </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> 10/10/2015</td>
+                                                                    <td>07/01/2016 </td>
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">ICWA Information</h2>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <div class="col-xs-10">
+                                                                <label for="supervisorID">Is Child Verified as a Member of an Indian Tribe?</label>&nbsp;&nbsp;
+                                                                <input type="text" id="supervisorID" style="width: 10%" value="Yes" disabled>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row"><br></div>
+                                                    <div class="row">                                                               
+                                                        <div class="col-xs-10">
+                                                            <label for="supervisorID">Tribe Name</label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 60%" value="tribeName" disabled>
+                                                        </div>
+
+                                                        <div class="col-xs-8">
+                                                            <label for="supervisorID">Tribe Location</label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 70%" value="Location" disabled>
+                                                        </div>                                                               
+                                                    </div>
+                                                    <div class="row"><br></div>
+                                                    
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Disability/Medical Condition</h2>
+                                                        </div> 
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                    <div class="col-xs-12">
+                                                            <label for="supervisorID">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 30%" value="Age" disabled>
+            </div></div>
+            <div class="row"><br></div>
+                                                     <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    
+                                                                     <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                     <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                     
+                                                                    
+
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Mental Retardation </td>
+                                                                    <td>01/01/2017</td>
+                                                                    <td>10/01/2017 </td>
+                                                                    
+                                                                    
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Physically Disabled </td>
+                                                                    <td>01/01/2016</td>
+                                                                    <td>10/01/2016</td>
+                                                                    
+                                                                    
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Emotionally Disturbed (DSMIV) </td>
+                                                                    <td>01/01/2015</td>
+                                                                    <td>10/01/2015</td>
+                                                                    
+
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table></div></div></div>
+    
+    
+    
+    
+      </div>
+ </div>
+                                        
+                                        
+         
+    <!--                Verticalization of Participants ends here                      -->
                                                     <div class="row">
                                                         <div class="col-lg-18">
                                                             <h2 class="tab-heading">Demographic Information</h2>
