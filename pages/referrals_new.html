@@ -48,6 +48,23 @@
             e.style.display = 'none';
 
         }
+        
+         function  visibleFn(lid){
+          
+          
+          
+          var f = document.getElementById('noteParti');
+          if(lid == 'partClicked'){
+              //make the note visible
+              
+              f.style.display = 'block';
+          }
+          else{
+              //make note invisible
+              
+              f.style.display = 'none';
+          }
+      }
     </script> 
     <script type="text/javascript">
         function toggle_vis(id) {
@@ -86,8 +103,9 @@
                     <p>Case Name:<span>SmithCase</span></p>
                     <p>County:<span>Allegheny</span></p>
                     <p>Region:<span>West</span></p>
+                    <p id="noteParti" style="display: none">Note: <span>Case Participant is Under Review</span></p>
                     <br>
-                    <span id="showHide" > <p>Note:<span>This Case is Under Review</span></p></span>
+                    
 
                 </div>
             </div>
@@ -107,15 +125,15 @@
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs">
 
-                                            <li class="active"><a href="#ddddd" data-toggle="tab" >Case Information</a></li>
-                                            <li><a href="#participants" data-toggle="tab" >Participants</a></li>
-                                            <li><a href="#resources" data-toggle="tab" >Resources</a></li> 
-                                            <li><a href="#plans" data-toggle="tab" >Plans</a></li>
-                                            <li><a href="#services" data-toggle="tab" >Family Services</a></li>
-                                            <li><a href="#caseNotes" data-toggle="tab" >Case Notes</a></li>
+                                            <li class="active"><a href="#ddddd" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Information</a></li>
+                                            <li id="participantLi"><a href="#participants" data-toggle="tab" onclick="visibleFn('partClicked')">Participants</a></li>
+                                            <li><a href="#resources" data-toggle="tab" onclick="visibleFn('noneClicked')">Resources</a></li> 
+                                            <li><a href="#plans" data-toggle="tab" onclick="visibleFn('noneClicked')">Plans</a></li>
+                                            <li><a href="#services" data-toggle="tab" onclick="visibleFn('noneClicked')">Family Services</a></li>
+                                            <li><a href="#caseNotes" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Notes</a></li>
                                             <!-- <li><a href="#assignments" data-toggle="tab">Assignments</a></li> -->
-                                            <li><a href="#placeHome" data-toggle="tab" >Placement/Removal</a></li>
-                                            <li><a href="#adopt" data-toggle="tab" >Adoption/PLC</a></li>
+                                            <li><a href="#placeHome" data-toggle="tab" onclick="visibleFn('noneClicked')" onclick="visibleFn('noneClicked')">Placement/Removal</a></li>
+                                            <li><a href="#adopt" data-toggle="tab" onclick="visibleFn('noneClicked')">Adoption/PLC</a></li>
                                             <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
 
                                         </ul>
@@ -126,8 +144,7 @@
                                         <div class="tab-content">
 
                                             <div class="tab-pane" id="placeHome">
-
-                                                <div class="row">
+ <div class="row">
                                                     <div class="col-lg-18">
                                                         <h2 class="tab-heading">Removal Episodes</h2>
                                                     </div> 
@@ -138,12 +155,12 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Removal Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Removal End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Discharge Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Removal Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Removal End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Discharge Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View</th>
                                                         </tr>
                                                     </thead>
@@ -200,6 +217,42 @@
                                                             <div class="tab-pane active" id="">
                                                                 <div class="row">
                                                                     <div class="col-lg-18">
+                                                                        <h2 class="tab-heading">Primary Caretakers Removed</h2>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                            <div class="people-entity victim">
+                                                <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+                                                <p style="word-wrap: break-word;">Parent</p>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                            <div class="people-entity victim">
+                                                <h4>John Doe<em class="glyphicon glyphicon-user"></em></h4>
+                                                <p style="word-wrap: break-word;">Parent</p>
+                                                <div class="row"></div>
+
+
+                                            </div>
+                                        </div>
+                                                                <div class="col-xs-10">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">Caretaker's Family Structure</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:50%;" value="Married Couple" disabled>
+                                                                        </div>
+                                                                    </div>
+                                       
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                <div class="row">
+                                                                    <div class="col-lg-18">
                                                                         <h2 class="tab-heading">Child Details</h2>
                                                                     </div>
                                                                 </div>
@@ -228,6 +281,27 @@
 
                                                                         </div>
                                                                     </div>  
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-14">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">Has the Child Ever Been Adopted?</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:10%;" value="Y" disabled>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    
+                                                                </div>
+                                                                
+                                                                 <div class="row">
+                                                                    <div class="col-xs-18">
+                                                                        <div class="form-group">
+                                                                            <label for="casname">How Old Was the Child When the Previous Adoption Was Legalized?</label>&nbsp;&nbsp;
+                                                                            <input type="text" id="casname" style="max-width:10%;" value="13" disabled>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    
                                                                 </div>
                                                                 <div class="row"><br></div>
 
@@ -418,11 +492,11 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>End Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>End Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View</th>
 
 
@@ -810,6 +884,22 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                
+                                                                <div class="row">	
+                                                                    <div class="col-xs-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDateTimeReceived">Court Petition Date &nbsp;&nbsp;</label>
+                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 40%">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-xs-10">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDateTimeReceived">Court Order Date &nbsp;&nbsp;</label>
+                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 30%">
+                                                                        </div>
+                                                                    </div>	
+                                                                </div>
                                                             </div>
 
                                                             <div class="row"><br></div>
@@ -860,13 +950,7 @@
                                                                     </div> 
 
 
-                                                                    <div class="col-xs-12">
-                                                                        <div class="form-group">
-                                                                            <label for="txtDateTimeReceived">Separation Reason</label>
-                                                                            <input type="text" id="txtDateTimeReceived" disabled style="width: 60%">
-
-                                                                        </div>
-                                                                    </div> 
+                                                                    
 
                                                                 </div>
 
@@ -1168,6 +1252,47 @@
                                             <!-- Begin of Adoption Tab --> 
 
                                             <div class="tab-pane" id="adopt">                                              
+                                               
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
+                                                    </div> 
+                                                </div>
+                                                
+                                                 <table class="table table-hover table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>John Smith </td>
+                                                            <td>987654 </td>
+                                                            <td>06/01/2017</td>
+                                                            <td>10/01/2017</td>
+                                                            
+
+                                                    </tr>
+                                                   
+
+                                                <tr>
+                                                    <td>Jane Doe </td>
+                                                    <td>112233 </td>
+                                                    <td>10/01/2017 </td>
+                                                    <td>12/01/2017</td>
+                                                    																	
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                                
+                                                
                                                 <div class="row">
                                                     <div class="col-lg-18">
                                                         <h2 class="tab-heading">Adoptions/PLC Information</h2>
@@ -1177,11 +1302,11 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View</th>
 
                                                         </tr>
@@ -1195,8 +1320,8 @@
                                                             <td>01/01/2016</td>																		
                                                             <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
-                                                    </td>
                                                     </tr>
+                                                   
 
                                                 <tr>
                                                     <td>987654321 </td>
@@ -1316,11 +1441,13 @@
                                                                 <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
 
 
-                                                                <p style="word-wrap: break-word;">MCI ID: 123456</p>
+                                                               
 
                                                                 <p style="word-wrap: break-word;">DOB: 10/23/1968</p>
 
                                                                 <p style="word-wrap: break-word;">Sex: F</p>
+                                                                
+                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
 
 
 
@@ -1333,16 +1460,33 @@
                                                                 <h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>
 
 
-                                                                <p style="word-wrap: break-word;">MCI ID: 56781</p>
+                                                                
 
                                                                 <p style="word-wrap: break-word;">DOB: 11/21/1974</p>
 
                                                                 <p style="word-wrap: break-word;">Sex: M</p>
+                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
 
 
 
 
                                                             </div>
+                                                        </div>
+                                                        <div class="col-xs-10" ng-repeat="Person in PersonList">
+                                                            <div class="row">													
+                                                            																			
+                                                                <label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+                                                          													
+                                                        </div>
+                                                            <br>
+                                                            <div class="row">													
+                                                            																			
+                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
+                                                          													
+                                                        </div>
+                                                            
                                                         </div>
 
                                                         <div class="row"><br></div>																			
@@ -1356,9 +1500,9 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -1387,8 +1531,8 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -1415,16 +1559,16 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                     <!--  <th>Subsidy Start Date</th>
 <th>Subsidy End Date</th>
 <th>Rate Start Date</th>
 <th>Rate End Date</th> -->
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -3246,7 +3390,7 @@
 
 
                                                 <div class="tab-pane active" id="demographic">
-                                                    <div class="row">
+                                                       <div class="row">
                                                         <div class="col-lg-18">
                                                             <h2 class="tab-heading">Demographic Information</h2>
                                                         </div> 
@@ -3270,7 +3414,7 @@
                                                         <div class="col-xs-4">
                                                             <div class="form-group">
                                                                 <label for="casname"> Middle Name</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+                                                                <input type="text" id="casname" style="max-width:30%;" value="John" disabled>
                                                             </div>
                                                         </div>
 
@@ -3295,7 +3439,7 @@
                                                             <div class="form-group">
                                                                 <label for="casname">Social Security Number</label>&nbsp;&nbsp;
 
-                                                                <input type=text value="xxx-xx-1234" style="max-width:50%;" disabled><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#ssnDetail" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
+                                                                <input type=text value="xxx-xx-1234" style="max-width:40%;" disabled><a href="Javascript:void(0);" title="View" data-toggle="modal" data-target="#ssnDetail" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)"><em class="glyphicon glyphicon-eye-open"></em></a>
 
 
                                                                 <!--                                                                        <input type="text" id="casname"  value="xxx-xx-1234" disabled></a></input>-->
@@ -3478,16 +3622,24 @@
                                                                 <input type="text" id="casname" style="max-width:50%;" value="Shared" disabled>
                                                             </div>
                                                         </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Type of Shared Case</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Formal" disabled>
+                                                            </div>
+                                                        </div>
 
                                                     </div>
+                                                    
+                                                    
                                                     <div class="row row-padding">
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
 
 
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                                 </tr>
@@ -3505,6 +3657,39 @@
 
 
                                                     </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Dependent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Adjudicated Delinquent</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="Yes" disabled>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label for="casname">Court Ordered Date</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:50%;" value="" disabled>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <br>
                                                     <!-- AKA Information -->
                                                     <div class="row">
                                                         <div class="col-lg-18">
@@ -3516,13 +3701,13 @@
                                                             <thead>
 
                                                                 <tr> 
-                                                                    <th>AKA Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>AKA Prefix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>AKA First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>AKA Middle Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>AKA Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>AKA Suffix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date AKA Entered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>AKA Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Prefix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Middle Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>AKA Suffix<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date AKA Entered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                 </tr>
                                                             </thead>
@@ -3608,9 +3793,9 @@
                                                             <thead>
                                                                 <tr> 
 
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Reason for Inactivation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Reason for Inactivation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -3662,7 +3847,7 @@
                                                         <div class="col-xs-12">
                                                             <div class="form-group">
                                                                 <label for="casname">Facility Type where Safe Haven Baby was relinquished</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="Harrisburg Fire Station" disabled>
+                                                                <input type="text" id="casname" style="max-width:30%;" value="Harrisburg Fire Station" disabled>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -3674,43 +3859,7 @@
                                                                 <input type="text" id="casname" style="max-width:50%;" value="1820 N 6th Street, Harrisburg PA, 17102" disabled>
                                                             </div>
                                                         </div>																				
-                                                    </div>
-
-                                                    <!--
-<div class="row">		
-<div class="col-xs-15">
-<div class="form-group">
-<label for="casname">Safe Haven Baby Family Medical History Provided</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
-</div>
-</div>																		
-</div>
-
-<div class="row">		
-<div class="col-xs-12">
-<div class="form-group">
-<label for="casname">Safe Haven Baby Family History Uploaded to PAIR</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
-</div>
-</div>																		
-</div>
-
-<div class="row">		
-<div class="col-xs-15">
-<div class="form-group">
-<label for="casname">Was CY-981 form completed?</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>
-</div>
-</div>																		
-</div>
--->
-                                                    <!-- End of Safe Haven Baby Section --> 
-                                                    <div class="row"><br></div>
-
-
-
-
-                                                    <div class="row">
+                        </div>   <div class="row">
                                                         <div class="col-lg-18">
                                                             <h2 class="tab-heading">Human Trafficking</h2>
                                                         </div>
@@ -3720,10 +3869,10 @@
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Type of Trafficking<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Type of Trafficking<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                <th>Report made to Law Enforcement<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Date Report Was Made <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Report made to Law Enforcement<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Date Report Was Made <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -3757,80 +3906,7 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
-
-
-
-                                                    <div class="row"><br></div>
-
-
-
-
-
-
-
-                                                    <div class="row">
-                                                        <div class="col-lg-18">
-                                                            <h2 class="tab-heading">Marital Status</h2>
-                                                        </div> 
-                                                    </div>
-
-                                                    <!-- Marital Status Table --> 																		
-                                                    <div class="row row-padding">
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr> 
-                                                                    <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Spouse<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																									
-                                                                </tr>
-                                                            </thead>
-
-                                                            <tr>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Divorced</span>
-                                                                    <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
-
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jill Jackson</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">12/29/2017</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus"></span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName">Married</span>
-                                                                    <!-- <a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">Mr.</a>
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" /> -->
-
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseName"> Jill Jackson</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">02/03/2017</span>
-                                                                </td>
-                                                                <td>
-                                                                    <span id="MainContent_rptSearchResults_lnkHeaderStatus">12/28/2017</span>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                        <div class="row"><br></div>
-                                                    </div>
-
-
-
-
-                                                    <div class="row">
+                                                    </div> <div class="row">
                                                         <div class="col-lg-18">
                                                             <h2 class="tab-heading">Address Information</h2>
                                                         </div> 
@@ -3842,14 +3918,14 @@
 
                                                                 <tr> 
 
-                                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                                 </tr>
@@ -3969,10 +4045,10 @@
                                                             <thead>
                                                                 <tr> 
 
-                                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Parent/Legal Guardian Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Parent/Legal Guardian Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -4012,61 +4088,7 @@
                                                         </table>
                                                         <div class="row"><br></div>
                                                     </div>
-
-
-
-
-                                                    <!--
-
-<div class="row">
-<div class="col-lg-18">
-<h2 class="tab-heading">AFCARS Adoption Information</h2>
-</div> 
-</div>
-Adoption Information 
-
-<div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname"> Child Previously Adopted</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:25%;" value="Y" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname"> Inter-Country Adoption</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:25%;" value="N" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname"> Adoption Funded With Title IV-E</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:25%;" value="Y" disabled>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname"> Prior Legal Custodianship</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:25%;" value="N" disabled>
-</div>
-</div>
-
-<div class="col-xs-7">
-<div class="form-group">
-<label for="casname">Date Most Recent Custodianship Legalized</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:25%;" value="10/23/2016" disabled>
-</div>
-</div>
-</div>
--->
-                                                    <div class="row"><br></div>			
-                                                    <!-- Pregnancy/Parenting Section --> 																			
-                                                    <div class="row">
+            <div class="row">
                                                         <div class="col-lg-18">
                                                             <h2 class="tab-heading">Pregnancy/Parenting</h2>
                                                         </div> 
@@ -4097,8 +4119,8 @@ Adoption Information
                                                             <thead>
                                                                 <tr>
 
-                                                                    <th>Start Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>End Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Start Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date of Pregnancy<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -4154,59 +4176,81 @@ Adoption Information
                                                         </div>                                                               
                                                     </div>
                                                     <div class="row"><br></div>
-                                                    <!--
-<div class="row">
-<div class="col-xs-10">
-<label for="supervisorID">Name of Indian Tribe</label>&nbsp;&nbsp;
-<input type="text" id="supervisorID" style="width: 50%" value="Cherokee" disabled>
-</div>
-
-<div class="col-xs-8">
-<label for="supervisorID">Date of Agency Discovery</label>&nbsp;&nbsp;
-<input type="text" id="supervisorID" style="width: 30%" value="10/20/2015" disabled>
-</div>
-
-</div>
-<div class="row"><br></div>
-
-<div class="row">
-<div class="form-group">
-<div class="col-xs-12">
-<label for="supervisorID">Person that was Contacted Regarding Indian Status</label>&nbsp;&nbsp;
-<input type="text" id="supervisorID" style="width: 50%" value="James Brown" disabled>
-</div>
-
-<div class="col-xs-6">
-<label for="supervisorID">Tribal ID Number</label>&nbsp;&nbsp;
-<input type="text" id="supervisorID" style="width: 30%" value="123456789" disabled>
-</div>
-
-</div>
-</div>
--->
-                                                    <div class="row"><br></div>
+                                                    
+                                                    
                                                     <div class="row">
-                                                        <div class="form-group">
-
-                                                        </div>
+                                                        <div class="col-lg-18">
+                                                            <h2 class="tab-heading">Disability/Medical Condition</h2>
+                                                        </div> 
                                                     </div>
+                                                    
+            <div class="row">
+                                                    <div class="col-xs-14">
+                                                            <label for="supervisorID">Has the State Agency Determined That the Child has Special Needs? </label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 30%" value="Yes" disabled>
+            </div></div>
+            <br>
+                                                    <div class="row">
+                                                    <div class="col-xs-12">
+                                                            <label for="supervisorID">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 30%" value="Age" disabled>
+            </div></div>
+            <br>
+            <div class="row">
+                                                    <div class="col-xs-12">
+                                                            <label for="supervisorID">Has Child Been Clinically Diagnosed as Having a Disability(ies) </label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 30%" value="Yes" disabled>
+            </div></div><br>
+             <div class="row">
+                                                    <div class="col-xs-12">
+                                                            <label for="supervisorID">Last Appointment Date </label>&nbsp;&nbsp;
+                                                            <input type="text" id="supervisorID" style="width: 30%" value="01/01/2017" disabled>
+            </div></div>
+            
+            <div class="row"><br></div>
+                                                     <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    
+                                                                     <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                     <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                     
+                                                                    
 
 
 
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Mental Retardation </td>
+                                                                    <td>01/01/2017</td>
+                                                                    <td>10/01/2017 </td>
+                                                                    
+                                                                    
 
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Physically Disabled </td>
+                                                                    <td>01/01/2016</td>
+                                                                    <td>10/01/2016</td>
+                                                                    
+                                                                    
 
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Emotionally Disturbed (DSMIV) </td>
+                                                                    <td>01/01/2015</td>
+                                                                    <td>10/01/2015</td>
+                                                                    
 
+                                                                </tr>
 
-
-
-
-
-
-
-
-
-
-
+                                                            </tbody>
+                                                        </table></div></div></div>
+    
                                                 </div>
 
 
@@ -4288,15 +4332,7 @@ Adoption Information
 
                                                 </div>
                                                 <!-- End of Pregnancy/Parenting --> 
-                                                <div class="row"><br></div>	
-
-
-
-
-
-
-                                            </div>
-                                        </div>
+                                                <div class="row"><br>
 
                                         <!-- ENd of Details of tab -->
                                     </div>
@@ -4676,12 +4712,13 @@ Adoption Information
                                             <!-- Nav tabs -->
                                             <ul class="nav nav-tabs">
                                                 <li class="active"><a href="#inhomesafety" data-toggle="tab">In-Home Safety Assessment</a></li>
-                                                <li><a href="#asq-se" data-toggle="tab">Out-of-Home Safety Assessment </a></li> 
+<!--                                                <li><a href="#asq-se" data-toggle="tab">Out-of-Home Safety Assessment </a></li> -->
                                                 <li><a href="#risk" data-toggle="tab">Risk Assessment</a></li>
                                                 <li><a href="#family_service_plan" data-toggle="tab">Family Service Plan </a></li>
                                                 <li><a href="#permanency_plan" data-toggle="tab">Child Permanency Plan </a></li>
+                                                 <li><a href="#otherAssessments" data-toggle="tab">Other Plans & Assessments</a></li>
                                                 <li><a href="#asq" data-toggle="tab">ASQ </a></li>
-                                                <li><a href="#otherAssessments" data-toggle="tab">Other Plans & Assessments </a></li>
+                                               
 
                                             </ul>
                                         </div>
@@ -5122,7 +5159,18 @@ Adoption Information
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+<tr>
+                                                            <td>02/20/2018</td>
+                                                            <td>Karen - Out of Home</td>
+                                                            <td>Out of Home Safety Assessment</td>
+                                                            <td>Dauphin</td>
+                                                            <td>Jim Smith, Karen Smith</td>
+                                                            <td>No</td>
+                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('visibleBelow')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
 
+
+
+                                                        </tr>
 
                                                         <tr>
                                                             <td>01/30/2017</td>
@@ -5148,6 +5196,7 @@ Adoption Information
 
 
                                                         </tr>
+                                                        
                                                         <!--
 <tr>
 <td>05/25/2017</td>
