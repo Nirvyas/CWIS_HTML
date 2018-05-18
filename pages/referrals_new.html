@@ -133,8 +133,9 @@
                                             <li><a href="#caseNotes" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Notes</a></li>
                                             <!-- <li><a href="#assignments" data-toggle="tab">Assignments</a></li> -->
                                             <li><a href="#placeHome" data-toggle="tab" onclick="visibleFn('noneClicked')" onclick="visibleFn('noneClicked')">Placement/Removal</a></li>
-                                            <li><a href="#adopt" data-toggle="tab" onclick="visibleFn('noneClicked')">Adoption/PLC</a></li>
-                                            <!--                                            <li><a href="#education" data-toggle="tab">Education</a></li>-->
+                                            <li><a href="#adopt" data-toggle="tab" onclick="visibleFn('noneClicked')">Adoption</a></li>
+                                            <li><a href="#plc" data-toggle="tab" onclick="visibleFn('noneClicked')">PLC</a></li>
+                                            
 
                                         </ul>
                                     </div>
@@ -1248,10 +1249,11 @@
                                                     <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
                                                 </div>
                                             </div>
-
-                                            <!-- Begin of Adoption Tab --> 
-
-                                            <div class="tab-pane" id="adopt">                                              
+                                            
+                                            
+                                            <!--begin of PLC Tab-->
+                                            
+                                            <div class="tab-pane" id="plc">                                              
                                                
                                                 <div class="row">
                                                     <div class="col-lg-18">
@@ -1710,6 +1712,474 @@
                                             <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
                                         </div>
                                     </div>
+                                            
+                                            
+                                            <!-- End of PLC tab --> 
+
+                                            <!-- Begin of Adoption Tab --> 
+
+                                            <div class="tab-pane" id="adopt">                                              
+                                               
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
+                                                    </div> 
+                                                </div>
+                                                
+                                                 <table class="table table-hover table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>John Smith </td>
+                                                            <td>987654 </td>
+                                                            <td>06/01/2017</td>
+                                                            <td>10/01/2017</td>
+                                                            
+
+                                                    </tr>
+                                                   
+
+                                                <tr>
+                                                    <td>Jane Doe </td>
+                                                    <td>112233 </td>
+                                                    <td>10/01/2017 </td>
+                                                    <td>12/01/2017</td>
+                                                    																	
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                                
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-18">
+                                                        <h2 class="tab-heading">Adoption Information</h2>
+                                                    </div> 
+                                                </div>
+
+                                                <table class="table table-hover table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            
+                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>View</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>12345678 </td>
+                                                            <td>987654321A </td>
+                                                            <td>John Smith</td>
+                                                            
+                                                            <td>01/01/2016</td>																		
+                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+                                                    </tr>
+                                                   
+
+                                                <tr>
+                                                    <td>987654321 </td>
+                                                    <td>112233445B </td>
+                                                    <td>Jane Doe </td>
+                                                    
+                                                    <td>01/20/2014</td>
+                                                    <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+
+                                        <div class="row" id="adoptionDetails1" style="display:none">
+                                            <div class="panel-heading">
+                                                <!-- Nav tabs -->
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="panel-body panel-tabs">               
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="">
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Child Details</h2>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="casname">Provider Name </label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group">
+                                                                    <label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+                                                                    <input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
+                                                            </div>
+
+<!--
+                                                            
+-->
+
+                                                            <div class="col-xs-6">
+                                                                <label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row"><br></div>
+
+                                                        <div class="row">													<div class="col-xs-8">
+                                                                <label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
+                                                            </div>
+                                                            <div class="col-xs-10">																			
+                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
+                                                            </div>													
+                                                        </div>
+
+                                                        <div class="row"><br><br></div>	
+
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Adoptive Parent Details</h2>
+                                                            </div> 
+                                                        </div>	
+
+<!--
+                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                                            <div class="people-entity victim">
+                                                                <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+
+
+                                                               
+
+                                                                <p style="word-wrap: break-word;">DOB: 10/23/1968</p>
+
+                                                                <p style="word-wrap: break-word;">Sex: F</p>
+                                                                
+                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+
+
+
+                                                            </div>
+                                                        </div>
+-->
+
+<!--
+                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
+                                                            <div class="people-entity victim">
+                                                                <h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>
+
+
+                                                                
+
+                                                                <p style="word-wrap: break-word;">DOB: 11/21/1974</p>
+
+                                                                <p style="word-wrap: break-word;">Sex: M</p>
+                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+
+
+
+                                                            </div>
+                                                        </div>
+-->
+                                                        <div class="col-xs-10" ng-repeat="Person in PersonList">
+                                                            <div class="row">													
+                                                            																			
+                                                                <label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+                                                          													
+                                                        </div>
+                                                            <br>
+<!--
+                                                            <div class="row">													
+                                                            																			
+                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
+                                                                <input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
+                                                          													
+                                                        </div>
+-->
+                                                            
+                                                        </div>
+
+                                                        <div class="row"><br></div>																			
+
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Disruption/Dissolution</h2>
+                                                            </div> 
+                                                        </div>													
+
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>12/01/2015 </td>
+                                                                    <td>Dissolution</td>
+                                                                    <td>Dissolution Resolved</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>01/01/2014 </td>
+                                                                    <td>Disruption</td>
+                                                                    <td>Disruption Resolved</td>
+                                                                </tr>	
+
+                                                            </tbody>
+                                                        </table>
+
+                                                        <div class="row"><br></div>		
+<!--
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Annual Contact</h2>
+                                                            </div> 
+                                                        </div>													
+
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>12/01/2015 </td>
+                                                                    <td>Contact Sent</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>01/01/2014 </td>
+                                                                    <td>Contact Sent</td>
+                                                                </tr>	
+
+                                                            </tbody>
+                                                        </table>
+-->
+
+                                                        <div class="row"><br></div>		
+<!--
+                                                        <div class="row">
+                                                            <div class="col-lg-18">
+                                                                <h2 class="tab-heading">Payment Detail </h2>
+                                                            </div> 
+                                                        </div>													
+
+                                                        <table class="table table-hover table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                 
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>$1050 </td>
+                                                                    <td>$35</td>
+                                                                   
+                                                                    <td>12/01/2015 </td>
+                                                                    <td>12/31/2015 </td>
+                                                                    <td>12/01/2015 </td>
+                                                                    <td>12/31/2015 </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>$1050 </td>
+                                                                    <td>$35</td>
+                                                                  
+                                                                    <td>12/01/2015 </td>
+                                                                    <td>12/31/2015 </td>
+                                                                    <td>12/01/2014 </td>
+                                                                    <td>12/31/2014 </td>
+                                                                </tr>	
+
+                                                            </tbody>
+                                                        </table>
+-->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>																
+
+
+
+
+
+
+
+                                        <!-- Begin modal container -->
+                                        <div id="runawayDetailsModal" class="modal fade">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title">Runaway Details</h4>
+                                                    </div>
+
+                                                    <div class="modal-body">
+
+                                                        <!-- <div class="row">
+<div class="col-xs-6">
+<div class="form-group">
+<label for="casname">First Name</label>&nbsp;&nbsp;
+<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+</div>
+</div>
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="casname">Last Name</label>&nbsp;&nbsp;
+<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+</div>
+</div>
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+<a href="#">  12345678
+</a>
+
+</div>
+</div>  
+</div> -->
+
+
+                                                        <!-- <div class="row">
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+</div>
+</div>   
+
+
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+</div>
+</div> 
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+</div>
+</div> 
+</div> -->
+
+
+                                                        <!-- <div class="row">
+<div class="col-xs-9">
+<div class="form-group">
+<label for="txtDateTimeReceived">Upload to NCMEC</label>
+<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+</div>
+</div>   
+
+<div class="col-xs-9">
+<div class="form-group">
+<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+</div>
+</div> 
+
+</div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Modal --> 
+                                        <div class="modal-footer">
+
+                                            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
+                                            <!--a href="../pages/dashboard.html" -->                                        
+                                            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
+
+                                            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+                                        </div>
+                                    </div>
 
 
                                     <!-- End of Adoption Tab --> 
@@ -1804,9 +2274,9 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Open Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Opened Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                        <th>Close Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Closed Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                         <th>View</th>
                                                     </tr>
@@ -1814,7 +2284,7 @@
 
                                                 <tr>
                                                     <td>
-                                                        01/10/2016
+                                                        05/06/2016
                                                         <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                         <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
@@ -1919,7 +2389,7 @@
                                                     </td>
 
                                                     <td>
-                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">This case has been closed as the case participant’s goals have been accomplished.</span>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">This case has been closed as the case participant's goals have been accomplished.</span>
                                                     </td>
 
                                                     <td>
@@ -1999,9 +2469,9 @@
                                                 <thead>
                                                     <tr> 
 
-                                                        <th>Activate Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Activated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                        <th>Inactivate Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Inactivated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                         <th>View</th>
@@ -2010,14 +2480,14 @@
 
                                                 <tr>
                                                     <td>
-                                                        01/10/2016
+                                                        05/06/2016
                                                         <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
                                                         <input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 
                                                     </td>
 
                                                     <td>
-                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2017</span>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/10/2018</span>
                                                     </td>
 
                                                     <td>
@@ -2114,7 +2584,7 @@
                                                     </td>
 
                                                     <td>
-                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">This case has been inactivated as the case participant’s goals have been accomplished.</span>
+                                                        <span id="MainContent_rptSearchResults_lnkHeaderCaseName">This case has been inactivated as the case participant's goals have been accomplished.</span>
                                                     </td>
 
                                                     <td>
@@ -2182,16 +2652,16 @@
 
 
 
-                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
-                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -2243,11 +2713,11 @@
                                                 <tr>
 
 
-                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
-                                                    <th> Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th> Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -2265,14 +2735,7 @@
 
 
                                                 </tr>
-                                                <tr>
-
-                                                    <td>717-234-1265 </td>
-                                                    <td>Work </td>
-                                                    <td>163 </td>
-
-
-                                                </tr>
+                                                
 
 
                                             </tbody>
@@ -2290,10 +2753,10 @@
                                                 <thead>
                                                     <tr> 
 
-                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                     </tr>
                                                 </thead>
 
@@ -2352,10 +2815,10 @@
                                                 <thead>
                                                     <tr> 
 
-                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Worker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                     </tr>
                                                 </thead>
 
@@ -2414,11 +2877,11 @@
                                                 <thead>
                                                     <tr> 
 
-                                                        <th>Referral ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Referral Created Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Referral Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Primary Recipient<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Persons<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Referral ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Referral Created Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Referral Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Assigned County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Shared Persons</th>
 
                                                     </tr>
                                                 </thead>
@@ -2438,7 +2901,7 @@
                                                     <td>
                                                         <span id="MainContent_rptSearchResults_lnkHeaderStatus">Adams</span>
                                                     </td>
-                                                    <td>Brent Jones - 444333<br>Sally Musser - 543332</td>
+                                                    <td>Brent Jones - 444333222<br>Sally Musser - 543332122</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -2456,7 +2919,7 @@
                                                     <td>
                                                         <span id="MainContent_rptSearchResults_lnkHeaderStatus">Lancaster</span>
                                                     </td>
-                                                    <td>Sam Miller - 956632<br>Troy Smith - 663763</td>
+                                                    <td>Sam Miller - 956632564<br>Troy Smith - 663763456</td>
                                                 </tr>
                                             </table>
                                             <div class="row"><br></div>
@@ -2474,10 +2937,10 @@
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr> 
-                                                        <th>Case ID</th>
-                                                        <th>Assigned County</th>
-                                                        <th>Created Date</th>
-                                                        <th>Persons</th>
+                                                        <th>Case ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Assigned County <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Created Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Shared Persons</th>
                                                     </tr>
                                                 </thead>
                                                 <tr>
@@ -2495,7 +2958,7 @@
                                                     </td>
                                                     <td>
                                                         <span id="MainContent_rptSearchResults_lnkHeaderStatus">
-                                                            Amy Smith - 113455<br> Fred Marks - 224689 </span>
+                                                            Amy Smith - 113455456<br> Fred Marks - 224689322 </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -2513,7 +2976,7 @@
                                                     </td>
                                                     <td>
                                                         <span id="MainContent_rptSearchResults_lnkHeaderStatus">
-                                                            Ron Smith - 776754<br> Tom Gibson - 876443 </span>
+                                                            Ron Smith - 776754345<br> Tom Gibson - 876443765 </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -2531,7 +2994,7 @@
                                                     </td>
                                                     <td>
                                                         <span id="MainContent_rptSearchResults_lnkHeaderStatus">
-                                                            Mike Jones - 234586<br> Sam Hughes - 456789 <br> Don Johnson - 748648</span>
+                                                            Mike Jones - 234586456<br> Sam Hughes - 456789876 <br> Don Johnson - 748648987</span>
                                                     </td>
                                                 </tr>
 
@@ -2630,10 +3093,10 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Caseworker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date of Visit<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Caseworker ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date of Visit<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                 </tr>
                                                             </thead>
@@ -2715,22 +3178,22 @@
                                                                                         <tr> 
                                                                                             <th>
                                                                                                 School Name
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>
                                                                                                 Start Date
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>
                                                                                                 End Date
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>
                                                                                                 School Type
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>
                                                                                                 School District
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>
                                                                                                 Reason for School Change
-                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
 
@@ -2796,10 +3259,10 @@
                                                                                             <tr> 
                                                                                                 <th>
                                                                                                     Needs Identified
-                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                                 <th>
                                                                                                     Met
-                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                                             </tr>
                                                                                         </thead>
@@ -2841,10 +3304,10 @@
                                                                                             <tr> 
                                                                                                 <th>
                                                                                                     Services Needed
-                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                                 <th>
                                                                                                     Services Provided
-                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                    <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                                             </tr>
                                                                                         </thead>
@@ -2898,13 +3361,13 @@
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Healthcare Record<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Assessment Performed<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Currently Under Medication<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Substance Abuse<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Disability<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Financial Assistance<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Healthcare Record<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Assessment Performed<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Currently Under Medication<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Substance Abuse<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Disability<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Financial Assistance<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 <th>View</th>
 
 
@@ -3154,10 +3617,10 @@
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>Medication Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                    <th>Precription Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                    <th>Discontinued Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                    <th> Classification<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                    <th>Medication Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                    <th>Precription Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                    <th>Discontinued Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                    <th> Classification<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                                 </tr>
                                                                             </thead>
@@ -4276,11 +4739,11 @@
                                                         <table class="table table-hover table-striped">
                                                             <thead>
                                                                 <tr> 
-                                                                    <th>Client First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Client Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Relationship to Client<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																									
+                                                                    <th>Client First Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Client Last Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Relationship to Client<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>																									
                                                                 </tr>
                                                             </thead>
 
@@ -4574,15 +5037,15 @@
                                             <thead>
                                                 <tr> 
 
-                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Country<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                    <th>Address<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>City<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>State<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Zip<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Country<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Address Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Address End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                 </tr>
@@ -4661,9 +5124,9 @@
                                             <thead>
                                                 <tr> 
 
-                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																		
+                                                    <th>Phone Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Phone Number<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                    <th>Extension<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>																		
 
                                                 </tr>
                                             </thead>
@@ -4740,11 +5203,11 @@
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 <th>View</th>
 
 
@@ -4806,13 +5269,13 @@
                                                             <table class="table table-hover table-striped">																	   
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                        <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>  
-                                                                        <th>Date Placed in Setting<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Interval<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                
+                                                                        <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>  
+                                                                        <th>Date Placed in Setting<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Interval<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>                
 
                                                                     </tr>
                                                                 </thead>
@@ -4844,11 +5307,11 @@
                                                             <table class="table table-hover table-striped">																							   
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Role in Household<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Date Last Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Affiliated County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Role in Household<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Date Last Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Affiliated County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                                     </tr>
@@ -4886,8 +5349,8 @@
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                            <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                             <th>View</th>
                                                                         </tr>
@@ -4909,8 +5372,8 @@
                                                                     <table class="table table-hover table-striped"  style="width: 97%">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th>Safety Indicator<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                <th>Home<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                <th>Safety Indicator<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                <th>Home<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                                             </tr>
@@ -5146,12 +5609,12 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Date of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Name of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Type of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Assessment Agency<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Participants<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Court Ordered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Date of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Name of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Type of Assessment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Assessment Agency<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Participants<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Court Ordered<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View</th>
 
 
@@ -5314,8 +5777,8 @@
                                                                             <tr>
 
 
-                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                             </tr>
                                                                         </thead>
@@ -5411,8 +5874,8 @@
                                                                             <tr>
 
 
-                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                             </tr>
                                                                         </thead>
@@ -5485,11 +5948,11 @@
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View</th>
 
 
@@ -5560,12 +6023,12 @@
                                                         <table class="table table-hover table-striped">																	   
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                    
-                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>                                                    
+                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -5603,13 +6066,13 @@
                                                         <table class="table table-hover table-striped">																							   
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Family Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                    
-                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                    <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Family Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date of Birth<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Seen?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                    <th>Date Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>                                                    
+                                                                    <th>Reason Not Seen<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 </tr>
                                                             </thead>
 
@@ -5644,8 +6107,8 @@
                                                             <table class="table table-hover table-striped">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                        <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                        <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        <th>Safety Decision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                         <th>View</th>
                                                                     </tr>
@@ -5683,11 +6146,11 @@
                                                                                     <thead>
                                                                                         <tr>
 
-                                                                                            <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                            <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <!--
 <th>Protective Service Capacity</th>
 <th>Protective Capacity Status</th>
--->                                                                        <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+-->                                                                        <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                             <th>View</th>
                                                                                         </tr>
                                                                                     </thead>
@@ -5778,11 +6241,11 @@
                                                                                                     <thead>
                                                                                                         <tr>
 
-                                                                                                            <th>Caregiver<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                            <th>Caregiver<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                                                            <th>Protective Service Capacity<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                                            <th>Protective Capacity Status<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                                                            <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                                            <th>Protective Service Capacity<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                                            <th>Protective Capacity Status<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                                                            <th>Explanation<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                                                         </tr>
                                                                                                     </thead>
@@ -5853,9 +6316,9 @@ and use drugs.</textarea>
                                                                                 <thead>
                                                                                     <tr>
 
-                                                                                        <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                        <th>Safety Threat<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                                        <th>Explanations<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                                        <th>Explanations<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
@@ -6157,11 +6620,11 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Assessment Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Assessment Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         <th>View</th>
 
 
@@ -6268,11 +6731,11 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Highest Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Risk Details<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Role<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Age<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Highest Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Risk Details<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -6307,9 +6770,9 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -6345,9 +6808,9 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Risk Factor<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -6402,8 +6865,8 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Family Environment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Family Environment<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Risk Level<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -6510,10 +6973,10 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         <th>View</th>
 
 
@@ -6706,9 +7169,9 @@ and use drugs.</textarea>
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Child <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Permanency Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Imminent Risk / Substitute Care Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Child <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Permanency Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Imminent Risk / Substitute Care Goal <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
 
                                                             </tr>
@@ -6810,10 +7273,10 @@ and use drugs.</textarea>
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Needs Addressed <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Needs Addressed <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                             <th>View </th>
 
                                                         </tr>
@@ -6879,10 +7342,10 @@ and use drugs.</textarea>
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Service<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Service<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                 <th>View </th>
 
                                                             </tr>
@@ -7014,11 +7477,11 @@ and use drugs.</textarea>
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                            <th>Relationship to Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                            <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																						
-                                                                            <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                            <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Relationship to Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>																						
+                                                                            <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                             <th> View </th>
                                                                         </tr>
                                                                     </thead>
@@ -7203,10 +7666,10 @@ and use drugs.</textarea>
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Plan Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Worker ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor ID:Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Supervisor Approval Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                         <th>View</th>
 
 
@@ -8058,9 +8521,9 @@ Child has Disability or need Requiring Services
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                            <th>Objective <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                             <th>View </th>
 
@@ -8127,9 +8590,9 @@ Child has Disability or need Requiring Services
                                                     <table class="table table-hover table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                <th>Task <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Status <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
                                                                 <th>View </th>
 
@@ -8252,13 +8715,13 @@ Child has Disability or need Requiring Services
                                             <table class="table table-hover table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Participant Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Refused/Limited<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Frequency/Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Level of Supervision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Transportation Responsibility<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                        <th>Accommodation/ Barriers<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                        <th>Participant Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Refused/Limited<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Frequency/Duration<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Level of Supervision<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Location<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Transportation Responsibility<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                        <th>Accommodation/ Barriers<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -8319,11 +8782,11 @@ Child has Disability or need Requiring Services
                                                                 <table class="table table-hover table-striped">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th>Participant<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                                                            <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>																						
-                                                                            <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                                            <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                                                            <th> Date of Signature<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>																						
+                                                                            <th>Plan/Rights Sent Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Method of Delivery<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                             <th> View </th>
                                                                         </tr>
                                                                     </thead>
@@ -8523,10 +8986,10 @@ Child has Disability or need Requiring Services
                                                 <table class="table table-hover table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Date of Screening<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Need for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                                            <th>Date of Referral for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>                                                                        
+                                                            <th>Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Date of Screening<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Need for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                            <th>Date of Referral for Early Intervention Services<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>                                                                        
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -9125,12 +9588,12 @@ Child has Disability or need Requiring Services
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Date of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                            <th>Purpose of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                            <th>Type of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                            <th>Date of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                            <th>Purpose of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                            <th>Type of Contact <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 
-                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
-                                            <th>Safety Decision <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down"></em></a></th>
+                                            <th>Participants <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                            <th>Safety Decision <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                             <th>Action</th>
 
                                         </tr>
