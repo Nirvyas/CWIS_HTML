@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+	<!-- Body content goes here. -->
+     <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script> 
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+		<div class="container">
+                <div class="row">
+                    <br />
+                </div>
+                <div id="validationControl">
+					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
+                </div>
+    
+<div class="panel panel-secondary with-header-info">
+        <!-- Header Tabs -->
+        <div class="panel-heading">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">                
+                                           <li class="active"><a href="#createcvt" data-toggle="tab">Create CVT Report</a></li>
+											<li><a href="#viewcvt" data-toggle="tab">View CVT Reports</a></li>
+                                            <!-- <li><a href="#caseExpunc" data-toggle="tab">View Case Expunction</a></li> -->
+       
+            </ul>
+        </div>
+        <div class="panel-body panel-tabs">
+            <div class="tab-content">
+				<!-- Begin fo Creaet CVT -->
+                <div class="tab-pane active" id="createcvt">
+																											
+								<!-- <div class="tab-pane active" id="afcars_search">  -->  
+										<div class="row" >	
+											<div class="col-xs-8" >
+													<div class="form-group">
+													<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+													<input type="text" id="dtofrevisedplan" style="width: 60%" value="September 2017 - February 2018">
+												</div>
+											</div>		
+										</div>
+										<div class="row" >															
+											
+											<div class="col-xs-5">
+												<div class="form-group">
+													<label for="txtDateTimeReceived">Start Date</label>&nbsp;&nbsp;
+													  <input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+													<a href="#1" class="icon-date-time"></a>
+												</div>
+											</div>   
+											<div class="col-xs-3">
+											</div>
+
+											<div class="col-xs-5">
+												<div class="form-group">
+													<label for="txtDateTimeReceived">End Date</label>&nbsp;&nbsp;
+													<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+													<a href="#1" class="icon-date-time"></a>
+												</div>
+											</div> 
+										</div>
+										
+										<div class="row" >																												
+											<div class="col-xs-8" >
+												<div class="form-group">
+													<label for="dtofrevisedplan">System</label>&nbsp;&nbsp;
+													<span id="MainContent_ddlCounty" title="County">
+														 <select name="dropDown" id="county" style="width: 65%">
+															<option>ACYS </option>
+															<option>BERKS </option>
+															<option>CAPS </option>
+															<option>FACTS2 </option>
+															<option>JCIS </option>
+															<option>KIDS </option>																				
+														</select>
+													</span>
+
+												</div>
+											</div>																
+										</div>                                                     
+									
+								  
+											<div class="row style-select">
+												 <div class="col-md-12">
+													<div class="subject-info-box-1">
+														  <label>Available Counties</label>
+														 <select multiple class="form-control" id="lstBox1">
+															<option>Adams </option>
+															<option>Allegheny </option>
+															<option>Armstrong </option>
+															<option>Beaver </option>
+															<option>Bedford </option>
+															<option>Berks </option>
+															<option>Blair </option>
+															<option>Bradford </option>
+															<option>Bucks </option>
+															<option>Butler </option>
+															<option>Cambria </option>
+															<option>Cameron </option>
+															<option>Carbon </option>
+															<option>Centre </option>
+															<option>Chester </option>
+															<option>Clarion </option>
+															<option>Clearfield </option>
+															<option>Clinton </option>
+															<option>Columbia </option>
+															<option>Crawford </option>
+															<option>Cumberland </option>
+															<option>Dauphin </option>
+															<option>Delaware </option>
+															<option>Elk </option>
+															<option>Erie </option>
+															<option>Fayette </option>
+															<option>Forest </option>
+															<option>Franklin </option>
+															<option>Fulton </option>
+															<option>Greene </option>
+															<option>Huntingdon </option>
+															<option>Indiana </option>
+															<option>Jefferson </option>
+															<option>Juniata </option>
+															<option>Lackawanna </option>
+															<option>Lancaster </option>
+															<option>Lawrence </option>
+															<option>Lebanon </option>
+															<option>Lehigh </option>
+															<option>Luzerne </option>
+															<option>Lycoming </option>
+															<option>McKean </option>
+															<option>Mercer </option>
+															<option>Mifflin </option>
+															<option>Monroe </option>
+															<option>Montgomery </option>
+															<option>Montour </option>
+															<option>Northampton </option>
+															<option>Northumberland </option>
+															<option>Perry </option>
+															<option>Philadelphia </option>
+															<option>Pike </option>
+															<option>Potter </option>
+															<option>Schuylkill </option>
+															<option>Snyder </option>
+															<option>Somerset </option>
+															<option>Sullivan </option>
+															<option>Susquehanna </option>
+															<option>Tioga </option>
+															<option>Union </option>
+															<option>Venango </option>
+															<option>Warren </option>
+															<option>Washington </option>
+															<option>Wayne </option>
+															<option>Westmoreland </option>
+															<option>Wyoming </option>
+															<option>York </option>
+														 </select>
+													</div>
+
+														<div class="subject-info-arrows text-center">
+															  <input type='button' id='btnAllRight' value='>>' style="height:40px;width:40px;"/>
+															  <br />
+															  <input type='button' id='btnRight' value='>' style="height:40px;width:40px;"/>
+															  <br />
+															  <input type='button' id='btnLeft' value='<' style="height:40px;width:40px;"/>
+															  <br />
+															<input type='button' id='btnAllLeft' value='<<' style="height:40px;width:40px;"/>
+														</div>
+
+														<div class="subject-info-box-2">
+														  <label>Counties You Have Selected</label>
+														  <select multiple class="form-control" id="lstBox2">
+															
+														  </select>
+														</div>
+
+														<div class="clearfix"></div>
+														  <br/>
+														  <br/>
+												</div>
+											</div>
+
+											<script>
+											  $('#btnAvenger').click(function(e) {
+												$('select').moveToList('#StaffList', '#PresenterList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveAvenger').click(function(e) {
+												$('select').removeSelected('#PresenterList');
+												e.preventDefault();
+											  });
+
+											  $('#btnAvengerUp').click(function(e) {
+												$('select').moveUpDown('#PresenterList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnAvengerDown').click(function(e) {
+												$('select').moveUpDown('#PresenterList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnShield').click(function(e) {
+												$('select').moveToList('#StaffList', '#ContactList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveShield').click(function(e) {
+												$('select').removeSelected('#ContactList');
+												e.preventDefault();
+											  });
+
+											  $('#btnShieldUp').click(function(e) {
+												$('select').moveUpDown('#ContactList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnShieldDown').click(function(e) {
+												$('select').moveUpDown('#ContactList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeague').click(function(e) {
+												$('select').moveToList('#StaffList', '#FacilitatorList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveJusticeLeague').click(function(e) {
+												$('select').removeSelected('#FacilitatorList');
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeagueUp').click(function(e) {
+												$('select').moveUpDown('#FacilitatorList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeagueDown').click(function(e) {
+												$('select').moveUpDown('#FacilitatorList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnRight').click(function(e) {
+												$('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+												e.preventDefault();
+											  });
+
+											  $('#btnAllRight').click(function(e) {
+												$('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+												e.preventDefault();
+											  });
+
+											  $('#btnLeft').click(function(e) {
+												$('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+												e.preventDefault();
+											  });
+
+											  $('#btnAllLeft').click(function(e) {
+												$('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+												e.preventDefault();
+											  });
+
+											</script>
+
+																													
+										<div class="row"><br></div>	
+
+															
+										<div class="row" style="text-align: right">
+											<!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">Generate Report</button> -->
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('none')">Generate Report</button> <!--iskodikha2-->
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+										</div>
+										<div class="row"><br></div>
+											<div class="row col-xs-18" id="showResult" style="display: none">																
+												<div id="afcars_search" class="row">
+													<div class="col-xs-5"></div>
+														<div class="col-xs-8">																		
+															<h4>You will be notified as soon as the report is available.</h4>																		
+														</div>
+													<div class="col-xs-5"></div>
+												</div>	
+												 
+												 <div class="row"><br></div>
+												
+											</div>	
+												
+											<div class="row" id="iskodikha2" style="display: none" >	<!-- id="showResult2" style="display: none" -->																	
+													<div class="row row-padding">
+														<div class="col-xs-18">	
+															<div class="row row-padding">
+																<table class="table table-hover table-striped">
+																	<thead>
+																		<tr>
+																			<th>  </th>
+																			<th>Date Created </th>
+																			<th>Created By</th>
+																			<th>Report Type</th>
+																			<th>Reporting Period</th>
+																			<th>Narrative</th>
+																			<th>Date Submitted to ACF</th>
+																			<!-- <th>View</th> -->
+																		
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																			<td>09/12/2017</td>
+																			<td>John Smith</td>
+																			<td>Final</td>
+																			<td>09/01/2017  - 02/28/2018</td>
+																			<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																			<td>03/20/2018</td>
+																		   <!--  <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+
+																		</tr>
+																		<tr>
+																			<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																			<td>11/14/2017</td>
+																			<td>Jane Smiths</td>
+																			<td>Trial</td>
+																			<td>09/01/2017  - 02/28/2018</td>
+																			<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																			<td> </td>
+																			<!-- <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+																			
+																		</tr>																			
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+													
+													
+												<div class="row" style="text-align: right">
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t4')">View Details</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">View AFCARS File</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">Transmit to ACF</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">View Encrypted AFCARS File</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
+													
+												</div>                                                                  
+											</div>						
+				                   
+                </div>
+				<!-- End of Create CVT -->
+				
+				<!-- Begin of View CVT --> 
+
+                <div class="tab-pane" id="viewcvt">
+                   				
+										<div class="row" >	
+											
+											<div class="col-xs-8" >
+												<div class="form-group">
+													<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+													<input type="text" id="dtofrevisedplan" style="width: 60%" value="September 2017 - February 2018">
+												</div>
+											</div>		
+											
+										</div>
+										<div class="row" >															
+											
+											<div class="col-xs-5">
+												<div class="form-group">
+													<label for="txtDateTimeReceived">Start Date</label>&nbsp;&nbsp;
+													  <input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+													<a href="#1" class="icon-date-time"></a>
+												</div>
+											</div>   
+											<div class="col-xs-3">
+											</div>
+
+											<div class="col-xs-5">
+												<div class="form-group">
+													<label for="txtDateTimeReceived">End Date</label>&nbsp;&nbsp;
+													<input type="text" style="width: 68%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+													<a href="#1" class="icon-date-time"></a>
+												</div>
+											</div> 
+										</div>
+										
+										<div class="row" >	
+																											
+											<div class="col-xs-8" >
+												<div class="form-group">
+													<label for="dtofrevisedplan">System</label>&nbsp;&nbsp;
+													<span id="MainContent_ddlCounty" title="County">
+														 <select name="dropDown" id="county" style="width: 65%">
+															<option>ACYS </option>
+															<option>BERKS </option>
+															<option>CAPS </option>
+															<option>FACTS2 </option>
+															<option>JCIS </option>
+															<option>KIDS </option>																				
+														</select>
+													</span>
+
+												</div>
+											</div>																
+										</div>                                                     
+									
+								  
+											<div class="row style-select">
+												 <div class="col-md-12">
+													<div class="subject-info-box-1">
+														  <label>Available Counties</label>
+														 <select multiple class="form-control" id="lstBox1">
+															<option>Adams </option>
+															<option>Allegheny </option>
+															<option>Armstrong </option>
+															<option>Beaver </option>
+															<option>Bedford </option>
+															<option>Berks </option>
+															<option>Blair </option>
+															<option>Bradford </option>
+															<option>Bucks </option>
+															<option>Butler </option>
+															<option>Cambria </option>
+															<option>Cameron </option>
+															<option>Carbon </option>
+															<option>Centre </option>
+															<option>Chester </option>
+															<option>Clarion </option>
+															<option>Clearfield </option>
+															<option>Clinton </option>
+															<option>Columbia </option>
+															<option>Crawford </option>
+															<option>Cumberland </option>
+															<option>Dauphin </option>
+															<option>Delaware </option>
+															<option>Elk </option>
+															<option>Erie </option>
+															<option>Fayette </option>
+															<option>Forest </option>
+															<option>Franklin </option>
+															<option>Fulton </option>
+															<option>Greene </option>
+															<option>Huntingdon </option>
+															<option>Indiana </option>
+															<option>Jefferson </option>
+															<option>Juniata </option>
+															<option>Lackawanna </option>
+															<option>Lancaster </option>
+															<option>Lawrence </option>
+															<option>Lebanon </option>
+															<option>Lehigh </option>
+															<option>Luzerne </option>
+															<option>Lycoming </option>
+															<option>McKean </option>
+															<option>Mercer </option>
+															<option>Mifflin </option>
+															<option>Monroe </option>
+															<option>Montgomery </option>
+															<option>Montour </option>
+															<option>Northampton </option>
+															<option>Northumberland </option>
+															<option>Perry </option>
+															<option>Philadelphia </option>
+															<option>Pike </option>
+															<option>Potter </option>
+															<option>Schuylkill </option>
+															<option>Snyder </option>
+															<option>Somerset </option>
+															<option>Sullivan </option>
+															<option>Susquehanna </option>
+															<option>Tioga </option>
+															<option>Union </option>
+															<option>Venango </option>
+															<option>Warren </option>
+															<option>Washington </option>
+															<option>Wayne </option>
+															<option>Westmoreland </option>
+															<option>Wyoming </option>
+															<option>York </option>
+														 </select>
+													</div>
+
+														<div class="subject-info-arrows text-center">
+															  <input type='button' id='btnAllRight' value='>>' style="height:40px;width:40px;"/>
+															  <br />
+															  <input type='button' id='btnRight' value='>' style="height:40px;width:40px;"/>
+															  <br />
+															  <input type='button' id='btnLeft' value='<' style="height:40px;width:40px;"/>
+															  <br />
+															<input type='button' id='btnAllLeft' value='<<' style="height:40px;width:40px;"/>
+														</div>
+
+														<div class="subject-info-box-2">
+														  <label>Counties You Have Selected</label>
+														  <select multiple class="form-control" id="lstBox2">
+															
+														  </select>
+														</div>
+
+														<div class="clearfix"></div>
+														  <br/>
+														  <br/>
+												</div>
+											</div>
+
+											<script>
+											  $('#btnAvenger').click(function(e) {
+												$('select').moveToList('#StaffList', '#PresenterList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveAvenger').click(function(e) {
+												$('select').removeSelected('#PresenterList');
+												e.preventDefault();
+											  });
+
+											  $('#btnAvengerUp').click(function(e) {
+												$('select').moveUpDown('#PresenterList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnAvengerDown').click(function(e) {
+												$('select').moveUpDown('#PresenterList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnShield').click(function(e) {
+												$('select').moveToList('#StaffList', '#ContactList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveShield').click(function(e) {
+												$('select').removeSelected('#ContactList');
+												e.preventDefault();
+											  });
+
+											  $('#btnShieldUp').click(function(e) {
+												$('select').moveUpDown('#ContactList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnShieldDown').click(function(e) {
+												$('select').moveUpDown('#ContactList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeague').click(function(e) {
+												$('select').moveToList('#StaffList', '#FacilitatorList');
+												e.preventDefault();
+											  });
+
+											  $('#btnRemoveJusticeLeague').click(function(e) {
+												$('select').removeSelected('#FacilitatorList');
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeagueUp').click(function(e) {
+												$('select').moveUpDown('#FacilitatorList', true, false);
+												e.preventDefault();
+											  });
+
+											  $('#btnJusticeLeagueDown').click(function(e) {
+												$('select').moveUpDown('#FacilitatorList', false, true);
+												e.preventDefault();
+											  });
+
+											  $('#btnRight').click(function(e) {
+												$('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+												e.preventDefault();
+											  });
+
+											  $('#btnAllRight').click(function(e) {
+												$('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+												e.preventDefault();
+											  });
+
+											  $('#btnLeft').click(function(e) {
+												$('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+												e.preventDefault();
+											  });
+
+											  $('#btnAllLeft').click(function(e) {
+												$('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+												e.preventDefault();
+											  });
+
+											</script>
+
+										
+																													
+										<div class="row"><br></div>	
+
+															
+										<div class="row" style="text-align: right">
+											
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('iskodikha3')">Filter</button>
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+										</div>
+										<div class="row"><br></div>
+											<!-- <div class="row col-xs-18" id="showResult" style="display: none">																
+												<div id="afcars_search" class="row">
+													<div class="col-xs-5"></div>
+														<div class="col-xs-8">																		
+															<h4>You will be notified as soon as the report is available.</h4>																		
+														</div>
+													<div class="col-xs-5"></div>
+												</div>	
+												 
+												 <div class="row"><br></div>
+												
+											</div>	 -->
+												
+											<div class="row" id="iskodikha3" style="display: none" >																	
+													<div class="row row-padding">
+														<div class="col-xs-18">	
+															<div class="row row-padding">
+																<table class="table table-hover table-striped">
+																	<thead>
+																		<tr>
+																			<th>  </th>
+																			<th>Generation Status </th>
+																			<th>Date Created</th>
+																			<th>Created By</th>
+																			<th>Reporting Period</th>
+																			<th>Description</th>
+																			<th>Submitted to ACF</th>
+																			
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																			<td>In Progress</td>
+																			<td>05/05/2018</td>
+																			<td>Jane Smith</td>
+																			<td>03/01/2018  - 05/01/2018</td>
+																			<td>Report Generated by Jane Smith for reporting period 03/01/2018-05/01/2018</td>
+																			<td> </td>
+																		   <!--  <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+
+																		</tr>
+																		<tr>
+																			<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																			<td>Completed</td>
+																			<td>04/27/2018</td>
+																			<td>John Smith</td>
+																			<td>09/01/2017  - 02/01/2018</td>
+																			<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/01/2018</td>
+																			<td>03/01/2018 </td>
+																			<!-- <td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td> -->
+																			
+																		</tr>																			
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+													
+													
+												<div class="row" style="text-align: right">
+													<!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t4')">View Details</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button> -->
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">Download</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('clear')">Submit to ACF</button>
+													<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
+													
+												</div>                                                                  
+											</div>
+												
+										
+											<!--Fill everything related to family services before this -->
+								<!-- </div> -->	
+						
+										
+										<!--<div class="row" >
+											<div class="col-xs-18">	
+												<div class="col-xs-4" >
+													<div class="form-group">
+														<label for="dtofrevisedplan">Reporting Type</label>&nbsp;&nbsp;
+														<span id="MainContent_ddlCounty" title="County">
+															 <select name="dropDown" id="county" style="width: 40%">
+																<option selected>Final</option>
+																<option>Trial</option>
+															</select>
+														</span>
+													</div>
+												</div>	
+											
+												<div class="col-xs-7" >
+													<div class="form-group">
+														<label for="dtofrevisedplan">Reporting Period</label>&nbsp;&nbsp;
+														<input type="text" id="dtofrevisedplan" style="width: 58%" value="September 2017 - February 2018" disabled>
+													</div>
+												</div>	
+												
+												
+												<div class="col-xs-5">
+													<div class="form-group">
+														<label for="txtDateTimeReceived">Date Report Generated </label>&nbsp;&nbsp;
+														<input type="text" style="width: 40%" id="txtDateTimeReceived" placeholder="09/21/2017">
+														<a href="#1" class="icon-date-time"></a>
+													</div>
+												</div>
+												
+												 <div class="col-xs-3">
+													<div class="form-group">
+														<label for="ddlNameSuffix">Transmitted to ACF </label>&nbsp;&nbsp;
+														<input type="checkbox" id="ddlNameSuffix" style="max-width:40%;" value="F">
+
+													</div>
+												</div>  
+													
+											</div>  
+										</div> -->
+																																																													
+										<!-- <div class="row"><br></div>															
+															
+										<div class="row" style="text-align: center">
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult2')">Search</button>
+											<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Clear</button>
+										</div>
+
+										<div class="row"><br></div> -->
+
+										<!-- <div class="row col-xs-18" id="showResult2">																	
+												<div class="row row-padding">
+													<div class="col-xs-18">	
+														<div class="row row-padding">
+															<table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>  </th>
+																		<th>Date Created </th>
+																		<th>Created By</th>
+																		<th>Report Type</th>
+																		<th>Reporting Period</th>
+																		<th>Narrative</th>
+																		<th>Date Submitted to ACF</th>
+																		<th>View</th>
+																	
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																		<td>09/12/2017</td>
+																		<td>John Smith</td>
+																		<td>Final</td>
+																		<td>09/01/2017  - 02/28/2018</td>
+																		<td>Report Generated by John Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																		<td>03/20/2018</td>
+																		<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																	</tr>
+																	<tr>
+																		<td><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></td>
+																		<td>11/14/2017</td>
+																		<td>Jane Smiths</td>
+																		<td>Trial</td>
+																		<td>09/01/2017  - 02/28/2018</td>
+																		<td>Report Generated by Jane Smith for Reporting Period 09/01/2017-02/28/2018</td>
+																		<td>03/30/2018</td>
+																		<td><a href="Javascript:void(0);" title="View" onclick="toggle_tab('afcars_cwis_data')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+																		
+																	</tr>																			
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+												
+												
+											<div class="row" style="text-align: right">
+												<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_visibility('showResult')">View Report</button>
+												<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0" onclick="toggle_tabdisplay('t3')">View Errors</button>
+												<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">View AFCARS Data File</button>
+												<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Transmit to ACF</button>
+												<button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0" onclick="toggle_visibility('clear')">Discard Report</button>
+												
+											</div>
+										 
+										</div> -->
+						
+
+
+
+                </div>
+				<!-- End of View CVT -->
+                
+                
+            </div>
+            
+        </div>
+</div>
+</html>
