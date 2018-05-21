@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="../js/bootstrap-multiselect.js"></script>
+	<!-- Body content goes here. -->
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>
+    
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+  
+		
+                
+                <div id="validationControl">
+					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
+                </div>
+              <!-- below this-->
+            <div class="panel panel-secondary with-header-info">
+        <!-- Header Tabs -->
+        <div class="panel-heading">
+            <!-- Nav tabs -->
+            
+        </div>
+        <div class="panel-body panel-tabs">
+            <div class="tab-content">
+                <div class="tab-pane active" id="clearanceInformation">
+                    <div class="row">
+                        <div class="col-lg-18">
+                            <h2 class="tab-heading">Periodic Review Hearing</h2>
+                        </div>
+                    </div>
+						<div class="row row-padding">
+							<table class="table table-hover table-striped">
+										<thead>
+											<tr> 
+												<th>
+													<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Participant Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+												</th>
+												<th>
+													<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Hearing Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+												</th>
+											</tr>
+										</thead>
+									
+										<tr>
+											<td> </td>
+											<td>  </td>
+										</tr>
+										
+							</table>
+						</div>
+						
+						 <div class="modal-footer">		  
+							<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+						</div>
+							
+                    </div>
+            </div>
+
+            
+        </div>
+
+
+
+            </div>
+
+			<!-- above this-->
+
+			<div class="row">
+				<br />
+			</div>
+			<div class="row">
+				<br />
+			</div>
+		
+
+           
+	</div>
+</html>
