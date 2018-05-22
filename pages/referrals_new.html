@@ -711,7 +711,7 @@
                                                 </div>
                                                 <!--End runaway modal-->
 
-                                                <!--                                                                 Begin Placement Modal-->
+                                                <!--Begin Placement Modal-->
 
                                                 <div id="placementDetailsModal" class="modal fade">
                                                     <div class="modal-dialog modal-lg">
@@ -1330,464 +1330,862 @@
                                             
                                             <!--begin of PLC Tab-->
                                             
-                                            <div class="tab-pane" id="plc">                                              
-                                               
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
-                                                    </div> 
-                                                </div>
-                                                
-                                                 <table class="table table-hover table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>John Smith </td>
-                                                            <td>987654 </td>
-                                                            <td>06/01/2017</td>
-                                                            <td>10/01/2017</td>
-                                                            
-
-                                                    </tr>
-                                                   
-
-                                                <tr>
-                                                    <td>Jane Doe </td>
-                                                    <td>112233 </td>
-                                                    <td>10/01/2017 </td>
-                                                    <td>12/01/2017</td>
-                                                    																	
-                                                </tr>
-
-                                                </tbody>
-                                            </table>
-                                                
-                                                
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Adoptions/PLC Information</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <table class="table table-hover table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>View</th>
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>12345678 </td>
-                                                            <td>987654321A </td>
-                                                            <td>John Smith</td>
-                                                            <td>Adoption</td>
-                                                            <td>01/01/2016</td>																		
-                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
-
-                                                    </tr>
-                                                   
-
-                                                <tr>
-                                                    <td>987654321 </td>
-                                                    <td>112233445B </td>
-                                                    <td>Jane Doe </td>
-                                                    <td>PLC</td>
-                                                    <td>01/20/2014</td>
-                                                    <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
-                                                </tr>
-
-                                                </tbody>
-                                            </table>
-
-                                        <div class="row" id="adoptionDetails" style="display:none">
-                                            <div class="panel-heading">
-                                                <!-- Nav tabs -->
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="panel-body panel-tabs">               
-                                                <div class="tab-content">
-                                                    <div class="tab-pane active" id="">
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Child Details</h2>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="ddlCounty">State Name</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
-                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="casname">Provider Name </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="Hospital" disabled>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="txtFirstName">Voluntary Post-Agreement </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:30%;" value=" " disabled>
-                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6">
-                                                                <label for="casname">Agreement Entered </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value="04/10/2011" disabled>																			
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <label for="txtFirstName">Person who Signed Agreement </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="John Smith " disabled>																				
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row"><br></div>
-
-                                                        <div class="row">													
-                                                            <div class="col-xs-12">																			
-                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:50%;" value=" " disabled>		
-                                                            </div>													
-                                                        </div>
-
-                                                        <div class="row"><br><br></div>	
-
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Adoptive Parent Details</h2>
-                                                            </div> 
-                                                        </div>	
-
-                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                            <div class="people-entity victim">
-                                                                <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
-
-
-                                                               
-
-                                                                <p style="word-wrap: break-word;">DOB: 10/23/1968</p>
-
-                                                                <p style="word-wrap: break-word;">Sex: F</p>
-                                                                
-                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
-
-
-
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                            <div class="people-entity victim">
-                                                                <h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>
-
-
-                                                                
-
-                                                                <p style="word-wrap: break-word;">DOB: 11/21/1974</p>
-
-                                                                <p style="word-wrap: break-word;">Sex: M</p>
-                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
-
-
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-10" ng-repeat="Person in PersonList">
-                                                            <div class="row">													
-                                                            																			
-                                                                <label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
-                                                          													
-                                                        </div>
-                                                            <br>
-                                                            <div class="row">													
-                                                            																			
-                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
-                                                          													
-                                                        </div>
-                                                            
-                                                        </div>
-
-                                                        <div class="row"><br></div>																			
-
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Disruption/Dissolution</h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>Dissolution</td>
-                                                                    <td>Dissolution Resolved</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>01/01/2014 </td>
-                                                                    <td>Disruption</td>
-                                                                    <td>Disruption Resolved</td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
-
-                                                        <div class="row"><br></div>		
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Annual Contact</h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>Contact Sent</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>01/01/2014 </td>
-                                                                    <td>Contact Sent</td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
-
-                                                        <div class="row"><br></div>		
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Payment Detail </h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <!--  <th>Subsidy Start Date</th>
-<th>Subsidy End Date</th>
-<th>Rate Start Date</th>
-<th>Rate End Date</th> -->
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>$1050 </td>
-                                                                    <td>$35</td>
-                                                                    <!-- <td>12/01/2015 </td>
-<td>12/31/2015 </td>
-<td>12/01/2015 </td>
-<td>12/31/2015 </td> -->
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>$1050 </td>
-                                                                    <td>$35</td>
-                                                                    <!-- <td>12/01/2014 </td>
-<td>12/31/2014 </td>
-<td>12/01/2014 </td>
-<td>12/31/2014 </td> -->
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                    <td>12/01/2014 </td>
-                                                                    <td>12/31/2014 </td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>																
-
-
-
-
-
-
-
-                                        <!-- Begin modal container -->
-                                        <div id="runawayDetailsModal" class="modal fade">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title">Runaway Details</h4>
-                                                    </div>
-
-                                                    <div class="modal-body">
-
-                                                        <!-- <div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname">First Name</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname">Last Name</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
-<a href="#">  12345678
-</a>
-
-</div>
-</div>  
-</div> -->
-
-
-                                                        <!-- <div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
-
-</div>
-</div>   
-
-
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
-
-</div>
-</div> 
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
-
-</div>
-</div> 
-</div> -->
-
-
-                                                        <!-- <div class="row">
-<div class="col-xs-9">
-<div class="form-group">
-<label for="txtDateTimeReceived">Upload to NCMEC</label>
-<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
-
-</div>
-</div>   
-
-<div class="col-xs-9">
-<div class="form-group">
-<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
-<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
-
-</div>
-</div> 
-
-</div> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End of Modal --> 
-                                        <div class="modal-footer">
-
-                                            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
-                                            <!--a href="../pages/dashboard.html" -->                                        
-                                            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-
-                                            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
-                                        </div>
+                                    <div class="tab-pane" id="plc">      
+										<div class="panel panel-third">
+											<div class="panel-heading">
+												<!-- Nav tabs -->
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#preplc" data-toggle="tab">Pre-PLC</a></li>
+													<li><a href="#postplc" data-toggle="tab">Post-PLC</a></li>
+												</ul>
+											</div>
+
+											<div class="panel-body panel-tabs">
+												<!-- Tab panes -->
+												<div class="tab-content">
+													<div class="tab-pane" id="preplc">
+														
+															<div class="row">
+																<div class="col-lg-18">
+																	<h2 class="tab-heading">Termination of Parental Rights</h2>
+																</div> 
+															</div>
+															
+															 <table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>John Smith </td>
+																		<td>987654 </td>
+																		<td>06/01/2017</td>
+																		<td>10/01/2017</td>
+																</tr>
+																<tr>
+																	<td>Jane Doe </td>
+																	<td>112233 </td>
+																	<td>10/01/2017 </td>
+																	<td>12/01/2017</td>																
+																</tr>
+															</tbody>
+														</table>
+															
+															
+															<div class="row">
+																<div class="col-lg-18">
+																	<h2 class="tab-heading">Adoption Information</h2>
+																</div> 
+															</div>
+
+															<table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<!-- <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th> -->
+																		<th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>View</th>
+
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>12345678 </td>
+																		<td>987654321A </td>
+																		<td>John Smith</td>
+																		<!-- <td>Adoption</td> -->
+																		<td>01/01/2016</td>																		
+																		<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																</tr>
+															   
+
+															<tr>
+																<td>987654321 </td>
+																<td>112233445B </td>
+																<td>Jane Doe </td>
+																<!-- <td>PLC</td> -->
+																<td>01/20/2014</td>
+																<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+															</tr>
+
+															</tbody>
+														</table>
+
+														<div class="row" id="adoptionDetails" style="display:none">
+															<div class="panel-heading">
+																<!-- Nav tabs -->
+																<ul class="nav nav-tabs">
+																	<li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+																</ul>
+															</div>
+															<div class="panel-body panel-tabs">               
+																<div class="tab-content">
+																	<div class="tab-pane active" id="">
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Child Details</h2>
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																					<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																				</div>
+																			</div>
+																		</div>
+
+
+																		<div class="row">
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="casname">Provider Name </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+																					<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col-xs-12">
+																				<label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
+																			</div>
+
+																			<div class="col-xs-6">
+																				<label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+																			</div>
+																		</div>
+
+																		<div class="row"><br></div>
+
+																		<div class="row">													<div class="col-xs-8">
+																				<label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
+																			</div>
+																			<!-- <div class="col-xs-10">																			
+																				<label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
+																			</div>	 -->												
+																		</div>
+
+																		<div class="row"><br><br></div>	
+
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Adoptive Parent Details</h2>
+																			</div> 
+																		</div>	
+
+																		<!-- <div class="col-xs-4" ng-repeat="Person in PersonList">
+																			<div class="people-entity victim">
+																				<h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+																				<p style="word-wrap: break-word;">DOB: 10/23/1968</p>
+																				<p style="word-wrap: break-word;">Sex: F</p>																				
+																				<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+																			</div>
+																		</div>
+
+																		<div class="col-xs-4" ng-repeat="Person in PersonList">
+																			<div class="people-entity victim">
+																				<h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>																				
+																				<p style="word-wrap: break-word;">DOB: 11/21/1974</p>
+																				<p style="word-wrap: break-word;">Sex: M</p>
+																				<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+																			</div>
+																		</div> -->
+																		
+																		<div class="col-xs-10" ng-repeat="Person in PersonList">
+																			<div class="row">													
+																																						
+																				<label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+																															
+																			</div>
+																			<br>
+																			<div class="row">													
+																																						
+																				<label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
+																															
+																			</div>
+																			
+																		</div>
+
+																		<div class="row"><br></div>																			
+
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Disruption/Dissolution</h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>12/01/2015 </td>
+																					<td>Dissolution</td>
+																					<td>Dissolution Resolved</td>
+																				</tr>
+
+																				<tr>
+																					<td>01/01/2014 </td>
+																					<td>Disruption</td>
+																					<td>Disruption Resolved</td>
+																				</tr>	
+
+																			</tbody>
+																		</table>
+
+																		<div class="row"><br></div>	
+																		
+																		<!-- <div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Annual Contact</h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>12/01/2015 </td>
+																					<td>Contact Sent</td>
+																				</tr>
+
+																				<tr>
+																					<td>01/01/2014 </td>
+																					<td>Contact Sent</td>
+																				</tr>	
+
+																			</tbody>
+																		</table> -->
+
+																		<div class="row"><br></div>		
+																		
+																		<!-- <div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Payment Detail </h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					
+																					<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																				  
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																				</tr>
+
+																				<tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																			   
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2014 </td>
+																					<td>12/31/2014 </td>
+																				</tr>	
+
+																			</tbody>
+																		</table> -->
+
+																	</div>
+																</div>
+															</div>
+														</div>																
+
+														<!-- Begin modal container -->
+														<div id="runawayDetailsModal" class="modal fade">
+															<div class="modal-dialog modal-lg">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h4 class="modal-title">Runaway Details</h4>
+																	</div>
+
+																	<div class="modal-body">
+
+																			<!-- <div class="row">
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="casname">First Name</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+																				</div>
+																				</div>
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="casname">Last Name</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+																				</div>
+																				</div>
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+																				<a href="#">  12345678
+																				</a>
+
+																				</div>
+																				</div>  
+																				</div> -->
+
+
+																																		<!-- <div class="row">
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+																				</div>
+																				</div>   
+
+
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+																				</div>
+																				</div> 
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+																				</div>
+																				</div> 
+																				</div> -->
+
+
+																																		<!-- <div class="row">
+																				<div class="col-xs-9">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Upload to NCMEC</label>
+																				<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+																				</div>
+																				</div>   
+
+																				<div class="col-xs-9">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+																				<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+																				</div>
+																				</div> 
+
+																				</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- End of Modal --> 
+														<div class="modal-footer">
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- End of Pre-PLC --> 
+											
+											<!-- Begin Post PLC-->											
+											
+											<div class="panel-body panel-tabs">
+												<!-- Tab panes -->
+												<div class="tab-content">
+													<div class="tab-pane" id="postplc">
+														
+															<div class="row">
+																<div class="col-lg-18">
+																	<h2 class="tab-heading">Termination of Parental Rights</h2>
+																</div> 
+															</div>
+															
+															 <table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>John Smith </td>
+																		<td>987654 </td>
+																		<td>06/01/2017</td>
+																		<td>10/01/2017</td>
+																</tr>
+																<tr>
+																	<td>Jane Doe </td>
+																	<td>112233 </td>
+																	<td>10/01/2017 </td>
+																	<td>12/01/2017</td>																
+																</tr>
+															</tbody>
+														</table>
+															
+															
+															<div class="row">
+																<div class="col-lg-18">
+																	<h2 class="tab-heading">Adoption Information</h2>
+																</div> 
+															</div>
+
+															<table class="table table-hover table-striped">
+																<thead>
+																	<tr>
+																		<th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<!-- <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th> -->
+																		<th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>View</th>
+
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>12345678 </td>
+																		<td>987654321A </td>
+																		<td>John Smith</td>
+																		<!-- <td>Adoption</td> -->
+																		<td>01/01/2016</td>																		
+																		<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																</tr>
+															   
+
+															<tr>
+																<td>987654321 </td>
+																<td>112233445B </td>
+																<td>Jane Doe </td>
+																<!-- <td>PLC</td> -->
+																<td>01/20/2014</td>
+																<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+															</tr>
+
+															</tbody>
+														</table>
+
+														<div class="row" id="adoptionDetails" style="display:none">
+															<div class="panel-heading">
+																<!-- Nav tabs -->
+																<ul class="nav nav-tabs">
+																	<li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+																</ul>
+															</div>
+															<div class="panel-body panel-tabs">               
+																<div class="tab-content">
+																	<div class="tab-pane active" id="">
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Child Details</h2>
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																					<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																				</div>
+																			</div>
+																		</div>
+
+
+																		<div class="row">
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="casname">Provider Name </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+																				</div>
+																			</div>
+
+																			<div class="col-xs-6">
+																				<div class="form-group">
+																					<label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+																					<input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+																					<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col-xs-12">
+																				<label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
+																			</div>
+
+																			<div class="col-xs-6">
+																				<label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+																			</div>
+																		</div>
+
+																		<div class="row"><br></div>
+
+																		<div class="row">													<div class="col-xs-8">
+																				<label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
+																			</div>
+																			<!-- <div class="col-xs-10">																			
+																				<label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
+																			</div>	 -->												
+																		</div>
+
+																		<div class="row"><br><br></div>	
+
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Adoptive Parent Details</h2>
+																			</div> 
+																		</div>	
+
+																		<!-- <div class="col-xs-4" ng-repeat="Person in PersonList">
+																			<div class="people-entity victim">
+																				<h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+																				<p style="word-wrap: break-word;">DOB: 10/23/1968</p>
+																				<p style="word-wrap: break-word;">Sex: F</p>																				
+																				<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+																			</div>
+																		</div>
+
+																		<div class="col-xs-4" ng-repeat="Person in PersonList">
+																			<div class="people-entity victim">
+																				<h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>																				
+																				<p style="word-wrap: break-word;">DOB: 11/21/1974</p>
+																				<p style="word-wrap: break-word;">Sex: M</p>
+																				<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+																			</div>
+																		</div> -->
+																		
+																		<div class="col-xs-10" ng-repeat="Person in PersonList">
+																			<div class="row">													
+																																						
+																				<label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+																															
+																			</div>
+																			<br>
+																			<div class="row">													
+																																						
+																				<label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
+																															
+																			</div>
+																			
+																		</div>
+
+																		<div class="row"><br></div>																			
+
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Disruption/Dissolution</h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>12/01/2015 </td>
+																					<td>Dissolution</td>
+																					<td>Dissolution Resolved</td>
+																				</tr>
+
+																				<tr>
+																					<td>01/01/2014 </td>
+																					<td>Disruption</td>
+																					<td>Disruption Resolved</td>
+																				</tr>	
+
+																			</tbody>
+																		</table>
+
+																		<div class="row"><br></div>	
+																		
+																		<!-- <div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Annual Contact</h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>12/01/2015 </td>
+																					<td>Contact Sent</td>
+																				</tr>
+
+																				<tr>
+																					<td>01/01/2014 </td>
+																					<td>Contact Sent</td>
+																				</tr>	
+
+																			</tbody>
+																		</table> -->
+
+																		<div class="row"><br></div>		
+																		
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Subsidy Payment Detail </h2>
+																			</div> 
+																		</div>													
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>																					
+																					<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																				  
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																				</tr>
+
+																				<tr>
+																					<td>$1050 </td>
+																					<td>$35</td>
+																			   
+																					<td>12/01/2015 </td>
+																					<td>12/31/2015 </td>
+																					<td>12/01/2014 </td>
+																					<td>12/31/2014 </td>
+																				</tr>	
+
+																			</tbody>
+																		</table>
+
+																	</div>
+																</div>
+															</div>
+														</div>																
+
+														<!-- Begin modal container -->
+														<div id="runawayDetailsModal" class="modal fade">
+															<div class="modal-dialog modal-lg">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																		<h4 class="modal-title">Runaway Details</h4>
+																	</div>
+
+																	<div class="modal-body">
+
+																			<!-- <div class="row">
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="casname">First Name</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+																				</div>
+																				</div>
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="casname">Last Name</label>&nbsp;&nbsp;
+																				<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+																				</div>
+																				</div>
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+																				<a href="#">  12345678
+																				</a>
+
+																				</div>
+																				</div>  
+																				</div> -->
+
+
+																																		<!-- <div class="row">
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+																				</div>
+																				</div>   
+
+
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+																				</div>
+																				</div> 
+
+																				<div class="col-xs-6">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+																				<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+																				</div>
+																				</div> 
+																				</div> -->
+
+
+																																		<!-- <div class="row">
+																				<div class="col-xs-9">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Upload to NCMEC</label>
+																				<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+																				</div>
+																				</div>   
+
+																				<div class="col-xs-9">
+																				<div class="form-group">
+																				<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+																				<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+																				</div>
+																				</div> 
+
+																				</div> -->
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- End of Modal --> 
+														<div class="modal-footer">
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											
+											<!--End of Post PLC --> 
+											
+										</div>
                                     </div>
                                             
                                             
@@ -1795,470 +2193,862 @@
 
                                             <!-- Begin of Adoption Tab --> 
 
-                                            <div class="tab-pane" id="adopt">                                              
-                                               
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
-                                                    </div> 
-                                                </div>
-                                                
-                                                 <table class="table table-hover table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>John Smith </td>
-                                                            <td>987654 </td>
-                                                            <td>06/01/2017</td>
-                                                            <td>10/01/2017</td>
-                                                            
-
-                                                    </tr>
-                                                   
-
-                                                <tr>
-                                                    <td>Jane Doe </td>
-                                                    <td>112233 </td>
-                                                    <td>10/01/2017 </td>
-                                                    <td>12/01/2017</td>
-                                                    																	
-                                                </tr>
-
-                                                </tbody>
-                                            </table>
-                                                
-                                                
-                                                <div class="row">
-                                                    <div class="col-lg-18">
-                                                        <h2 class="tab-heading">Adoption Information</h2>
-                                                    </div> 
-                                                </div>
-
-                                                <table class="table table-hover table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            
-                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                            <th>View</th>
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>12345678 </td>
-                                                            <td>987654321A </td>
-                                                            <td>John Smith</td>
-                                                            
-                                                            <td>01/01/2016</td>																		
-                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
-
-                                                    </tr>
-                                                   
-
-                                                <tr>
-                                                    <td>987654321 </td>
-                                                    <td>112233445B </td>
-                                                    <td>Jane Doe </td>
-                                                    
-                                                    <td>01/20/2014</td>
-                                                    <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
-                                                </tr>
-
-                                                </tbody>
-                                            </table>
-
-                                        <div class="row" id="adoptionDetails1" style="display:none">
-                                            <div class="panel-heading">
-                                                <!-- Nav tabs -->
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="panel-body panel-tabs">               
-                                                <div class="tab-content">
-                                                    <div class="tab-pane active" id="">
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Child Details</h2>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="ddlCounty">State Name</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
-                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="casname">Provider Name </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                                <div class="form-group">
-                                                                    <label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
-                                                                    <input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
-                                                                    <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
-                                                            </div>
-
-<!--
-                                                            
--->
-
-                                                            <div class="col-xs-6">
-                                                                <label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row"><br></div>
-
-                                                        <div class="row">													<div class="col-xs-8">
-                                                                <label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
-                                                            </div>
-                                                            <div class="col-xs-10">																			
-                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
-                                                            </div>													
-                                                        </div>
-
-                                                        <div class="row"><br><br></div>	
-
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Adoptive Parent Details</h2>
-                                                            </div> 
-                                                        </div>	
-
-<!--
-                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                            <div class="people-entity victim">
-                                                                <h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
-
-
-                                                               
-
-                                                                <p style="word-wrap: break-word;">DOB: 10/23/1968</p>
-
-                                                                <p style="word-wrap: break-word;">Sex: F</p>
-                                                                
-                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
-
-
-
-
-                                                            </div>
-                                                        </div>
--->
-
-<!--
-                                                        <div class="col-xs-4" ng-repeat="Person in PersonList">
-                                                            <div class="people-entity victim">
-                                                                <h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>
-
-
-                                                                
-
-                                                                <p style="word-wrap: break-word;">DOB: 11/21/1974</p>
-
-                                                                <p style="word-wrap: break-word;">Sex: M</p>
-                                                                <p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
-
-
-
-
-                                                            </div>
-                                                        </div>
--->
-                                                        <div class="col-xs-10" ng-repeat="Person in PersonList">
-                                                            <div class="row">													
-                                                            																			
-                                                                <label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
-                                                          													
-                                                        </div>
-                                                            <br>
-<!--
-                                                            <div class="row">													
-                                                            																			
-                                                                <label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
-                                                                <input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
-                                                          													
-                                                        </div>
--->
-                                                            
-                                                        </div>
-
-                                                        <div class="row"><br></div>																			
-
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Disruption/Dissolution</h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>Dissolution</td>
-                                                                    <td>Dissolution Resolved</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>01/01/2014 </td>
-                                                                    <td>Disruption</td>
-                                                                    <td>Disruption Resolved</td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
-
-                                                        <div class="row"><br></div>		
-<!--
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Annual Contact</h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>Contact Sent</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>01/01/2014 </td>
-                                                                    <td>Contact Sent</td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
--->
-
-                                                        <div class="row"><br></div>		
-<!--
-                                                        <div class="row">
-                                                            <div class="col-lg-18">
-                                                                <h2 class="tab-heading">Payment Detail </h2>
-                                                            </div> 
-                                                        </div>													
-
-                                                        <table class="table table-hover table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                 
-                                                                    <th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                    <th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>$1050 </td>
-                                                                    <td>$35</td>
-                                                                   
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>$1050 </td>
-                                                                    <td>$35</td>
-                                                                  
-                                                                    <td>12/01/2015 </td>
-                                                                    <td>12/31/2015 </td>
-                                                                    <td>12/01/2014 </td>
-                                                                    <td>12/31/2014 </td>
-                                                                </tr>	
-
-                                                            </tbody>
-                                                        </table>
--->
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>																
-
-
-
-
-
-
-
-                                        <!-- Begin modal container -->
-                                        <div id="runawayDetailsModal" class="modal fade">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title">Runaway Details</h4>
-                                                    </div>
-
-                                                    <div class="modal-body">
-
-                                                        <!-- <div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname">First Name</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="casname">Last Name</label>&nbsp;&nbsp;
-<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
-</div>
-</div>
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
-<a href="#">  12345678
-</a>
-
-</div>
-</div>  
-</div> -->
-
-
-                                                        <!-- <div class="row">
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
-
-</div>
-</div>   
-
-
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
-
-</div>
-</div> 
-
-<div class="col-xs-6">
-<div class="form-group">
-<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
-<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
-
-</div>
-</div> 
-</div> -->
-
-
-                                                        <!-- <div class="row">
-<div class="col-xs-9">
-<div class="form-group">
-<label for="txtDateTimeReceived">Upload to NCMEC</label>
-<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
-
-</div>
-</div>   
-
-<div class="col-xs-9">
-<div class="form-group">
-<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
-<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
-
-</div>
-</div> 
-
-</div> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End of Modal --> 
-                                        <div class="modal-footer">
-
-                                            <!-- <a href="Javascript:void(0);" class="btn btn-inline btn-sm" title="Edit Role" ng-click="editPersonRole(Person, $index)" ng-show="!ReferralReadOnly"><em class="glyphicon glyphicon-wrench"></em></a> -->
-                                            <!--a href="../pages/dashboard.html" -->                                        
-                                            <!-- <button type="button" class="btn btn-internal btn-primary" data-toggle="modal" href ng-click="InitiateReevaluation(true)" ng-disabled="DisableInitReevalbtn" tabindex="0">Cancel</button> -->
-
-                                            <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
-                                        </div>
+                                    <div class="tab-pane" id="adopt"> 
+										<div class="panel panel-third">
+											<div class="panel-heading">
+												<!-- Nav tabs -->
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#preadoption" data-toggle="tab">Pre-Adoption</a></li>
+													<li><a href="#postadoption" data-toggle="tab">Post-Adoption</a></li>
+												</ul>
+											</div>
+
+											<div class="panel-body panel-tabs">
+												<!-- Tab panes -->
+												<div class="tab-content">
+													<div class="tab-pane" id="preadoption">
+														
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Termination of Parental Rights</h2>
+																			</div> 
+																		</div>
+																		
+																		 <table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>John Smith </td>
+																					<td>987654 </td>
+																					<td>06/01/2017</td>
+																					<td>10/01/2017</td>
+																			</tr>
+																		<tr>
+																			<td>Jane Doe </td>
+																			<td>112233 </td>
+																			<td>10/01/2017 </td>
+																			<td>12/01/2017</td>                                                																	
+																		</tr>
+
+																		</tbody>
+																	</table>
+																		
+																		<div class="row">
+																			<div class="col-lg-18">
+																				<h2 class="tab-heading">Adoption Information</h2>
+																			</div> 
+																		</div>
+
+																		<table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					
+																					<th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					<th>View</th>
+
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>12345678 </td>
+																					<td>987654321A </td>
+																					<td>John Smith</td>
+																					
+																					<td>01/01/2016</td>																		
+																					<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																			</tr>
+																		   
+
+																		<tr>
+																			<td>987654321 </td>
+																			<td>112233445B </td>
+																			<td>Jane Doe </td>
+																			
+																			<td>01/20/2014</td>
+																			<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails1')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+																		</tr>
+
+																		</tbody>
+																	</table>
+
+																	<div class="row" id="adoptionDetails1" style="display:none">
+																		<div class="panel-heading">
+																			<!-- Nav tabs -->
+																			<ul class="nav nav-tabs">
+																				<li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+																			</ul>
+																		</div>
+																		<div class="panel-body panel-tabs">               
+																			<div class="tab-content">
+																				<div class="tab-pane active" id="">
+																					<div class="row">
+																						<div class="col-lg-18">
+																							<h2 class="tab-heading">Child Details</h2>
+																						</div>
+																					</div>
+
+																					<div class="row">
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																								<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																							</div>
+																						</div>
+																					</div>
+
+
+																					<div class="row">
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="casname">Provider Name </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+																							</div>
+																						</div>
+
+																						<div class="col-xs-6">
+																							<div class="form-group">
+																								<label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+																								<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																							</div>
+																						</div>
+																					</div>
+
+																					<div class="row">
+																						<div class="col-xs-12">
+																							<label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
+																						</div>
+
+																						<div class="col-xs-6">
+																							<label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+																						</div>
+																					</div>
+
+																					<div class="row"><br></div>
+
+																					<div class="row">													<div class="col-xs-8">
+																							<label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
+																						</div>
+																						<!-- <div class="col-xs-10">																			
+																							<label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
+																						</div>	 -->												
+																					</div>
+
+																					<div class="row"><br><br></div>	
+
+																					<div class="row">
+																						<div class="col-lg-18">
+																							<h2 class="tab-heading">Adoptive Parent Details</h2>
+																						</div> 
+																					</div>	
+
+																					<div class="col-xs-10" ng-repeat="Person in PersonList">
+																						<div class="row">													
+																																									
+																							<label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+																																		
+																						</div>
+																						<br>
+																					</div>
+
+																					<div class="row"><br></div>																			
+
+																					<div class="row">
+																						<div class="col-lg-18">
+																							<h2 class="tab-heading">Disruption/Dissolution</h2>
+																						</div> 
+																					</div>													
+
+																					<table class="table table-hover table-striped">
+																						<thead>
+																							<tr>
+																								<th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								<th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								<th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																							</tr>
+																						</thead>
+																						<tbody>
+																							<tr>
+																								<td>12/01/2015 </td>
+																								<td>Dissolution</td>
+																								<td>Dissolution Resolved</td>
+																							</tr>
+
+																							<tr>
+																								<td>01/01/2014 </td>
+																								<td>Disruption</td>
+																								<td>Disruption Resolved</td>
+																							</tr>	
+
+																						</tbody>
+																					</table>
+
+																					<div class="row"><br></div>		
+								<!--
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Annual Contact</h2>
+																							</div> 
+																						</div>													
+
+																						<table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>12/01/2015 </td>
+																									<td>Contact Sent</td>
+																								</tr>
+
+																								<tr>
+																									<td>01/01/2014 </td>
+																									<td>Contact Sent</td>
+																								</tr>	
+
+																							</tbody>
+																						</table>
+								-->
+
+																					<div class="row"><br></div>		
+								<!--
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Payment Detail </h2>
+																							</div> 
+																						</div>													
+
+																						<table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								 
+																									<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																								   
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																								</tr>
+
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																								  
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2014 </td>
+																									<td>12/31/2014 </td>
+																								</tr>	
+
+																							</tbody>
+																						</table>
+								-->
+
+																				</div>
+																			</div>
+																		</div>
+																	</div>																
+
+																	<!-- Begin modal container -->
+																	<div id="runawayDetailsModal" class="modal fade">
+																		<div class="modal-dialog modal-lg">
+																			<div class="modal-content">
+																				<div class="modal-header">
+																					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																					<h4 class="modal-title">Runaway Details</h4>
+																				</div>
+
+																				<div class="modal-body">
+
+																					<!-- <div class="row">
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="casname">First Name</label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+																							</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="casname">Last Name</label>&nbsp;&nbsp;
+																							<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+																							</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+																							<a href="#">  12345678
+																							</a>
+
+																							</div>
+																							</div>  
+																							</div> -->
+
+
+																																					<!-- <div class="row">
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+																							<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+																							</div>
+																							</div>   
+
+
+
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+																							<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+																							</div>
+																							</div> 
+
+																							<div class="col-xs-6">
+																							<div class="form-group">
+																							<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+																							<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+																							</div>
+																							</div> 
+																							</div> -->
+
+
+																																					<!-- <div class="row">
+																							<div class="col-xs-9">
+																							<div class="form-group">
+																							<label for="txtDateTimeReceived">Upload to NCMEC</label>
+																							<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+																							</div>
+																							</div>   
+
+																							<div class="col-xs-9">
+																							<div class="form-group">
+																							<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+																							<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+																							</div>
+																							</div> 
+
+																							</div> -->
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																					<!-- End of Modal --> 
+																	<div class="modal-footer">
+
+																		
+																		<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+																	</div>
+													</div>
+													<!-- End of Pre-Adoption-->
+													
+													<!-- Begin of Post Adoption --> 
+													
+													<div class="panel-body panel-tabs">
+																<!-- Tab panes -->
+																<div class="tab-content">
+																	<div class="tab-pane" id="postadoption">
+																		
+																			<div class="row">
+																				<div class="col-lg-18">
+																					<h2 class="tab-heading">Termination of Parental Rights</h2>
+																				</div> 
+																			</div>
+																			
+																			 <table class="table table-hover table-striped">
+																				<thead>
+																					<tr>
+																						<th>Parent Name <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>MCI ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>John Smith </td>
+																						<td>987654 </td>
+																						<td>06/01/2017</td>
+																						<td>10/01/2017</td>
+																				</tr>
+																				<tr>
+																					<td>Jane Doe </td>
+																					<td>112233 </td>
+																					<td>10/01/2017 </td>
+																					<td>12/01/2017</td>																
+																				</tr>
+																			</tbody>
+																		</table>
+																			
+																			
+																			<div class="row">
+																				<div class="col-lg-18">
+																					<h2 class="tab-heading">Adoption Information</h2>
+																				</div> 
+																			</div>
+
+																			<table class="table table-hover table-striped">
+																				<thead>
+																					<tr>
+																						<th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<!-- <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th> -->
+																						<th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																						<th>View</th>
+
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>12345678 </td>
+																						<td>987654321A </td>
+																						<td>John Smith</td>
+																						<!-- <td>Adoption</td> -->
+																						<td>01/01/2016</td>																		
+																						<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+																				</tr>
+																			   
+
+																			<tr>
+																				<td>987654321 </td>
+																				<td>112233445B </td>
+																				<td>Jane Doe </td>
+																				<!-- <td>PLC</td> -->
+																				<td>01/20/2014</td>
+																				<td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('adoptionDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+																			</tr>
+
+																			</tbody>
+																		</table>
+
+																		<div class="row" id="adoptionDetails" style="display:none">
+																			<div class="panel-heading">
+																				<!-- Nav tabs -->
+																				<ul class="nav nav-tabs">
+																					<li class="active"><a href="#recordType" data-toggle="tab">Adoption Information</a></li>
+																				</ul>
+																			</div>
+																			<div class="panel-body panel-tabs">               
+																				<div class="tab-content">
+																					<div class="tab-pane active" id="">
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Child Details</h2>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+																								</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+																								</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+																									<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																								</div>
+																							</div>
+																						</div>
+
+
+																						<div class="row">
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="casname">Provider Name </label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+																								</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+																								</div>
+																							</div>
+
+																							<div class="col-xs-6">
+																								<div class="form-group">
+																									<label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+																									<!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+																								</div>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-xs-12">
+																								<label for="casname">Has the State Agency determined that the Child has Special Needs?</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:10%;" value="Yes" disabled>																			
+																							</div>
+
+																							<div class="col-xs-6">
+																								<label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:30%;" value="12/01/2015 " disabled>																	
+																							</div>
+																						</div>
+
+																						<div class="row"><br></div>
+
+																						<div class="row">													<div class="col-xs-8">
+																								<label for="txtFirstName">Primary Basis for Special Needs, if applicable</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:30%;" value="Age " disabled>																				
+																							</div>
+																							<!-- <div class="col-xs-10">																			
+																								<label for="ddlCounty">Type of Adoption Assistance Agreement </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:30%;" value=" " disabled>		
+																							</div>	 -->												
+																						</div>
+
+																						<div class="row"><br><br></div>	
+
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Adoptive Parent Details</h2>
+																							</div> 
+																						</div>	
+
+																						<!-- <div class="col-xs-4" ng-repeat="Person in PersonList">
+																							<div class="people-entity victim">
+																								<h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+																								<p style="word-wrap: break-word;">DOB: 10/23/1968</p>
+																								<p style="word-wrap: break-word;">Sex: F</p>																				
+																								<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+																							</div>
+																						</div>
+
+																						<div class="col-xs-4" ng-repeat="Person in PersonList">
+																							<div class="people-entity victim">
+																								<h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>																				
+																								<p style="word-wrap: break-word;">DOB: 11/21/1974</p>
+																								<p style="word-wrap: break-word;">Sex: M</p>
+																								<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+																							</div>
+																						</div> -->
+																						
+																						<div class="col-xs-10" ng-repeat="Person in PersonList">
+																							<div class="row">													
+																																										
+																								<label for="ddlCounty">Relationship of Adoptive Parent(s) to Child </label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:30%;" value="Step-parent" disabled>		
+																																			
+																							</div>
+																							<br>
+																							<div class="row">													
+																																										
+																								<label for="ddlCounty">Type of Adoption Assistance Agreement Adoptive Family Structure</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:20%;" value="Married Couple" disabled>		
+																																			
+																							</div>
+																							
+																						</div>
+
+																						<div class="row"><br></div>																			
+
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Disruption/Dissolution</h2>
+																							</div> 
+																						</div>													
+
+																						<table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Disruption/Dissolution Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Type<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Reason<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>12/01/2015 </td>
+																									<td>Dissolution</td>
+																									<td>Dissolution Resolved</td>
+																								</tr>
+
+																								<tr>
+																									<td>01/01/2014 </td>
+																									<td>Disruption</td>
+																									<td>Disruption Resolved</td>
+																								</tr>	
+
+																							</tbody>
+																						</table>
+
+																						<div class="row"><br></div>	
+																						
+																						<!-- <div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Annual Contact</h2>
+																							</div> 
+																						</div>													
+
+																						<table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>12/01/2015 </td>
+																									<td>Contact Sent</td>
+																								</tr>
+
+																								<tr>
+																									<td>01/01/2014 </td>
+																									<td>Contact Sent</td>
+																								</tr>	
+
+																							</tbody>
+																						</table> -->
+
+																						<div class="row"><br></div>		
+																						
+																						<div class="row">
+																							<div class="col-lg-18">
+																								<h2 class="tab-heading">Subsidy Payment Detail </h2>
+																							</div> 
+																						</div>	
+
+																						<div class="row">
+																							<div class="col-xs-9">
+																								<div class="form-group">
+																									<label for="casname">Primary Type of Adoption Assistance Agreement  </label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="Federal " disabled>
+																								</div>
+																							</div>
+
+																							<div class="col-xs-9">
+																								<div class="form-group">
+																									<label for="ddlCounty">Agreement Effective Date</label>&nbsp;&nbsp;
+																									<input type="text" id="casname" style="max-width:50%;" value="05/08/2018 " disabled>
+
+																								</div>
+																							</div>
+
+																						</div>
+																						<div class="row"><br></div>	
+																						<!-- <table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									
+																									<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																								  
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																								</tr>
+
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																							   
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2014 </td>
+																									<td>12/31/2014 </td>
+																								</tr>	
+
+																							</tbody>
+																						</table> -->
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>																
+
+																		<!-- Begin modal container -->
+																		<div id="runawayDetailsModal" class="modal fade">
+																			<div class="modal-dialog modal-lg">
+																				<div class="modal-content">
+																					<div class="modal-header">
+																						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																						<h4 class="modal-title">Runaway Details</h4>
+																					</div>
+
+																					<div class="modal-body">
+
+																							<!-- <div class="row">
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="casname">First Name</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+																								</div>
+																								</div>
+
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="casname">Last Name</label>&nbsp;&nbsp;
+																								<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+																								</div>
+																								</div>
+
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+																								<a href="#">  12345678
+																								</a>
+
+																								</div>
+																								</div>  
+																								</div> -->
+
+
+																																						<!-- <div class="row">
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+																								</div>
+																								</div>   
+
+
+
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+																								</div>
+																								</div> 
+
+																								<div class="col-xs-6">
+																								<div class="form-group">
+																								<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+																								<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+																								</div>
+																								</div> 
+																								</div> -->
+
+
+																																						<!-- <div class="row">
+																								<div class="col-xs-9">
+																								<div class="form-group">
+																								<label for="txtDateTimeReceived">Upload to NCMEC</label>
+																								<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+																								</div>
+																								</div>   
+
+																								<div class="col-xs-9">
+																								<div class="form-group">
+																								<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+																								<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+																								</div>
+																								</div> 
+
+																								</div> -->
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<!-- End of Modal --> 
+																		<div class="modal-footer">
+																			<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+																		</div>
+																	</div>
+																</div>
+													</div>
+													
+													
+													<!-- End of Post Adoption --> 
+													
+												</div>
+											</div>
+													
+										</div>
                                     </div>
-
-
                                     <!-- End of Adoption Tab --> 
 
 
@@ -4181,7 +4971,7 @@
 																	<th>Court Ordered Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																	<th>Adjudicated Dependent?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																	<th>Court Ordered Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																	<th>Adjudicated Dependent?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																	<th>Adjudicated Delinquent?<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																	<th>Court Ordered Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																	<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
                                                                     <th>End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
@@ -4193,7 +4983,7 @@
                                                                 <tr>
                                                                     <td>Yes</td>
                                                                     <td>Formal</td>
-																	<td>05/15/2108</td>
+																	<td>05/15/2018</td>
                                                                     <td> </td>
 																	<td> </td>
                                                                     <td>Yes</td>
@@ -4751,7 +5541,7 @@
 														<table class="table table-hover table-striped">
 																<thead>
 																	<tr>
-																		<th>Has child been Clinically Diagnosed as having a disability?	Last Updated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																		<th>Has child been Clinically Diagnosed as having a disability?	<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																		<th>Last Updated Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																	</tr>
 																</thead>
@@ -4828,38 +5618,38 @@
 															</div> 
 														</div>
 														
-														<table class="table table-hover table-striped">
-																<thead>
-																	<tr>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-E (FOSTER CARE">Foster Care Element #59</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-E (ADOPTION SUBSIDY)">Foster Care Element #60</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-A (AID TO FAMILIES WITH DEPENDENT CHILDREN)">Foster Care Element #61</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-D (CHILD SUPPORT)">Foster Care Element #62</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE XIX (MEDICAID)">Foster Care Element #63</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: SSI OR OTHER SOCIAL SECURITY BENEFITS">Foster Care Element #64</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: NONE OF THE ABOVE">Foster Care Element #65</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th> AFCARS Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																		<th> AFCARS Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
-																	
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr>
-																		<td>  </td>
-																		<td> </td>
-																		<td>  </td>
-																		<td> </td>
-																		<td>  </td>
-																		<td> </td>
-																		<td>  </td>
-																		<td> </td>
-																		<td>  </td>
+														<div class="row row-padding">
+															<table class="table table-hover table-striped">
+																	<thead>
+																		<tr>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-E (FOSTER CARE">Foster Care Element #59</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-E (ADOPTION SUBSIDY)">Foster Care Element #60</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-A (AID TO FAMILIES WITH DEPENDENT CHILDREN)">Foster Care Element #61</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE IV-D (CHILD SUPPORT)">Foster Care Element #62</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: TITLE XIX (MEDICAID)">Foster Care Element #63</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: SSI OR OTHER SOCIAL SECURITY BENEFITS">Foster Care Element #64</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th><span title="SOURCE(S) OF FEDERAL SUPPORT/ASSISTANCE FOR CHILD: NONE OF THE ABOVE">Foster Care Element #65</span><a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th> AFCARS Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																			<th> AFCARS Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
 																		
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td> Yes </td>
+																			<td>No </td>
+																			<td>  No</td>
+																			<td>No </td>
+																			<td> No </td>
+																			<td>Yes </td>
+																			<td> Yes</td>
+																			<td>10/17/2016</td>
+																			<td> 09/24/2017 </td>
+																		</tr>
 																		
-																	</tr>
-																	
-																</tbody>
-														</table>
+																	</tbody>
+															</table>
+														</div>
 														<br>
     
                                                 </div>
