@@ -16,7 +16,7 @@
         }
     </script>
     
-	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
   
 		
                 
@@ -24,7 +24,7 @@
 					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
                 </div>
               <!-- below this-->
-            <div class="panel panel-secondary with-header-info">
+    <div class="panel panel-secondary with-header-info">
         <!-- Header Tabs -->
         <div class="panel-heading">
             <!-- Nav tabs -->
@@ -33,112 +33,477 @@
         <div class="panel-body panel-tabs">
             <div class="tab-content">
                 <div class="tab-pane active" id="clearanceInformation">
-                    <div class="row">
-                        <div class="col-lg-18">
-                            <h2 class="tab-heading">Case Overview: Insights</h2>
-                        </div>
-                    </div>
-                    
-                  <center>  <img src="../images/map.png" style="width: 100%"> </center>
-                    
+				
+					<div class="row">
+						<div class="col-lg-18">
+		   
+								<div class="panel panel-third">
+									<div class="panel-heading">                                       
+										<ul class="nav nav-tabs">
+											<li id="t1" class="active"><a href="#caseplan" data-toggle="tab" onclick="visibleFn('noneClicked')">Case Plan Completion</a></li>
+											<li id="t2"><a href="#planprogress" data-toggle="tab" onclick="visibleFn('partClicked')">Plan Progress</a></li>
+											<li id="t3"><a href="#placementremoval" data-toggle="tab" onclick="visibleFn('noneClicked')">Placement/Removal</a></li> 
+											<li id="t4"><a href="#dichargeadoption" data-toggle="tab" onclick="visibleFn('noneClicked')">Discharge/Adoption</a></li>
 
-                <br>
-                
-                <div class="row">
-								<div class="col-lg-18">
-									<h2 class="tab-heading">Case Records</h2>
+										</ul>
+									</div>
+				
+									<div class="panel-body panel-tabs">
+											
+											<div class="tab-content">
 
-								</div>
-							</div>
-                
-                <div class="row row-padding">
-								<table class="table table-hover table-striped">
-											<thead>
-												<tr> 
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case ID</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Created Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Status</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-                                                    <th>
-														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Fiscal Status</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderConfidential" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderInvestigationOutcome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Confidential </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderCounty" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderWorkFlowStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">County </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
-													</th>
-												</tr>
-											</thead>
+												<div class="tab-pane" id="caseplan">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Case Plan Completion Overview: Insights</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/map.png" style="width: 100%"> </center>										
+
+													<br>
 										
-											<tr>
-												<td>
-													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="vertical_2.html">7426191</a>
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+														<div class="row">
+															<div class="col-lg-18">
+																<h2 class="tab-heading">Case Records</h2>
+
+															</div>
+														</div>
+										
+														<div class="row row-padding">
+																		<table class="table table-hover table-striped">
+																					<thead>
+																						<tr> 
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">CWIS Case ID</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCounty" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderWorkFlowStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">County </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Open Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Missing Plan</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																						</tr>
+																					</thead>
+																				
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="vertical_2.html">141903</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">98237</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Bob Williams </span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">5/9/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">FSP</span>
+																						</td>
+																					
+																					</tr>
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">147940</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">78324</span>
+																						</td>
+																						
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">John Smith</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">6/1/2017</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">CPP</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">147941</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">12354</span>
+																						</td>
+																						
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Mike Kimble</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">4/3/2016</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Concurrent Permanency Goal</span>
+																						</td>
+																					</tr>
+																		</table>
+														</div>
 													
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">John Smith Case</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/01/2010</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
-												</td>
-                                                <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Active</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCounty">Dauphin</span>
-												</td>
-											</tr>
-                                    <tr>
-												<td>
-													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">7352387</a>
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="planprogress">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Plan Progress Overview: Insights</h2>
+														</div>
+													</div>
 													
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jane Smith Case</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/01/2010</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
-												</td>
-                                                <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Inactive</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCounty">Dauphin</span>
-												</td>
-											</tr>
-								</table>
-							</div>
-							
-							 <div class="modal-footer">		  
-								<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
-							</div>
-							
-                    </div>
+													<center>  <img src="../images/Plan_Progress_Data_Insight.png" style="width: 100%"> </center>										
+
+													<br>
+										
+														<div class="row">
+															<div class="col-lg-18">
+																<h2 class="tab-heading">Case Records</h2>
+
+															</div>
+														</div>
+										
+														<div class="row row-padding">
+																		<table class="table table-hover table-striped">
+																					<thead>
+																						<tr> 
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">CWIS Case ID</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCounty" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderWorkFlowStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">County </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCounty" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderWorkFlowStep&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">MCI </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Child Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Status</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Service Category</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Case Opened Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							
+																						</tr>
+																					</thead>
+																				
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="vertical_2.html">141903</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Allegheny</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">141903</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">James Smith</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open/Active</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">In-Home</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCounty">05/02/2018</span>
+																						</td>
+																					</tr>
+																				<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">7352387</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Jane Smith Case</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">01/01/2010</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Inactive</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCounty">Dauphin</span>
+																						</td>
+																					</tr>
+																		</table>
+														</div>
+													
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="placementremoval">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Placement/Removal Overview: Insights</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/Removal_Placement_Data_Insight.png" style="width: 100%"> </center>										
+
+													<br>
+										
+														<div class="row">
+															<div class="col-lg-18">
+																<h2 class="tab-heading">Case Records</h2>
+
+															</div>
+														</div>
+										
+														<div class="row row-padding">
+																		<table class="table table-hover table-striped">
+																					<thead>
+																						<tr> 
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">CWIS Case ID</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">MCI</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Child Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Placement Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Placement Setting</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							
+																						</tr>
+																					</thead>
+																				
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="vertical_2.html">141903</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																																												<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">98237</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Bob Williams </span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">05/02/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Foster Care</span>
+																						</td>
+																						
+																					</tr>
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">147940</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">78324</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">John Smith</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">05/01/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Pre-Adoption Home</span>
+																						</td>
+																						
+																					</tr>
+																						<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">147941</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">12354</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Mike Kimble </span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">05/05/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Group Home</span>
+																						</td>
+																						
+																					</tr>
+																		</table>
+														</div>
+													
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="dichargeadoption">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Discharge/Adoption Overview: Insights</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/Discharge_Adoption_Data_Insight.png" style="width: 100%"> </center>										
+
+													<br>
+										
+														<div class="row">
+															<div class="col-lg-18">
+																<h2 class="tab-heading">Case Records</h2>
+
+															</div>
+														</div>
+										
+														<div class="row row-padding">
+																		<table class="table table-hover table-striped">
+																					<thead>
+																						<tr> 
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderReferralID" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralID&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">CWIS Case ID</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">MCI</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseName" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralType&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Child Name</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Discharge Date</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Discharge Reason</a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>																							
+																							<th>
+																								<a id="MainContent_rptSearchResults_lnkHeaderConfidential" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderInvestigationOutcome&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Agreement Date </a><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em>
+																							</th>
+																						</tr>
+																					</thead>
+																				
+																					<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="vertical_2.html">141903</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">98237</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Bob Williams</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">05/02/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Reunification</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">05/02/2018</span>
+																						</td>
+																					</tr>
+																				<tr>
+																						<td>
+																							<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">147940</a>
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
+																							<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
+																							
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseName">78324</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">John Smith</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">05/01/2018</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderStatus">Adoption</span>
+																						</td>
+																						<td>
+																							<span id="MainContent_rptSearchResults_lnkHeaderConfidential">05/01/2018</span>
+																						</td>
+																					</tr>
+																		</table>
+														</div>
+													
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+											</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
             </div>
 
             
@@ -146,7 +511,7 @@
 
 
 
-            </div>
+    </div>
 
 			<!-- above this-->
 
@@ -159,5 +524,5 @@
 		
 
            
-	</div>
+</div>
 </html>
