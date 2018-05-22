@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<!-- JavaScripts that loads the template system. -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/template.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="../js/bootstrap-multiselect.js"></script>
+	<!-- Body content goes here. -->
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>
+    
+	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+  
+		
+                
+                <div id="validationControl">
+					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
+                </div>
+              <!-- below this-->
+            <div class="panel panel-secondary with-header-info">
+        <!-- Header Tabs -->
+        <div class="panel-heading">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a id="MainContent_lnkIdentitySearch" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$lnkIdentitySearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Restrictive Placement Report</a></li>
+            </ul>
+        </div>
+        <div class="panel-body panel-tabs">
+            <div class="tab-content">
+                
+                <div class="tab-pane active" id="clearanceInformation">
+                    
+                        
+                    <div class="row">
+                      <div class="col-lg-18">
+                            <h2 class="tab-heading">Search Criteria</h2>                        
+                       </div> 
+                    </div> 
+                    <div class ="row row-padding ">
+                        <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="ddlCounty">Reporting Period    &nbsp;&nbsp;</label>
+                                        <input type="text" id="txtDateTimeReceived" value="01/01/2018" style="width: 60%; background-color: white">
+                                        <a href="#1" class="icon-date-time"></a>
+                                    </div>
+                                </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                       
+                                        <input type="text" id="txtDateTimeReceived" value="05/05/2018" style="width: 100%; background-color: white">
+                                        <a href="#1" class="icon-date-time"></a>
+                                    </div>
+                        </div>
+                   </div>
+                   <div class ="row row-padding">
+                      <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Region</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlReferralType" title="ReferralType"><select name="ctl00$MainContent$ddlReferralType$ddlDropDownList" id="MainContent_ddlReferralType_ddlDropDownList">
+	<option value="-1">All</option>
+	<option value="CMP">Complaint</option>
+	
+
+</select></span>
+                                  
+                           </div>
+                       </div>
+                       <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>County</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlReferralType" title="ReferralType"><select name="ctl00$MainContent$ddlReferralType$ddlDropDownList" id="MainContent_ddlReferralType_ddlDropDownList">
+	<option value="-1">All</option>
+	<option value="CMP">Complaint</option>
+	
+
+</select></span>
+                                  
+                           </div>
+                       </div>
+                  </div>
+                   <div class ="row row-padding">
+                      <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Class Size</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlPrimaryRecipient" title="PrimaryRecipient"><select name="ctl00$MainContent$ddlPrimaryRecipient$ddlDropDownList" id="MainContent_ddlPrimaryRecipient_ddlDropDownList">
+	<option value="-1">All</option>
+	<option value="01">Adams</option>
+	<option value="02">Allegheny</option>
+	<option value="03">Armstrong</option>
+	<option value="04">Beaver</option>
+	<option value="05">Bedford</option>
+	<option value="06">Berks</option>
+	<option value="07">Blair</option>
+
+
+</select></span>
+                                    
+                           </div>
+                       </div>
+                       <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Round Table</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlPrimaryRecipient" title="PrimaryRecipient"><select name="ctl00$MainContent$ddlPrimaryRecipient$ddlDropDownList" id="MainContent_ddlPrimaryRecipient_ddlDropDownList">
+	<option value="-1">All</option>
+	<option value="01">Adams</option>
+	<option value="02">Allegheny</option>
+	<option value="03">Armstrong</option>
+	<option value="04">Beaver</option>
+	<option value="05">Bedford</option>
+	<option value="06">Berks</option>
+	<option value="07">Blair</option>
+
+</select></span>
+                                    
+                           </div>
+                       </div>
+                       
+                       
+                         <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Rural/Urban</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlPrimaryRecipient" title="PrimaryRecipient"><select name="ctl00$MainContent$ddlPrimaryRecipient$ddlDropDownList" id="MainContent_ddlPrimaryRecipient_ddlDropDownList">
+<option value="-1">All</option>
+	<option value="01">Adams</option>
+	<option value="02">Allegheny</option>
+	<option value="03">Armstrong</option>
+	<option value="04">Beaver</option>
+	<option value="05">Bedford</option>
+	<option value="06">Berks</option>
+	<option value="07">Blair</option>
+
+</select></span>
+                                    
+                           </div>
+                       </div>
+                  </div>
+
+<!--
+                    <div class ="row row-padding">
+                      <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Service Type</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlPrimaryRecipient" title="PrimaryRecipient"><select name="ctl00$MainContent$ddlPrimaryRecipient$ddlDropDownList" id="MainContent_ddlPrimaryRecipient_ddlDropDownList">
+<option value="-1">All</option>
+	<option value="01">Adams</option>
+	<option value="02">Allegheny</option>
+	<option value="03">Armstrong</option>
+	<option value="04">Beaver</option>
+	<option value="05">Bedford</option>
+	<option value="06">Berks</option>
+	<option value="07">Blair</option>
+
+</select></span>
+                                    
+                           </div>
+                       </div>
+                       
+                       
+                         <div class="col-lg-2">
+                          <div class="form-group">
+                              <label>Service Category</label>
+                          </div>
+                       </div>
+                       <div class="col-lg-4">
+                           <div class="form-group">
+                               <span id="MainContent_ddlPrimaryRecipient" title="PrimaryRecipient"><select name="ctl00$MainContent$ddlPrimaryRecipient$ddlDropDownList" id="MainContent_ddlPrimaryRecipient_ddlDropDownList">
+<option value="-1">All</option>
+	<option value="01">Adams</option>
+	<option value="02">Allegheny</option>
+	<option value="03">Armstrong</option>
+	<option value="04">Beaver</option>
+	<option value="05">Bedford</option>
+	<option value="06">Berks</option>
+	<option value="07">Blair</option>
+
+</select></span>
+                                    
+                           </div>
+                       </div>
+                  </div>
+-->
+
+                  <div class ="row row-padding">
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <div class="radio">
+                                    <input id="MainContent_rdoPDF" type="radio" name="ctl00$MainContent$ReportFormat" value="rdoPDF" /><label for="MainContent_rdoPDF">PDF</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="form-group">
+                                <div class="radio">
+                                    <input id="MainContent_rdoExcel" type="radio" name="ctl00$MainContent$ReportFormat" value="rdoExcel" checked="checked" /><label for="MainContent_rdoExcel">Excel</label>
+                                </div>
+                            </div>
+                      </div> 
+                    
+                </div>
+                <div class ="row row-padding">
+                      
+                      
+                    
+                    <input type="button" name="ctl00$MainContent$btnClear" value="GENERATE REPORT" onclick="toggle_visibility('table1')" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+<!--                    </form>-->
+<!--                    <form action="SearchPage2.html" method="get" class="btn-group primary-actions">-->
+                    <input type="button" name="ctl00$MainContent$btnSearch" value="EXPORT" id="MainContent_btnSearch" class="btn btn-internal btn-primary" />
+                    
+                    <input type="button" name="ctl00$MainContent$btnSearch" value="CLEAR" id="MainContent_btnSearch" class="btn btn-internal btn-primary" onclick="systemReports.html"/>
+                </div>
+<!-- table goes here -->
+                    <div class="row row-padding" id="table1" style="display: none">
+                        
+                        <div class="panel panel-secondary with-header-info">
+				<div class="panel-body panel-tabs">
+					<div class="tab-content">
+						<div class="tab-pane active" id="someid">
+                        <div class="row">
+                        <div class="col-lg-18">
+                            <h2 class="tab-heading">Summary Report</h2>                        
+                       </div>
+                        </div>
+                    <table class="table table-hover table-striped">
+																			<thead>
+																				<tr>
+																					<th>Region</th>
+                                                                                    <th>County</th>
+                                                                                    <th>CWIS Case ID</th>
+                                                                                    <th>MCI ID</th>  
+                                                                                    <th>Reason for Placement Changed to More Restrictive Changes</th>
+
+                                                                                    
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    
+																				</tr>
+                                                                               <tr>
+																					<td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    
+																				</tr>
+
+																			</tbody>
+																		</table>
+                        
+                        <div class="row"><br></div>
+                        
+                        </div>
+                    </div>
+                            </div>
+                            <div class="panel-footer text-right">
+					<!-- <div class="btn-group primary-actions">
+						<p class="record-count pull-left">
+							<span id="MainContent_lblPageStart">Currently viewing 1-</span><span id="MainContent_lblPageEnd">1</span><span id="MainContent_lblTotalRecords"> of 1 records found. </span>&nbsp;
+						</p>
+						
+						
+						<div class="clearfix"></div>
+					</div> -->
+					<div class="row">
+						<div class="col-xs-18 text-right">
+							
+							<form action="restrictivePlacement.html" method="get" class="btn-group primary-actions">
+							<input type="submit" name="ctl00$MainContent$btnClose" value="Close" id="MainContent_btnClose" tabindex="29" title="Close" class="btn btn-primary" />
+							</form>
+						</div>
+					</div>
+
+				</div>
+                        </div>
+                    </div>
+                
+            
+                    
+                   
+                
+        </div>
+            </div>
+
+            
+        </div>
+
+
+
+            </div>
+
+			<!-- above this-->
+
+			<div class="row">
+				<br />
+			</div>
+			<div class="row">
+				<br />
+			</div>
+		
+
+           
+	</div>
+</html>
