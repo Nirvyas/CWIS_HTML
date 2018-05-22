@@ -41,7 +41,7 @@
                 
                                             <li class="active"><a href="#caseHold" data-toggle="tab">Put Case on Hold</a></li>
                  <li><a href="#personSearch" data-toggle="tab">View Case on Hold</a></li>
-                                            <li><a href="#caseExpunc" data-toggle="tab">View Case Expunction</a></li>
+                                            <li><a href="#caseExpunc" data-toggle="tab">View Cases to be Expunged</a></li>
                                            
                  
        
@@ -58,7 +58,7 @@
                                
                                     
                                         <label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID">Case ID</label>
-                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" style="max-width: 50%"/><label for="MainContent_rdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="123456" checked="checked" style="max-width: 50%"/><label for="MainContent_rdoPersonID"></label>
                                     
                              
                             </div>
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <div class="radio">
                                         <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID">Reason for Hold</label>
-                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="rdoMCIID" style="max-width: 50%"/><label for="MainContent_rdoMCIID"></label>
+                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="Inactive Case" style="max-width: 50%"/><label for="MainContent_rdoMCIID"></label>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                         <div class="form-group">
                                 <div class="form-group">
                                     <label for="txtFirstName">Comments</label>
-                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%; background-color: white" id="txtFirstName" alt="Enter First Name" value="John Doe Case" />
+                                    <input name="txtFirstName" type="text" autocomplete="off" style="max-width:70%; background-color: white" id="txtFirstName" alt="Enter First Name"  />
                                 </div>
                         </div>
                             </div>
@@ -195,7 +195,7 @@
 													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Open</span>
 												</td>
                                                 <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Inactive</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Inactive Case</span>
 												</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderConfidential">Y</span>
@@ -356,14 +356,14 @@
                                 
                                     
                                         <label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID">Case ID</label>
-                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="rdoPersonID" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="123456" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
                                     
                                 
                             </div>
                             <div class="col-xs-8">
                                 
-                                        <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID">Reason for Hold ID</label>
-                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="rdoMCIID" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoMCIID" ></label>
+                                        <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID">Reason for Hold </label>
+                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="Inactive Case" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoMCIID" ></label>
                                     </div>
                                 
                         </div>
@@ -382,7 +382,7 @@
 	<option value="03">Armstrong</option>
 	<option value="04">Beaver</option>
 	<option value="05">Bedford</option>
-	<option value="06">Berks</option>
+	<option value="06" selected>Berks</option>
 	<option value="07">Blair</option>
 	<option value="08">Bradford</option>
 	<option value="09">Bucks</option>
@@ -450,8 +450,8 @@
                             </div>
                            <div class="col-xs-5">
                                     <div class="form-group">
-                                        <label for="ddlCounty">Date put on Hold</label>
-                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2016" style="width: 50%; background-color: white">
+                                        <label for="ddlCounty">Date Put on Hold</label>
+                                        <input type="text" id="txtDateTimeReceived" value="10/15/1989" style="width: 50%; background-color: white">
                                         <a href="#1" class="icon-date-time"></a>
                                     </div>
                                 </div> 
@@ -476,7 +476,7 @@
                                 <div class="form-group">
                                     
                                         <label for="MainContent_rdoPersonID" >Put on Hold By</label>
-                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="c-jbourne" checked="checked" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
                                     
                             </div>
                             </div>
@@ -544,48 +544,27 @@
 											<tr>
 												<td>
 													
-													<input id="MainContent_rdoPersonID" type="checkbox" name="ctl00$MainContent$Identifier" value="rdoPersonID" style="max-width: 50%; background-color: white"/>
+													<input id="MainContent_rdoPersonID" type="checkbox" name="ctl00$MainContent$Identifier" value="rdoPersonID" style="max-width: 50%; background-color: white" checked/>
 													
 												</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">123456</span>
 												</td>
                                                 <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">John Smith</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Berks </span>
 												</td>
 												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">55%</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">10/15/1989</span>
-												</td>
-                                                <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Male</span>
-												</td>
-												
-											</tr>
-                                            <tr>
-												<td>
-													<input id="MainContent_rdoPersonID" type="checkbox" name="ctl00$MainContent$Identifier" value="rdoPersonID" checked="checked" style="max-width: 50%; background-color: white"/>
-													
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">123456</span>
-												</td>
-                                                <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">John Smith</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">55%</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Inactive Case</span>
 												</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderStatus">10/15/1989</span>
 												</td>
                                                 <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderStatus">Male</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderStatus">c-jbourne</span>
 												</td>
 												
 											</tr>
+                                          
 								</table>
 							</div>
                     
@@ -603,23 +582,23 @@
            
                 
                 
-                <div class="tab-pane" id="caseExpunc">
+               <div class="tab-pane" id="caseExpunc">
                     <div id="MainContent_srchCriteria" class="row">
                         <div class="col-xs-18">
-                            <h2 class="tab-heading">View Case Expunction</h2>
+                            <h2 class="tab-heading">View Cases to be Expunged</h2>
 
                             <div class="col-xs-8">
                                 
                                     
                                         <label for="MainContent_rdoPersonID" id="MainContent_lblrdoPersonID">Case ID</label>
-                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="rdoPersonID" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
+                                        <input id="MainContent_rdoPersonID" type="text" name="ctl00$MainContent$Identifier" value="742619" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoPersonID"></label>
                                     
                                 
                             </div>
                             <div class="col-xs-8">
                                 
                                         <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID">Expunction Reason</label>
-                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="rdoMCIID" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoMCIID" ></label>
+                                        <input id="MainContent_rdoMCIID" type="text" name="ctl00$MainContent$Identifier" value="Closed Case" style="max-width: 50%; background-color: white"/><label for="MainContent_rdoMCIID" ></label>
                                     </div>
                                 
                         </div>
@@ -654,7 +633,7 @@
 	<option value="19">Columbia</option>
 	<option value="20">Crawford</option>
 	<option value="21">Cumberland</option>
-	<option value="22">Dauphin</option>
+	<option value="22" selected>Dauphin</option>
 	<option value="23">Delaware</option>
 	<option value="24">Elk</option>
 	<option value="25">Erie</option>
@@ -707,7 +686,7 @@
                            <div class="col-xs-5">
                                     <div class="form-group">
                                         <label for="ddlCounty">Date put on Hold</label>
-                                        <input type="text" id="txtDateTimeReceived" placeholder="01/01/2016" style="width: 50%; background-color: white">
+                                        <input type="text" id="txtDateTimeReceived" value="01/01/2016" style="width: 50%; background-color: white">
                                         <a href="#1" class="icon-date-time"></a>
                                     </div>
                                 </div> 
@@ -785,7 +764,7 @@
 														<a id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Scheduled Expunction Date </a>
 													</th>
 													<th>
-														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Expunction Revision</a>
+														<a id="MainContent_rptSearchResults_lnkHeaderStatus" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$rptSearchResults$ctl00$lnkHeaderReferralReceivedDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="color:White;text-decoration:none;">Expunction Reason</a>
 													</th>
                                                     
 													
@@ -794,50 +773,33 @@
 										
 											<tr>
 												<td>
-													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">7426191</a>
+													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">742619</a>
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 													
 												</td>
 												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">123456</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Dauphin</span>
 												</td>
                                                 <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">John Smith</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">01/31/2016</span>
 												</td>
 												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">55%</span>
+													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">Closed Case</span>
 												</td>
 												
 												
 											</tr>
-                                            <tr>
-												<td>
-													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="referrals_new.html">7426191</a>
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
-													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
-													
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">123456</span>
-												</td>
-                                                <td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">John Smith</span>
-												</td>
-												<td>
-													<span id="MainContent_rptSearchResults_lnkHeaderCaseCreatedDate">55%</span>
-												</td>
-												
-												
-											</tr>
+                                            
 								</table>
 							</div>
                     
                <div class="panel-footer text-right">
                 <div class="btn-group primary-actions">
 <!--                     <form action="SearchPage1.html" method="get" class="btn-group primary-actions">-->
-                    <input type="button" name="ctl00$MainContent$btnClear" value="Remove Process from Hold"  id="MainContent_btnClear" class="btn btn-internal btn-primary" />
-
+                    
+                    <input type="button" name="ctl00$MainContent$btnClear" value="Remove Expunction Process from Hold"  id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+                   
                 </div>
             </div>
                     
