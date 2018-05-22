@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+qqqq<!DOCTYPE html>
 <html class="no-js">
 	<!-- JavaScripts that loads the template system. -->
 	<script src="../js/jquery-1.11.0.min.js"></script>
@@ -40,43 +40,48 @@
             <div class="tab-content">
                 <div class="tab-pane" id="viewSomething">
                     <div id="MainContent_srchCriteria" class="row">
+										
+					
                         
                         <div class="col-xs-7">
                             <div class="row"><br></div>
                             <div class="row">
-                                <div class="col-xs-10">
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
-                                         Case ID
-                            <input type="text" style="width: 60%; background-color: white">
+								<div class="col-xs-5">
+									<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>MCI ID
+									<input type="text" style="width: 40%; background-color: white">
                                 </div>
-                                <div class="col-xs-8" style="text-align: right">
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Review Type
+                                <div class="col-xs-5">
+									<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Case ID
+									<input type="text" style="width: 40%; background-color: white">
+                                </div>
+                                <div class="col-xs-8" style="text-align:right">
+									<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Review Type
                                 </div>
                             </div>
                             <div class="row"><br></div>
                         </div>
                         <div class="col-xs-4">
-                        <select id="example-getting-started" multiple="multiple">
-    <option value="cheese">Quality Services Review</option>
-    <option value="tomatoes">CFSR</option>
-    <option value="mozarella">IV-E Review</option>
-    <option value="mushrooms">AFCARS Review</option>
-    <option value="pepperoni">Licensing Review</option>
-    
-</select>
+							<select id="example-getting-started" multiple="multiple">
+								<option value="cheese">Quality Services Review</option>
+								<option value="tomatoes">CFSR</option>
+								<option value="mozarella">IV-E Review</option>
+								<option value="mushrooms">AFCARS Review</option>
+								<option value="pepperoni">Licensing Review</option>
+								
+							</select>
                         </div>
                         <div class="col-xs-3">
                         <div class="row"><br></div>
                             <div class="row">
                                 <div class="col-xs-10"></div>
                                 <div class="col-xs-8" style="text-align: right">
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>County
+									<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>County
                                 </div>
                             </div>
                             <div class="row"><br></div>
                         </div>
-                        <div class="col-xs-4">
-                        <select  id="ddlNameSuffix" multiple="multiple">
+                        <div class="col-xs-3" style="text-align: right">
+									<select  id="ddlNameSuffix" multiple="multiple">
 										
 											<option value="01">Adams</option>
 											<option value="02">Allegheny</option>
@@ -286,6 +291,9 @@
 											<thead>
 												<tr> 
 													<th>
+														MCI ID
+													</th>
+													<th>
 														Case ID
 													</th>
 													<th>
@@ -308,6 +316,7 @@
 											</thead>
 										
 											<tr>
+												<td>12345 </td>
 												<td>
 													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">12345</a>
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
@@ -331,7 +340,8 @@
 												</td>
 												
 											</tr>
-                                   <tr>
+											<tr>
+												<td>13156 </td>
 												<td>
 													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">13156</a>
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
@@ -355,7 +365,8 @@
 												</td>
 												
 											</tr>
-                                     <tr>
+											<tr>
+												<td>11045 </td>
 												<td>
 													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">11045</a>
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
@@ -379,7 +390,8 @@
 												</td>
 												
 											</tr>
-                                     <tr>
+											<tr>
+												<td>15623 </td>
 												<td>
 													<a id="MainContent_rptSearchResults_lnkReferralID_0" href="#">15623</a>
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralTable" id="MainContent_rptSearchResults_hdnReferralTable_0" value="MAIN" />
@@ -475,7 +487,7 @@
                      <div class="panel-footer text-right">
                 <div class="btn-group primary-actions">
 
-                    <input type="button" name="ctl00$MainContent$btnClear" value="Add" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
+                    <input type="button" name="ctl00$MainContent$btnClear" value="Add Participant Review" id="MainContent_btnClear" class="btn btn-internal btn-primary" />
 
                 </div>
             </div>
