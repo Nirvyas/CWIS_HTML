@@ -16,7 +16,7 @@
         }
     </script>
     
-	<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
+<div id="template-body-content" class="template-body-white" data-header="login" data-nav-selection="1" data-broadcast-messages="no">
   
 		
                 
@@ -24,7 +24,7 @@
 					<div id="masterValidationSummary" class="alert alert-error" data-valsummary="true" style="display:none;"></div>
                 </div>
               <!-- below this-->
-            <div class="panel panel-secondary with-header-info">
+    <div class="panel panel-secondary with-header-info">
         <!-- Header Tabs -->
         <div class="panel-heading">
             <!-- Nav tabs -->
@@ -33,27 +33,132 @@
         <div class="panel-body panel-tabs">
             <div class="tab-content">
                 <div class="tab-pane active" id="clearanceInformation">
-                    <div class="row">
-                        <div class="col-lg-18">
-                            <h2 class="tab-heading">Demographic Trends: Story</h2>
-                        </div>
-                    </div>
-                    
-                  <center>  <img src="../images/story.png" style="width: 100%"> </center>
-                    
+				
+					<div class="row">
+						<div class="col-lg-18">
+		   
+								<div class="panel panel-third">
+									<div class="panel-heading">                                       
+										<ul class="nav nav-tabs">
+											<li id="t1" class="active"><a href="#demo" data-toggle="tab" onclick="visibleFn('noneClicked')">Child Demographics</a></li>											
+											<li id="t3"><a href="#goal" data-toggle="tab" onclick="visibleFn('noneClicked')">Child Imminent Risks & Goals</a></li> 
+											<li id="t4"><a href="#discharge" data-toggle="tab" onclick="visibleFn('noneClicked')">Discharge</a></li>
+                                            <li id="t5"><a href="#reentry" data-toggle="tab" onclick="visibleFn('noneClicked')">Re-Entry</a></li>
+                                            <li id="t2"><a href="#siblings" data-toggle="tab" onclick="visibleFn('partClicked')">Siblings</a></li>
 
-                </div>
-				 <!-- <div class="modal-footer">
-					<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
-				</div> -->
-            </div>
-            <div class="col-lg-18">
-                <div class="panel-footer text-right">
-                    
-                    <div class="btn-group primary-actions" style="float: right;">
-                        <input type="submit" name="ctl00$MainContent$btnGenerateReport" value="Reset" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnGenerateReport&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnGenerateReport" class="btn btn-primary" />
-                    </div>
-                </div>
+										</ul>
+									</div>
+				
+									<div class="panel-body panel-tabs">
+											
+											<div class="tab-content">
+
+												<div class="tab-pane active" id="demo">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Child Demographics: Data Story</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/child_demographics.jpg" style="width: 100%"></center>										
+
+													<br>
+													
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="goal">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Child Imminent Risks & Goals: Data Story</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/child goals.jpg" style="width: 100%"> </center>										
+
+													<br>										
+														
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="discharge">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Discharge: Data Story</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/discharge.jpg" style="width: 100%"> </center>										
+
+													<br>
+														
+													
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												<div class="tab-pane" id="reentry">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Re-Entry: Data Story</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/Re-Entry.jpg" style="width: 100%"> </center>										
+
+													<br>
+										
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+                                                
+                                                <div class="tab-pane" id="siblings">
+
+													<div class="row">
+														<div class="col-lg-18">
+															<h2 class="tab-heading">Siblings: Data Story</h2>
+														</div>
+													</div>
+													
+													<center>  <img src="../images/siblings.jpg" style="width: 100%"> </center>										
+
+													<br>
+										
+														 <div class="modal-footer">		  
+															<a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+														</div>
+												</div>
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+											</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
             </div>
 
             
@@ -61,7 +166,7 @@
 
 
 
-            </div>
+    </div>
 
 			<!-- above this-->
 
@@ -74,5 +179,5 @@
 		
 
            
-	</div>
+</div>
 </html>
