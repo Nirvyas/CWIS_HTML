@@ -1,0 +1,377 @@
+<div class="tab-pane" id="postplc">
+
+<div class="row">
+                                                                    <div class="col-lg-18">
+                                                                        <h2 class="tab-heading">Termination of Parental Rights</h2>
+                                                                    </div> 
+                                                                </div>
+
+                                                                <table class="table table-hover table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            
+                                                                            <th>Relationship of Previous Parent(s) to Child<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Petition Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>TPR Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            
+                                                                            <td>Biological Father </td>
+                                                                            <td>06/01/2017</td>
+                                                                            <td>10/01/2017</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            
+                                                                            <td>Biological Mother </td>
+                                                                            <td>10/01/2017 </td>
+                                                                            <td>12/01/2017</td>																
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+
+                                                                <div class="row">
+                                                                    <div class="col-lg-18">
+                                                                        <h2 class="tab-heading">PLC Information</h2>
+                                                                    </div> 
+                                                                </div>
+
+                                                                <table class="table table-hover table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>MCI ID <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Federal ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>Child Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <!-- <th>Adoption/PLC<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th> -->
+                                                                            <th>Finalization/Legalization Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                            <th>View</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>12345678 </td>
+                                                                            <td>987654321A </td>
+                                                                            <td>John Smith</td>
+                                                                            <!-- <td>Adoption</td> -->
+                                                                            <td>01/01/2016</td>																		
+                                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('postplcDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>
+
+                                                                        </tr>
+
+
+                                                                        <tr>
+                                                                            <td>987654321 </td>
+                                                                            <td>112233445B </td>
+                                                                            <td>Jane Doe </td>
+                                                                            <!-- <td>PLC</td> -->
+                                                                            <td>01/20/2014</td>
+                                                                            <td><a href="Javascript:void(0);" title="View" ng-show="ReferralReadOnly" ng-click="editInvPersonInfo(Person, $index, true)" onclick="toggle_visibility('postplcDetails')"><em class="glyphicon glyphicon-eye-open"></em></a></td>																		
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <div class="row" id="postplcDetails" style="display:none">
+                                                                    <div class="panel-heading">
+                                                                        <!-- Nav tabs -->
+                                                                        <ul class="nav nav-tabs">
+                                                                            <li class="active"><a href="#recordType" data-toggle="tab">PLC Information</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="panel-body panel-tabs">               
+                                                                        <div class="tab-content">
+                                                                            <div class="tab-pane active" id="">
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-18">
+                                                                                        <h2 class="tab-heading">Child Details</h2>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Intra/Inter Jurisdictional </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Intra " disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="ddlCounty">State Name</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="PA " disabled>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtFirstName">Tribal Service Area</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value=" " disabled>
+                                                                                            <!-- <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Provider Name </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="Pinnacle Health " disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="ddlCounty">Agency Type </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:50%;" value="CCYA" disabled>
+
+                                                                                        </div>
+                                                                                    </div>
+
+<!--
+                                                                                    <div class="col-xs-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="txtFirstName">Voluntary Post-Adoption Agreement</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:30%;" value="Notified" disabled>
+                                                                                             <input name="txtFirstName" type="text" autocomplete="off" style="max-width:50%;" id="txtFirstName" alt="Enter First Name"value="caseName" disabled /> 
+                                                                                        </div>
+                                                                                    </div>
+-->
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                   
+
+                                                                                    <div class="col-xs-6">
+                                                                                        <label for="ddlCounty">Finalization/Legalization Date </label>&nbsp;&nbsp;
+                                                                                        <input type="text" id="casname" style="max-width:30%;" value="01/01/2016" disabled>																	
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="row"><br></div>
+
+                                                                              
+
+                                                                                
+
+                                                                                <!-- <div class="col-xs-4" ng-repeat="Person in PersonList">
+<div class="people-entity victim">
+<h4>Jane Doe<em class="glyphicon glyphicon-user"></em></h4>
+<p style="word-wrap: break-word;">DOB: 10/23/1968</p>
+<p style="word-wrap: break-word;">Sex: F</p>																				
+<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+
+</div>
+</div>
+
+<div class="col-xs-4" ng-repeat="Person in PersonList">
+<div class="people-entity victim">
+<h4>John Smith<em class="glyphicon glyphicon-user"></em></h4>																				
+<p style="word-wrap: break-word;">DOB: 11/21/1974</p>
+<p style="word-wrap: break-word;">Sex: M</p>
+<p style="word-wrap: break-word;">Hispanic or Latino origin: Yes</p>
+</div>
+</div> -->
+
+                                                                               
+
+                                                                                <div class="row"><br></div>																			
+
+                                                                             												
+
+
+
+
+                                                                                <!-- <div class="row">
+<div class="col-lg-18">
+<h2 class="tab-heading">Annual Contact</h2>
+</div> 
+</div>													
+
+<table class="table table-hover table-striped">
+<thead>
+<tr>
+<th>Date Sent <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+<th>Notes<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/01/2015 </td>
+<td>Contact Sent</td>
+</tr>
+
+<tr>
+<td>01/01/2014 </td>
+<td>Contact Sent</td>
+</tr>	
+
+</tbody>
+</table> -->
+
+                                                                                <div class="row"><br></div>		
+
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-18">
+                                                                                        <h2 class="tab-heading">Subsidy Payment Detail </h2>
+                                                                                    </div> 
+                                                                                </div>													
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-10">
+                                                                                        <div class="form-group">
+                                                                                            <label for="casname">Primary Type of PLC Assistance Agreement  </label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:40%;" value="Federal " disabled>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-8">
+                                                                                        <div class="form-group">
+                                                                                            <label for="ddlCounty">Agreement Effective Date</label>&nbsp;&nbsp;
+                                                                                            <input type="text" id="casname" style="max-width:40%;" value="05/08/2018 " disabled>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                
+                                                                                
+                                                                                   <table class="table table-hover table-striped">
+																							<thead>
+																								<tr>
+																									<th>Monthly Per Diem<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Daily Subsidy Amount<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									
+																									<th>Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								<th> End Date <a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement Start Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																									<th>Agreement End Date<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																								  
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																								</tr>
+
+																								<tr>
+																									<td>$1050 </td>
+																									<td>$35</td>
+																							   
+																									<td>12/01/2015 </td>
+																									<td>12/31/2015 </td>
+																									<td>12/01/2014 </td>
+																									<td>12/31/2014 </td>
+																								</tr>	
+
+																							</tbody>
+																						</table> 
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>																
+
+                                                                <!-- Begin modal container -->
+                                                                <div id="runawayDetailsModal" class="modal fade">
+                                                                    <div class="modal-dialog modal-lg">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Runaway Details</h4>
+                                                                            </div>
+
+                                                                            <div class="modal-body">
+
+                                                                                <!-- <div class="row">
+<div class="col-xs-6">
+<div class="form-group">
+<label for="casname">First Name</label>&nbsp;&nbsp;
+<input type="text" id="casname" style="max-width:50%;" value="John" disabled>
+</div>
+</div>
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="casname">Last Name</label>&nbsp;&nbsp;
+<input type="text" id="casname" style="max-width:50%;" value="Smith" disabled>
+</div>
+</div>
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="ddlNameSuffix">MCI ID</label>&nbsp;&nbsp;
+<a href="#">  12345678
+</a>
+
+</div>
+</div>  
+</div> -->
+
+
+                                                                                <!-- <div class="row">
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Runaway Start Date</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" value="02/01/2010" disabled style="width: 30%">
+
+</div>
+</div>   
+
+
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Runaway End Date</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" value="01/20/2012" disabled style="width: 30%">
+
+</div>
+</div> 
+
+<div class="col-xs-6">
+<div class="form-group">
+<label for="txtDateTimeReceived">Reason for End</label>&nbsp;&nbsp;
+<input type="text" id="txtDateTimeReceived" disabled style="width: 50%">
+
+</div>
+</div> 
+</div> -->
+
+
+                                                                                <!-- <div class="row">
+<div class="col-xs-9">
+<div class="form-group">
+<label for="txtDateTimeReceived">Upload to NCMEC</label>
+<input type="text" id="txtDateTimeReceived" value="No"  disabled style="width: 50%">
+
+</div>
+</div>   
+
+<div class="col-xs-9">
+<div class="form-group">
+<label for="txtDateTimeReceived">Dilligent Efforts to Locate</label>
+<input type="text" id="txtDateTimeReceived" value= " " disabled style="width: 50%">
+
+</div>
+</div> 
+
+</div> -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End of Modal --> 
+                                                                <div class="modal-footer">
+                                                                    <a class="btn btn-internal btn-primary" href="../pages/case_dashboard.html" data-toggle="modal" ng-click="InitiateReevaluation(false)" ng-disabled="DisableNoReevalNeededbtn" tabindex="0">Close</a>
+                                                                </div>
+                                                            </div>
