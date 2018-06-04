@@ -42,132 +42,139 @@
 				<div class="panel-body panel-tabs">
             <div class="tab-content">
                 <div class="tab-pane" id="viewSomething">
-                    <div id="MainContent_srchCriteria" class="row">
-                        
-                        <div class="col-xs-8">
-                            <div class="row"><br></div>
-                            <div class="row">
-								<div class="col-xs-7">
-										<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>MCI ID
-										<input type="text" style="width: 63%; background-color: white" value="123456789">
-                                </div>
-                                <div class="col-xs-7">
-										<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Case ID
-										<input type="text" style="width: 63%; background-color: white" value="12345">
-                                </div>
-                                <div class="col-xs-4" style="text-align: right">
-										<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Review Type
-                                </div>
-                            </div>
-                            <div class="row"><br></div>
-                        </div>
-                        <div class="col-xs-3">
-                        <select id="example-getting-started" multiple="multiple">
-    <option value="cheese">Quality Services Review</option>
-    <option value="tomatoes">CFSR</option>
-    <option value="mozarella">IV-E Review</option>
-    <option value="mushrooms" selected>AFCARS Review</option>
-    <option value="pepperoni">Licensing Review</option>
-    
-</select>
-                        </div>
-                        <div class="col-xs-2">
-                        <div class="row"><br></div>
-                            <div class="row">
-                                <div class="col-xs-10"></div>
-                                <div class="col-xs-8" style="text-align: right">
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>County
-                                </div>
-                            </div>
-                            <div class="row"><br></div>
-                        </div>
-                        <div class="col-xs-4">
-                        <select  id="ddlNameSuffix" multiple="multiple">
-										
-											<option value="01">Adams</option>
-											<option value="02" selected>Allegheny</option>
-											<option value="03">Armstrong</option>
-											<option value="04">Beaver</option>
-											<option value="05">Bedford</option>
-											<option value="06">Berks</option>
-											<option value="07">Blair</option>
-											<option value="08">Bradford</option>
-											<option value="09">Bucks</option>
-											<option value="10">Butler</option>
-											<option value="11">Cambria</option>
-											<option value="12">Cameron</option>
-											<option value="13">Carbon</option>
-											<option value="14">Centre</option>
-											<option value="15">Chester</option>
-											<option value="16">Clarion</option>
-											<option value="17">Clearfield</option>
-											<option value="18">Clinton</option>
-											<option value="19">Columbia</option>
-											<option value="20">Crawford</option>
-											<option value="21">Cumberland</option>
-											<option value="22">Dauphin</option>
-											<option value="23">Delaware</option>
-											<option value="24">Elk</option>
-											<option value="25">Erie</option>
-											<option value="26">Fayette</option>
-											<option value="27">Forest</option>
-											<option value="28">Franklin</option>
-											<option value="29">Fulton</option>
-											<option value="30">Greene</option>
-											<option value="31">Huntingdon</option>
-											<option value="32">Indiana</option>
-											<option value="33">Jefferson</option>
-											<option value="34">Juniata</option>
-											<option value="35">Lackawanna</option>
-											<option value="36">Lancaster</option>
-											<option value="37">Lawrence</option>
-											<option value="38">Lebanon</option>
-											<option value="39">Lehigh</option>
-											<option value="40">Luzerne</option>
-											<option value="41">Lycoming</option>
-											<option value="42">McKean</option>
-											<option value="43">Mercer</option>
-											<option value="44">Mifflin</option>
-											<option value="45">Monroe</option>
-											<option value="46">Montgomery</option>
-											<option value="47">Montour</option>
-											<option value="48">Northampton</option>
-											<option value="49">Northumberland</option>
-											<option value="50">Perry</option>
-											<option value="51">Philadelphia</option>
-											<option value="52">Pike</option>
-											<option value="53">Potter</option>
-											<option value="54">Schuylkill</option>
-											<option value="55">Snyder</option>
-											<option value="56">Somerset</option>
-											<option value="57">Sullivan</option>
-											<option value="58">Susquehanna</option>
-											<option value="59">Tioga</option>
-											<option value="60">Union</option>
-											<option value="61">Venango</option>
-											<option value="62">Warren</option>
-											<option value="63">Washington</option>
-											<option value="64">Wayne</option>
-											<option value="65">Westmoreland</option>
-											<option value="66">Wyoming</option>
-											<option value="67">York</option>
-									</select>
-                        
-                        </div>
+                   <div id="MainContent_srchCriteria" class="row">
 
 
-                                
-                                
-                                    
-<!--
-                                <script type="text/javascript">
-    $(document).ready(function() {
-        $('#example-getting-started').multiselect();
-    });
+
+                                <div class="col-xs-10">
+                                    <div class="row"><br></div>
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>MCI ID
+                                            <input type="text" style=" width: 75%;  background-color: white">
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>CWIS Case ID
+                                            <input type="text" style="width: 75%; background-color: white">
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>County Case ID
+                                            <input type="text" style="width: 75%; background-color: white">
+                                        </div>
+                                        
+                                        <div class="col-xs-3" style="text-align:right">
+                                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>Review Type
+                                        </div>
+                                    </div>
+                                    <div class="row"><br></div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <select id="example-getting-started" multiple="multiple">
+                                        <option value="cheese">Quality Services Review</option>
+                                        <option value="tomatoes">CFSR</option>
+                                        <option value="mozarella">IV-E Review</option>
+                                        <option value="mushrooms">AFCARS Review</option>
+                                        <option value="pepperoni">Licensing Review</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="row"><br></div>
+                                    <div class="row">
+                                        <div class="col-xs-10"></div>
+                                        <div class="col-xs-8" style="text-align: right">
+                                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>County
+                                        </div>
+                                    </div>
+                                    <div class="row"><br></div>
+                                </div>
+                                <div class="col-xs-3" style="text-align: right">
+                                    <select  id="ddlNameSuffix" multiple="multiple">
+
+                                        <option value="01">Adams</option>
+                                        <option value="02">Allegheny</option>
+                                        <option value="03">Armstrong</option>
+                                        <option value="04">Beaver</option>
+                                        <option value="05">Bedford</option>
+                                        <option value="06">Berks</option>
+                                        <option value="07">Blair</option>
+                                        <option value="08">Bradford</option>
+                                        <option value="09">Bucks</option>
+                                        <option value="10">Butler</option>
+                                        <option value="11">Cambria</option>
+                                        <option value="12">Cameron</option>
+                                        <option value="13">Carbon</option>
+                                        <option value="14">Centre</option>
+                                        <option value="15">Chester</option>
+                                        <option value="16">Clarion</option>
+                                        <option value="17">Clearfield</option>
+                                        <option value="18">Clinton</option>
+                                        <option value="19">Columbia</option>
+                                        <option value="20">Crawford</option>
+                                        <option value="21">Cumberland</option>
+                                        <option value="22">Dauphin</option>
+                                        <option value="23">Delaware</option>
+                                        <option value="24">Elk</option>
+                                        <option value="25">Erie</option>
+                                        <option value="26">Fayette</option>
+                                        <option value="27">Forest</option>
+                                        <option value="28">Franklin</option>
+                                        <option value="29">Fulton</option>
+                                        <option value="30">Greene</option>
+                                        <option value="31">Huntingdon</option>
+                                        <option value="32">Indiana</option>
+                                        <option value="33">Jefferson</option>
+                                        <option value="34">Juniata</option>
+                                        <option value="35">Lackawanna</option>
+                                        <option value="36">Lancaster</option>
+                                        <option value="37">Lawrence</option>
+                                        <option value="38">Lebanon</option>
+                                        <option value="39">Lehigh</option>
+                                        <option value="40">Luzerne</option>
+                                        <option value="41">Lycoming</option>
+                                        <option value="42">McKean</option>
+                                        <option value="43">Mercer</option>
+                                        <option value="44">Mifflin</option>
+                                        <option value="45">Monroe</option>
+                                        <option value="46">Montgomery</option>
+                                        <option value="47">Montour</option>
+                                        <option value="48">Northampton</option>
+                                        <option value="49">Northumberland</option>
+                                        <option value="50">Perry</option>
+                                        <option value="51">Philadelphia</option>
+                                        <option value="52">Pike</option>
+                                        <option value="53">Potter</option>
+                                        <option value="54">Schuylkill</option>
+                                        <option value="55">Snyder</option>
+                                        <option value="56">Somerset</option>
+                                        <option value="57">Sullivan</option>
+                                        <option value="58">Susquehanna</option>
+                                        <option value="59">Tioga</option>
+                                        <option value="60">Union</option>
+                                        <option value="61">Venango</option>
+                                        <option value="62">Warren</option>
+                                        <option value="63">Washington</option>
+                                        <option value="64">Wayne</option>
+                                        <option value="65">Westmoreland</option>
+                                        <option value="66">Wyoming</option>
+                                        <option value="67">York</option>
+                                    </select>
+
+                                </div>
+
+
+
+
+
+                                <!--
+<script type="text/javascript">
+$(document).ready(function() {
+$('#example-getting-started').multiselect();
+});
 </script>  
 -->
-                               
-                                
+
+
 
                             </div>
 
@@ -295,7 +302,10 @@
 														MCI ID
 													</th>
 													<th>
-														Case ID
+														CWIS Case ID
+													</th>
+                                                    <th>
+														County Case ID
 													</th>
 													<th>
 														County
@@ -324,6 +334,7 @@
 													<input type="hidden" name="ctl00$MainContent$rptSearchResults$ctl01$hdnReferralStatus" id="MainContent_rptSearchResults_hdnReferralStatus_0" value="OPN" />
 													
 												</td>
+                                                <td>89191</td>
 												<td>
 													<span id="MainContent_rptSearchResults_lnkHeaderCaseName">Allegheny</span>
 												</td>
@@ -348,35 +359,117 @@
 			  </div>
                   <div class="tab-pane active" id="addSomething">
                       <div id="MainContent_srchCriteria" class="row">
-                        
-                        <div class="col-xs-5">
-                            
-                            
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
-                                         Case ID
-                            <input type="text" style="width: 60%; background-color: white">
+
+                                <!--
+<div class="col-xs-5">
+
+
+<label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+Case ID
+<input type="text" style="width: 60%; background-color: white">
+</div>
+-->
+                                <div class="col-xs-3">
+
+
+                                    <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
+                                    MCI ID
+                                    <input type="text" style="width: 60%; background-color: white">
+
+
                                 </div>
-                          <div class="col-xs-5">
-                            
-                            
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID"></label>
-                                         MCI ID
-                            <input type="text" style="width: 60%; background-color: white">
+                                <div class="col-xs-4">
+
+
+                                    <a href="Javascript:void(0);" class="btn btn-internal btn-primary" title="View" data-toggle="modal" data-target="#someDetail" style="font-size: 10px" ng-show="ReferralReadOnly" ng-click="editAddress(Address, $index)">Search for CWIS Case ID</a>
+
+
+                                    <div id="someDetail" class="modal fade">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">Case ID Results</h4>
+                                                </div>
+
+                                                <div class="modal-body">
+
+                                                   <table class="table table-hover table-striped">
+                                                        <thead>
+                                                            <tr>
+
+                                                                <th>CWIS Case ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+                                                                <th>County Case ID<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>County<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Case Name<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+                                                                <th>Open/Closed Status<a href="Javascript:void(0);" style="color: white"><em class="	glyphicon glyphicon-chevron-down" style="float:right"></em></a></th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+
+                                                                <td>12345</td>
+
+                                                                <td>89191</td>
+                                                                <td>Allegheny</td>
+                                                                <td>John Doe</td>
+                                                                <td>Open</td>
+
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td>97421</td>
+
+                                                                <td>90010</td>
+                                                                <td>Allegheny</td>
+                                                                <td>Lisa Banks</td>
+                                                                <td>Closed</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>    
+
+
+
+
+
+
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-6">
-                            <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID" ></label>Review Type
-                                <select id="example-getting-started" style="width: 70%">
-    <option value="cheese">Quality Services Review</option>
-    <option value="tomatoes">CFSR</option>
-    <option value="mozarella">IV-E Review</option>
-    <option value="mushrooms">AFCARS Review</option>
-    <option value="pepperoni">Licensing Review</option>
-    
-</select>
-                            
-                            
-                        </div>
-                     </div>
+                                <div class="col-xs-5">
+                                    <label for="MainContent_rdoMCIID" id="MainContent_lblrdoMCIID" ></label>Review Type
+                                    <select id="example-getting-started" style="width: 70%">
+                                        <option value="cheese">Quality Services Review</option>
+                                        <option value="tomatoes">CFSR</option>
+                                        <option value="mozarella">IV-E Review</option>
+                                        <option value="mushrooms">AFCARS Review</option>
+                                        <option value="pepperoni">Licensing Review</option>
+
+                                    </select>
+
+
+                                </div>
+                                <div class="col-xs-5">
+                                    <div class="form-group">
+													<label for="txtDateTimeReceived">Review Start Date</label>&nbsp;&nbsp;
+													  <input type="text" style="width: 48%" id="txtDateTimeReceived" placeholder="Eg., 01/21/2014">
+													<a href="#1" class="icon-date-time"></a>
+												</div>
+
+                                </div>
+                            </div>
                      <br>
                      
                      <div id="MainContent_srchCriteria" class="row">
